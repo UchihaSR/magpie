@@ -2,13 +2,13 @@
 Dotfiles geared for running a gnu-linux system as minimally, efficiently and as fast as possible 
 
 # Highlights
-   * **ZSH** (Shell)
-   * **BSPWM** (Window Manager)
-   * **SXHKD** (Hotkey Daemon)
-   * **Alacritty** (Terminal Emulator)
-   * **Neovim** (Text Editor)
-   * **LF** (File Manager)
-   * **Yabar** (Status Bar)
-   * **Rofi** (Dmenu Program)
+   * **zsh** (Shell)
+   * **bspwm** (Window Manager)
+   * **sxhkd** (Hotkey Daemon)
+   * **alacritty** (Terminal Emulator)
+   * **neovim** (Text Editor)
+   * **lf** (File Manager)
+   * **yabar** (Status Bar)
+   * **rofi** (Dmenu Program)
 
 
