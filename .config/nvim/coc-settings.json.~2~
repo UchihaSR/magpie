@@ -1,0 +1,16 @@
+{
+    "languageserver": {
+        "cls": {
+            "command": "css-languageserver",
+            "args": [
+                "--stdio"
+            ],
+            "filetypes": [
+                "sass"
+            ]
+        }
+    },
+
+    "diagnostic.enable": false,
+    "coc.preferences.jumpCommand": "split"
+}

@@ -1,0 +1,116 @@
+set folder = "~/.local/share/mail/gmail/"
+set smtp_url = "smtps://$MAIL1_ADDR:$MAIL1_PASS@smtp.gmail.com"
+set from = "$MAIL1_ADDR"
+set realname = "Salman Abedin"
+
+set spoolfile = +INBOX
+# set record = "+Sent"
+# set trash = "+Trash"
+# set postponed = "+Drafts"
+
+mailboxes =INBOX
+# mailboxes =INBOX =Sent =Trash =Drafts
+
+# Disable saving outgoing mail since Gmail saves them by default.
+
+# Activate caching, as it can greatly improve speed
+set header_cache = "~/.mutt/.cache"
+set message_cachedir = "~/.mutt/.cache"
+
+set sort = 'reverse-date'
+
+# Basic Options {{{
+set mbox_type = Maildir  # mailbox type
+unset move               # gmail does that
+# set delete               # don't ask, just do
+# unset confirmappend      # don't ask, just do!
+# set quit                 # don't ask, just do !!
+# set delete=yes           # Don't ask to confirm purge deleted message on sync
+# unset mark_old           # read/new is good enough for me
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set recall=no            # Don't ask to recall postponed message when Composing
+unset record             # Gmails SMTP already copies emails to Sent folder
+# set beep_new             # bell on new mails
+
+set sleep_time = 0				# Pause 0 seconds for informational messages
+set markers = no				# Disables the `+` displayed at line wraps
+set mark_old = no				# Unread mail stay unread until read
+set mime_forward = yes			# attachments are forwarded with mail
+set wait_key = no				# mutt won't ask "press key to continue"
+set fast_reply					# skip to compose when replying
+set fcc_attach					# save attachments with the body
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote				# include message in forwards
+set reverse_name				# reply as whomever it was to
+set include						# include message in replies
+# set mail_check=60 				# to avoid lags using IMAP with some email providers (yahoo for example)
+
+auto_view text/html				# automatically show html (mailcap uses w3m)
+auto_view application/pgp-encrypted
+alternative_order text/plain text/enriched text/html
+
+set editor="$EDITOR"
+
+set query_command = "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+
+# Sidebar mappings
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
+
+# Sidebar
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cl sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager S sidebar-toggle-visible
+
+# Binds
+bind index,attach 			l 			next-entry
+bind pager 					l 			next-line
+bind index,pager,browser 	L 			half-down
+# bind index 					L 			last-entry
+
+bind index,attach 			k 			previous-entry
+bind pager 					k 			previous-line
+bind index,pager,browser 	K 			half-up
+# bind index 			K 			first-entry
+
+bind index 					";" 			display-message
+bind pager 					";" 			view-attachments
+bind attach 				";" 			view-mailcap
+bind browser 				";" 			select-entry
+
+bind pager,attach 			j 			exit
+
+# bind index 					d 			purge-message
+bind index 					d 			delete-message
+bind index 					D 			undelete-message
+
+bind index,pager 			s 			sync-mailbox
+
+bind editor 				<Tab> 		complete-query
+
+bind index 					<space> 	tag-entry
+
+bind index,pager			<ESC><ESC> 	quit
+
+
+bind index					f 			imap-fetch-mail
+
+macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+macro index O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
+macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+macro index A "<limit>all\n" "show all messages (undo limit)"
+
+macro index,pager 			U  			<set-flag>O 		"Mark as read"
+macro index,pager 			R  			<clear-flag>O    	"Mark as unread"
+
+source lukes-colors.sh

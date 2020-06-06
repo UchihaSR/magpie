@@ -1,0 +1,165 @@
+# &  shell-async     shell command running asynchronously
+# $  shell           shell command
+# %  shell-pipe      shell command running with the ui
+# !  shell-wait      shell command waiting for key press
+
+# ---------------------[  Sal's lf settings ]-----------------------------
+
+set hidden
+set color256
+# set drawbox
+set icons
+set period 1
+
+# set previewer ~/.config/lf/pv.sh
+
+# ---------------------[ Commands ]-----------------------------
+
+cmd trash %mv $fx ~/.local/share/Trash
+
+cmd open $launch "$f"
+
+cmd makeScript %{{
+   printf "What shall be we call her? : "
+      read -r name
+      printf "#!/usr/bin/env sh\n\n" > "$name"
+      chmod +x "$name"
+}}
+
+cmd moveto ${{
+   set -f
+      clear; echo "Move to where?"
+      dest="$(cut -d'	' -f2- /home/salman/.config/directories | fzf)" &&
+      eval mv -iv $fx $dest &&
+      notify-send "🚚 File(s) moved." "File(s) moved to $dest."
+}}
+
+cmd copyto ${{
+   set -f
+      clear; echo "Copy to where?"
+      dest="$(cut -d'	' -f2- /home/salman/.config/directories | fzf)" &&
+      eval cp -ivr $fx $dest &&
+      notify-send "📋 File(s) copied." "File(s) copies to $dest."
+}}
+
+cmd mkDir %{{
+   printf "Directory Name: "
+      read ans
+      mkdir $ans
+}}
+
+cmd chmod %{{
+   printf "Mode Bits: "
+      read ans
+      for f in "$fx"; do doas chmod $ans $f; done
+}}
+
+cmd chown ${{
+   for f in "$fx"; do doas -- chown -R $USER:wheel $f; done
+}}
+
+# ---------------------[ Bindings ]-----------------------------
+
+# map <enter> shell-pipe
+# map <enter> shell-wait
+# map \ shell-pipe
+map <enter> $$SHELL
+
+map j updir
+map J top
+# map : half-down
+
+map l down
+map K half-up
+map L half-down
+
+map ; open
+
+# map : &setsid "$TERMINAL" -e lf $f
+# map J $$SHELL
+
+map . set hidden!
+
+map C copyto
+map M moveto
+map t %mv -f "$fx" ~/.local/share/Trash
+map T delete
+
+map r rename
+map b $vidir
+map B $format -l $f
+# map b $vimv "$fx"
+
+map ap !rsync -avhe 'ssh -p 8022' --progress $fx $CARD
+map aP !printf "What do you wanna pull? "; read req; rsync -avhe 'ssh -p 8022' --progress $CARD/"$req" $(dirname $f)
+
+map f search
+
+map n &echo "${f%.*}" | rev | cut -d'/' -f1 | rev | xsel -p
+map N &mv "$f" $(xsel -o) 
+
+map <esc> quit
+
+map i $$EDITOR "$f"
+map I %du -sh "$f" | cut -f1
+
+map J $$SHELL
+
+# map o &setsid "$TERMINAL" -e lf $f
+# map o &setsid open "$f"
+map O &launch-choose "$f"
+
+map Y &echo $f | xsel -b
+
+# map s !adb push --sync $fx $CARD/Phone
+# map s !rsync -avhe 'ssh -p 8022' --progress --delete $f $CARD
+# map S !printf "What do you wanna pull? "; read req; adb pull $CARD/"$req"
+
+map F %printf "What should we call her? "; read name; touch $name
+map D %printf "What should we call it? "; read name; mkdir $name
+
+map w &setsid $TERMINAL -e $SHELL
+
+map u &sync-dots
+map U $upload $fx
+
+map z
+
+# map h
+# map hmr mark-remove
+
+################################################################################
+#                             Bookmarks 
+################################################################################
+
+map g
+map gb cd ~/Storage/Workspace/bracu
+map gd cd ~/Downloads
+map gf cd /home/git/own/magpie
+map gh cd ~ 
+map gm cd /disk/Media
+map gp
+map gp cd /disk/Phone
+map gr cd /home/git/own
+map gs cd /disk
+map gt cd ~/.local/share/Trash
+map gw cd ~/Storage/Workspace
+
+################################################################################
+#                             FFMPEG 
+################################################################################
+
+map zmg !make-gif "$f"
+map zcv !cut-vid "$f"
+map zrv !reduce-volume "$f"
+map zam !add-music "$fx"
+
+# map zrv !printf "Level? [01 - 99] "; read lev;reduce-volume "$f" "$lev"
+
+################################################################################
+#                             Misc 
+################################################################################
+
+map zms makeScript
+map zcm chmod
+map zco chown

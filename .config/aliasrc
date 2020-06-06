@@ -1,0 +1,141 @@
+#!/bin/sh
+
+# Misc
+alias \
+   c="clear" \
+   cc="calcurse" \
+   cpr="cp -r" \
+   cccd="calcurse-caldav" \
+   da="doas --" \
+   dcpr="da cp -r" \
+   dka="da killall" \
+   dlf="da lf" \
+   dmd="da mkdir" \
+   dmv="da mv" \
+   drm="da rm -rf" \
+   e="exit" \
+   f="explore" \
+   k="xev -event keyboard" \
+   ka="killall" \
+   m="neomutt" \
+   md="mkdir" \
+   ns="notify-send" \
+   p="patch -p1 <" \
+   s="search-fzf" \
+   S="ssh -p 8022 192.168.0.101" \
+   t="htop" \
+   u="da pacman -Syyu --noconfirm; yay -Syyu --noconfirm" \
+   v="nvim" \
+   x="xprop" \
+   xmqf="xdg-mime query filetype" \
+   src=". ~/.config/functionrc && . ~/.config/aliasrc" \
+   msa="mbsync -c ~/.config/isync/mbsyncrc -a" \
+   dj="da journalctl -p 3 -xb" \
+   yd="youtube-dl -x -f bestaudio/best" \
+   ydv="youtube-dl -f best"
+
+# yd="youtube-dl -x --audio-format mp3 --audio-quality 0" \
+
+# Pacman & Yay
+alias \
+   dps="da pacman -S" \
+   dpsn="da pacman -S --needed" \
+   dpsnn="da pacman -S --needed --noconfirm " \
+   ys="yay -S" \
+   ysn="yay -S --noconfirm" \
+   dprn="da pacman -Rns --noconfirm" \
+   pq="pacman -Qs" \
+   pqe="pacman -Qqe"
+
+# Systemctl
+alias \
+   dse="da systemctl enable" \
+   dsd="da systemctl disable" \
+   dss="da systemctl start" \
+   dsS="da systemctl stop" \
+   dsf="da systemctl --failed" \
+   sab="systemd-analyze blame"
+
+# Git
+alias \
+   gi="git init" \
+   ga="git add" \
+   gaa="ga ." \
+   gs="git status" \
+   gcm="git commit -m" \
+   gca="gc -a" \
+   gp="git push" \
+   gpo="git push origin" \
+   gac="gaa && gc" \
+   gacp="gaa && gc && gp" \
+   gpo="gp -u origin" \
+   gpom="gpo master" \
+   gpos="gpo slave" \
+   gP="git pull" \
+   gb="git branch" \
+   gbd="gb -D" \
+   gC="git checkout" \
+   gm="git merge" \
+   gpod="gpo --delete" \
+   grh="git reset HEAD" \
+   gcsufn="git config --local status.showUntrackedFiles no" \
+   grh="git reset --hard" \
+   gpf="git push --force" \
+   garu="git add remote upstream" \
+   gfu="git fetch upstream" \
+   grum="git rebase upstream/master" \
+   gcb="git checkout -b" \
+# ug="cd $DF; git commit -a -m \"update\" && git push -u origin master" \
+
+# NPM
+alias \
+   niy="npm init -y" \
+   ni="npm install" \
+   dnig="da npm install -g" \
+   nis="npm install --save" \
+   nisd="npm install --save-dev" \
+   nrd="npm run dev" \
+   nrs="npm run start" \
+   ncra="npx create-react-app"
+
+# Power
+alias \
+   sS='systemctl suspend' \
+   pku='pkill -KILL -u $USER' \
+   po='poweroff' \
+   rb='reboot'
+
+# Make
+alias \
+   dmi="da make install" \
+   dmci="da make clean install" \
+   dmu="da make uninstall"
+
+# Colorize commands when possible.
+alias \
+   ls="ls -hN --color=auto --group-directories-first" \
+   grep="grep --color=auto" \
+   diff="diff --color=auto"
+
+# lsd
+alias \
+   l="lsd" \
+   l1="lsd -1" \
+   lA1="lsd -1A" \
+   lAl="lsd -Al" \
+   lt="lsd --tree" \
+   lAt="lsd -A --tree" \
+
+# # XBPS
+# alias \
+#    dxi="da xbps-install" \
+#    dxis="da xbps-install -S" \
+#    dxisy="da xbps-install -Sy" \
+#    dxrry="da xbps-remove -Ry" \
+#    dxisuy="da xbps-install -Suy" \
+#    xqrs="xbps-query -Rs"
+
+# # Runit
+# alias \
+#    dsu="da sv up" \
+#    dsd="da sv down"

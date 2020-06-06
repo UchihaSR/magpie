@@ -1,0 +1,66 @@
+# Calcurse Binds
+
+move-right      ; RGT
+move-left       j LFT
+move-down       l DWN
+move-up         k UP
+
+raise-priority  K +
+lower-priority  L -
+
+start-of-week  J 0
+end-of-week  : $
+
+generic-cancel  q
+generic-select  SPC
+generic-quit    ESC
+
+generic-copy    y
+generic-paste   p
+
+generic-save    s
+
+generic-change-view  h
+
+generic-prev-month  n
+generic-next-month  m
+
+del-item  d
+flag-item  D
+
+add-item  i
+repeat  r
+
+generic-prev-week  W
+generic-next-week  w
+generic-prev-year  ^Y
+generic-next-year  Y
+
+generic-goto  g
+generic-goto-today  t
+
+generic-config-menu  c
+
+###################################################################################
+
+generic-reload  R
+generic-import  I
+generic-export  E
+generic-other-cmd  o O
+generic-redraw  ^R
+generic-add-appt  ^A
+generic-add-todo  ^G
+generic-prev-day  ^D
+generic-next-day  ^X
+generic-scroll-down  ^N
+generic-scroll-up  ^P
+generic-command  `
+edit-item  e
+view-item  v V RET
+pipe-item  |
+edit-note  N
+view-note  >
+
+generic-credits  @
+generic-help  ?
+

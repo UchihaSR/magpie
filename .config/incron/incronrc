@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+/home/salman/.local/share/dot_files     IN_CREATE,IN_DELETE,IN_MOVE_SELF,IN_MOVED_TO,IN_MOVED_FROM  syncDots
+

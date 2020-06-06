@@ -1,0 +1,24 @@
+#!/bin/bash
+
+[commands.swipe.three]
+# left = "xdotool key alt+Left"
+left = "xdotool key ctrl+shift+Tab"
+# right = "xdotool key alt+Right"
+right = "xdotool key ctrl+Tab"
+# down = "xdotool key super+u"
+down = "xdotool key ctrl+w"
+# up = "xdotool key super+h"
+up = "xdotool key ctrl+shift+t"
+
+#left_down = "xdotool key ctrl+w"
+#right_down = "xdotool key ctrl+shift+t"
+
+[commands.swipe.four]
+#left_up = ""
+#right_up = ""
+#up = ""
+#left_down = ""
+#right_down = ""
+#down = ""
+#left = ""
+#right = ""

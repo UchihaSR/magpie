@@ -1,0 +1,28 @@
+IMAPStore gmail-remote
+Host imap.gmail.com
+# Host imap.zoho.com
+# Port 993
+User salman104alvi@gmail.com
+PassCmd "echo $MAIL1_PASS"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore gmail-local
+Path ~/.local/share/mail/gmail/
+Inbox ~/.local/share/mail/gmail/INBOX
+Subfolders Verbatim
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns *
+
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+
+# Save the synchronization state files in the relevant directory
+SyncState *
+
+#
+Expunge Both
+

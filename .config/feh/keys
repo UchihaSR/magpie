@@ -1,0 +1,26 @@
+#Unset
+toggle_info
+toggle_keep_vp
+toggle_pointer
+toggle_pause
+toggle_menu
+toggle_filenames
+
+#Set
+
+next_img		l
+prev_img        k
+zoom_in 		semicolon
+zoom_out		j
+
+scroll_right	J
+scroll_left		colon
+scroll_up       L
+scroll_down		K
+
+orient_3	o
+orient_1	O
+mirror		m
+delete		d
+
+quit 		n

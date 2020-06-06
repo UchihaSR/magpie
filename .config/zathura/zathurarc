@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set     selection-clipboard     clipboard
+set     adjust-open             width
+
+map     j           scroll left
+map     ;           scroll right
+map     k           scroll up
+map     l           scroll down
+
+# map     J           navigate_index previous
+# map     :           navigate_index next
+# map     K           navigate_index up
+# map     L           navigate_index down
+
+map     K           navigate previous
+map     L           navigate next
+# map     K           goto top
+# map     L           goto bottom
+
+map     m           zoom in
+map     n           zoom out
+map     i           toggle_index
+
+map     r           recolor
+
+map     w           adjust_window width
+map     W           adjust_window best-fit
+
+map     p    		print
+
+map     <Esc>    	quit
