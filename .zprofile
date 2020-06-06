@@ -139,8 +139,8 @@ export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 #                             Auto Start X
 ###############################################################################
 
-[ "$(fgconsole 2> /dev/null)" = 1 ] &&
-   exec startx -- vt1 > /dev/null 2>&1
+[ "$(fgconsole 2> /dev/null)" = 1 ] && 
+   exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
 
 ###############################################################################
 #                             Swap Escape & Caps Lock
