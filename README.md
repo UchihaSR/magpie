@@ -1,16 +1,15 @@
 # Magpie
 Dotfiles of my minimal GNU/Linux system geared for media and programming.
 
-
 # Highlights
    * **zsh** (Shell)
    * **bspwm** (Window Manager)
-   * **sxhkd** (Hotkey Daemon)
    * **alacritty** (Terminal Emulator)
    * **neovim** (Text Editor)
    * **lf** (File Manager)
    * **yabar** (Status Bar)
-   * **rofi** (Dmenu Program)
+   * **sxhkd** (Hotkey Daemon)
+   * **rofi** (Dmenu Alternative)
 
 ![](https://cloud.disroot.org/s/k5tXnY3mxAzQmiy/preview)
 
