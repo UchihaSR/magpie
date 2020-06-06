@@ -1,5 +1,5 @@
 # Magpie
-Dotfiles geared for running a gnu-linux system as minimally, efficiently and as fast as possible 
+Dotfiles geared for running a GNU/Linux system as minimally, efficiently and as fast as possible 
 
 # Highlights
    * **zsh** (Shell)
