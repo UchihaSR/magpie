@@ -10,3 +10,4 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
 @ 1m     notify-send "yo yo"
 
+

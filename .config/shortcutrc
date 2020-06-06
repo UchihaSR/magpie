@@ -9,8 +9,10 @@
 /home/git/own/private
 
 /home/git/own/magpie/.xinitrc
-/home/git/own/magpie/.profile
+/home/git/own/magpie/.zprofile
 /home/git/own/magpie/.config
+
+/home/git/own/magpie/.config/nvim/source
 
 /home/git/own/magpie/.local/bin
 /home/git/own/private/.local/bin

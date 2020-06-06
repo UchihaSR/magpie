@@ -79,3 +79,5 @@ au automation   FileType c     inoremap    ;p          printf("");<left><left><l
 
 au automation FileType text,markdown inoremap . .<cr>
 
+au automation FileType markdown inoremap ;i ![](/preview)
+

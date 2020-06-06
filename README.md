@@ -15,6 +15,6 @@ Dotfiles geared for running a GNU/Linux system as minimally, efficiently and as 
 
 ![](https://cloud.disroot.org/s/DNQmrBn5B2b56zP/preview)
 
-![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
-
 ![](https://cloud.disroot.org/s/QDigqQjTKe42dGa/preview)
+
+![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
