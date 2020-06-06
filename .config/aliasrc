@@ -62,6 +62,7 @@ alias \
    ga="git add" \
    gaa="ga ." \
    gs="git status" \
+   gc="git commit -m 'Update'" \
    gcm="git commit -m" \
    gca="gc -a" \
    gp="git push" \
