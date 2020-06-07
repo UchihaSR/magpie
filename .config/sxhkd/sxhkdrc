@@ -56,8 +56,7 @@ Print
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
 super + backslash
-	xmodmap {$LAYOUT_EN,$LAYOUT_AR}
-	# xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
+	xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
 
 super + shift + n
 	toggle-notify

@@ -18,15 +18,17 @@ keycode  45 = U0996 NoSymbol Up
 keycode  46 = U09B2 U0982 Down
 keycode  47 = semicolon colon Right
 
-keycode  43 = U09B9 U0983 Retrurn
 keycode  57 = U09A8 U09A3 BackSpace
 
-keycode  31 = U09BF U0987 Home
-keycode  32 = U09CB U0993 U0985 End
+keycode  43 = U09B9 U0983
+keycode  48 = apostrophe quotedbl
+
+keycode  30 = U09C1 U0989 U09C2 U098A
+keycode  31 = U09BF U0987
+keycode  32 = U09CB U0993 U0985
 
 ! U09C8 ৈ U0990 ঐ U09CC ৳ U099E ঞ U09CE ৎ U0994 ঔ
 ! U09CC
-keycode   8 =
 keycode   9 = Escape NoSymbol Escape
 keycode  10 = U09E7 exclam
 keycode  11 = U09E8 at
@@ -48,7 +50,6 @@ keycode  26 = U09C7 U098F
 keycode  27 = U09B0 U09DC U09DD
 keycode  28 = U09A4 U09A5 U099F U09A0
 keycode  29 = U09C0 U0988 U09DF
-keycode  30 = U09C1 U0989 U09C2 U098A
 keycode  33 = U09AA
 keycode  34 = bracketleft braceleft
 keycode  35 = bracketright braceright
@@ -61,7 +62,6 @@ keycode  39 = U09B8 U09B7 U09B8 U09B7
 keycode  40 = U09A6 U09A7 U09A1 U09A2
 keycode  41 = U09AB
 keycode  42 = U0997 U0998 U0997 U0998
-keycode  48 = apostrophe quotedbl
 keycode  49 = U200D asciitilde U200D asciitilde
 keycode  50 = Shift_L ISO_Prev_Group Shift_L ISO_Prev_Group
 keycode  51 = Mode_switch

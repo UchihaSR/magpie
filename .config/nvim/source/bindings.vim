@@ -27,14 +27,16 @@ nnoremap    <leader><esc>            ZQ
 " ------------[ Navigation ]-----------------
 
 :noremap    j           h
-:noremap    k           gk
-:noremap    l           gj
 :noremap    ;           l
 
-:noremap	J    	    b
+:noremap    k           gk
+:noremap    l           gj
+
+:noremap	   J    	      b
+:noremap	   :    	      e
+
 " :noremap    K           <C-u>zz
 " :noremap    L           <C-d>zz
-:noremap	:    	    e
 
 :map    <leader>k	gg
 :map    <leader>l	G$zz

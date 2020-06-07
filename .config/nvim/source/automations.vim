@@ -68,3 +68,23 @@ au automation FileType text,markdown setlocal spell
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "require(rmarkdown); rmarkdown::render('%', quiet=TRUE)"
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "rmarkdown::render('%', quiet=TRUE)"
 
+function ArabicMode()
+
+   set nospell
+   set rightleft
+   set delcombine
+   set arabicshape
+
+   :noremap    ;           h
+   :noremap    j           l
+   :noremap	   :    	      b
+   :noremap	   J    	      e
+   :map        <leader>;	^
+   :map        <leader>j	$
+
+   au automation  InsertEnter *   silent !xmodmap $LAYOUT_AR
+   au automation  InsertLeave *   silent !xmodmap $LAYOUT_EN
+
+endfunction
+
+au automation BufRead,BufNewFile *.ar.* call ArabicMode()
