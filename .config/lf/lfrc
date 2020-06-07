@@ -151,6 +151,8 @@ map gw cd ~/Storage/Workspace
 #                             FFMPEG 
 ################################################################################
 
+map zr
+
 map zmg !make-gif "$f"
 map zcv !cut-vid "$f"
 map zrv !reduce-volume "$f"
