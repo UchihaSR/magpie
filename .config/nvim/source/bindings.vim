@@ -38,10 +38,10 @@ nnoremap    <leader><esc>            ZQ
 " :noremap    K           <C-u>zz
 " :noremap    L           <C-d>zz
 
-:map    <leader>k	gg
-:map    <leader>l	G$zz
-:map    <leader>j	^
-:map    <leader>;	$
+:noremap    <leader>k	gg
+:noremap    <leader>l	G$zz
+:noremap    <leader>j	^
+:noremap    <leader>;	$
 
 " nnoremap    f           /
 " vnoremap    f           y/\V<C-R>=escape(@",'/\')<CR><CR>

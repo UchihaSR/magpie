@@ -79,8 +79,13 @@ function ArabicMode()
    :noremap    j           l
    :noremap	   :    	      b
    :noremap	   J    	      e
-   :map        <leader>;	^
-   :map        <leader>j	$
+   :noremap    <leader>;	^
+   :noremap    <leader>j	$
+
+   :noremap    i           a
+   :noremap    I           A
+   :noremap    a           i
+   :noremap    A           I
 
    au automation  InsertEnter *   silent !xmodmap $LAYOUT_AR
    au automation  InsertLeave *   silent !xmodmap $LAYOUT_EN
