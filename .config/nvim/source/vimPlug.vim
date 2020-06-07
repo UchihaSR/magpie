@@ -36,7 +36,7 @@ nmap    L         <Plug>(SmoothieDownwards)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'junegunn/goyo.vim'
-au automation FocusGained,BufEnter * Goyo 82
+au automation FocusGained,BufEnter * Goyo 82x100%
 au automation User GoyoLeave silent! source $MYVIMRC
 " au! automation User GoyoLeave silent! source $MYVIMRC
 
