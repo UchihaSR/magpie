@@ -111,6 +111,7 @@ export GNUPGHOME=~/.local/share/gnupg
 export GOPATH=~/.local/share/go
 export HISTFILE=~/.local/share/history
 export INPUTRC=~/.config/inputrc
+export XINITRC=~/.config/X11/xinitrc
 export PASSWORD_STORE_DIR=~/.config/pass
 export UNISON=~/.local/share/unison
 export WGETRC=~/.config/wget/wgetrc
@@ -141,7 +142,6 @@ export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 
 [ "$(fgconsole 2> /dev/null)" = 1 ] && 
    exec start-x
-   # exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
 
 ###############################################################################
 #                             Swap Escape & Caps Lock

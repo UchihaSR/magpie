@@ -5,32 +5,6 @@
 
 [Default Applications]
 
-text/x-shellscript=nvim.desktop;
-text/plain=nvim.desktop;
-text/x-empty=nvim.desktop
-text/x-c=nvim.desktop
-text/xml=nvim.desktop
-text/x-python=nvim.desktop
-inode/x-empty=nvim.desktop
-
 x-scheme-handler/magnet=transmission-gtk.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 
-image/png=feh.desktop;
-image/jpeg=feh.desktop;
-
-audio/mpeg=mpv-audio.desktop
-audio/wav=mpv-audio.desktop
-
-video/mp4=mpv.desktop;
-video/x-matroska=mpv.desktop;
-
-application/epub+zip=zathura.desktop;
-
-application/vnd-ms.powerpoint=libreoffice.desktop
-application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice.desktop
-
-inode/directory=lf.desktop
-# inode/directory=vifm.desktop
-
-application/pdf=masterpdfeditor4.desktop;
