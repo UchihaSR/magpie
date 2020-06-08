@@ -140,8 +140,7 @@ export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 #                             Auto Start X
 ###############################################################################
 
-[ "$(fgconsole 2> /dev/null)" = 1 ] && 
-   exec start-x
+[ "$(fgconsole 2> /dev/null)" = 1 ] && exec start-x
 
 ###############################################################################
 #                             Swap Escape & Caps Lock
