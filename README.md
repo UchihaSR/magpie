@@ -17,4 +17,6 @@ Dotfiles of my minimal GNU/Linux system geared for media and programming.
 
 ![](https://cloud.disroot.org/s/QDigqQjTKe42dGa/preview)
 
+![](https://cloud.disroot.org/s/t258xjFrkm5fF9Q/preview)
+
 ![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
