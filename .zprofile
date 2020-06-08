@@ -40,6 +40,8 @@ export LAYOUT_BN=~/.config/X11/xmodmap-bn
 export ICONS=~/.icons/system
 export WALL=~/.local/share/wallpapers/wall.jpg
 
+export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
+
 # export MOZ_USE_XINPUT2="1"
 
 export LF_ICONS="di=📁:\
@@ -132,7 +134,6 @@ export ZDOTDIR=~/.config/zsh
 # export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 # export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 # export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
-export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 
 # cat /etc/*-release | grep \"void\" >/dev/null && export TERMINAL=alacritty
 
