@@ -13,6 +13,7 @@ Dotfiles of my minimal GNU/Linux system geared for media and programming/writing
 
 # Dependencies
    * [Uniblocks](https://github.com/salman-abedin/uniblocks)
+   * [Alfred](https://github.com/salman-abedin/alfred)
 
 ![](https://cloud.disroot.org/s/k5tXnY3mxAzQmiy/preview)
 
