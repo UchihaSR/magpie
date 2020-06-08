@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=Torrent Client
-Exec=/usr/bin/transmission-gtk %U
+Exec=/usr/bin/transmission-remote -a %U

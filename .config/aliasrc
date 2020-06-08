@@ -15,6 +15,7 @@ alias \
    drm="da rm -rf" \
    e="exit" \
    f="explore" \
+   gsl="gen-search-list" \
    k="xev -event keyboard" \
    ka="killall" \
    m="neomutt" \
