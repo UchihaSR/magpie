@@ -15,6 +15,8 @@ Dotfiles of my minimal GNU/Linux system geared for media and programming/writing
    * [Alfred](https://github.com/salman-abedin/alfred)
    * [Uniblocks](https://github.com/salman-abedin/uniblocks)
 
+![](https://cloud.disroot.org/s/YHjELDteXdqYdqn/preview)
+
 ![](https://cloud.disroot.org/s/DNQmrBn5B2b56zP/preview)
 
 ![](https://cloud.disroot.org/s/QDigqQjTKe42dGa/preview)

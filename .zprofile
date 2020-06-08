@@ -38,7 +38,7 @@ export LAYOUT_AR=~/.config/X11/xmodmap-ar
 export LAYOUT_BN=~/.config/X11/xmodmap-bn
 
 export ICONS=~/.icons/system
-export WALL=~/.local/share/wall.jpg
+export WALL=~/.local/share/wallpapers/wall.jpg
 
 # export MOZ_USE_XINPUT2="1"
 
