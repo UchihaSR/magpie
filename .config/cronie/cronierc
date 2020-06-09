@@ -8,8 +8,9 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
 */5 		* 		* 		* 		* 		   ~/.local/bin/battery/monitor-battery
 
-@hourly										~/.local/bin/check-storage
+@hourly										~/.local/bin/misc/check-storage
 @hourly										~/.local/bin/syncing/sync-git
+@hourly										~/.local/bin/syncing/sync-calcurse
 
 # @daily										~/.local/bin/syncing/sync-phone
 # @daily										~/.local/bin/syncing/sync-upstream

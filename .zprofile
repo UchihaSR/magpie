@@ -4,9 +4,8 @@
 #                             Defaults
 ###############################################################################
 
-# export COMPOSITOR="picom -b"
+export COMPOSITOR="picom -b"
 export BROWSER=firefox
-export COMPOSITOR="xcompmgr -cCfF"
 export DMENU="rofi -dmenu -i"
 export EDITOR=nvim
 export FILE=lf

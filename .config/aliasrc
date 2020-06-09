@@ -5,7 +5,6 @@ alias \
    c="clear" \
    cc="calcurse" \
    cpr="cp -r" \
-   cccd="calcurse-caldav" \
    da="doas --" \
    dcpr="da cp -r" \
    dka="da killall" \

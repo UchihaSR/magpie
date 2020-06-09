@@ -15,6 +15,9 @@ Dotfiles of my minimal GNU/Linux system geared for media, programming & writing.
    * [Alfred](https://github.com/salman-abedin/alfred)
    * [Uniblocks](https://github.com/salman-abedin/uniblocks)
 
+# Installation
+   * [MISS: Magpie Installer Shell Script](https://github.com/salman-abedin/miss)
+
 ![](https://cloud.disroot.org/s/YHjELDteXdqYdqn/preview)
 
 ![](https://cloud.disroot.org/s/DNQmrBn5B2b56zP/preview)

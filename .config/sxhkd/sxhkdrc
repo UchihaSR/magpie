@@ -69,8 +69,7 @@ alt + y
 	xdotool keyup y key --clearmodifiers Control+Shift+c
 
 alt + p
-	xdotool keyup p key --clearmodifiers Control+v
-	# xdotool keyup p key --clearmodifiers Control+Shift+v
+	xdotool keyup p key --clearmodifiers Control+Shift+v
 
 super + Escape
 	systemctl poweroff

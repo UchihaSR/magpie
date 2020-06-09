@@ -3,7 +3,7 @@ Host imap.gmail.com
 # Host imap.zoho.com
 # Port 993
 User salman104alvi@gmail.com
-PassCmd "echo $MAIL1_PASS"
+PassCmd "gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
