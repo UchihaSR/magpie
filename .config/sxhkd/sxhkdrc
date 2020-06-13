@@ -145,6 +145,9 @@ super + XF86MonBrightnessDown
 super + XF86MonBrightnessUp
 	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
 
+F7
+	toggle-wifi
+
 # XF86AudioRaiseVolume
 # 	pactl set-sink-volume @DEFAULT_SINK@ +10%
 # 	# amixer set Master 5%+
@@ -174,6 +177,7 @@ super + {_,shift} + n
 # Toggle Tiled / Monocle
 super + m
 	bspc desktop -l next
+	# one-monocle
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}
@@ -203,7 +207,7 @@ super + period
 
 # Shift to Biggest
 super + i
-    bspc node -s biggest.local
+    bspc node -n biggest.local
 
 # Fullscreen
 super + shift + f

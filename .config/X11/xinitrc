@@ -4,9 +4,11 @@
 # doas killall compton mpd polybar connman-vpnd picom
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
+# Launch Transmission Daemon
+# transmission-daemon &
 
 # Clears existing processes
-doas killall notification-daemon gebaard unclutter xcape sxhkd xss-lock xcompmgr transmission-daemon
+doas killall gebaard unclutter xcape sxhkd xss-lock xcompmgr transmission-daemon dunst
 # Generates search list
 gen-search-list &
 # Sets DPI (dpi.lv)
@@ -20,8 +22,7 @@ sh -c "sleep 1 && $COMPOSITOR" &
 # Speeds key reapeat of pressing
 xset r rate 200 30 & 
 # Launch notification server
-notification-daemon &
-# dunst &
+dunst &
 # Binds Multi-purpose keys
 sh -c "xmodmap $LAYOUT_EN && xcape -e \"Super_L=Escape;Mode_switch=Tab\"" & 
 # Binds key commands
@@ -34,8 +35,6 @@ xsetroot -cursor_name left_ptr &
 unclutter &                      
 # Launch bar
 sh -c "sleep 1 && $STATUS_BAR" & 
-# Launch Transmission Daemon
-transmission-daemon &
 # Luanch Window Manager
 exec "$WM"
 

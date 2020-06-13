@@ -138,7 +138,7 @@ nnoremap        <leader>t       maggVG='a
 "                             Spelling 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap    <leader>S   :set spell!<cr> 
+nnoremap    <leader>o   :set spell!<cr> 
 nnoremap    <leader>f   1z=
 
 " Add / Remove Words

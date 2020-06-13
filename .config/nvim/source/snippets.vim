@@ -81,3 +81,10 @@ au automation FileType text,markdown inoremap . .<cr>
 
 au automation FileType markdown inoremap ;i ![](/preview)
 
+au automation   FileType text     inoremap    ;b          <Esc>80i-<Esc>o<Esc>80i-<Esc>O-<Esc>30a<space><Esc>i
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Groff 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+au automation   FileType groff     inoremap    ;b          <Esc>40i\"<Esc>o<Esc>40i\"<Esc>O\"<Esc>30a<space><Esc>i

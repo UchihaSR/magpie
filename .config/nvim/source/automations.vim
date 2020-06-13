@@ -2,6 +2,7 @@ au automation  BufWritePost    sxhkdrc              silent !pkill -USR1 sxhkd
 au automation  BufWritePost    gebaard.toml         silent !pkill -USR1 gebaard
 " au automation  BufWritePost    picom.conf           silent !pkill -USR1 picom
 au automation  BufWritePost    cronierc               silent !crontab %
+au automation  BufWritePost    anacronrc               silent !anacron -t %
 au automation  BufWritePost    fcronrc               silent !fcrontab %
 au automation  BufWritePost    incronrc             silent !incrontab %
 au automation  BufWritePost    bspwmrc             silent !sh %
@@ -45,12 +46,12 @@ au automation FileType json syntax match Comment +\/\/.\+$+
 
 au automation BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 
-au automation FileType text,markdown setlocal spell
+au automation FileType text,markdown,groff setlocal spell
 
 " Vimwiki
 " au automation BufRead,BufNewFile /disk/Phone/Notes/*.md set FileType vimwiki
 
-" au automation  BufWritePost    dunstrc                                      silent !killall dunst; dunst &; notify-send 'Head' 'Message'
+au automation  BufWritePost    dunstrc                                      silent !killall dunst; dunst & notify-send 'Head' 'Message'
 " au automation  BufWritePost    rootincronrc                                 silent !doas incrontab %
 " au automation  BufWritePost    rootcronrc                                   silent !doas crontab %
 " au automation  BufWritePost    *Xresources,*Xdefaults  					       silent !xrdb %
@@ -88,3 +89,5 @@ function ArabicMode()
 endfunction
 
 au automation BufRead,BufNewFile *.ar.* call ArabicMode()
+
+au automation BufRead,BufNewFile *.ms set filetype=groff

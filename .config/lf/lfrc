@@ -17,7 +17,8 @@ set period 1
 
 cmd trash %mv $fx ~/.local/share/Trash
 
-cmd open $launch "$f"
+cmd open $launch-swallow "$f"
+# cmd open $launch "$f"
 
 cmd makeScript %{{
    printf "What shall be we call her? : "
@@ -107,7 +108,7 @@ map J $$SHELL
 
 # map o &setsid "$TERMINAL" -e lf $f
 # map o &setsid open "$f"
-map O &launch-choose "$f"
+map o &launch-choose "$f"
 
 map Y &echo $f | xsel -b
 
@@ -118,7 +119,8 @@ map Y &echo $f | xsel -b
 map F %printf "What should we call her? "; read name; touch $name
 map D %printf "What should we call it? "; read name; mkdir $name
 
-map w &setsid $TERMINAL -e $SHELL
+map w &setsid $TERMINAL -e lf -last-dir-path ~/.config/lf/lastPath "$f"
+# map w &setsid $TERMINAL -e $SHELL
 
 map u &sync-dots
 map U $upload $fx

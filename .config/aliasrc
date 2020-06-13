@@ -82,7 +82,7 @@ alias \
    gcsufn="git config --local status.showUntrackedFiles no" \
    grh="git reset --hard" \
    gpf="git push --force" \
-   garu="git add remote upstream" \
+   grau="git remote add upstream" \
    gfu="git fetch upstream" \
    grum="git rebase upstream/master" \
    gcb="git checkout -b" \

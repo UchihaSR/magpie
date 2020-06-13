@@ -12,18 +12,20 @@ export FILE=lf
 export MANPAGER="nvim +Man!"
 export PAGER="nvim -R +AnsiEsc"
 export READER=zathura
-export STATUS_BAR=yabar
 export TERMINAL=alacritty
 export VISUAL=nvim
+export STATUS_BAR=yabar
 export WM=bspwm
+
+# export WM=dwm
+# export STATUS_BAR=uniblocks
 
 ###############################################################################
 #                             System
 ###############################################################################
 
-export NOTIFICATION=/usr/lib/notification-daemon-1.0
-export PATH
-PATH="$PATH:$NOTIFICATION:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:$//')"
+# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
 export INACTIVITY=900
 
@@ -31,6 +33,7 @@ export PANEL_FIFO=/tmp/panel_fifo
 export REC_PID=/tmp/rec_pid
 export UNIBLOCKS_PID=/tmp/ub_pid
 export SEARCH_LIST=/tmp/search_list
+export NODE_ID=/tmp/node_id
 
 export LAYOUT_EN=~/.config/X11/xmodmap-en
 export LAYOUT_AR=~/.config/X11/xmodmap-ar
@@ -147,4 +150,4 @@ export ZDOTDIR=~/.config/zsh
 #                             Swap Escape & Caps Lock
 ###############################################################################
 
-sudo -n loadkeys ~/.local/share/ttyMaps.kmap 2> /dev/null
+sudo -n loadkeys ~/.local/share/misc/ttyMaps.kmap 2> /dev/null

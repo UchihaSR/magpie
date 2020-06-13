@@ -10,14 +10,6 @@ h() {
 
 M() { man "$1" | nvim -R; }
 
-cl() {
-   doas -- pacman -Scc
-   doas -- pacman -Rns "$(pacman -Qtdq)"
-   doas -- rm -rf ~/.local/share/cache/* /var/log/journal/* ~/.local/share/Trash/*
-   find ~ -xtype l -delete
-   find ~ -type d -empty -delete
-}
-
 n() {
    pidof mpd > /dev/null || mpd 2> /dev/null
    ncmpcpp
@@ -50,15 +42,7 @@ vpn() { doas -- openvpn --config ~/.local/share/ovpn/vpnbook-us1-tcp80.ovpn; }
 sf() { fc-list | grep -i "$1"; }
 
 check() {
-
-   # echo "What do you wanna try?"
-   # while read -r line; do
-   #    [ "$line" ] || break
-   #    [ "$code" ] && code="$code\n$line" || code="$line"
-   # done
-
    time sh -c 'for i in $(seq 100); do testy > /dev/null; done'
-
 }
 
 ug() { doas -- grub-mkconfig -o /boot/grub/grub.cfg; }
@@ -68,6 +52,8 @@ mirror() {
       doas tee /etc/pacman.d/mirrorlist && return
    doas -- reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 }
+
+calc() { printf "%s\n" "$*" | bc; }
 
 ################################################################################
 #                             Wifi
