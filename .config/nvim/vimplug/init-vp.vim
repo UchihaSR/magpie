@@ -1,7 +1,3 @@
-augroup automation
-   autocmd!
-augroup END
-
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo 'Downloading junegunn/vim-plug to manage plugins...'
 	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
@@ -11,10 +7,10 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-so ~/.config/nvim/source/plugins/colorschemes.vim
+so ~/.config/nvim/vimplug/colorschemes.vim
 " so ~/.config/nvim/source/plugins/airline.vim
 " so ~/.config/nvim/source/plugins/coc.vim
-so ~/.config/nvim/source/plugins/ale.vim
+so ~/.config/nvim/vimplug/ale.vim
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -23,6 +19,7 @@ Plug 'mhinz/vim-startify'
 Plug 'farmergreg/vim-lastplace'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'sheerun/vim-polyglot'
 
 " Plug 'Yggdroot/indentLine'
 " let g:indentLine_setConceal = 0
@@ -49,8 +46,6 @@ Plug 'tpope/vim-commentary'
 :map		s       gc
 nmap		ss      gcc
 
-" au automation  FileType            xdefaults    setlocal    commentstring=!\ %s
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Hexokinase 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,12 +53,11 @@ nmap		ss      gcc
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 " let g:Hexokinase_highlighters = [ 'virtual' ]
-let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml']
+let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Markdown 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " let g:mkdp_auto_start = 1
@@ -115,6 +109,17 @@ Plug 'mxw/vim-xhp'
 " Plug 'moll/vim-node'
 " Plug 'othree/yajs'
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Python 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'jeetsukumaran/vim-pythonsense'
+" Plug 'vim-python/python-syntax' 
+" Plug 'aliev/vim-compiler-python' 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Emmet 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -161,7 +166,6 @@ nmap f <Plug>(easymotion-overwin-w)
 
 " Plug 'cometsong/CommentFrame.vim'
 " Plug 'tmhedberg/matchit'
-" Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
 " Plug 'metakirby5/codi.vim'
 " Plug 'chrisbra/Colorizer'
@@ -217,5 +221,3 @@ nmap f <Plug>(easymotion-overwin-w)
  " Plug 'vim-scripts/restore_view.vim'
 
 call plug#end()
-
-au automation  FileType            json         setlocal    commentstring=//\ %s

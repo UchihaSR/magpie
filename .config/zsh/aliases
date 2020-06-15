@@ -1,0 +1,144 @@
+#!/bin/sh
+
+################################################################################
+#                             Globals 
+################################################################################
+
+alias  -g da="doas --"
+
+################################################################################
+#                             MVPs 
+################################################################################
+
+alias  c="clear" 
+alias  cc="calcurse"
+alias  cpr="cp -r"
+alias  dcpr="da cp -r"
+alias  dka="da killall"
+alias  dlf="da lf"
+alias  dmd="da mkdir"
+alias  dmv="da mv"
+alias  drm="da rm -rf"
+alias  e="exit"
+alias  f="explore"
+alias  gsl="gen-search-list"
+alias  k="xev -event keyboard"
+alias  ka="killall"
+alias  m="neomutt"
+alias  md="mkdir"
+alias  ns="notify-send"
+alias  p="patch -p1 <"
+alias  s="search-fzf"
+alias  S="ssh -p 8022 192.168.0.101"
+alias  t="htop"
+alias  u="da pacman -Syyu --noconfirm; yay -Syyu --noconfirm"
+alias  v="nvim"
+alias  x="xprop"
+alias  xmqf="xdg-mime query filetype"
+alias  src=". ~/.config/functionrc && . ~/.config/aliasrc"
+alias  msa="mbsync -c ~/.config/isync/mbsyncrc -a"
+alias  dj="da journalctl -p 3 -xb"
+alias  yd="youtube-dl -x -f bestaudio/best"
+alias  ydv="youtube-dl -f best"
+
+# yd="youtube-dl -x --audio-format mp3 --audio-quality 0"
+
+# Pacman & Yay
+alias  dps="da pacman -S"
+alias  dpsn="da pacman -S --needed"
+alias  dpsnn="da pacman -S --needed --noconfirm "
+alias  ys="yay -S"
+alias  ysn="yay -S --noconfirm"
+alias  dprn="da pacman -Rns --noconfirm"
+alias  pq="pacman -Qs"
+alias  pqe="pacman -Qqe"
+
+# Systemctl
+alias  dse="da systemctl enable"
+alias  dsd="da systemctl disable"
+alias  dss="da systemctl start"
+alias  dsS="da systemctl stop"
+alias  dsf="da systemctl --failed"
+alias  sab="systemd-analyze blame"
+
+################################################################################
+#                             Git 
+################################################################################
+
+alias  gi="git init"
+alias  ga="git add"
+alias  gaa="ga ."
+alias  gs="git status"
+alias  gc="git commit -m 'Update'"
+alias  gcm="git commit -m"
+alias  gca="gc -a"
+alias  gp="git push"
+alias  gpo="git push origin"
+alias  gac="gaa && gc"
+alias  gacp="gaa && gc && gp"
+alias  gpo="gp -u origin"
+alias  gpom="gpo master"
+alias  gpos="gpo slave"
+alias  gP="git pull"
+alias  gb="git branch"
+alias  gbd="gb -D"
+alias  gC="git checkout"
+alias  gm="git merge"
+alias  gpod="gpo --delete"
+alias  grh="git reset HEAD"
+alias  gcsufn="git config --local status.showUntrackedFiles no"
+alias  grh="git reset --hard"
+alias  gpf="git push --force"
+alias  grau="git remote add upstream"
+alias  gfu="git fetch upstream"
+alias  grum="git rebase upstream/master"
+alias  gcb="git checkout -b"
+# ug="cd $DF; git commit -a -m"update\" && git push -u origin master"
+
+# NPM
+alias  niy="npm init -y"
+alias  ni="npm install"
+alias  dnig="da npm install -g"
+alias  nis="npm install --save"
+alias  nisd="npm install --save-dev"
+alias  nrd="npm run dev"
+alias  nrs="npm run start"
+alias  ncra="npx create-react-app"
+
+# Power
+alias  sS='systemctl suspend'
+alias  pku='pkill -KILL -u $USER'
+alias  po='poweroff'
+alias  rb='reboot'
+
+# Make
+alias  dmi="da make install"
+alias  dmci="da make clean install"
+alias  dmu="da make uninstall"
+
+# Colorize commands when possible.
+alias  ls="ls -hN --color=auto --group-directories-first"
+alias  grep="grep --color=auto"
+alias  diff="diff --color=auto"
+
+# lsd
+alias  l="lsd"
+alias  l1="lsd -1"
+alias  lA1="lsd -1A"
+alias  lAl="lsd -Al"
+alias  lt="lsd --tree"
+alias  lAt="lsd -A --tree"
+
+# # XBPS
+# alias
+#    dxi="da xbps-install"
+#    dxis="da xbps-install -S"
+#    dxisy="da xbps-install -Sy"
+#    dxrry="da xbps-remove -Ry"
+#    dxisuy="da xbps-install -Suy"
+#    xqrs="xbps-query -Rs"
+
+# # Runit
+# alias
+#    dsu="da sv up"
+#    dsd="da sv down"

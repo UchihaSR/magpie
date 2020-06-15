@@ -4,7 +4,7 @@ show-icons: true;
 hide-scrollbar: true;
 sort: true;
 sorting-method: "fzf";
-font: "mono Bold 14";
+font: "sans-serif 15";
 
 /* kb-accept-entry: "Return,KP_Enter,space"; */
 

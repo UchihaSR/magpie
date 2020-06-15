@@ -56,7 +56,7 @@ au automation  FileType markdown,vimwiki    inoremap    ;f     \frac{}{<*>}<esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " au automation FileType    sh,conf      inoremap    ;b          <Esc>60i#<Esc>o<Esc>60i#<Esc>O#<Esc>20a<space><Esc>i
-au automation   FileType sh,conf,yaml,sxhkd,zsh     inoremap    ;b          <Esc>80i#<Esc>o<Esc>80i#<Esc>O#<Esc>30a<space><Esc>i
+au automation FileType sh,conf,yaml,sxhkd,zsh,python inoremap ;b <Esc>80i#<Esc>o<Esc>80i#<Esc>O#<Esc>30a<space><Esc>i
 
 au automation FileType    sh           inoremap    ;s         #!/usr/bin/env sh<cr><cr>
 
@@ -88,3 +88,13 @@ au automation   FileType text     inoremap    ;b          <Esc>80i-<Esc>o<Esc>80
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 au automation   FileType groff     inoremap    ;b          <Esc>40i\"<Esc>o<Esc>40i\"<Esc>O\"<Esc>30a<space><Esc>i
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Python 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+au automation FileType sh,conf,yaml,sxhkd,zsh,python inoremap ;b <Esc>79i#<Esc>o<Esc>79i#<Esc>O#<Esc>30a<space><Esc>i
+
+au automation FileType python inoremap ;p print()<left>
+
+

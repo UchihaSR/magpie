@@ -1,6 +1,4 @@
-################################################################################
-#                              
-################################################################################
+# Config SXHKD
 
 super + Return
 	$TERMINAL
@@ -59,7 +57,7 @@ super + backslash
 	xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
 
 super + shift + n
-	toggle-notify
+	toggle-notification
 
 ################################################################################
 #                             System 
@@ -90,7 +88,8 @@ KP_Insert
 #     systemctl suspend
 
 KP_Delete
-	pkill -u $USER
+	bspc quit
+	# pkill -u $USER
 	# pkill -KILL -u $USER
 
 KP_Add
@@ -166,6 +165,7 @@ F7
 # Navigate Nodes
 super + {_,shift} + {k,l}
 	bspc node -{f,s} {prev,next}.local
+	# bspc node -{f,s} {prev,next}.local
 
 super + {_,shift} + {j,semicolon}
 	bspc {desktop -f,node -d} {prev,next}
@@ -175,9 +175,8 @@ super + {_,shift} + n
 	bspc node -{c,k}
 
 # Toggle Tiled / Monocle
-super + m
-	bspc desktop -l next
-	# one-monocle
+super + {_,shift} + m
+	{bspc desktop -l next,tog-trans-moncl}
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}
@@ -211,7 +210,7 @@ super + i
 
 # Fullscreen
 super + shift + f
-    toggle-fullscreen
+    tog-trans-fs
 
 # # Focus / Swap
 # super + {_,shift} + {j,l,semicolon,k}

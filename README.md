@@ -1,5 +1,5 @@
 # Magpie
-Dotfiles of my minimal GNU/Linux system geared for media, programming & writing.
+Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 # Highlights
    * **zsh** (Shell)

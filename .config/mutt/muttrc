@@ -3,6 +3,8 @@ set smtp_url = "smtps://$MAIL1_ADDR:$MAIL1_PASS@smtp.gmail.com"
 set from = "$MAIL1_ADDR"
 set realname = "Salman Abedin"
 
+set mailcap_path = "~/.config/mutt/mailcap"
+
 set spoolfile = +INBOX
 # set record = "+Sent"
 # set trash = "+Trash"

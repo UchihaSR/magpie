@@ -4,11 +4,11 @@
 # doas killall compton mpd polybar connman-vpnd picom
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
+
 # Launch Transmission Daemon
 # transmission-daemon &
-
-# Clears existing processes
-doas killall gebaard unclutter xcape sxhkd xss-lock xcompmgr transmission-daemon dunst
+# Launches Sync-dots daemon
+sync-dots &
 # Generates search list
 gen-search-list &
 # Sets DPI (dpi.lv)

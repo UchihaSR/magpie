@@ -24,8 +24,7 @@ export WM=bspwm
 #                             System
 ###############################################################################
 
-PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:$//')"
-# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export GIT=/home/git
 
 export INACTIVITY=900
 
@@ -101,15 +100,15 @@ ex=🎯:\
 *.json=📒:\
 "
 
-[ -f ~/.private ] && . ~/.private
+. /home/git/own/private/.private 2> /dev/null
 
 ###############################################################################
 #                             Maintain a Clean Home Directory
 ###############################################################################
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME=~/.config
+export XDG_DATA_HOME=~/.local/share
+export XDG_CACHE_HOME=~/.cache
 
 export GNUPGHOME=~/.local/share/gnupg
 export GOPATH=~/.local/share/go
@@ -122,6 +121,18 @@ export WGETRC=~/.config/wget/wgetrc
 export XAUTHORITY=~/.config/X11/.Xauthority
 export XDG_CACHE_HOME=~/.local/share/cache
 export ZDOTDIR=~/.config/zsh
+
+################################################################################
+#                             Paths 
+################################################################################
+
+# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:$//')"
+
+PATH=$PATH:~/.local/bin
+PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
+PATH=$PATH:$GIT/own/uniblocks
+export PATH
 
 ###############################################################################
 #                             Misc

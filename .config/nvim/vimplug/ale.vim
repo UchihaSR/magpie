@@ -12,18 +12,22 @@ let g:ale_virtualtext_prefix = '   <--   💡 '
 let g:ale_use_global_executables = 1
 
 let g:ale_linters = {
-      \   'sh':           ['shellcheck'],
-      \   'vim':           ['vint'],
-      \   'sass':           ['sasslint'],
-      \   'scss':           ['sasslint'],
-      \   'javascript':   ['eslint'],
-      \   'javascriptreact':   ['eslint'],
-      \   'json':   ['jsonlint'],
-      \   'typescript':   ['tsserver'],
-      \   'typescriptreact':   ['tsserver'],
-      \   'text':   ['write-good'],
-      \   'c':   ['clang'],
-      \}
+         \   'sh':           ['shellcheck'],
+         \   'vim':           ['vint'],
+         \   'sass':           ['sasslint'],
+         \   'scss':           ['sasslint'],
+         \   'javascript':   ['eslint'],
+         \   'javascriptreact':   ['eslint'],
+         \   'json':   ['jsonlint'],
+         \   'typescript':   ['tsserver'],
+         \   'typescriptreact':   ['tsserver'],
+         \   'text':   ['write-good'],
+         \   'c':   ['clang'],
+         \   'python':   ['flake8'],
+         \   'yaml':   ['yamllint'],
+         \}
+
+" \   'python':   ['flake8', 'pylint'],
 
 let g:ale_javascript_eslint_options = '-c ~/.config/eslintrc.json'
 " let g:ale_scss_sasslint_options = '-s sass'
@@ -40,15 +44,17 @@ nmap gl <Plug>(ale_next_wrap)
 " highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_fixers = {
-      \   'json': ['prettier', 'fixjson'],
-      \   'sh': ['shfmt'],
-      \   'sass': ['prettier'],
-      \   'css': ['prettier'],
-      \   'scss': ['prettier'],
-      \   'html': ['prettier'],
-      \   'javascript': ['prettier'],
-      \   'c': ['clang-format'],
-      \}
+         \   'json': ['prettier', 'fixjson'],
+         \   'sh': ['shfmt'],
+         \   'sass': ['prettier'],
+         \   'css': ['prettier'],
+         \   'scss': ['prettier'],
+         \   'html': ['prettier'],
+         \   'javascript': ['prettier'],
+         \   'yaml': ['prettier'],
+         \   'c': ['clang-format'],
+         \   'python': ['autopep8'],
+         \}
 " \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 let g:ale_sh_shfmt_options = '-p -i 3 -ci -s -sr'
 " let g:ale_c_clangformat_options = '--style=LLVM'

@@ -1,4 +1,4 @@
-#!/bin/bash
+# Gebaard Configuration
 
 [commands.swipe.three]
 # left = "xdotool key alt+Left"

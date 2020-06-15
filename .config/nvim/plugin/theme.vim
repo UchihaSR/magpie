@@ -5,7 +5,7 @@ scriptencoding utf-8
 " syntax on
 " set t_8f=[38;2;%lu;%lu;%lum
 " set t_8b=[48;2;%lu;%lu;%lum
-set termguicolors
+" set termguicolors
 " set t_Co=256
 " set bg=light
 " set bg=dark
@@ -16,6 +16,8 @@ set termguicolors
 
 colorscheme one
 let g:one_allow_italics = 1
+
+" colorscheme seoul256
 
 " colorscheme monokai
 " let g:monokai_term_italic = 1

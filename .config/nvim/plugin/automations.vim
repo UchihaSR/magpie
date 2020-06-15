@@ -1,21 +1,13 @@
-au automation  BufWritePost    sxhkdrc              silent !pkill -USR1 sxhkd
-au automation  BufWritePost    gebaard.toml         silent !pkill -USR1 gebaard
-" au automation  BufWritePost    picom.conf           silent !pkill -USR1 picom
-au automation  BufWritePost    cronierc               silent !crontab %
-au automation  BufWritePost    anacronrc               silent !anacron -t %
-au automation  BufWritePost    fcronrc               silent !fcrontab %
-au automation  BufWritePost    incronrc             silent !incrontab %
-au automation  BufWritePost    bspwmrc             silent !sh %
-au automation  BufWritePost    *.rules					 !doas -- udevadm control --reload
+au automation  BufWritePost sxhkdrc       silent !pkill -USR1 sxhkd
+au automation  BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
+" au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
+au automation  BufWritePost cronierc      !crontab %
+" au automation  BufWritePost cronierc      silent !crontab %
+au automation  BufWritePost bspwmrc       silent !sh %
+au automation  BufWritePost *.rules       !doas -- udevadm control --reload
 
-au automation  BufWritePost    *.scss,*.sass        silent !compile %
-au automation  BufWritePost    config.h             !compile %
-" au automation  BufWritePost    practice.sh          !compile %
-
-au automation  BufWritePost    testy                !sh %
-au automation  BufWritePost    *.ms                silent !compile %
-
-au automation  VimLeave    *.c,*.tex   !clean-junk %
+au automation  BufWritePost    test.sh              !sh %
+au automation  BufWritePost    test.py              !python %
 
 " Vertically center document when entering insert mode
 au automation  InsertEnter *   norm zz
@@ -51,7 +43,9 @@ au automation FileType text,markdown,groff setlocal spell
 " Vimwiki
 " au automation BufRead,BufNewFile /disk/Phone/Notes/*.md set FileType vimwiki
 
-au automation  BufWritePost    dunstrc                                      silent !killall dunst; dunst & notify-send 'Head' 'Message'
+au automation  BufWritePost dunstrc silent !killall dunst && dunst & notify-send 'Head' 'Message'
+
+" au automation  BufWritePost    dunstrc                                      silent !killall dunst; dunst & notify-send 'Head' 'Message'
 " au automation  BufWritePost    rootincronrc                                 silent !doas incrontab %
 " au automation  BufWritePost    rootcronrc                                   silent !doas crontab %
 " au automation  BufWritePost    *Xresources,*Xdefaults  					       silent !xrdb %
@@ -69,25 +63,12 @@ au automation  BufWritePost    dunstrc                                      sile
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "require(rmarkdown); rmarkdown::render('%', quiet=TRUE)"
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "rmarkdown::render('%', quiet=TRUE)"
 
-function ArabicMode()
-
-   set nospell
-   set rightleft
-   set delcombine
-   set arabicshape
-
-   :noremap    ;           h
-   :noremap    j           l
-   :noremap	   :    	      b
-   :noremap	   J    	      e
-   :noremap    <leader>;	^
-   :noremap    <leader>j	$
-
-   au automation  InsertEnter *   silent !xmodmap $LAYOUT_AR
-   au automation  InsertLeave *   silent !xmodmap $LAYOUT_EN
-
-endfunction
-
-au automation BufRead,BufNewFile *.ar.* call ArabicMode()
-
 au automation BufRead,BufNewFile *.ms set filetype=groff
+
+au automation  BufWritePost *.scss,*.sass,*.ms   silent !compile %
+au automation  BufWritePost config.h             !compile %
+
+au automation  VimLeave    *.c,*.tex   !clean-junk %
+
+au automation BufRead,BufNewFile .*profile set filetype=sh
+

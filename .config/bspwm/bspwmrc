@@ -15,7 +15,7 @@ bspc rule -a    Screenkey manage=off
 
 bspc monitor -d                           	1 2 3 4 5
 bspc desktop -f 	                        3
-bspc desktop -l			                next
+# bspc desktop -l			                next
 
 bspc config automatic_scheme 			spiral
 bspc config initial_polarity			first_child

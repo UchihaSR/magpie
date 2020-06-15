@@ -1,3 +1,4 @@
+" Plug 'junegunn/seoul256.vim'
 " Plug 'tomasr/molokai'
 " Plug 'nanotech/jellybeans.vim'
 " Plug 'patstockwell/vim-monokai-tasty'

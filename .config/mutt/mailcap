@@ -1,0 +1,4 @@
+text/html; firefox %s; nametemplate=%s.html
+image/*; launch-swallow %s;
+application/pdf; launch-swallow %s;
+video/*; launch-swallow %s;

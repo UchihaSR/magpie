@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,34 +7,43 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#!/usr/bin/env zsh
 
 setopt promptsubst
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-autoload -U colors && colors
-PS1=""
+
+################################################################################
+#                             Prompt 
+################################################################################
+
+autoload -U colors
+colors
+
+PS1=" "
 PS1+="%B"
-if [ "$EUID" -ne 0 ];then
-    PS1+="%{$fg[blue]%}[ %~ ]"
-else
-    PS1+="%{$fg[red]%}[ %~ ]"
-fi
-# PS1+="%{$fg[blue]%}[ %~ ]"
-# PS1+=" 💲 "
-PS1+="%{$fg[yellow]%} => "
-# PS1+="%{$fg[red]%}[ "
-# PS1+="%{$fg[yellow]%}%n"
-# PS1+="%{$fg[green]%}@"
-# PS1+="%{$fg[blue]%}%M "
-# PS1+="%{$fg[magenta]%}%~"
-# PS1+="%{$fg[red]%} ]"
+
+[ "$EUID" = 0 ] &&
+   PS1+="%{$fg[red]%}%1~ " ||
+   PS1+="%{$fg[blue]%}%1~ "
+
+PS1+="%{$fg[red]%}%(1j.*.) "
+PS1+="%{$fg[yellow]%}%(?..!) "
 PS1+="%{$reset_color%}%b"
 
+[ "$EUID" = 0 ] &&
+   PS1+="  " ||
+   PS1+="💲 "
+
 # PS1=$'${(r:$COLUMNS::_:)}\n\n'$PS1
-PS1=$'%U${(r:$COLUMNS:: :)}%u\n\n'$PS1
+# PS1=$'%U${(r:$COLUMNS:: :)}%u\n\n'$PS1
+
+################################################################################
+#                             Completions
+################################################################################
+
+fpath=($HOME/.config/zsh/completions $fpath)
 
 ## Basic auto/tab complete:
 autoload -U compinit
@@ -41,14 +52,51 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 zmodload zsh/complist
-compinit
+# compinit
+compinit -u
 _comp_options+=(globdots)		# Include hidden files.
 setopt COMPLETE_ALIASES         # Alias auto completions
 # zstyle ':completion::complete:*' gain-privileges 1
 
+
+# Make completion:
+# - Case-insensitive.
+# - Accept abbreviations after . or _ or - (ie. f.b -> foo.bar).
+# - Substring complete (ie. bar -> foobar).
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# Colorize completions using default `ls` colors.
+zstyle ':completion:*' list-colors ''
+
+################################################################################
+#                             Options 
+################################################################################
+
+setopt autocd               # .. is shortcut for cd .. (etc)
+setopt autoparamslash       # tab completing directory appends a slash
+setopt autopushd            # cd automatically pushes old dir onto dir stack
+setopt clobber              # allow clobbering with >, no need to use >!
+setopt correct              # command auto-correction
+setopt correctall           # argument auto-correction
+setopt noflowcontrol        # disable start (C-s) and stop (C-q) characters
+setopt nonomatch            # unmatched patterns are left unchanged
+setopt histignorealldups    # filter duplicates from history
+setopt histignorespace      # don't record commands starting with a space
+setopt histverify           # confirm history expansion (!$, !!, !foo)
+setopt ignoreeof            # prevent accidental C-d from exiting shell
+setopt interactivecomments  # allow comments, even in interactive shells
+setopt printexitvalue       # for non-zero exit status
+setopt pushdignoredups      # don't push multiple copies of same dir onto stack
+setopt pushdsilent          # don't print dir stack after pushing/popping
+setopt sharehistory         # share history across shells
+
+################################################################################
+#                             Misc 
+################################################################################
+
 ## History in cache directory:
 HISTSIZE=10000
-SAVEHIST=10000
+SAVEHIST=$HISTSIZE
 HISTFILE=~/.config/zsh/history
 
 
@@ -78,7 +126,9 @@ echo -ne '\e[5 q'
 ## Use beam shape cursor for each new prompt.
 preexec() { echo -ne '\e[5 q' ;}
 
-## -------------------------------[ Key Bindings ]-------------------------------
+################################################################################
+#                             Bindings
+################################################################################
 
 ## vi mode
 bindkey -v
@@ -91,9 +141,11 @@ bindkey -M menuselect 'l' vi-down-line-or-history
 bindkey -M menuselect ';' vi-forward-char
 
 bindkey -M vicmd 'j' vi-backward-char
+bindkey -M vicmd ';' vi-forward-char
+bindkey -M vicmd 'J' vi-backward-word
+bindkey -M vicmd ':' vi-forward-word
 bindkey -M vicmd 'k' vi-up-line-or-history
 bindkey -M vicmd 'l' vi-down-line-or-history
-bindkey -M vicmd ';' vi-forward-char
 
 # bindkey     "^[j"   backward-char
 # bindkey     "^[k"   up-line-or-history
@@ -152,15 +204,30 @@ bindkey -M vicmd ';' vi-forward-char
 # [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 # [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
-## Sources Aliases and Functions
-[ -f ~/.config/aliasrc ]        && . ~/.config/aliasrc
-[ -f ~/.config/functionrc ]    && . ~/.config/functionrc
+################################################################################
+#                             Sources 
+################################################################################
 
+[ -f ~/.config/zsh/aliases ] && . ~/.config/zsh/aliases
+[ -f ~/.config/zsh/functions ] && . ~/.config/zsh/functions
+
+################################################################################
+#                             Plugins 
+################################################################################
+
+# # autosuggestions
+# [ -f /home/git/others/zsh-autosuggestions/zsh-autosuggestions.zsh ] &&
+#    . /home/git/others/zsh-autosuggestions/zsh-autosuggestions.zsh 
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
+
+# powerleve10k
 # [ -f /home/git/others/zsh_powerlevel10k/powerlevel10k.zsh-theme ] &&
 #    . /home/git/others/zsh_powerlevel10k/powerlevel10k.zsh-theme 
 
-## Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || . ~/.config/zsh/.p10k.zsh
+
+. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

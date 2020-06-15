@@ -134,6 +134,8 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 nnoremap        <leader>t       maggVG='a
 
+nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Spelling 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -151,4 +153,4 @@ nnoremap    <leader>A   zug
 au automation FileType markdown,text nnoremap gk [s
 au automation FileType markdown,text nnoremap gl ]s
 
-nnoremap    <leader>g   :Goyo!<cr>
+" nnoremap    <leader>g   :Goyo!<cr>
