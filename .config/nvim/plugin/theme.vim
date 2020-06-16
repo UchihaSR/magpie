@@ -14,8 +14,8 @@ scriptencoding utf-8
 "                                       Color Schemes 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme one
-let g:one_allow_italics = 1
+" colorscheme one
+" let g:one_allow_italics = 1
 
 " colorscheme seoul256
 
@@ -35,7 +35,7 @@ let g:one_allow_italics = 1
 
 " colorscheme gruvbox
 " colorscheme gruvbox8
-" colorscheme gruvbox-material
+colorscheme gruvbox-material
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1

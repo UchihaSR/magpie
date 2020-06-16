@@ -9,7 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 so ~/.config/nvim/vimplug/colorschemes.vim
 " so ~/.config/nvim/source/plugins/airline.vim
-" so ~/.config/nvim/source/plugins/coc.vim
+" so ~/.config/nvim/vimplug/coc.vim
 so ~/.config/nvim/vimplug/ale.vim
 
 Plug 'jiangmiao/auto-pairs'

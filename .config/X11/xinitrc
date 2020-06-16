@@ -5,16 +5,16 @@
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
 
-# Launch Transmission Daemon
+# Launches Transmission Daemon
 # transmission-daemon &
-# Watch mails
+# Monitors mail directory
 watch-mails &
-# Launches Sync-dots daemon
-sync-dots &
-# Generates search list
-gen-search-list &
+# Monitors dotfiles
+watch-dots &
 # Sets DPI (dpi.lv)
 set-dpi &
+# Generates search list
+gen-search-list &
 # Sets Locker
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper

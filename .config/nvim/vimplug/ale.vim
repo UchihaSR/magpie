@@ -25,6 +25,7 @@ let g:ale_linters = {
          \   'c':   ['clang'],
          \   'python':   ['flake8'],
          \   'yaml':   ['yamllint'],
+         \   'tex':   ['chktex', 'lacheck'],
          \}
 
 " \   'python':   ['flake8', 'pylint'],

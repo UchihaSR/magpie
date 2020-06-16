@@ -4,7 +4,7 @@
 #                             Defaults
 ###############################################################################
 
-export COMPOSITOR="picom -b"
+export COMPOSITOR="xcompmgr -cCfF"
 export BROWSER=firefox
 export DMENU="rofi -dmenu -i"
 export EDITOR=nvim
@@ -19,6 +19,7 @@ export WM=bspwm
 
 # export WM=dwm
 # export STATUS_BAR=uniblocks
+# export COMPOSITOR="picom -b"
 
 ###############################################################################
 #                             System

@@ -10,6 +10,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "             \ 'coc-vimlsp',
 "             \ 'coc-emmet',
 "             \ 'coc-python',
+"             \ 'coc-texlab',
 "             \ ]
 
 " " Use tab for trigger completion with characters ahead and navigate.
