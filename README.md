@@ -18,8 +18,6 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 # Installation
    * [MISS: Magpie Installer Shell Script](https://github.com/salman-abedin/miss)
 
-![](https://cloud.disroot.org/s/Cb5id8gsJTzoo6H/preview)
-
 ![](https://cloud.disroot.org/s/YHjELDteXdqYdqn/preview)
 
 ![](https://cloud.disroot.org/s/DNQmrBn5B2b56zP/preview)
