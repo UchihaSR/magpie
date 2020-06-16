@@ -1,26 +1,20 @@
-au automation  BufWritePost sxhkdrc       silent !pkill -USR1 sxhkd
-au automation  BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
-" au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
-au automation  BufWritePost cronierc      !crontab %
-" au automation  BufWritePost cronierc      silent !crontab %
-au automation  BufWritePost bspwmrc       silent !sh %
-au automation  BufWritePost *.rules       !doas -- udevadm control --reload
+au automation FocusGained,BufEnter * checktime
 
-au automation  BufWritePost    test.sh              !sh %
-au automation  BufWritePost    test.py              !python %
+au automation  VimLeave    *.c,*.tex   !clean-junk %
 
 " Vertically center document when entering insert mode
 au automation  InsertEnter *   norm zz
+
+" JSON Comment Viewer
+au automation FileType json syntax match Comment +\/\/.\+$+
+
+" Disables automatic commenting on newline:
+au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
    highlight! link DiffText MatchParen
 endif
-
-" Disables automatic commenting on newline:
-au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-au automation FocusGained,BufEnter * checktime
 
 " Auto Fold at Startup
 " au automation VimEnter * normal zM
@@ -31,19 +25,11 @@ au automation FocusGained,BufEnter * checktime
 " Goyo Fix
 " au! automation User GoyoLeave silent! so ~/.config/nvim/init.vim
 
-au automation BufWritePost */dwmblocks/config.h, */uniBlocks/*     !doas make install && { killall -q dwmblocks;setsid dwmblocks & }
+" au automation BufWritePost */dwmblocks/config.h, */uniBlocks/*     !doas make install && { killall -q dwmblocks;setsid dwmblocks & }
 
-" JSON Comment Viewer
-au automation FileType json syntax match Comment +\/\/.\+$+
-
-au automation BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-
-au automation FileType text,markdown,groff setlocal spell
 
 " Vimwiki
 " au automation BufRead,BufNewFile /disk/Phone/Notes/*.md set FileType vimwiki
-
-au automation  BufWritePost dunstrc silent !killall dunst && dunst & notify-send 'Head' 'Message'
 
 " au automation  BufWritePost    dunstrc                                      silent !killall dunst; dunst & notify-send 'Head' 'Message'
 " au automation  BufWritePost    rootincronrc                                 silent !doas incrontab %
@@ -54,7 +40,6 @@ au automation  BufWritePost dunstrc silent !killall dunst && dunst & notify-send
 " au automation  BufWritePost    modules.ini,colors.ini                	    silent !pkill -USR1 polybar
 
 " au automation  BufWritePost    bspwmblocks                                 !killall bspwmblocks
-" au automation  BufWritePost    yabar.conf                                  silent !pkill yabar && yabar &
 " au automation  BufWritePost    yabar.conf                                  silent !killall yabar; yabar &
 
 " au automation  BufWritePost    *.c                     !gcc % && ./a.out
@@ -62,13 +47,4 @@ au automation  BufWritePost dunstrc silent !killall dunst && dunst & notify-send
 
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "require(rmarkdown); rmarkdown::render('%', quiet=TRUE)"
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "rmarkdown::render('%', quiet=TRUE)"
-
-au automation BufRead,BufNewFile *.ms set filetype=groff
-
-au automation  BufWritePost *.scss,*.sass,*.ms   silent !compile %
-au automation  BufWritePost config.h             !compile %
-
-au automation  VimLeave    *.c,*.tex   !clean-junk %
-
-au automation BufRead,BufNewFile .*profile set filetype=sh
 

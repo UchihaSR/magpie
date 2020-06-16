@@ -5,10 +5,10 @@
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
 
-# Watch mails
-watch-mails &
 # Launch Transmission Daemon
 # transmission-daemon &
+# Watch mails
+watch-mails &
 # Launches Sync-dots daemon
 sync-dots &
 # Generates search list
