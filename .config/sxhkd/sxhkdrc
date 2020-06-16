@@ -195,7 +195,7 @@ super + alt + shift + {j,l,semicolon,k}
 
 # Toggle gaps
 super + s
-    bspc config window_gap {75,100,0,25,50}
+    bspc config window_gap {50, 75,100,0,25}
 
 # Rotate 
 super + comma

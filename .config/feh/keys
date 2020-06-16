@@ -1,3 +1,5 @@
+# Feh Configuration
+
 #Unset
 toggle_info
 toggle_keep_vp
@@ -10,8 +12,11 @@ toggle_filenames
 
 next_img		semicolon
 prev_img    j
-zoom_in 		l
-zoom_out		k
+next_img		l
+prev_img    k
+
+zoom_in 		m
+zoom_out		n
 
 scroll_right	J
 scroll_left		colon
@@ -23,4 +28,4 @@ orient_1	O
 mirror		m
 delete		d
 
-quit 		n
+quit 		h
