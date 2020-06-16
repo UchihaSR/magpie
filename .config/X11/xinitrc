@@ -5,6 +5,8 @@
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
 
+# Monitors shortcut paths
+# watch-list &
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launches Compositor
@@ -16,7 +18,7 @@ watch-dots &
 # Sets DPI (dpi.lv)
 set-dpi &
 # Generates search list
-bolt &
+generate-list &
 # Sets Locker
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
