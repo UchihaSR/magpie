@@ -13,13 +13,15 @@ let g:ale_use_global_executables = 1
 
 let g:ale_linters = {
          \   'c':   ['clang'],
+         \   'groff':   ['write-good'],
          \   'markdown':   ['write-good'],
+         \   'python':   ['flake8'],
          \   'javascript':   ['eslint'],
          \   'javascriptreact':   ['eslint'],
          \   'json':   ['jsonlint'],
+         \   'nroff':   ['write-good'],
          \   'typescript':   ['tsserver'],
          \   'typescriptreact':   ['tsserver'],
-         \   'python':   ['flake8'],
          \   'sass':           ['sasslint'],
          \   'scss':           ['sasslint'],
          \   'sh':           ['shellcheck'],
