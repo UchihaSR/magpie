@@ -7,6 +7,8 @@
 
 # Launches Transmission Daemon
 # transmission-daemon &
+# Launches Compositor
+sh -c "sleep 1 && $COMPOSITOR" & 
 # Monitors mail directory
 watch-mails &
 # Monitors dotfiles
@@ -19,8 +21,6 @@ gen-search-list &
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
 set-bg &
-# Launches Compositor
-sh -c "sleep 1 && $COMPOSITOR" & 
 # Speeds key reapeat of pressing
 xset r rate 200 30 & 
 # Launch notification server

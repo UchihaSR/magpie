@@ -10,9 +10,13 @@ scriptencoding utf-8
 " set bg=light
 " set bg=dark
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                       Color Schemes 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Color Schemes
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Available values: 'hard', 'medium'(default), 'soft'
+" let g:gruvbox_material_background = 'soft'
+colorscheme gruvbox-material
 
 " colorscheme one
 " let g:one_allow_italics = 1
@@ -32,17 +36,15 @@ scriptencoding utf-8
 " colorscheme sublimemonokai
 " let g:sublimemonokai_term_italic = 1
 
-
 " colorscheme gruvbox
 " colorscheme gruvbox8
-colorscheme gruvbox-material
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
 
 " colorscheme minimalist
-" let g:airline_theme='minimalist'
+" " let g:airline_theme='minimalist'
 
 " colorscheme onedark
 
@@ -56,9 +58,9 @@ colorscheme gruvbox-material
 "colorscheme flattened_dark
 " colorscheme monokai_pro
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                       Cursor 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Cursor 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 hi clear CursorLine
 hi CursorLine gui=underline
@@ -76,11 +78,11 @@ highlight Normal 	      guibg=NONE
 highlight SignColumn    guibg=NONE
 highlight Pmenu         guibg=NONE
 highlight CursorLineNR  guibg=NONE
+highlight EndOfBuffer   guibg=NONE
 
 highlight Visual       guibg=NONE guifg=#00FF00
 
 " hi LineNr 	    guibg=NONE
-" hi EndOfBuffer  guibg=NONE
 " highlight NonText      guibg=NONE
 
 " highlight clear SpellBadi

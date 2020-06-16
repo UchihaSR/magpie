@@ -7,10 +7,30 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-so ~/.config/nvim/vimplug/colorschemes.vim
+so ~/.config/nvim/vimplug/ale.vim
 " so ~/.config/nvim/source/plugins/airline.vim
 " so ~/.config/nvim/vimplug/coc.vim
-so ~/.config/nvim/vimplug/ale.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Color Schemes 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Plug 'junegunn/seoul256.vim'
+" Plug 'tomasr/molokai'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'dikiaap/minimalist'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'lifepillar/vim-gruvbox8'
+" Plug 'joshdick/onedark.vim'
+" Plug 'mhartington/oceanic-next'
+Plug 'iCyMind/NeoSolarized'
+Plug 'rakr/vim-one'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Essentials 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
