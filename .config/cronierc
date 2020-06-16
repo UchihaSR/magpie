@@ -12,14 +12,12 @@ GIT=/home/git
 # */60		*		*		*		*		~/.config/cron/update
 # * 		* 		* 		* 		* 		notify-send -t 3000 -i ~/.icons/system/update.png  '😀 Summary' 'Body'
 
-# */5 		* 		* 		* 		* 		   monitor-battery
+*/5 		* 		* 		* 		* 		   monitor-battery
 
 @hourly check-storage
 @hourly sync-git
 @hourly sync-calcurse
 
 # * 		* 		* 		* 		* 		notify-send -t 3000 -i ~/.icons/system/update.png  '😀 Summary' 'Body'
-
-* 		* 		* 		* 		* 		   sync-git
 
 
