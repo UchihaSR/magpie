@@ -40,6 +40,7 @@ export LAYOUT_BN=~/.config/X11/xmodmap-bn
 
 export ICONS=~/.icons/system
 export WALL=~/.local/share/wallpapers/wall.jpg
+export DONT_DISTURB_MODE=/tmp/ddm
 
 export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 

@@ -15,9 +15,8 @@ GIT=/home/git
 */5 		* 		* 		* 		* 		   monitor-battery
 
 @hourly check-storage
-@hourly sync-git
-@hourly sync-calcurse
+@hourly sync-all
 
 # * 		* 		* 		* 		* 		notify-send -t 3000 -i ~/.icons/system/update.png  '😀 Summary' 'Body'
 
-
+* 		* 		* 		* 		* 		   sync-all

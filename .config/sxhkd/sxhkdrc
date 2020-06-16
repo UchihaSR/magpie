@@ -109,12 +109,12 @@ XF86Audio{LowerVolume,RaiseVolume}
     # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && pkill -5 volume
 
 {F2,F3}
-	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && ref-block 1
+	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
     # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 "$(cat $UNIBLOCKS_PID)"
     # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
 
 {XF86AudioMute,F1}
-	pactl set-sink-mute @DEFAULT_SINK@ toggle && ref-block 1
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
 	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refBlock -v
 	# pactl set-sink-mute @DEFAULT_SINK@ toggle
 
