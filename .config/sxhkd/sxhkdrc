@@ -178,8 +178,8 @@ super + {_,shift} + n
 
 # Toggle Tiled / Monocle
 super + {_,shift} + m
-	{tog-trans-moncl,bspc desktop -l next}
-	# {bspc desktop -l next,tog-trans-moncl}
+	{bspc desktop -l next,tog-trans-moncl}
+	# {tog-trans-moncl,bspc desktop -l next}
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}

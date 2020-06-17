@@ -41,7 +41,8 @@ xsetroot -cursor_name left_ptr &
 # Hides cursor while idle
 unclutter &                      
 # Launch bar
-sh -c "sleep 1 && $STATUS_BAR" & 
+# sh -c "sleep 1 && $STATUS_BAR" & 
+$STATUS_BAR & 
 # Luanch Window Manager
 exec "$WM"
 
