@@ -88,9 +88,9 @@ KP_Insert
 #     systemctl suspend
 
 KP_Delete
-	pkill -u $USER
+	pkill -KILL -u $USER
+	# pkill -u $USER
 	# bspc quit
-	# pkill -KILL -u $USER
 
 KP_Add
 	systemctl suspend
@@ -172,14 +172,14 @@ F7
 super + {_,shift} + {j,semicolon}
 	bspc {desktop -f,node -d} {prev,next}
 
-# Close / Kill
-super + {_,shift} + n
-	bspc node -{c,k}
+# # Close / Kill
+# super + {_,shift} + n
+# 	bspc node -{c,k}
 
-# Toggle Tiled / Monocle
-super + {_,shift} + m
-	{bspc desktop -l next,tog-trans-moncl}
-	# {tog-trans-moncl,bspc desktop -l next}
+# # Toggle Tiled / Monocle
+# super + {_,shift} + m
+# 	{bspc desktop -l next,tog-trans-moncl}
+# 	# {tog-trans-moncl,bspc desktop -l next}
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}
@@ -234,5 +234,8 @@ super + i
 super + {l,k}
    mono-trans --navigate {next,prev}
 
-super + f
-   mono-trans --toggle fulllscreen
+super + {f,m}
+   mono-trans --toggle {fullscreen,monocle}
+
+super + n
+   mono-trans --close
