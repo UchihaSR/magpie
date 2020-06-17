@@ -135,6 +135,7 @@ PATH=$PATH:~/.local/bin
 PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
 PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/bolt
+PATH=$PATH:$GIT/own/mono_trans_bspwm
 export PATH
 
 ###############################################################################
