@@ -136,6 +136,7 @@ PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
 PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/bolt
 PATH=$PATH:$GIT/own/mono_trans_bspwm
+PATH=$PATH:$GIT/own/bspwm_swallow
 export PATH
 
 ###############################################################################
