@@ -158,6 +158,7 @@ map zr
 
 map zmg !make-gif "$f"
 map zcv !cut-vid "$f"
+map zCv !crop-vid "$f"
 map zrv !reduce-volume "$f"
 map zam !add-music "$fx"
 
