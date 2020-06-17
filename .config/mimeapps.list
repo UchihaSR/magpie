@@ -1,5 +1,5 @@
 # Mime List
 
 [Default Applications]
-x-scheme-handler/magnet=transmission-gtk.desktop;
-application/x-bittorrent=transmission-gtk.desktop;
+x-scheme-handler/magnet=transmission.desktop;
+application/x-bittorrent=transmission.desktop;

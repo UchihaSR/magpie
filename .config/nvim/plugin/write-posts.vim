@@ -13,4 +13,4 @@ au automation  BufWritePost config.h             !compile %
 au automation  BufWritePost    test.sh              !sh %
 au automation  BufWritePost    test.py              !python %
 
-au automation  BufWritePost yabar.conf,*/uniblocks/* silent !pkill yabar && yabar &
+au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
