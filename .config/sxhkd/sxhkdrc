@@ -18,8 +18,8 @@ super + b
 # super + i
 # 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
 
-# super + e
-# 	insert-emoji
+super + shift + e
+	insert-emoji
 
 # super + {_,shift,alt} + b
 #     {$BROWSER,bookmark-add,bookmark-edit}
@@ -88,8 +88,8 @@ KP_Insert
 #     systemctl suspend
 
 KP_Delete
-	bspc quit
-	# pkill -u $USER
+	pkill -u $USER
+	# bspc quit
 	# pkill -KILL -u $USER
 
 KP_Add
