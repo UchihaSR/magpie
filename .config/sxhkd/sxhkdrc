@@ -9,7 +9,7 @@ super + t
 super + o
 	search
 
-super + f
+super + e
 	$TERMINAL -e explore
 
 super + b
@@ -18,8 +18,8 @@ super + b
 # super + i
 # 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
 
-super + e
-	insert-emoji
+# super + e
+# 	insert-emoji
 
 # super + {_,shift,alt} + b
 #     {$BROWSER,bookmark-add,bookmark-edit}
@@ -209,7 +209,7 @@ super + i
     bspc node -n biggest.local
 
 # Fullscreen
-super + shift + f
+super + f
     tog-trans-fs
 
 # # Focus / Swap
