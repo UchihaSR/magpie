@@ -88,8 +88,8 @@ KP_Insert
 #     systemctl suspend
 
 KP_Delete
-	bspc quit
-	# pkill -u $USER
+	pkill -u $USER
+	# bspc quit
 	# pkill -KILL -u $USER
 
 KP_Add
@@ -166,7 +166,7 @@ F7
 
 # Navigate Nodes
 super + {_,shift} + {k,l}
-	bspc node -{f,s} {prev,next}.local
+	bspc node -{f,s} {prev,any}.local
 	# bspc node -{f,s} {prev,next}.local
 
 super + {_,shift} + {j,semicolon}
