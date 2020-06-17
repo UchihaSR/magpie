@@ -164,10 +164,16 @@ F7
 #                             BSPWM 
 ################################################################################
 
-# Navigate Nodes
-super + {_,shift} + {k,l}
-	bspc node -{f,s} {prev,any}.local
-	# bspc node -{f,s} {prev,next}.local
+super + l
+   bspc node -f next.local || tgl-mono-trans-node next
+
+super + k
+   bspc node -f prev.local || tgl-mono-trans-node prev
+
+# # Navigate Nodes
+# super + {_,shift} + {k,l}
+# 	bspc node -{f,s} {prev,next}.local
+# 	# bspc node -{f,s} {prev,next}.local
 
 super + {_,shift} + {j,semicolon}
 	bspc {desktop -f,node -d} {prev,next}
