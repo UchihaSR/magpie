@@ -47,7 +47,6 @@ bspc config top_padding 			35
 
 bspc config borderless_monocle		true
 bspc config gapless_monocle			true
-# bspc config single_monocle			true
 
 #----------[ Colors ]-----------------
 

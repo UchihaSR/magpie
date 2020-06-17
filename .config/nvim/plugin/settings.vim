@@ -152,7 +152,7 @@ if has('termguicolors')
   set termguicolors                   " use guifg/guibg instead of ctermfg/ctermbg in terminal
 endif
 
-set textwidth=80                      " automatically hard wrap at 80 columns
+" set textwidth=80                      " automatically hard wrap at 80 columns
 
 set whichwrap=b,h,l,s,<,>,[,],~       " allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
 
