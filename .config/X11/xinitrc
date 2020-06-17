@@ -5,12 +5,15 @@
 # pulseaudio --start &
 # [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
 
+
 # Monitors shortcut paths
 # watch-list &
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launches Compositor
 sh -c "sleep 1 && $COMPOSITOR" & 
+# Launches Uniblock server
+ub-server &
 # Monitors mail directory
 watch-mails &
 # Monitors dotfiles

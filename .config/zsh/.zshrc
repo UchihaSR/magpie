@@ -33,7 +33,7 @@ PS1+="%{$fg[yellow]%}%(?..!) "
 PS1+="%{$reset_color%}%b"
 
 [ "$EUID" = 0 ] &&
-   PS1+="  " ||
+   PS1+="   " ||
    PS1+="💲 "
 
 # PS1=$'${(r:$COLUMNS::_:)}\n\n'$PS1
