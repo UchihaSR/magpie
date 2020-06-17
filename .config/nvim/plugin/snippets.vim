@@ -55,8 +55,9 @@ au automation  FileType markdown,vimwiki    inoremap    ;f     \frac{}{<*>}<esc>
 "                             Shell 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" au automation FileType    sh,conf      inoremap    ;b          <Esc>60i#<Esc>o<Esc>60i#<Esc>O#<Esc>20a<space><Esc>i
 au automation FileType sh,conf,yaml,sxhkd,zsh,python inoremap ;b <Esc>80i#<Esc>o<Esc>80i#<Esc>O#<Esc>30a<space><Esc>i
+
+au automation FileType sh,conf,yaml,sxhkd,zsh,python inoremap ;t <Esc>40i#<Esc>o<Esc>40i#<Esc>O#<Esc>15a<space><Esc>i
 
 au automation FileType    sh           inoremap    ;s         #!/usr/bin/env sh<cr><cr>
 

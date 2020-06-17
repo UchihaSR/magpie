@@ -164,12 +164,6 @@ F7
 #                             BSPWM 
 ################################################################################
 
-super + l
-   bspc node -f next.local || tgl-mono-trans-node next
-
-super + k
-   bspc node -f prev.local || tgl-mono-trans-node prev
-
 # # Navigate Nodes
 # super + {_,shift} + {k,l}
 # 	bspc node -{f,s} {prev,next}.local
@@ -217,9 +211,9 @@ super + period
 super + i
     bspc node -n biggest.local
 
-# Fullscreen
-super + f
-    tog-trans-fs
+# # Fullscreen
+# super + f
+#     tog-trans-fs
 
 # # Focus / Swap
 # super + {_,shift} + {j,l,semicolon,k}
@@ -232,3 +226,13 @@ super + f
 # super + ctrl + {j,k,l,i,semicolon}
 # # super + ctrl + {j,k,l,i,semicolon}
 # 	bspc node -p {west,south,east,north,cancel}
+
+########################################
+#              Mono Transaprent 
+########################################
+
+super + {l,k}
+   mono-trans --navigate {next,prev}
+
+super + f
+   mono-trans --toggle fulllscreen
