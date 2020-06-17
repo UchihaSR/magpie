@@ -8,12 +8,12 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
    * **neovim** (Text Editor)
    * **lf** (File Manager)
    * **yabar** (Status Bar)
-   * **sxhkd** (Hotkey Daemon)
-   * **rofi** (Dmenu Alternative)
 
 # Dependencies
    * [Alfred](https://github.com/salman-abedin/alfred)
    * [Uniblocks](https://github.com/salman-abedin/uniblocks)
+   * [mono_trans_bspwm](https://github.com/salman-abedin/mono_trans_bspwm)
+   * [bspwm_swallow](https://github.com/salman-abedin/bspwm_swallow)
 
 # Installation
    * [MISS: Magpie Installer Shell Script](https://github.com/salman-abedin/miss)
