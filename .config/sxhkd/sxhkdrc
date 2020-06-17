@@ -176,10 +176,9 @@ super + {_,shift} + {j,semicolon}
 # super + {_,shift} + n
 # 	bspc node -{c,k}
 
-# # Toggle Tiled / Monocle
-# super + {_,shift} + m
-# 	{bspc desktop -l next,tog-trans-moncl}
-# 	# {tog-trans-moncl,bspc desktop -l next}
+# Toggle Tiled / Monocle
+super + shift + m
+   bspc desktop -l next
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}
