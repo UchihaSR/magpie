@@ -81,25 +81,9 @@ alt + p
 # super + control + shift + Escape
 	# systemctl reboot
 
-KP_Insert
-    xrandr --output eDP-1 {--off,--auto --dpi 96}
-
-# KP_End
-#     systemctl suspend
-
-KP_Delete
-	pkill -KILL -u $USER
-	# pkill -u $USER
-	# bspc quit
-
-KP_Add
-	systemctl suspend
-
-KP_Subtract
-	leave-x
 
 ################################################################################
-#                             Function & Media Keys 
+#                             Function, Media & Num Keys 
 ################################################################################
 
 # Volume Control
@@ -159,6 +143,26 @@ F7
 # XF86AudioMute
 # 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 # 	# amixer set Master toggle
+
+KP_Insert
+    xrandr --output eDP-1 {--off,--auto --dpi 96}
+
+# KP_End
+#     systemctl suspend
+
+KP_Delete
+	pkill -KILL -u $USER
+	# pkill -u $USER
+	# bspc quit
+
+KP_Add
+	systemctl suspend
+
+KP_Subtract
+	leave-x
+
+KP_Left
+   sync-git
 
 ################################################################################
 #                             BSPWM 
