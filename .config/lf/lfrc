@@ -20,7 +20,7 @@ set previewer /home/git/own/alfred/misc/preview
 
 cmd trash %mv $fx ~/.local/share/Trash
 
-cmd open $launch-swallow "$f"
+cmd open $launch-devour "$fx"
 # cmd open $launch "$f"
 
 cmd makeScript %{{
