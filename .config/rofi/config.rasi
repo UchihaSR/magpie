@@ -1,22 +1,24 @@
 configuration {
 
-show-icons: true;
-hide-scrollbar: true;
-sort: true;
-sorting-method: "fzf";
 font: "sans-serif 15";
 
-padding: 20;
-line-padding: 2;
+sort: true;
+sorting-method: "fzf";
 
-separator-style: "solid";
 width: 30;
-lines: 15;
+lines: 10;
+
+show-icons: true;
+hide-scrollbar: true;
 
 /* location: 0; */
 
 /* color-enabled: true; */
-/* color-window:  #3B4252; #8fbcbb; #8fbcbb; */
+/* color-normal:  "#3B4252, #E5E9F0, #3B4252, #3B4252, #8FBCBB"; */
+/* color-window:  "#3B4252, #8fbcbb, #8fbcbb"; */
+/* separator-style: "solid"; */
+/* padding: 50; */
+/* line-padding: 20; */
 
 /* kb-accept-entry: "Return,KP_Enter,space"; */
 
