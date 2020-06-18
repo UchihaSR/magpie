@@ -38,7 +38,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set tabstop=3
+set shiftround                        " always indent by multiple of shiftwidth
+set shiftwidth=2                      " spaces per tab (when shifting)
+set tabstop=2
 set expandtab
 
 set linebreak
@@ -107,10 +109,7 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 
 set formatoptions+=n " smart auto-indenting inside numbered lists
 
-
 set scrolloff=3                       " start scrolling 3 lines before edge of viewport
-set shiftround                        " always indent by multiple of shiftwidth
-set shiftwidth=3                      " spaces per tab (when shifting)
 set shortmess+=A                      " ignore annoying swapfile messages
 set shortmess+=I                      " no splash screen
 set shortmess+=O                      " file-read message overwrites previous
