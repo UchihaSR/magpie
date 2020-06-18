@@ -6,6 +6,17 @@ sort: true;
 sorting-method: "fzf";
 font: "sans-serif 15";
 
+padding: 20;
+line-padding: 2;
+
+separator-style: "solid";
+width: 30;
+lines: 15;
+
+color-enabled: true;
+
+/* color-window:  #3B4252; #8fbcbb; #8fbcbb; */
+
 /* kb-accept-entry: "Return,KP_Enter,space"; */
 
 /* fake-transparency: true; */
