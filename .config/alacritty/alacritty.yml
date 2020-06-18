@@ -51,9 +51,9 @@ window:
       y: 25
    dynamic_padding: true
 
-   # dimensions:
-   #    columns: 80
-   #    lines: 24
+   dimensions:
+      columns: 80
+      lines: 24
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 

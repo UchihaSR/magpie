@@ -25,7 +25,7 @@ generate-list &
 # Sets Locker
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
-set-bg &
+set-bg -s &
 # Speeds key reapeat of pressing
 xset r rate 200 30 & 
 # Launch notification server

@@ -37,8 +37,8 @@ super + c
     killall xcompmgr || xcompmgr -cCfF &
     # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
 
-super + w
-    set-bg -s
+super + {_,shift} + w
+    set-bg -{s,d}
 
 # super + shift + p
     # launchPolybar

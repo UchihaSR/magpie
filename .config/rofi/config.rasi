@@ -13,8 +13,9 @@ separator-style: "solid";
 width: 30;
 lines: 15;
 
-color-enabled: true;
+/* location: 0; */
 
+/* color-enabled: true; */
 /* color-window:  #3B4252; #8fbcbb; #8fbcbb; */
 
 /* kb-accept-entry: "Return,KP_Enter,space"; */

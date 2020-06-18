@@ -27,6 +27,7 @@ export WM=bspwm
 
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers
+export ICONS=~/.icons/system
 
 export INACTIVITY=900
 
@@ -34,15 +35,11 @@ export PANEL_FIFO=/tmp/panel_fifo
 export REC_PID=/tmp/rec_pid
 export UNIBLOCKS_PID=/tmp/ub_pid
 export SEARCH_LIST=/tmp/search_list
-export NODE_ID=/tmp/node_id
+# export NODE_ID=/tmp/node_id
 
 export LAYOUT_EN=~/.config/X11/xmodmap-en
 export LAYOUT_AR=~/.config/X11/xmodmap-ar
 export LAYOUT_BN=~/.config/X11/xmodmap-bn
-
-export ICONS=~/.icons/system
-export WALL=~/.local/share/wallpapers/wall.jpg
-export DONT_DISTURB_MODE=/tmp/ddm
 
 export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
 
