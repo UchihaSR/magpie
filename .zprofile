@@ -135,6 +135,7 @@ PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/bolt
 PATH=$PATH:$GIT/own/mono_trans_bspwm
 PATH=$PATH:$GIT/own/devour
+PATH=$PATH:$GIT/own/crystal
 export PATH
 
 ###############################################################################

@@ -232,14 +232,15 @@ super + i
 # 	bspc node -p {west,south,east,north,cancel}
 
 ########################################
-#              Mono Transaprent 
+#              Crystal
 ########################################
 
 super + {l,k}
-   mono-trans --navigate {next,prev}
+   crystal --navigate {next,prev}
 
 super + {f,m}
-   mono-trans --toggle {fullscreen,monocle}
+   crystal --toggle {fullscreen,monocle}
 
 super + n
-   mono-trans --close
+   crystal --close
+
