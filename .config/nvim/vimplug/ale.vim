@@ -52,6 +52,7 @@ let g:ale_fixers = {
          \   'html': ['prettier'],
          \   'javascript': ['prettier'],
          \   'json': ['prettier', 'fixjson'],
+         \   'markdown': ['prettier'],
          \   'python': ['autopep8'],
          \   'sass': ['prettier'],
          \   'scss': ['prettier'],
