@@ -26,6 +26,7 @@ export WM=bspwm
 ###############################################################################
 
 export GIT=/home/git
+export WALLPAPERS=/home/git/own/wallpapers
 
 export INACTIVITY=900
 
