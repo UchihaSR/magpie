@@ -162,8 +162,8 @@ KP_Subtract
 KP_Add
 	systemctl suspend
 
-# KP_Left
-#    sync-git
+KP_Left
+   sync-git
 
 ################################################################################
 #                             BSPWM 
