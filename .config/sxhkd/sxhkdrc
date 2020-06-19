@@ -146,8 +146,8 @@ KP_Home
 	connect-bt
 
 KP_Delete
-   pkill -KILL -u $USER
-	# pkill -u $USER
+	pkill -u $USER
+   # pkill -KILL -u $USER
 	# bspc quit
 
 KP_Subtract

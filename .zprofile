@@ -17,26 +17,22 @@ export VISUAL=nvim
 export STATUS_BAR=yabar
 export WM=bspwm
 
-# export WM=dwm
-# export STATUS_BAR=uniblocks
-# export COMPOSITOR="picom -b"
-
 ###############################################################################
 #                             System
 ###############################################################################
+
+export PANEL_FIFO=/tmp/panel_fifo
+export UNIBLOCKS_PID=/tmp/ub_pid
+export SEARCH_LIST=/tmp/search_list
 
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers
 export ICONS=~/.icons/system
 export DONT_DISTURB_MODE=/tmp/ddm
+export REC_PID=/tmp/rec_pid
 
 export INACTIVITY=900
 
-export PANEL_FIFO=/tmp/panel_fifo
-export REC_PID=/tmp/rec_pid
-export UNIBLOCKS_PID=/tmp/ub_pid
-export SEARCH_LIST=/tmp/search_list
-# export NODE_ID=/tmp/node_id
 
 export LAYOUT_EN=~/.config/X11/xmodmap-en
 export LAYOUT_AR=~/.config/X11/xmodmap-ar
@@ -127,14 +123,10 @@ export ZDOTDIR=~/.config/zsh
 #                             Paths 
 ################################################################################
 
-# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-# PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:$//')"
-
 PATH=$PATH:~/.local/bin
 PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
-PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/bolt
-PATH=$PATH:$GIT/own/mono_trans_bspwm
+PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/devour
 PATH=$PATH:$GIT/own/crystal
 export PATH
@@ -142,6 +134,8 @@ export PATH
 ###############################################################################
 #                             Misc
 ###############################################################################
+
+# export NODE_ID=/tmp/node_id
 
 # export LESS=-R
 # export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
