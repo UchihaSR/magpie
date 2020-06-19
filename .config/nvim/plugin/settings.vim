@@ -39,8 +39,8 @@ set nowritebackup
 set noswapfile
 
 set shiftround                        " always indent by multiple of shiftwidth
-set shiftwidth=2                      " spaces per tab (when shifting)
-set tabstop=2
+set shiftwidth=4                      " spaces per tab (when shifting)
+set tabstop=4
 set expandtab
 
 set linebreak

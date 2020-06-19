@@ -28,7 +28,7 @@ export WM=bspwm
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers
 export ICONS=~/.icons/system
-export $DONT_DISTURB_MODE=/tmp/ddm
+export DONT_DISTURB_MODE=/tmp/ddm
 
 export INACTIVITY=900
 

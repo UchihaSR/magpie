@@ -61,7 +61,7 @@ let g:ale_fixers = {
          \}
 
 " \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-let g:ale_sh_shfmt_options = '-p -i 2 -ci -s -sr'
+let g:ale_sh_shfmt_options = '-p -i 4 -ci -s -sr'
 " let g:ale_c_clangformat_options = '--style=LLVM'
 let g:ale_css_stylelint_options = '-s sass --fix'
 let g:ale_javascript_prettier_options = '--tab-width 3 --single-quote'
