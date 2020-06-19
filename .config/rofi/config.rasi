@@ -2,8 +2,8 @@ configuration {
 
 font: "sans-serif 15";
 
-/* sort: true; */
-/* sorting-method: "fzf"; */
+sort: true;
+sorting-method: "fzf";
 
 width: 30;
 lines: 10;

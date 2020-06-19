@@ -21,15 +21,15 @@ setopt promptsubst
 autoload -U colors
 colors
 
-PS1=" "
+PS1=""
 PS1+="%B"
 
 [ "$EUID" = 0 ] &&
    PS1+="%{$fg[red]%}%1~ " ||
    PS1+="%{$fg[blue]%}%1~ "
 
-PS1+="%{$fg[red]%}%(1j.*.) "
-PS1+="%{$fg[yellow]%}%(?..!) "
+PS1+="%{$fg[red]%}%(1j.*.)"
+PS1+="%{$fg[yellow]%}%(?..!)"
 PS1+="%{$reset_color%}%b"
 
 [ "$EUID" = 0 ] &&
