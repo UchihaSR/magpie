@@ -7,7 +7,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/git/own/
 ICONS=~/.icons/system
 GIT=/home/git
 
-# Mi 	H 		D 		M 		WD 		<Command>
+# Mi H D M WD <Command>
 
 */5 * * * * monitor-battery
 @hourly check-storage
