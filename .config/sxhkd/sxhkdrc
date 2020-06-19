@@ -6,8 +6,6 @@ super + Return
 super + t
 	st
 
-super + o
-	search
 
 super + e
 	$TERMINAL -e explore
@@ -232,7 +230,7 @@ super + i
 # 	bspc node -p {west,south,east,north,cancel}
 
 ########################################
-#              Crystal
+#              Crystal & Bolt
 ########################################
 
 super + {l,k}
@@ -244,3 +242,5 @@ super + {f,m}
 super + n
    crystal --close
 
+super + o
+	bolt-search

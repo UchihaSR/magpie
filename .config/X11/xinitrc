@@ -28,7 +28,7 @@ watch-dots &
 # Sets DPI (dpi.lv)
 set-dpi &
 # Generates search list
-generate-list &
+bolt-generate &
 # Sets Locker
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
