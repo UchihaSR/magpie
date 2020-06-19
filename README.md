@@ -13,10 +13,10 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 # Dependencies
 
--  [Alfred](https://github.com/salman-abedin/alfred)
 -  [Bolt](https://github.com/salman-abedin/bolt)
 -  [Uniblocks](https://github.com/salman-abedin/uniblocks)
 -  [Crystal](https://github.com/salman-abedin/crystal)
+-  [Alfred](https://github.com/salman-abedin/alfred)
 
 # Installation
 
