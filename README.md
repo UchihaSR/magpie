@@ -2,7 +2,7 @@
 
 Dotfiles of my minimal Unix system geared for media, programming & writing.
 
-# Highlights
+## Highlights
 
 -  **zsh** (Shell)
 -  **bspwm** (Window Manager)
@@ -11,14 +11,14 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 -  **lf** (File Manager)
 -  **yabar** (Status Bar)
 
-# Dependencies
+## Dependencies
 
 -  [Bolt](https://github.com/salman-abedin/bolt)
 -  [Uniblocks](https://github.com/salman-abedin/uniblocks)
 -  [Crystal](https://github.com/salman-abedin/crystal)
 -  [Alfred](https://github.com/salman-abedin/alfred)
 
-# Installation
+## Installation
 
 -  [MISS: Magpie Installer Shell Script](https://github.com/salman-abedin/miss)
 
