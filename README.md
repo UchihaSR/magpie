@@ -16,8 +16,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 -  [Alfred](https://github.com/salman-abedin/alfred)
 -  [Bolt](https://github.com/salman-abedin/bolt)
 -  [Uniblocks](https://github.com/salman-abedin/uniblocks)
--  [mono_trans_bspwm](https://github.com/salman-abedin/mono_trans_bspwm)
--  [bspwm_swallow](https://github.com/salman-abedin/bspwm_swallow)
+-  [Crystal](https://github.com/salman-abedin/crystal)
 
 # Installation
 
