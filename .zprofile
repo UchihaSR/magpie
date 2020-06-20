@@ -128,7 +128,7 @@ PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
 PATH=$PATH:$GIT/own/bolt
 PATH=$PATH:$GIT/own/uniblocks
 PATH=$PATH:$GIT/own/devour
-PATH=$PATH:$GIT/own/crystal
+# PATH=$PATH:$GIT/own/crystal
 export PATH
 
 ###############################################################################
