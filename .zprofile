@@ -23,7 +23,7 @@ export WM=bspwm
 
 export PANEL_FIFO=/tmp/panel_fifo
 export UNIBLOCKS_PID=/tmp/ub_pid
-export SEARCH_LIST=/tmp/search_list
+# export SEARCH_LIST=/tmp/search_list
 
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers

@@ -243,4 +243,5 @@ super + n
    crystal --close
 
 super + o
-	bolt-search
+    bolt --search
+	# bolt-search
