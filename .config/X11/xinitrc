@@ -29,7 +29,7 @@ watch-dots &
 set-dpi &
 # Generates search list
 # bolt-generate &
-bolt --generate &
+bolt --generate --watch &
 # Sets Locker
 sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
