@@ -46,9 +46,9 @@ super + {_,shift} + w
 #     {$BROWSER}
 
 Print
-	screencast
+	maim -u -d 1 ~/screen.png
+	# screencast
 	# record
-	# maim -u -d 1 ~/screen.png
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
 super + backslash
