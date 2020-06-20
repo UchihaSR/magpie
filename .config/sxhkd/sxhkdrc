@@ -237,7 +237,7 @@ super + {l,k}
    crystal --navigate {next,prev}
 
 super + {f,m}
-   crystal --toggle {fullscreen,monocle}
+   crystal --toggle {fullscreen,solo}
 
 super + n
    crystal --close
