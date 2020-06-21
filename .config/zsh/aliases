@@ -93,6 +93,7 @@ alias grau="git remote add upstream"
 alias gfu="git fetch upstream"
 alias grum="git rebase upstream/master"
 alias gcb="git checkout -b"
+alias gl="git log"
 # ug="cd $DF; git commit -a -m"update\" && git push -u origin master"
 
 # NPM
