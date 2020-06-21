@@ -3,7 +3,7 @@
 # sh -c "sleep 0.5;  stalonetray -bg \"#000000\" --geometry \"1x1+125+5\"" &
 # doas killall compton mpd polybar connman-vpnd picom
 # pulseaudio --start &
-# [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &	
+# [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &
 
 # # Lunch Dbus
 # if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -13,44 +13,38 @@
 #  unset f
 # fi
 
-# Monitors shortcut paths
-# watch-list &
 # Launches Transmission Daemon
 # transmission-daemon &
-# Launches Compositor
-sh -c "sleep 1 && $COMPOSITOR" & 
-# Launches Uniblock server
+# Launch Compositor
+sh -c "sleep 1 && $COMPOSITOR" &
+# Launch Uniblock server
 ub-server &
-# Monitors mail directory
-watch-mails &
-# Monitors dotfiles
-watch-dots &
-# Sets DPI (dpi.lv)
+# Monitor preferred directories
+watchmen --dots --mails &
+# Set DPI (dpi.lv)
 set-dpi &
-# Generates search list
-# bolt-generate &
-bolt --generate --watch &
-# Sets Locker
-sh -c "xset s $INACTIVITY && xss-lock --ignore-sleep screensaver" &
+# Generate search list
+bolt --generate &
+# Set Locker
+sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
 # Set Wallpaper
 set-bg -s &
-# Speeds key reapeat of pressing
-xset r rate 200 30 & 
-# Launch notification server
+# Speed key reapeat of pressing
+xset r rate 200 30 &
+# Launche notification server
 dunst &
-# Binds Multi-purpose keys
-sh -c "xmodmap $LAYOUT_EN && xcape -e \"Super_L=Escape;Mode_switch=Tab\"" & 
-# Binds key commands
-sxhkd &                     
-# Binds gesture commands
-gebaard -b &                     
-# Removes X cursor
-xsetroot -cursor_name left_ptr & 
-# Hides cursor while idle
-unclutter &                      
-# Launch bar
-# sh -c "sleep 1 && $STATUS_BAR" & 
-$STATUS_BAR & 
-# Luanch Window Manager
+# Bind Multi-purpose keys
+sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
+# Bind key commands
+sxhkd &
+# Bind gesture commands
+gebaard -b &
+# Remove X cursor
+xsetroot -cursor_name left_ptr &
+# Hide cursor while idle
+unclutter &
+# Launche bar
+# sh -c "sleep 1 && $STATUS_BAR" &
+$STATUS_BAR &
+# Luanche Window Manager
 exec "$WM"
-
