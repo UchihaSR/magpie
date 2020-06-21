@@ -14,7 +14,7 @@ export PAGER="nvim -R +AnsiEsc"
 export READER=zathura
 export TERMINAL=alacritty
 export VISUAL=nvim
-export STATUS_BAR=yabar
+export STATUSBAR=yabar
 export WM=bspwm
 
 ###############################################################################

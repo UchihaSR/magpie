@@ -67,6 +67,9 @@ alt + y
 alt + p
 	xdotool keyup p key --clearmodifiers Control+Shift+v
 
+# shift + Escape
+# 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
+
 # super + Escape
 # 	systemctl poweroff
 

@@ -1,5 +1,6 @@
 " au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
 
+au automation  BufWritePost *xmodmap*     silent !xmodmap %
 au automation  BufWritePost sxhkdrc       silent !pkill -USR1 sxhkd
 au automation  BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
 au automation  BufWritePost bspwmrc       silent !sh %

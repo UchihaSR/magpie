@@ -45,6 +45,6 @@ xsetroot -cursor_name left_ptr &
 unclutter &
 # Launche bar
 # sh -c "sleep 1 && $STATUS_BAR" &
-$STATUS_BAR &
+$STATUSBAR &
 # Luanche Window Manager
 exec "$WM"

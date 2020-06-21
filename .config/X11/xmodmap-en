@@ -9,6 +9,7 @@ clear lock
 keycode  66 = Super_L
 ! Right Alt
 keycode  108 = Caps_Lock NoSymbol Caps_Lock
+keycode  31 = i I Caps_Lock
 
 ! Tab
 keycode  23 = Mode_switch
@@ -25,7 +26,6 @@ keycode  43 = h H
 keycode  48 = apostrophe quotedbl
 
 keycode  30 = u U
-keycode  31 = i I Home
 keycode  32 = o O End
 
 keycode   9 = Escape NoSymbol Escape

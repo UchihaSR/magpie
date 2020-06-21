@@ -1,12 +1,8 @@
-" ------------[ Unmap ]-----------------
-
-noremap <Up> <Nop>
-
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 let mapleader = ' '
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Saves & Quits 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap                                    <cr>	            :update<cr>
 " nnoremap                                    <cr>	            :update<cr> <bar> maggVG='a
@@ -24,7 +20,9 @@ nnoremap                                    <m-cr>       :silent w !doas tee %<c
 nnoremap    <esc> 	                :qa<cr>
 nnoremap    <leader><esc>            ZQ
 
-" ------------[ Navigation ]-----------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Navigation 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 :noremap    j           h
 :noremap    ;           l
@@ -59,7 +57,9 @@ vnoremap    L           <C-d>zz
 " nnoremap gl :next<cr>
 " nnoremap gk :prev<cr>
 
-" -------------[ Changing, Deleting & Yanking ]-------------
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Modifications 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap    Y                   y$
 
