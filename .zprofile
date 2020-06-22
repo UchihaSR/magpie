@@ -98,22 +98,19 @@ ex=🎯:\
 
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
-export XDG_CACHE_HOME=~/.cache
-
+export XDG_CACHE_HOME=~/.local/share/cache
+export XINITRC=~/.config/X11/xinitrc
+export ZDOTDIR=~/.config/zsh
 export GNUPGHOME=~/.local/share/gnupg
 export GOPATH=~/.local/share/go
 export HISTFILE=~/.local/share/history
-export INPUTRC=~/.config/inputrc
-export XINITRC=~/.config/X11/xinitrc
-export PASSWORD_STORE_DIR=~/.config/pass
 export UNISON=~/.local/share/unison
 export WGETRC=~/.config/wget/wgetrc
 export XAUTHORITY=~/.config/X11/.Xauthority
-export XDG_CACHE_HOME=~/.local/share/cache
-export ZDOTDIR=~/.config/zsh
+export INPUTRC=~/.config/inputrc
 
 ################################################################################
-#                             Paths 
+#                             Paths
 ################################################################################
 
 PATH=$PATH:~/.local/bin
@@ -124,6 +121,7 @@ export PATH
 #                             Misc
 ###############################################################################
 
+# export PASSWORD_STORE_DIR=~/.config/pass
 # export NODE_ID=/tmp/node_id
 # export MOZ_USE_XINPUT2="1"
 # export LESS=-R
@@ -139,14 +137,14 @@ export PATH
 # cat /etc/*-release | grep \"void\" >/dev/null && export TERMINAL=alacritty
 
 ###############################################################################
-#                             Auto Start X
+#                             Auto Start X on TTY1
 ###############################################################################
 
 [ "$(fgconsole 2> /dev/null)" = 1 ] &&
-   exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
+    exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
 
 ###############################################################################
-#                             Swap Escape & Caps Lock
+#                             Swap Escape & Caps Lock if On TTY
 ###############################################################################
 
 sudo -n loadkeys ~/.local/share/misc/ttyMaps.kmap 2> /dev/null
