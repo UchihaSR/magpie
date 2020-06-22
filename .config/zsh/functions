@@ -47,7 +47,7 @@ check() {
 
 ug() { doas -- grub-mkconfig -o /boot/grub/grub.cfg; }
 
-mirror() {
+server() {
    [ "$1" ] && echo 'Server = http://mirror.xeonbd.com/archlinux/$repo/os/$arch' |
       doas tee /etc/pacman.d/mirrorlist && return
    doas -- reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist

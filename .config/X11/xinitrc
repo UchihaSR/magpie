@@ -15,20 +15,15 @@
 
 # Launches Transmission Daemon
 # transmission-daemon &
+# Launch uniblocks, watchmen, bolt & alfred (Original Scripts)
+ub-server &
+watchmen --dots --mails &
+bolt --generate &
+alfred --background shuffle --dpi &
 # Launch Compositor
 sh -c "sleep 1 && $COMPOSITOR" &
-# Launch Uniblock server
-ub-server &
-# Monitor preferred directories
-watchmen --dots --mails &
-# Set DPI (dpi.lv)
-set-dpi &
-# Generate search list
-bolt --generate &
 # Set Locker
 sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
-# Set Wallpaper
-set-bg -s &
 # Speed key reapeat of pressing
 xset r rate 200 30 &
 # Launche notification server

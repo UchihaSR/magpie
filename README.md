@@ -17,6 +17,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 -  [Uniblocks](https://github.com/salman-abedin/uniblocks)
 -  [Crystal](https://github.com/salman-abedin/crystal)
 -  [Alfred](https://github.com/salman-abedin/alfred)
+-  [Devour](https://github.com/salman-abedin/devour)
 
 ## Installation
 

@@ -1,170 +1,50 @@
 # Config SXHKD
 
+###############################################################################
+#                             MVPs
+###############################################################################
+
 super + Return
-	$TERMINAL
-
-super + t
-	st
-
+    $TERMINAL
 
 super + e
-	$TERMINAL -e explore
+    $TERMINAL -e explore
 
 super + b
-	$BROWSER
-
-# super + i
-# 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
-
-super + shift + e
-	insert-emoji
-
-# super + {_,shift,alt} + b
-#     {$BROWSER,bookmark-add,bookmark-edit}
+    $BROWSER
 
 super + r
-	rofi -show drun
+    rofi -show drun
 
 super + g
-	google
-
-super + p
-	masterpdfeditor4
-
-super + c
-    killall xcompmgr || xcompmgr -cCfF &
-    # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
+    google
 
 super + {_,shift} + w
-    set-bg -{s,d}
+    alfred --background {shuffle,delete}
+    # set-bg -{s,d}
 
-# super + shift + p
-    # launchPolybar
-    # pkill -USR1 polybar
+super + o
+    bolt --search
 
-# KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior,Add,Subtract,Del,Ins}
-#     {$BROWSER}
+super + p
+   mirror --git
 
-Print
-	maim -u -d 1 ~/screen.png
-	# screencast
-	# record
-	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
+super + {l,k}
+   crystal --navigate {next,prev}
 
-super + backslash
-	xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
+super + {f,m}
+   crystal --toggle {fullscreen,solo}
 
-super + shift + n
-	toggle-notification
-
-################################################################################
-#                             System 
-################################################################################
-
-alt + y
-	xdotool keyup y key --clearmodifiers Control+Shift+c
-
-alt + p
-	xdotool keyup p key --clearmodifiers Control+Shift+v
-
-# shift + Escape
-# 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
-
-# super + Escape
-# 	systemctl poweroff
-
-# super + shift + Escape
-	# systemctl suspend
-# super + alt + Escape
-	# sleep 1 ; xset dpms force off
-# super + control + Escape
-	# systemctl poweroff
-# super + control + shift + Escape
-	# systemctl reboot
-
-
-################################################################################
-#                             Function, Media & Num Keys 
-################################################################################
-
-# Volume Control
-XF86Audio{LowerVolume,RaiseVolume}
-	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 $(cat pid)
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && pkill -5 volume
-
-{F2,F3}
-	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
-	# pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block -v
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 "$(cat $UNIBLOCKS_PID)"
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
-
-{XF86AudioMute,F1}
-	pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block -v
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refBlock -v
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-
-# Music control
-XF86Audio{Next,Prev,Play}
-	playerctl {next,prev,play-pause}
-    # mpc {next,prev,toggle}
-
-super + XF86Audio{Next,Prev}
-	mpc seek {+5,-5}
-
-super + XF86AudioPlay
-	mpc random {on,off}
-
-# Backlight
-{XF86MonBrightness{Up,Down}}
-    {incBl,decBl}
-F{11,12}
-	{decBl,incBl}
-
-super + XF86MonBrightnessDown
-	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
-
-super + XF86MonBrightnessUp
-	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
-
-F7
-	toggle-wifi
-
-# XF86AudioRaiseVolume
-# 	pactl set-sink-volume @DEFAULT_SINK@ +10%
-# 	# amixer set Master 5%+
-# XF86AudioLowerVolume
-# 	pactl set-sink-volume @DEFAULT_SINK@ -10%
-# 	# amixer set Master 5%-
-# 	# sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
-# XF86AudioMute
-# 	pactl set-sink-mute @DEFAULT_SINK@ toggle
-# 	# amixer set Master toggle
+super + n
+   crystal --close
 
 KP_Home
 	connect-bt
 
 KP_Delete
-	pkill -u $USER
+    bspc quit
    # pkill -KILL -u $USER
-	# bspc quit
-
-KP_Subtract
-	leave-x
-
-# KP_Insert
-#     xrandr --output eDP-1 {--off,--auto --dpi 96}
-
-# KP_End
-#     systemctl suspend
-
-KP_Add
-	systemctl suspend
-
-KP_Left
-   sync-git
+	# pkill -u $USER
 
 ################################################################################
 #                             BSPWM 
@@ -232,19 +112,146 @@ super + i
 # # super + ctrl + {j,k,l,i,semicolon}
 # 	bspc node -p {west,south,east,north,cancel}
 
-########################################
-#              Crystal & Bolt
-########################################
 
-super + {l,k}
-   crystal --navigate {next,prev}
+################################################################################
+#                             Function, Media & Num Keys 
+################################################################################
 
-super + {f,m}
-   crystal --toggle {fullscreen,solo}
+# Volume Control
+XF86Audio{LowerVolume,RaiseVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 $(cat pid)
+    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
+    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && pkill -5 volume
 
-super + n
-   crystal --close
+{F2,F3}
+	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
+	# pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block -v
+    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 "$(cat $UNIBLOCKS_PID)"
+    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
 
-super + o
-    bolt --search
-	# bolt-search
+{XF86AudioMute,F1}
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
+	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block -v
+	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refBlock -v
+	# pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+# Music control
+XF86Audio{Next,Prev,Play}
+	playerctl {next,prev,play-pause}
+    # mpc {next,prev,toggle}
+
+super + XF86Audio{Next,Prev}
+	mpc seek {+5,-5}
+
+super + XF86AudioPlay
+	mpc random {on,off}
+
+# Backlight
+{XF86MonBrightness{Up,Down}}
+    {incBl,decBl}
+F{11,12}
+	{decBl,incBl}
+
+super + XF86MonBrightnessDown
+	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
+
+super + XF86MonBrightnessUp
+	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
+
+F7
+	toggle-wifi
+
+# XF86AudioRaiseVolume
+# 	pactl set-sink-volume @DEFAULT_SINK@ +10%
+# 	# amixer set Master 5%+
+# XF86AudioLowerVolume
+# 	pactl set-sink-volume @DEFAULT_SINK@ -10%
+# 	# amixer set Master 5%-
+# 	# sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
+# XF86AudioMute
+# 	pactl set-sink-mute @DEFAULT_SINK@ toggle
+# 	# amixer set Master toggle
+
+
+KP_Subtract
+	leave-x
+
+# KP_Insert
+#     xrandr --output eDP-1 {--off,--auto --dpi 96}
+
+# KP_End
+#     systemctl suspend
+
+KP_Add
+	systemctl suspend
+
+
+
+
+###############################################################################
+#                             Misc
+###############################################################################
+
+super + t
+    st
+
+# super + i
+# 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
+
+super + shift + e
+	insert-emoji
+
+# super + {_,shift,alt} + b
+#     {$BROWSER,bookmark-add,bookmark-edit}
+
+# super + p
+# 	masterpdfeditor4
+
+super + c
+    killall xcompmgr || xcompmgr -cCfF &
+    # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
+
+# super + shift + p
+    # launchPolybar
+    # pkill -USR1 polybar
+
+Print
+	maim -u -d 1 ~/screen.png
+	# screencast
+	# record
+	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
+
+# KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior,Add,Subtract,Del,Ins}
+#     {$BROWSER}
+
+super + backslash
+    xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
+
+super + shift + n
+    toggle-notification
+
+################################################################################
+#                             System 
+################################################################################
+
+alt + y
+	xdotool keyup y key --clearmodifiers Control+Shift+c
+
+alt + p
+	xdotool keyup p key --clearmodifiers Control+Shift+v
+
+# shift + Escape
+# 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
+
+# super + Escape
+# 	systemctl poweroff
+
+# super + shift + Escape
+	# systemctl suspend
+# super + alt + Escape
+	# sleep 1 ; xset dpms force off
+# super + control + Escape
+	# systemctl poweroff
+# super + control + shift + Escape
+	# systemctl reboot
