@@ -23,24 +23,18 @@ export WM=bspwm
 
 export PANEL_FIFO=/tmp/panel_fifo
 export UNIBLOCKS_PID=/tmp/ub_pid
-
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers
 export ICONS=~/.icons/system
 export DONT_DISTURB_MODE=/tmp/ddm
 export REC_PID=/tmp/rec_pid
-
 export INACTIVITY=900
-
-
 export LAYOUT_EN=~/.config/X11/xmodmap-en
 export LAYOUT_AR=~/.config/X11/xmodmap-ar
 export LAYOUT_BN=~/.config/X11/xmodmap-bn
+export QT_QPA_PLATFORMTHEME="gtk2"
 
-export QT_QPA_PLATFORMTHEME="gtk2" # Have QT use gtk2 theme.
-
-# export MOZ_USE_XINPUT2="1"
-
+# Stolen from Luke Smith
 export LF_ICONS="di=📁:\
 fi=📃:\
 tw=🤝:\
@@ -131,7 +125,7 @@ export PATH
 ###############################################################################
 
 # export NODE_ID=/tmp/node_id
-
+# export MOZ_USE_XINPUT2="1"
 # export LESS=-R
 # export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
 # export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
