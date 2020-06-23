@@ -101,8 +101,8 @@ bind editor 				<Tab> 		complete-query
 
 bind index 					<space> 	tag-entry
 
-bind index,pager			<ESC><ESC> 	quit
-
+bind pager                  <ESC>       noop
+bind index,pager            <ESC>       quit
 
 bind index					f 			imap-fetch-mail
 
