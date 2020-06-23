@@ -172,3 +172,6 @@ map zam !add-music "$fx"
 map zms makeScript
 map zcm chmod
 map zco chown
+
+map zt
+map ztg $ttf2groff "$f"

@@ -226,7 +226,7 @@ Print
 #     {$BROWSER}
 
 super + backslash
-    xmodmap {$LAYOUT_EN,$LAYOUT_AR,$LAYOUT_BN}
+    xmodmap $LAYOUT_{EN,AR}
 
 super + shift + n
     toggle-notification
