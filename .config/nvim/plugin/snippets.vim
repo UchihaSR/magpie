@@ -29,20 +29,6 @@ au automation   FileType javascript     inoremap    ;a          () => <++><Esc>F
 au automation   FileType sass inoremap    ;bc          background-color: 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Latex 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-au automation  FileType tex    inoremap    ;dc                \documentclass[]{<*>}<cr><*><esc>kf[a
-au automation  FileType tex    inoremap    ;up                \usepackage[]{<*>}<cr><*><esc>kf[a
-au automation  FileType tex    inoremap    ;be                \begin{document}<cr><cr><cr><cr>\end{document}<esc>kki
-au automation  FileType tex    inoremap    ;se                \section*{}<cr><*><esc>kf{a
-au automation  FileType tex    inoremap    ;ss                \subsection*{}<cr><*><esc>kf{a
-au automation  FileType tex    inoremap    ;sS                \subsubsection*{}<cr><*><esc>kf{a
-au automation  FileType tex    inoremap    ;ul                \begin{itemize}<cr><cr>\end{itemize}<esc>k
-au automation  FileType tex    inoremap    ;ol                \begin{enumerate}<cr><cr>\end{enumerate}<esc>k
-au automation  FileType tex    inoremap    ;i                 \item
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Markdown 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
