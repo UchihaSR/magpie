@@ -81,6 +81,8 @@ external_editor = nvim
 use_console_editor = yes
 screen_switcher_mode = playlist, browser
 
+allow_for_physical_item_deletion = yes
+
 ##############################################################################
 ## This is the example configuration file. Copy it to $HOME/.ncmpcpp/config ##
 ## or $XDG_CONFIG_HOME/ncmpcpp/config and set up your preferences.          ##
@@ -444,7 +446,6 @@ screen_switcher_mode = playlist, browser
 #
 #generate_win32_compatible_filenames = yes
 #
-#allow_for_physical_item_deletion = no
 #
 ##
 ## Note: If you set this variable, ncmpcpp will try to get info from last.fm in

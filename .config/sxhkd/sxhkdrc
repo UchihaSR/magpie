@@ -138,8 +138,8 @@ XF86Audio{LowerVolume,RaiseVolume}
 
 # Music control
 XF86Audio{Next,Prev,Play}
-	playerctl {next,prev,play-pause}
-    # mpc {next,prev,toggle}
+    mpc {next,prev,toggle}
+	# playerctl {next,prev,play-pause}
 
 super + XF86Audio{Next,Prev}
 	mpc seek {+5,-5}
