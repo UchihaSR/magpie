@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=Torrent Client
-Exec=/usr/bin/env add-torrent %U
+Exec=/usr/local/bin/torrent --add %U
