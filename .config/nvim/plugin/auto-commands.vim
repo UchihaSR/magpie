@@ -1,6 +1,7 @@
 au automation FocusGained,BufEnter * checktime
 
-au automation  VimLeave    *.c,*.tex   !clean-junk %
+au automation  VimLeave    *.c,*.tex   !compile --clean %
+" au automation  VimLeave    *.c,*.tex   !clean-junk %
 
 " Vertically center document when entering insert mode
 au automation  InsertEnter *   norm zz
