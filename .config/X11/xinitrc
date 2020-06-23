@@ -16,11 +16,11 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
-mirror --mail &
+alfred --background shuffle --dpi &
+bolt --generate &
 ub-server &
 watchmen --dots --mails &
-bolt --generate &
-alfred --background shuffle --dpi &
+mirror --mail &
 # Launch Compositor
 sh -c "sleep 1 && $COMPOSITOR -cCfF" &
 # Set Locker
