@@ -86,6 +86,9 @@ au  automation  FileType    markdown,vimwiki    nnoremap    <leader><cr>    <Plu
 let g:mkdp_browser = 'falkon'
 au automation FileType markdown nnoremap    <leader><cr>        :MarkdownPreview<cr>
 
+Plug 'dhruvasagar/vim-table-mode'
+" au automation FileType markdown TableModeToggle
+
 " Plug 'plasticboy/vim-markdown'
 " Plug 'tpope/vim-markdown'
 " Plug 'vim-pandoc/vim-pandoc'
