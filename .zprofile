@@ -4,7 +4,7 @@
 #                             Defaults
 ###############################################################################
 
-export COMPOSITOR="xcompmgr -cCfF"
+export COMPOSITOR="xcompmgr"
 export BROWSER=firefox
 export DMENU="rofi -dmenu -i"
 export EDITOR=nvim

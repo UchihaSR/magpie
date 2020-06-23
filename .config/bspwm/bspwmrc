@@ -2,8 +2,8 @@
 
 bspc rule -r    "*"                         # remove all previous rules
 bspc rule -a    Zathura     state=tiled
-bspc rule -a    guvcview    state=floating stikcy=on layer=above rectangle=480x270+1440+810
-bspc rule -a    Screenkey manage=off
+# bspc rule -a    guvcview    state=floating stikcy=on layer=above rectangle=480x270+1440+810
+# bspc rule -a    Screenkey manage=off
 
 # bspc rule -a    Rofi    	follow=on
 # bspc rule -a    XTerm    	follow=on state=fullscreen
@@ -17,6 +17,7 @@ bspc monitor -d                           	1 2 3 4 5
 bspc desktop -f 	                        3
 # bspc desktop -l			                next
 
+# Launch new nodes to the left
 bspc config automatic_scheme 			spiral
 bspc config initial_polarity			first_child
 

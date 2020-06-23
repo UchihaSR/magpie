@@ -22,12 +22,12 @@ watchmen --dots --mails &
 bolt --generate &
 alfred --background shuffle --dpi &
 # Launch Compositor
-sh -c "sleep 1 && $COMPOSITOR" &
+sh -c "sleep 1 && $COMPOSITOR -cCfF" &
 # Set Locker
 sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
 # Speed key reapeat of pressing
 xset r rate 200 30 &
-# Launche notification server
+# Launch notification server
 dunst &
 # Bind Multi-purpose keys
 sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
@@ -37,10 +37,10 @@ sxhkd &
 gebaard -b &
 # Remove X cursor
 xsetroot -cursor_name left_ptr &
-# Hide cursor while idle
+# Hide cursor when idle
 unclutter &
 # Launche bar
-# sh -c "sleep 1 && $STATUS_BAR" &
-$STATUSBAR &
+sh -c "sleep 1 && $STATUSBAR" &
+# $STATUSBAR &
 # Luanche Window Manager
 exec "$WM"
