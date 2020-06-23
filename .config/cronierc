@@ -9,7 +9,8 @@ GIT=/home/git
 
 # Mi H D M WD <Command>
 
-*/5 * * * * monitor-battery
+*/5 * * * * battery --monitor
+# */5 * * * * monitor-battery
 @hourly check-storage
 # @hourly sync-all
 @hourly mirror --git --mail --calcurse
