@@ -11,7 +11,7 @@ set color256
 set icons
 set period 1
 
-set previewer /home/git/own/alfred/misc/preview
+set previewer preview
 
 # Two columns.
 # set ratios 1:2
