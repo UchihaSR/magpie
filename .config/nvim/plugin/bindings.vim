@@ -133,7 +133,7 @@ nnoremap        <leader>b       :w! %.bak<cr>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 nnoremap        <leader>P       maggVG='a
-nnoremap        <leader>t       :TableModeToggle<cr>
+" nnoremap        <leader>t       :TableModeToggle<cr>
 
 nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
 
