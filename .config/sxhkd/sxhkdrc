@@ -20,7 +20,7 @@ super + g
     google
 
 super + {_,shift} + w
-    alfred --background {shuffle,delete}
+    alfred --bg {shuffle,delete}
     # set-bg -{s,d}
 
 super + o
