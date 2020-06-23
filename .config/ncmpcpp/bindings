@@ -1,3 +1,5 @@
+# NCMPCPP Bindings
+
 def_key ";"
   enter_directory
 
@@ -12,6 +14,15 @@ def_key ";"
 
 def_key "j"
   jump_to_parent_directory
+
+def_key "f"
+  find
+
+def_key "f"
+  find_item_forward
+
+def_key "F"
+  find_item_backward
 
 # def_key "o"
 #   next_column

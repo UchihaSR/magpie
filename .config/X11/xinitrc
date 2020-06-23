@@ -16,7 +16,7 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
-alfred --background shuffle --dpi &
+alfred --bg reel --dpi &
 bolt --generate &
 ub-server &
 watchmen --dots --mails &
