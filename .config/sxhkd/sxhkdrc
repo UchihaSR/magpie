@@ -46,7 +46,7 @@ KP_Delete
 	# pkill -u $USER
 
 ################################################################################
-#                             BSPWM 
+#                             BSPWM
 ################################################################################
 
 # # Navigate Nodes
@@ -84,7 +84,7 @@ super + alt + shift + {j,l,semicolon,k}
 super + s
     bspc config window_gap {50, 75,100,0,25}
 
-# Rotate 
+# Rotate
 super + comma
     bspc node @focused:/ -R 270
 
@@ -113,7 +113,7 @@ super + i
 
 
 ################################################################################
-#                             Function, Media & Num Keys 
+#                             Function, Media & Num Keys
 ################################################################################
 
 # Volume Control
@@ -159,7 +159,7 @@ super + XF86MonBrightnessUp
 	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
 
 F7
-    toggle --wifi --noti
+    toggle --wifi --noti && setdisplay --bg toggle-reel
 	# toggle-wifi
 
 # XF86AudioRaiseVolume
@@ -232,7 +232,7 @@ super + shift + n
     toggle --noti
 
 ################################################################################
-#                             System 
+#                             System
 ################################################################################
 
 alt + y
