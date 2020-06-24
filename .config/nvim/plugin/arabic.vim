@@ -18,3 +18,6 @@ function! ArabicMode()
 endfunction
 
 au automation BufRead,BufNewFile *.ar.* call ArabicMode()
+
+nnoremap <leader>r :call ArabicMode()<cr>
+nnoremap <silent> ga :call ArabicMode()<CR>

@@ -116,8 +116,7 @@ nnoremap    H           O<esc>
 nnoremap    '           "
 nnoremap    "           '
 
-nnoremap    <leader>r   :source $MYVIMRC<cr>
-nnoremap    <leader>R   :set rightleft!<cr>
+nnoremap    <leader>R   :source $MYVIMRC<cr>
 :noremap    <c-w>       g<c-g>
 
 " imap		{			{  }<esc>i<bs>
