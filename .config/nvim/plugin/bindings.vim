@@ -18,7 +18,8 @@ nnoremap                                    <m-cr>       :silent w !doas tee %<c
 :noremap    <leader><leader>	    :
 
 nnoremap    <esc> 	                :qa<cr>
-nnoremap    <leader><esc>            ZQ
+nnoremap    <leader><esc>           :qa!<cr>
+" nnoremap    <leader><esc>            ZQ
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Navigation 
