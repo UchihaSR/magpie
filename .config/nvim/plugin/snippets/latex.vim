@@ -46,4 +46,4 @@ au automation FileType tex inoremap ;i  \item
 "                             Table
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-au automation FileType tex inoremap ;t  \begin{tabular}{}<cr>\end{tabular}<up><esc>f{a
+au automation FileType tex inoremap ;zt  \begin{tabular}{}<cr>\end{tabular}<up><esc>f{a
