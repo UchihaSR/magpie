@@ -1,7 +1,7 @@
 let mapleader = ' '
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Saves & Quits 
+"                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap                                    <cr>	            :update<cr>
@@ -22,7 +22,7 @@ nnoremap    <leader><esc>           :qa!<cr>
 " nnoremap    <leader><esc>            ZQ
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Navigation 
+"                             Navigation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 :noremap    j           h
@@ -59,7 +59,7 @@ vnoremap    L           <C-d>zz
 " nnoremap gk :prev<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Modifications 
+"                             Modifications
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap    Y                   y$
@@ -117,7 +117,7 @@ nnoremap    H           O<esc>
 nnoremap    '           "
 nnoremap    "           '
 
-nnoremap    <leader>R   :source $MYVIMRC<cr>
+nnoremap    <leader>r   :source $MYVIMRC<cr>
 :noremap    <c-w>       g<c-g>
 
 " imap		{			{  }<esc>i<bs>
@@ -138,10 +138,10 @@ nnoremap        <leader>P       maggVG='a
 nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Spelling 
+"                             Spelling
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap    <leader>o   :set spell!<cr> 
+nnoremap    <leader>o   :set spell!<cr>
 nnoremap    <leader>f   1z=
 
 " Add / Remove Words

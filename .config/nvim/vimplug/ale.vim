@@ -58,16 +58,26 @@ let g:ale_fixers = {
          \   'scss': ['prettier'],
          \   'sh': ['shfmt'],
          \   'yaml': ['prettier'],
+         \   '*': ['remove_trailing_lines', 'trim_whitespace'],
          \}
 
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 let g:ale_sh_shfmt_options = '-p -i 4 -ci -s -sr'
 " let g:ale_c_clangformat_options = '--style=LLVM'
 let g:ale_css_stylelint_options = '-s sass --fix'
 let g:ale_javascript_prettier_options = '--tab-width 3 --single-quote'
 " let g:ale_javascript_prettier_options = '--single-quote'
 
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
+
+" let g:ale_fix_on_save_ignore = {
+"          \   'c': ['clang-format'],
+"          \   'css': ['prettier'],
+"          \   'html': ['prettier'],
+"          \   'python': ['autopep8'],
+"          \   'sass': ['prettier'],
+"          \   'scss': ['prettier'],
+"          \}
+
 " \   'javascript': ['prettier', 'eslint'],
 
 
