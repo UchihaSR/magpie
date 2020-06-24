@@ -134,17 +134,15 @@ XF86Audio{LowerVolume,RaiseVolume}
 	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refBlock -v
 	# pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-
 # Music control
 XF86Audio{Next,Prev,Play}
-	playerctl {next,prev,play-pause}
-    # mpc {next,prev,toggle}
+    setplayer {next,prev,toggle}
 
-super + XF86Audio{Next,Prev}
-	mpc seek {+5,-5}
+# super + XF86Audio{Next,Prev}
+# 	mpc seek {+5,-5}
 
-super + XF86AudioPlay
-	mpc random {on,off}
+# super + XF86AudioPlay
+# 	mpc random {on,off}
 
 # Backlight
 {XF86MonBrightness{Up,Down}}
