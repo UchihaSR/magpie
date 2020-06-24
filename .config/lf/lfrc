@@ -20,7 +20,7 @@ set previewer preview
 
 cmd trash %mv $fx ~/.local/share/Trash
 
-cmd open $launch-devour "$fx"
+cmd open $launch --devour "$fx"
 # cmd open $launch "$f"
 
 cmd makeScript %{{
@@ -100,7 +100,7 @@ map aP !printf "What do you wanna pull? "; read req; rsync -avhe 'ssh -p 8022' -
 map f search
 
 map n &echo "${f%.*}" | rev | cut -d'/' -f1 | rev | xsel -p
-map N &mv "$f" $(xsel -o) 
+map N &mv "$f" $(xsel -o)
 
 map <esc> quit
 
@@ -134,14 +134,14 @@ map z
 # map hmr mark-remove
 
 ################################################################################
-#                             Bookmarks 
+#                             Bookmarks
 ################################################################################
 
 map g
 map gb cd ~/Storage/Workspace/bracu
 map gd cd ~/Downloads
 map gf cd /home/git/own/magpie
-map gh cd ~ 
+map gh cd ~
 map gm
 map gm cd /disk/Media
 map gp
@@ -152,7 +152,7 @@ map gt cd ~/.local/share/Trash
 map gw cd ~/Storage/Workspace
 
 ################################################################################
-#                             FFMPEG 
+#                             FFMPEG
 ################################################################################
 
 map zr
@@ -166,7 +166,7 @@ map zam !add-music "$fx"
 # map zrv !printf "Level? [01 - 99] "; read lev;reduce-volume "$f" "$lev"
 
 ################################################################################
-#                             Misc 
+#                             Misc
 ################################################################################
 
 map zms makeScript
