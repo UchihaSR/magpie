@@ -1,1 +1,0 @@
-/home/git/own/magpie/.config/zsh/.zshrc
