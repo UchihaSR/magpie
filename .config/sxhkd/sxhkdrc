@@ -20,8 +20,7 @@ super + g
     google
 
 super + {_,shift} + w
-    alfred --bg {shuffle,delete}
-    # set-bg -{s,d}
+    setdisplay --bg {toggle-reel,delete}
 
 super + o
     bolt --search

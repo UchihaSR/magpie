@@ -23,11 +23,11 @@ export WM=bspwm
 
 export PANEL_FIFO=/tmp/panel_fifo
 export UNIBLOCKS_PID=/tmp/ub_pid
+export DONT_DISTURB_MODE=/tmp/ddm
+export REC_PID=/tmp/rec_pid
 export GIT=/home/git
 export WALLPAPERS=/home/git/own/wallpapers
 export ICONS=~/.icons/system
-export DONT_DISTURB_MODE=/tmp/ddm
-export REC_PID=/tmp/rec_pid
 export INACTIVITY=900
 export LAYOUT_EN=~/.config/X11/xmodmap-en
 export LAYOUT_AR=~/.config/X11/xmodmap-ar
