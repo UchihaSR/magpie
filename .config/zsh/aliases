@@ -1,16 +1,16 @@
 #!/bin/sh
 
 ################################################################################
-#                             Globals 
+#                             Globals
 ################################################################################
 
 alias -g da="doas --"
 
 ################################################################################
-#                             MVPs 
+#                             MVPs
 ################################################################################
 
-alias c="clear" 
+alias c="clear"
 alias cc="calcurse"
 alias cpr="cp -r"
 alias dcpr="da cp -r"
@@ -37,7 +37,7 @@ alias xmqf="xdg-mime query filetype"
 alias src=". ~/.config/functionrc && . ~/.config/aliasrc"
 alias msa="mbsync -c ~/.config/isync/mbsyncrc -a"
 alias dj="da journalctl -p 3 -xb"
-alias yd="youtube-dl -x -f bestaudio/best"
+alias yd="youtube-dl -x --embed-thumbnail -f bestaudio/best"
 alias ydv="youtube-dl -f best"
 
 # yd="youtube-dl -x --audio-format mp3 --audio-quality 0"
@@ -61,7 +61,7 @@ alias dsf="da systemctl --failed"
 alias sab="systemd-analyze blame"
 
 ################################################################################
-#                             Git 
+#                             Git
 ################################################################################
 
 alias gi="git init"
