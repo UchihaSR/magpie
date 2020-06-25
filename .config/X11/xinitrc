@@ -39,8 +39,7 @@ gebaard -b &
 xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
-# Launche bar
+# Launch bar
 sh -c "sleep 1 && $STATUSBAR" &
-# $STATUSBAR &
-# Luanche Window Manager
+# Launch Window Manager
 exec "$WM"
