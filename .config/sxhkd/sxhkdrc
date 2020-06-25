@@ -116,64 +116,29 @@ super + i
 #                             Function, Media & Num Keys
 ################################################################################
 
-# Volume Control
-XF86Audio{LowerVolume,RaiseVolume}
-	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 $(cat pid)
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && pkill -5 volume
+F{2,3}
+    pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
 
-{F2,F3}
-	pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
-	# pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block -v
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && kill -35 "$(cat $UNIBLOCKS_PID)"
-    # pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refBlock -v
+F1
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
 
-{XF86AudioMute,F1}
-	pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block -v
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle && refBlock -v
-	# pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# Music control
 XF86Audio{Next,Prev,Play}
     setplayer {next,prev,toggle}
 
-# super + XF86Audio{Next,Prev}
-# 	mpc seek {+5,-5}
-
-# super + XF86AudioPlay
-# 	mpc random {on,off}
-
-# Backlight
-{XF86MonBrightness{Up,Down}}
-    {incBl,decBl}
 F{11,12}
-	{decBl,incBl}
-
-super + XF86MonBrightnessDown
-	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
-
-super + XF86MonBrightnessUp
-	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
+    {decBl,incBl}
 
 F7
     toggle --wifi --noti && setdisplay --bg toggle-reel
-	# toggle-wifi
 
-# XF86AudioRaiseVolume
-# 	pactl set-sink-volume @DEFAULT_SINK@ +10%
-# 	# amixer set Master 5%+
-# XF86AudioLowerVolume
-# 	pactl set-sink-volume @DEFAULT_SINK@ -10%
-# 	# amixer set Master 5%-
-# 	# sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
-# XF86AudioMute
-# 	pactl set-sink-mute @DEFAULT_SINK@ toggle
-# 	# amixer set Master toggle
+# super + XF86MonBrightnessDown
+# 	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
 
+# super + XF86MonBrightnessUp
+# 	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
 
 KP_Subtract
-	leave-x
+    leave-x
 
 # KP_Insert
 #     xrandr --output eDP-1 {--off,--auto --dpi 96}
@@ -182,10 +147,7 @@ KP_Subtract
 #     systemctl suspend
 
 KP_Add
-	systemctl suspend
-
-
-
+    systemctl suspend
 
 ###############################################################################
 #                             Misc
@@ -215,8 +177,8 @@ super + c
     # pkill -USR1 polybar
 
 Print
-	maim -u -d 1 ~/screen.png
-	# screencast
+	screencast
+	# maim -u -d 1 ~/screen.png
 	# record
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
@@ -234,10 +196,10 @@ super + shift + n
 ################################################################################
 
 alt + y
-	xdotool keyup y key --clearmodifiers Control+Shift+c
+    xdotool keyup y key --clearmodifiers Control+Shift+c
 
 alt + p
-	xdotool keyup p key --clearmodifiers Control+Shift+v
+    xdotool keyup p key --clearmodifiers Control+Shift+v
 
 # shift + Escape
 # 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
