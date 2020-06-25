@@ -1,4 +1,4 @@
-# Config SXHKD
+# sxhkd configuraton
 
 ###############################################################################
 #                             MVPs
@@ -38,7 +38,7 @@ super + n
    crystal --close
 
 KP_Home
-	connect-bt
+    connectbt
 
 KP_Delete
     bspc quit
