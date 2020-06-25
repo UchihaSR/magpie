@@ -53,16 +53,18 @@ nmap    L         <Plug>(SmoothieDownwards)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'junegunn/goyo.vim'
-augroup Goyo
-    autocmd!
-    autocmd BufReadPost * Goyo        82x80%
-    autocmd BufReadPost *.md Goyo     76x80%
-    autocmd BufReadPost neofetch Goyo 102x80%
-    autocmd VimResized * execute "normal \<C-W>="
-augroup END
+au automation BufReadPost * Goyo        82x80%
+au automation VimResized * execute "normal \<C-W>="
 
-au automation FocusGained,BufEnter * Goyo 82x100%
-au automation User GoyoLeave silent! source $MYVIMRC
+" augroup Goyo
+"     autocmd!
+"     autocmd BufReadPost * Goyo        82x80%
+"     " autocmd BufReadPost * Goyo        82x80%
+"     autocmd VimResized * execute "normal \<C-W>="
+" augroup END
+
+" au automation FocusGained,BufEnter * Goyo 82x100%
+" au automation User GoyoLeave silent! source $MYVIMRC
 " au! automation User GoyoLeave silent! source $MYVIMRC
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

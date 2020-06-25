@@ -12,23 +12,23 @@ let g:ale_virtualtext_prefix = '   <--   💡 '
 let g:ale_use_global_executables = 1
 
 let g:ale_linters = {
-         \   'c':   ['clang'],
-         \   'groff':   ['write-good'],
-         \   'markdown':   ['write-good'],
-         \   'python':   ['flake8'],
-         \   'javascript':   ['eslint'],
-         \   'javascriptreact':   ['eslint'],
-         \   'json':   ['jsonlint'],
-         \   'nroff':   ['write-good'],
-         \   'typescript':   ['tsserver'],
-         \   'typescriptreact':   ['tsserver'],
-         \   'sass':           ['sasslint'],
-         \   'scss':           ['sasslint'],
-         \   'sh':           ['shellcheck'],
-         \   'tex':   ['chktex', 'lacheck'],
-         \   'vim':           ['vint'],
-         \   'yaml':   ['yamllint'],
-         \}
+            \   'c':   ['clang'],
+            \   'groff':   ['write-good'],
+            \   'markdown':   ['write-good'],
+            \   'python':   ['flake8'],
+            \   'javascript':   ['eslint'],
+            \   'javascriptreact':   ['eslint'],
+            \   'json':   ['jsonlint'],
+            \   'nroff':   ['write-good'],
+            \   'typescript':   ['tsserver'],
+            \   'typescriptreact':   ['tsserver'],
+            \   'sass':           ['sasslint'],
+            \   'scss':           ['sasslint'],
+            \   'sh':           ['shellcheck'],
+            \   'tex':   ['chktex', 'lacheck'],
+            \   'vim':           ['vint'],
+            \   'yaml':   ['yamllint'],
+            \}
 
 " \   'python':   ['flake8', 'pylint'],
 
@@ -47,19 +47,19 @@ nmap gl <Plug>(ale_next_wrap)
 " highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_fixers = {
-         \   'c': ['clang-format'],
-         \   'css': ['prettier'],
-         \   'html': ['prettier'],
-         \   'javascript': ['prettier'],
-         \   'json': ['prettier', 'fixjson'],
-         \   'markdown': ['prettier'],
-         \   'python': ['autopep8'],
-         \   'sass': ['prettier'],
-         \   'scss': ['prettier'],
-         \   'sh': ['shfmt'],
-         \   'yaml': ['prettier'],
-         \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-         \}
+            \   'c': ['clang-format'],
+            \   'css': ['prettier'],
+            \   'html': ['prettier'],
+            \   'javascript': ['prettier'],
+            \   'json': ['prettier', 'fixjson'],
+            \   'markdown': ['prettier'],
+            \   'python': ['autopep8'],
+            \   'sass': ['prettier'],
+            \   'scss': ['prettier'],
+            \   'sh': ['shfmt'],
+            \   'yaml': ['prettier'],
+            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \}
 
 let g:ale_sh_shfmt_options = '-p -i 4 -ci -s -sr'
 " let g:ale_c_clangformat_options = '--style=LLVM'
@@ -86,3 +86,5 @@ let g:ale_fix_on_save = 1
 
 "" let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 "" " \   'jsx':          ['stylelint', 'eslint'],
+
+let g:ale_sign_column_always = 1
