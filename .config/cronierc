@@ -1,16 +1,15 @@
 SHELL=/bin/sh
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-# DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$UID/bus
-
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/home/git/own/alfred/syncing:/home/git/own/alfred/misc:/home/git/own/alfred/battery
-
 ICONS=~/.icons/system
 GIT=/home/git
 
-# Mi H D M WD <Command>
+# This is required for notifications
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+# DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$UID/bus
 
+# Update paths for the scripts
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h d M D <Command>
 */5 * * * * battery --monitor
-# */5 * * * * monitor-battery
-@hourly check-storage
-# @hourly sync-all
+@hourly checkstorage / 5 /home 10
 @hourly mirror --git --mail --calcurse
