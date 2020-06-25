@@ -16,10 +16,10 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
-setdisplay --bg shuffle --dpi &
+setdisplay --bg toggle-reel --dpi &
 bolt --generate &
 uniblocks --server &
-watchmen --dots --mails &
+watchmen &
 mirror --mail &
 # Launch Compositor
 sh -c "sleep 1 && $COMPOSITOR -cCfF" &
