@@ -1,5 +1,5 @@
 SHELL=/bin/sh
-ICONS=~/.icons/system
+ICONS=~/.local/share/icons/system
 GIT=/home/git
 
 # This is required for notifications
