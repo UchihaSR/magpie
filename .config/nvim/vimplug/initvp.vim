@@ -33,7 +33,7 @@ Plug 'rakr/vim-one'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
+
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
 Plug 'farmergreg/vim-lastplace'
@@ -47,6 +47,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'psliwka/vim-smoothie'
 nmap    K         <Plug>(SmoothieUpwards)
 nmap    L         <Plug>(SmoothieDownwards)
+
+
+Plug 'tpope/vim-surround'
+nmap sw ysiw
+nmap sW ysiW
+nmap sl yss
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Goyo
@@ -175,6 +181,8 @@ nmap f <Plug>(easymotion-overwin-w)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Dead
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Plug 'kana/vim-textobj-user'
 
 " Plug 'bilalq/lite-dfm'
 " let g:lite_dfm_normal_bg_cterm = 215

@@ -62,25 +62,25 @@ vnoremap    L           <C-d>zz
 "                             Modifications
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap    Y                   y$
+nnoremap Y         y$
 
-nnoremap    V                   v$h
-nnoremap    vv                  V
-nnoremap    <leader>v           <c-v>
+nnoremap V         v$h
+nnoremap vv        V
+nnoremap <leader>v <c-v>
 
-nnoremap	cj                  c^
-nnoremap	dj                  d^
-nnoremap	yj                  y^
+nnoremap cj        c^
+nnoremap dj        d^
+nnoremap yj        y^
 
-nnoremap	c;                  lC
-nnoremap	d;                  lD
-nnoremap	y;                  ly$
+nnoremap c;        lC
+nnoremap d;        lD
+nnoremap y;        ly$
 
-nnoremap    <M-j>	            4dh
-nnoremap    <M-;>	            i<tab><esc>l
+nnoremap <M-j>  4dh
+nnoremap <M-;>  i<tab><esc>l
 
-nnoremap    <M-k>	            kJ
-nnoremap    <M-l>	            J
+nnoremap <M-k>  kJ
+nnoremap <M-l>  J
 
 " nnoremap    <M-k>	            kdd
 " nnoremap    <M-l>	            I<cr><esc>l
@@ -92,30 +92,30 @@ nnoremap    <M-l>	            J
 " nnoremap    <C-k>	            K
 " nnoremap    <C-l>	            J
 
-nnoremap    <leader>y          :%y<cr>
-nnoremap    <leader>d          :%d<cr>
+nnoremap <leader>y :%y<cr>
+nnoremap <leader>d :%d<cr>
 
-nnoremap    U	                <C-r>
+nnoremap U <C-r>
 
 " ------------[ View ]-----------------
 
-nnoremap	<leader>w	:set wrap!<cr>
+nnoremap <leader>w	:set wrap!<cr>
 
 " :noremap    <leader>f	zf
 " :noremap    <leader>F	zd
 
-:noremap    <leader>u	za
-:noremap    <leader>U	zM
+:noremap <leader>u	za
+:noremap <leader>U	zM
 
 " vmap        <leader>f   za
 
 " ------------[ Misc ]-----------------
 
-nnoremap    h           o<esc>
-nnoremap    H           O<esc>
+nnoremap h           o<esc>
+nnoremap H           O<esc>
 
-nnoremap    '           "
-nnoremap    "           '
+nnoremap '           "
+nnoremap "           '
 
 nnoremap    <leader>r   :source $MYVIMRC<cr>
 :noremap    <c-w>       g<c-g>
@@ -136,6 +136,7 @@ nnoremap        <leader>P       maggVG='a
 " nnoremap        <leader>t       :TableModeToggle<cr>
 
 nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Spelling
