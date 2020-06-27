@@ -12,7 +12,8 @@ au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex silent !compile %
 
 au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
-au automation BufWritePost test.c  silent !cc %
+au automation BufWritePost test.c  silent !compile %
+" au automation BufWritePost test.c  silent !gcc -Wall % -lxcb ;;
 
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 
