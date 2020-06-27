@@ -73,8 +73,8 @@ au automation VimResized * execute "normal \<C-W>="
 
 Plug 'tpope/vim-commentary'
 
-:map		s       gc
-nmap		ss      gcc
+:map s  gc
+nmap ss gcc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Hexokinase

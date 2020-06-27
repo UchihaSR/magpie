@@ -1,4 +1,3 @@
-
 au automation BufRead,BufNewFile .*profile set filetype=sh
 au automation FileType markdown,groff,tex setlocal spell
 

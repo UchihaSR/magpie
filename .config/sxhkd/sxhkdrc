@@ -41,9 +41,9 @@ KP_Home
     connectbt
 
 KP_Delete
-    bspc quit
+    pkill -u $USER
+    # bspc quit
    # pkill -KILL -u $USER
-	# pkill -u $USER
 
 ################################################################################
 #                             BSPWM
