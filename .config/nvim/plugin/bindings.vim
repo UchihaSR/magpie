@@ -97,6 +97,8 @@ nnoremap <leader>d :%d<cr>
 
 nnoremap U <C-r>
 
+xnoremap p pgvy
+
 " ------------[ View ]-----------------
 
 nnoremap <leader>w	:set wrap!<cr>
@@ -117,22 +119,22 @@ nnoremap H           O<esc>
 nnoremap '           "
 nnoremap "           '
 
-nnoremap    <leader>r   :source $MYVIMRC<cr>
-:noremap    <c-w>       g<c-g>
+nnoremap <leader>r   :source $MYVIMRC<cr>
+:noremap <c-w>       g<c-g>
 
 " imap		{			{  }<esc>i<bs>
 
-nnoremap    <leader>s   :%s//gcI<left><left><left><left>
-vnoremap    <leader>s   "zy:%s/<C-r>z//gc<left><left><left>
+nnoremap <leader>s   :%s//gcI<left><left><left><left>
+vnoremap <leader>s   "zy:%s/<C-r>z//gc<left><left><left>
 
 " vnoremap    <leader>r   "zy:args *.<ext> | argdo :%s/<C-r>z/<rep>/gc | update
 
-nnoremap        <leader>b       :w! %.bak<cr>
+nnoremap <leader>b       :w! %.bak<cr>
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-nnoremap        <leader>P       maggVG='a
+nnoremap <leader>P       maggVG='a
 " nnoremap        <leader>t       :TableModeToggle<cr>
 
 nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
@@ -142,12 +144,12 @@ nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
 "                             Spelling
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap    <leader>o   :set spell!<cr>
-nnoremap    <leader>f   1z=
+nnoremap <leader>o   :set spell!<cr>
+nnoremap <leader>f   1z=
 
 " Add / Remove Words
-nnoremap    <leader>a   zg
-nnoremap    <leader>A   zug
+nnoremap <leader>a   zg
+nnoremap <leader>A   zug
 
 " nnoremap gk [s
 " nnoremap gl ]s
