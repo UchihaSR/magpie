@@ -10,8 +10,9 @@ au automation  BufWritePost dunstrc       silent !killall dunst && dunst & notif
 
 au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex   silent !compile %
 
-au automation  BufWritePost    test.sh              !sh %
-au automation  BufWritePost    test.py              !python %
+au automation  BufWritePost    test.sh !sh %
+au automation  BufWritePost    test.py !python %
+au automation  BufWritePost    test.c  !cc %
 
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 
