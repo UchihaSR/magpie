@@ -23,7 +23,7 @@ super + g
     google
 
 super + {_,shift} + w
-    setdisplay --bg {toggle-reel,delete}
+    {toggle --wall-reel,setdisplay --bg delete}
 
 super + o
     bolt --search
