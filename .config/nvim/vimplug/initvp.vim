@@ -207,7 +207,10 @@ nmap f <Plug>(easymotion-overwin-w)
 
 " Plug 'cometsong/CommentFrame.vim'
 " Plug 'tmhedberg/matchit'
-" Plug 'godlygeek/tabular'
+
+Plug 'godlygeek/tabular'
+nnoremap <leader>p :Tabularize /
+
 " Plug 'metakirby5/codi.vim'
 " Plug 'chrisbra/Colorizer'
 " Plug 'powerman/vim-plugin-AnsiEsc'

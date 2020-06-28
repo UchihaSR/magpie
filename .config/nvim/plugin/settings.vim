@@ -52,7 +52,7 @@ set nohlsearch
 set clipboard+=unnamedplus
 set splitbelow splitright
 set wildmode=longest,list,full
-" set hidden
+set hidden
 " set paste
 set modelines=0
 " set viewoptions-=options
@@ -85,7 +85,7 @@ set nofoldenable
 "Visible space
 set list
 " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
-set listchars=nbsp:⦸ 
+set listchars=nbsp:⦸
 " WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7)
 set listchars+=tab:▷┅
 " RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
@@ -154,4 +154,3 @@ endif
 " set textwidth=80                      " automatically hard wrap at 80 columns
 
 set whichwrap=b,h,l,s,<,>,[,],~       " allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
-

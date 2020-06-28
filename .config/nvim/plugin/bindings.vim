@@ -85,6 +85,7 @@ nnoremap <leader>r   :source $MYVIMRC<cr>
 :noremap <c-w>       g<c-g>
 
 
+" nnoremap <leader>s   :argdo %s//gcI | update
 nnoremap <leader>s   :%s//gcI<left><left><left><left>
 vnoremap <leader>s   "zy:%s/<C-r>z//gc<left><left><left>
 
@@ -133,8 +134,8 @@ au automation FileType markdown,text nnoremap gl ]s
 " vmap        <leader>f   za
 
 " ------------[ Buffers ]-----------------
-" nnoremap gl :next<cr>
-" nnoremap gk :prev<cr>
+nnoremap g; :next<cr>
+nnoremap gj :prev<cr>
 
 " :noremap    <leader>f	zf
 " :noremap    <leader>F	zd
