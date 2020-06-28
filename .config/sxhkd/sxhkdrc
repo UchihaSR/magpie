@@ -144,8 +144,9 @@ F7
 KP_Subtract
     leave-x
 
-# KP_Insert
-#     xrandr --output eDP-1 {--off,--auto --dpi 96}
+KP_Insert
+    sleep 1 && xset dpms force off
+    # xrandr --output eDP1 {--off,--auto --dpi 96}
 
 # KP_End
 #     systemctl suspend
