@@ -10,6 +10,9 @@ super + Return
 super + e
     $TERMINAL -e explore
 
+super + v
+    $TERMINAL -e nvim
+
 super + b
     $BROWSER
 

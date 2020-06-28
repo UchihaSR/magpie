@@ -7,52 +7,60 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+""""""""""""""""""""""""""""""""""""""""
+"              Sources
+""""""""""""""""""""""""""""""""""""""""
 so ~/.config/nvim/vimplug/ale.vim
-" so ~/.config/nvim/source/plugins/airline.vim
 so ~/.config/nvim/vimplug/coc.vim
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Color Schemes
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Plug 'junegunn/seoul256.vim'
-" Plug 'tomasr/molokai'
-" Plug 'nanotech/jellybeans.vim'
-" Plug 'patstockwell/vim-monokai-tasty'
-" Plug 'dikiaap/minimalist'
-Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'lifepillar/vim-gruvbox8'
-" Plug 'joshdick/onedark.vim'
-" Plug 'mhartington/oceanic-next'
-Plug 'iCyMind/NeoSolarized'
-Plug 'rakr/vim-one'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Essentials
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 Plug 'jiangmiao/auto-pairs'
-
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
 Plug 'farmergreg/vim-lastplace'
-Plug 'kovetskiy/sxhkd-vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'sheerun/vim-polyglot'
 
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_setConceal = 1
-
 Plug 'psliwka/vim-smoothie'
-nmap    K         <Plug>(SmoothieUpwards)
-nmap    L         <Plug>(SmoothieDownwards)
-
+nmap K <Plug>(SmoothieUpwards)
+nmap L <Plug>(SmoothieDownwards)
 
 Plug 'tpope/vim-surround'
 nmap sw ysiw
 nmap sW ysiW
 nmap sl yss
+
+Plug 'tpope/vim-commentary'
+:map s  gc
+nmap ss gcc
+
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
+
+Plug 'godlygeek/tabular'
+au automation BufReadPost * :noremap <leader>t :Tabularize /
+
+Plug 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<a-,>'
+let g:user_emmet_install_global = 0
+au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+
+Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+map  f <Plug>(easymotion-bd-w)
+nmap f <Plug>(easymotion-overwin-w)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Color Schemes
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'lifepillar/vim-gruvbox8'
+
+Plug 'iCyMind/NeoSolarized'
+Plug 'rakr/vim-one'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Goyo
@@ -62,45 +70,19 @@ Plug 'junegunn/goyo.vim'
 au automation BufReadPost * Goyo        82x80%
 au automation VimResized * execute "normal \<C-W>="
 
-" augroup Goyo
-"     autocmd!
-"     autocmd BufReadPost * Goyo        82x80%
-"     " autocmd BufReadPost * Goyo        82x80%
-"     autocmd VimResized * execute "normal \<C-W>="
-" augroup END
-
 " au automation FocusGained,BufEnter * Goyo 82x100%
 " au automation User GoyoLeave silent! source $MYVIMRC
 " au! automation User GoyoLeave silent! source $MYVIMRC
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Commentary
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plug 'tpope/vim-commentary'
-
-:map s  gc
-nmap ss gcc
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Hexokinase
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-" let g:Hexokinase_highlighters = [ 'virtual' ]
-let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-" let g:mkdp_auto_start = 1
 let g:mkdp_refresh_slow = 1
 au  automation  FileType    markdown,vimwiki    nnoremap    <leader><cr>    <Plug>MarkdownPreviewToggle
 let g:mkdp_browser = 'falkon'
-au automation FileType markdown nnoremap    <leader><cr>        :MarkdownPreview<cr>
+au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
 " Plug 'dhruvasagar/vim-table-mode'
 " au automation FileType markdown TableModeToggle
@@ -131,10 +113,10 @@ au automation FileType markdown nnoremap    <leader><cr>        :MarkdownPreview
 "                             Javascript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'peecky/vim-node-syntax'
-Plug 'mxw/vim-xhp'
+" Plug 'pangloss/vim-javascript'
+" Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'peecky/vim-node-syntax'
+" Plug 'mxw/vim-xhp'
 
 " Plug 'tasn/vim-tsx'
 " Plug 'leafgarland/typescript-vim'
@@ -148,7 +130,6 @@ Plug 'mxw/vim-xhp'
 " Plug 'moll/vim-node'
 " Plug 'othree/yajs'
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Python
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,27 +141,20 @@ Plug 'mxw/vim-xhp'
 " Plug 'aliev/vim-compiler-python'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Emmet
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key='<a-,>'
-let g:user_emmet_install_global = 0
-au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Easy Motion
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plug 'easymotion/vim-easymotion'
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-map  f <Plug>(easymotion-bd-w)
-nmap f <Plug>(easymotion-overwin-w)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Dead
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Plug 'tomasr/molokai'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'dikiaap/minimalist'
+" Plug 'joshdick/onedark.vim'
+" Plug 'mhartington/oceanic-next'
+
+" so ~/.config/nvim/source/plugins/airline.vim
+
+" Plug 'Yggdroot/indentLine'
+" let g:indentLine_setConceal = 1
 
 " Plug 'kana/vim-textobj-user'
 
@@ -208,8 +182,6 @@ nmap f <Plug>(easymotion-overwin-w)
 " Plug 'cometsong/CommentFrame.vim'
 " Plug 'tmhedberg/matchit'
 
-Plug 'godlygeek/tabular'
-nnoremap <leader>p :Tabularize /
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'chrisbra/Colorizer'
@@ -263,5 +235,7 @@ nnoremap <leader>p :Tabularize /
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
 " Plug 'vim-scripts/restore_view.vim'
+
+" Plug 'kovetskiy/sxhkd-vim'
 
 call plug#end()
