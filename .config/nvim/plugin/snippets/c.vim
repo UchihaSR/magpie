@@ -3,3 +3,5 @@ au automation FileType c inoremap ;B <Esc>20i//<Esc>o<Esc>20i//<Esc>O//<Esc>15a<
 au automation FileType c inoremap ;s <Esc>40i//<Esc>o
 au automation FileType c inoremap ;S <Esc>20i//<Esc>o
 au automation FileType c inoremap ;p printf("");<left><left><left>
+
+au automation FileType c inoremap ;t  <Esc>:read ~/.config/nvim/templates/c_boiler.c<cr>
