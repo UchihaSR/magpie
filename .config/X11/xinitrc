@@ -16,7 +16,8 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
-setdisplay --bg toggle-reel --dpi &
+setdisplay --dpi &
+toggle --wall-reel &
 bolt --generate &
 uniblocks --server &
 watchmen &

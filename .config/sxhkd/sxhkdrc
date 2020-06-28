@@ -132,7 +132,8 @@ F{11,12}
     {decBl,incBl}
 
 F7
-    toggle --wifi --noti && setdisplay --bg toggle-reel
+    toggle --wifi --noti --wall-reel
+    # toggle --wifi --noti && setdisplay --bg toggle-reel
 
 # super + XF86MonBrightnessDown
 # 	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
