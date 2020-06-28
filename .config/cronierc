@@ -12,4 +12,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # m h d M D <Command>
 */5 * * * * battery --monitor
 @hourly checkstorage / 5 /home 10
-@hourly mirror --git --mail --calcurse
+@hourly mirror --firefox --git --mail --calcurse
