@@ -8,7 +8,7 @@ au automation FileType tex inoremap ;T  <Esc>:read ~/.config/nvim/templates/late
 
 au automation FileType tex inoremap ;b <Esc>80i%<Esc>o<Esc>80i%<Esc>O%<Esc>30a<space><Esc>i
 
-au automation FileType tex inoremap ;t <Esc>40i%<Esc>o<Esc>40i%<Esc>O%<Esc>15a<space><Esc>i
+au automation FileType tex inoremap ;B <Esc>40i%<Esc>o<Esc>40i%<Esc>O%<Esc>15a<space><Esc>i
 
 au automation FileType tex inoremap ;s <Esc>80i%<Esc>o
 au automation FileType tex inoremap ;S <Esc>40i%<Esc>o

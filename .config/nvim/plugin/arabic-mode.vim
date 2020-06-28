@@ -1,5 +1,5 @@
 let s:arabicmode = 0
-function! ToggleArabic()
+function! ToggleArabicMode()
     set arabicshape
     set spell!
     set rightleft!
@@ -30,5 +30,5 @@ function! ToggleArabic()
         augroup END
     endif
 endfunction
-au automation BufRead,BufNewFile *.ar.* call ToggleArabic()
-nnoremap <silent> ga :call ToggleArabic()<CR>
+au automation BufReadPost *.ar.* call ToggleArabicMode()
+nnoremap <silent> ga :call ToggleArabicMode()<CR>

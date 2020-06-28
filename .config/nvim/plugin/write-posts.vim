@@ -1,5 +1,3 @@
-" au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
-
 au automation BufWritePost *xmodmap*     silent !xmodmap %
 au automation BufWritePost sxhkdrc       silent !pkill -USR1 sxhkd
 au automation BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
@@ -13,8 +11,10 @@ au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex silent !compile %
 au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
 au automation BufWritePost test.c  silent !compile %
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " au automation BufWritePost test.c  silent !gcc -Wall % -lxcb ;;
-
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
-
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
+" au automation  BufWritePost picom.conf    silent !pkill -USR1 picom

@@ -1,21 +1,37 @@
+" Updates the buffer if changed elsewhere
 au automation FocusGained,BufEnter * checktime
-
-au automation  VimLeave    *.c,*.tex   !compile --clean %
-" au automation  VimLeave    *.c,*.tex   !clean-junk %
-
+" Clean Junk files after quitting
+au automation VimLeave *.c,*.tex !compile --clean %
 " Vertically center document when entering insert mode
-au automation  InsertEnter *   norm zz
-
+au automation InsertEnter * norm zz
 " JSON Comment Viewer
 au automation FileType json syntax match Comment +\/\/.\+$+
-
 " Disables automatic commenting on newline:
 au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Read profile as a shellscript
+au automation BufReadPost .*profile set filetype=sh
+" Set spelling for certain filetypes
+au automation FileType markdown,groff,tex setlocal spell
+" Comment string setup
+au automation FileType json     setlocal commentstring=//\%s
+au automation FileType sxhkdrc  setlocal commentstring=#\%s
+au automation FileType markdown setlocal commentstring=<!---\%s\-->
 
-" Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
-if &diff
-   highlight! link DiffText MatchParen
-endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" au automation BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+" au automation BufRead,BufNewFile *.ms      set filetype=groff
+" au automation FileType markdown setlocal commentstring=[//]:\ #\ (\%s\)
+" au automation FileType markdown setlocal commentstring=[//]:\ #\ "\%s\"
+" au automation FileType xdefaults setlocal commentstring=!\%s
+" au automation BufRead,BufNewFile .*profile set filetype=sh
+
+" " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
+" if &diff
+"    highlight! link DiffText MatchParen
+" endif
 
 " Auto Fold at Startup
 " au automation VimEnter * normal zM
@@ -48,4 +64,3 @@ endif
 
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "require(rmarkdown); rmarkdown::render('%', quiet=TRUE)"
 " au automation  BufWritePost    *.rmd,*.Rmd             !Rscript -e "rmarkdown::render('%', quiet=TRUE)"
-

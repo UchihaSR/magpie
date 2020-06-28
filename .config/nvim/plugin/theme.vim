@@ -59,18 +59,22 @@ colorscheme gruvbox-material
 " colorscheme monokai_pro
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Cursor 
+"                             Cursor
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" set cursorline
+" set cursorcolumn
+" autocmd automation InsertEnter * set nocursorline nocursorcolumn
+" autocmd automation InsertLeave * set cursorline cursorcolumn
 
 hi clear CursorLine
 hi CursorLine gui=underline
 " hi CursorLine gui=underline cterm=underline
-
-autocmd automation InsertEnter * set nocul
-autocmd automation InsertLeave * set cul
+autocmd automation InsertEnter * set nocursorline
+autocmd automation InsertLeave * set cursorline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Backgrounds and Foregrouds 
+"                             Backgrounds and Foregrouds
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Transparency
