@@ -20,34 +20,21 @@ map ; scroll right
 map k scroll up
 map l scroll down
 
-# map     J           navigate_index previous
-# map     :           navigate_index next
-# map     K           navigate_index up
-# map     L           navigate_index down
-
 map J navigate previous
 map : navigate next
-map K scroll half up
-map L scroll half down
-
-# map     K           goto top
-# map     L           goto bottom
+map K scroll half-up
+map L scroll half-down
 
 map m zoom in
 map n zoom out
-# map i toggle_index
 
 map i recolor
 
 map w adjust_window width
 map W adjust_window best-fit
 
-map p print
-
 map <Esc> quit
 map h quit
-
-map D toggle_page_mode
 
 ################################################################################
 #                     Gruvbox Color Scheme (Stolen from Bryan Jenks)
@@ -85,3 +72,25 @@ set default-bg                  "#1d2021"
 set default-fg                  "#001512"
 set recolor-lightcolor          "#282828"
 set recolor-darkcolor           "#ebdbb2"
+
+################################################################################
+#                             Experiements
+################################################################################
+
+map z           navigate_index collapse
+map x           navigate_index collapse-all
+map c           navigate_index expand
+map v           navigate_index expand-all
+
+map index z navigate_index up
+map index c navigate_index next
+map index v navigate_index collapse
+
+# map     K           goto top
+# map     L           goto bottom
+
+# map i toggle_index
+
+# map p print
+
+# map D toggle_page_mode
