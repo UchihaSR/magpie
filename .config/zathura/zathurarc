@@ -77,14 +77,14 @@ set recolor-darkcolor           "#ebdbb2"
 #                             Experiements
 ################################################################################
 
-map z           navigate_index collapse
-map x           navigate_index collapse-all
-map c           navigate_index expand
-map v           navigate_index expand-all
+# map z           navigate_index collapse
+# map x           navigate_index collapse-all
+# map c           navigate_index expand
+# map v           navigate_index expand-all
 
-map index z navigate_index up
-map index c navigate_index next
-map index v navigate_index collapse
+# map index z navigate_index up
+# map index c navigate_index next
+# map index v navigate_index collapse
 
 # map     K           goto top
 # map     L           goto bottom
