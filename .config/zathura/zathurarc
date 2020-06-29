@@ -1,32 +1,87 @@
-#!/bin/bash
+# Zathura configuration
 
-set     selection-clipboard     clipboard
-set     adjust-open             width
+########################################
+#              Options
+########################################
 
-map     j           scroll left
-map     ;           scroll right
-map     k           scroll up
-map     l           scroll down
+set selection-clipboard clipboard
+set adjust-open width
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set recolor true
+
+########################################
+#              Bindings
+########################################
+
+map j scroll left
+map ; scroll right
+map k scroll up
+map l scroll down
 
 # map     J           navigate_index previous
 # map     :           navigate_index next
 # map     K           navigate_index up
 # map     L           navigate_index down
 
-map     K           navigate previous
-map     L           navigate next
+map J navigate previous
+map : navigate next
+map K scroll half up
+map L scroll half down
+
 # map     K           goto top
 # map     L           goto bottom
 
-map     m           zoom in
-map     n           zoom out
-map     i           toggle_index
+map m zoom in
+map n zoom out
+# map i toggle_index
 
-map     r           recolor
+map i recolor
 
-map     w           adjust_window width
-map     W           adjust_window best-fit
+map w adjust_window width
+map W adjust_window best-fit
 
-map     p    		print
+map p print
 
-map     <Esc>    	quit
+map <Esc> quit
+map h quit
+
+map D toggle_page_mode
+
+################################################################################
+#                     Gruvbox Color Scheme (Stolen from Bryan Jenks)
+################################################################################
+
+set completion-group-bg         "#282828"
+set completion-group-fg         "#ebdbb2"
+set completion-bg               "#282828"
+set completion-fg               "#ebdbb2"
+set completion-highlight-bg     "#458588"
+set completion-highlight-fg     "#ebdbb2"
+
+set notification-error-bg       "#3c3836"
+set notification-error-fg       "#ebdbb2"
+set notification-warning-bg     "#3c3836"
+set notification-warning-fg     "#ebdbb2"
+set notification-bg             "#3c3836"
+set notification-fg             "#ebdbb2"
+
+set index-bg                    "#1d2021"
+set index-fg                    "#ebdbb2"
+set index-active-bg             "#282828"
+set index-active-fg             "#ebdbb2"
+
+set inputbar-bg                 "#3c3836"
+set inputbar-fg                 "#ebdbb2"
+
+set statusbar-bg                "#282828"
+set statusbar-fg                "#ebdbb2"
+
+set highlight-color             "#458588"
+set highlight-active-color      "#458588"
+
+set default-bg                  "#1d2021"
+set default-fg                  "#001512"
+set recolor-lightcolor          "#282828"
+set recolor-darkcolor           "#ebdbb2"
