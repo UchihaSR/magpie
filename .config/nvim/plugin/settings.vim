@@ -68,13 +68,6 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-" Arabic Settings
-" set delcombine
-" set rl
-" set arabicshape
-" set rightleftcmd&
-" set guifont=Markazi\ Text\ 15
-
 "Folds
 " set foldmethod=marker
 " set foldmarker=<<<,>>>
@@ -99,9 +92,6 @@ set nojoinspaces
 
 " set conceallevel=0
 " set completeopt-=preview
-
-set noruler
-set laststatus=0
 
 " set shortmess=F
 
@@ -154,3 +144,10 @@ endif
 " set textwidth=80                      " automatically hard wrap at 80 columns
 
 set whichwrap=b,h,l,s,<,>,[,],~       " allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
+
+" set noruler
+" set laststatus=0
+" set noshowcmd
+" set shortmess+=F
+
+set noshowmode
