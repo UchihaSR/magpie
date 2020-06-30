@@ -21,12 +21,12 @@ export WM=bspwm
 #                             System
 ###############################################################################
 
+export GIT=/mnt/horcrux/git
 export PANEL_FIFO=/tmp/panel_fifo
 export UNIBLOCKS_PID=/tmp/ub_pid
 export DONT_DISTURB_MODE=/tmp/ddm
 export REC_PID=/tmp/rec_pid
-export GIT=/home/git
-export WALLPAPERS=/home/git/own/eyelust
+export WALLPAPERS=$GIT/own/eyelust
 export ICONS=~/.local/share/icons/system
 export INACTIVITY=900
 export LAYOUT_EN=~/.config/X11/xmodmap-en
@@ -91,7 +91,7 @@ ex=🎯:\
 *.json=📒:\
 "
 
-. /home/git/own/private/.private 2> /dev/null
+. ~/.private 2> /dev/null
 
 ###############################################################################
 #                             Maintain a Clean Home Directory

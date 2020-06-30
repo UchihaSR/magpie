@@ -140,14 +140,12 @@ map z
 map g
 map gb cd ~/Storage/Workspace/bracu
 map gd cd ~/Downloads
-map gf cd /home/git/own/magpie
 map gh cd ~
 map gm
-map gm cd /disk/Media
+map gs cd /mnt/horcrux
 map gp
-map gp cd /home/phone
-map gr cd /home/git/own
-map gs cd /disk
+map gp cd /mnt/horcrux/phone
+map gr cd /mnt/horcrux/git/own
 map gt cd ~/.local/share/Trash
 map gw cd ~/Storage/Workspace
 
