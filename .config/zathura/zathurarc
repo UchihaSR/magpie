@@ -25,6 +25,11 @@ map : navigate next
 map K scroll half-up
 map L scroll half-down
 
+map [index] k navigate_index up
+map [index] l navigate_index down
+map [index] j navigate_index collapse
+map [index] ; navigate_index expand
+
 map m zoom in
 map n zoom out
 
@@ -77,6 +82,9 @@ set recolor-darkcolor           "#ebdbb2"
 #                             Experiements
 ################################################################################
 
+map o toggle_index
+
+
 # map z           navigate_index collapse
 # map x           navigate_index collapse-all
 # map c           navigate_index expand
@@ -89,7 +97,6 @@ set recolor-darkcolor           "#ebdbb2"
 # map     K           goto top
 # map     L           goto bottom
 
-# map i toggle_index
 
 # map p print
 
