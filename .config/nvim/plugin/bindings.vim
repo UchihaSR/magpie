@@ -70,8 +70,8 @@ xnoremap p pgvy
 
 nnoremap <leader>w	:set wrap!<cr>
 
-:noremap <leader>u	za
-:noremap <leader>U	zM
+" :noremap <leader>u	za
+" :noremap <leader>U	zM
 
 " ------------[ Misc ]-----------------
 
@@ -97,8 +97,10 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 nnoremap <leader>P       maggVG='a
 
-nnoremap ! :silent !swallow "$TERMINAL --working-directory" "$(pwd)"<cr>
+nnoremap ! :silent !devour $TERMINAL --working-directory $PWD<cr>
 
+nnoremap <leader>u g~iw
+vnoremap <leader>u ~
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Spelling
