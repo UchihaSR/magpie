@@ -104,8 +104,8 @@ map N &mv "$f" $(xsel -o)
 
 map <esc> quit
 
-map i $$EDITOR "$f"
-map I %du -sh "$f" | cut -f1
+# map i $$EDITOR "$f"
+map i %du -sh "$f" | cut -f1
 
 map J $$SHELL
 

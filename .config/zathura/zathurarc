@@ -27,8 +27,15 @@ map L scroll half-down
 
 map [index] k navigate_index up
 map [index] l navigate_index down
+
 map [index] j navigate_index collapse
 map [index] ; navigate_index expand
+
+map [index] J navigate_index collapse-all
+map [index] : navigate_index expand-all
+
+map o toggle_index
+map [index] o toggle_index
 
 map m zoom in
 map n zoom out
@@ -40,6 +47,8 @@ map W adjust_window best-fit
 
 map <Esc> quit
 map h quit
+
+map [index] h exit
 
 ################################################################################
 #                     Gruvbox Color Scheme (Stolen from Bryan Jenks)
@@ -82,17 +91,6 @@ set recolor-darkcolor           "#ebdbb2"
 #                             Experiements
 ################################################################################
 
-map o toggle_index
-
-
-# map z           navigate_index collapse
-# map x           navigate_index collapse-all
-# map c           navigate_index expand
-# map v           navigate_index expand-all
-
-# map index z navigate_index up
-# map index c navigate_index next
-# map index v navigate_index collapse
 
 # map     K           goto top
 # map     L           goto bottom
