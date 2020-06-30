@@ -145,7 +145,7 @@ map gh cd ~
 map gm
 map gm cd /disk/Media
 map gp
-map gp cd /disk/Phone
+map gp cd /home/phone
 map gr cd /home/git/own
 map gs cd /disk
 map gt cd ~/.local/share/Trash
