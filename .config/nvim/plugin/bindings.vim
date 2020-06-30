@@ -108,6 +108,7 @@ nnoremap <leader>o   :set spell!<cr>
 
 " Autofix Word
 nnoremap <leader>f   1z=
+nnoremap <leader>F   i<C-X><C-S>
 
 " Add / Remove Word
 nnoremap <leader>a   zg
