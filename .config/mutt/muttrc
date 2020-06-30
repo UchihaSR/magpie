@@ -1,6 +1,6 @@
 set folder = "~/.local/share/mail/gmail/"
-set smtp_url = "smtps://$MAIL1_ADDR:$MAIL1_PASS@smtp.gmail.com"
-set from = "$MAIL1_ADDR"
+set smtp_url = "smtps://salman104alvi@gmail.com:`gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`@smtp.gmail.com"
+set from = "salman104alvi@gmail.com"
 set realname = "Salman Abedin"
 
 set mailcap_path = "~/.config/mutt/mailcap"
