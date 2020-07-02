@@ -76,8 +76,8 @@ set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
 ################################################################################
 
 # urlscan
-macro index,pager    o "<pipe-message> urlscan -dcr 'launch --link {}'<Enter>"
-macro attach,compose o "<pipe-entry> urlscan -dcr 'launch --link {}'<Enter>"
+macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
+macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
 
 # Sidebar
 bind index,pager \Ck sidebar-prev
