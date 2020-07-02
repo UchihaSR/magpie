@@ -10,13 +10,10 @@ toggle_filenames
 
 #Set
 
-next_img semicolon
-prev_img j
-# next_img l
-# prev_img k
-
-zoom_in  m
-zoom_out n
+zoom_in semicolon
+zoom_out j
+next_img l
+prev_img k
 
 scroll_right J
 scroll_left  colon

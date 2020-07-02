@@ -1,3 +1,9 @@
+# Mutt Config
+
+################################################################################
+#                             Options
+################################################################################
+
 set folder = "~/.local/share/mail/gmail/"
 set smtp_url = "smtps://salman104alvi@gmail.com:`gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`@smtp.gmail.com"
 set from = "salman104alvi@gmail.com"
@@ -65,6 +71,14 @@ set sidebar_next_new_wrap = yes
 set mail_check_stats
 set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
 
+################################################################################
+#                             Bindings
+################################################################################
+
+# urlscan
+macro index,pager    o "<pipe-message> urlscan -dcr 'launch --link {}'<Enter>"
+macro attach,compose o "<pipe-entry> urlscan -dcr 'launch --link {}'<Enter>"
+
 # Sidebar
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cl sidebar-next
@@ -103,6 +117,7 @@ bind index 					<space> 	tag-entry
 
 bind pager                  <ESC>       noop
 bind index,pager            <ESC>       quit
+bind index,pager            n           quit
 
 bind index					f 			imap-fetch-mail
 

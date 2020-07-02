@@ -103,6 +103,7 @@ map n &echo "${f%.*}" | rev | cut -d'/' -f1 | rev | xsel -p
 map N &mv "$f" $(xsel -o)
 
 map <esc> quit
+map h quit
 
 # map i $$EDITOR "$f"
 map i %du -sh "$f" | cut -f1

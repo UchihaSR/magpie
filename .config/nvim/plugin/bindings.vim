@@ -5,18 +5,20 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <cr>             :update<cr>
-nnoremap <leader><cr>     :update \| !compile %<cr>
-nnoremap <m-cr>           :silent w !doas tee %<cr>
+nnoremap <cr>          :update<cr>
+nnoremap <leader><cr>  :update \| !compile %<cr>
+nnoremap <m-cr>        :silent w !doas tee %<cr>
 
-nnoremap <esc>            :qa<cr>
-nnoremap <leader><esc>    :qa!<cr>
+nnoremap n             :qa<cr>
+nnoremap N             :qa!<cr>
+nnoremap <esc>         :qa<cr>
+nnoremap <leader><esc> :qa!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Navigation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" My right shifted semi reversed setup
+" My right shifted semi reversed setup =)
 :noremap j           h
 :noremap ;           l
 
@@ -74,6 +76,9 @@ nnoremap <leader>w	:set wrap!<cr>
 " :noremap <leader>U	zM
 
 " ------------[ Misc ]-----------------
+
+nnoremap m n
+nnoremap M N
 
 nnoremap h           o<esc>
 nnoremap H           O<esc>

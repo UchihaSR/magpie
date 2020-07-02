@@ -27,6 +27,7 @@ export UNIBLOCKS_PID=/tmp/ub_pid
 export DONT_DISTURB_MODE=/tmp/ddm
 export REC_PID=/tmp/rec_pid
 export WALLPAPERS=$GIT/own/eyelust
+export NEWS=/tmp/news
 export ICONS=~/.local/share/icons/system
 export INACTIVITY=900
 export LAYOUT_EN=~/.config/X11/xmodmap-en
