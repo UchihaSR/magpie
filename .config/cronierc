@@ -1,6 +1,6 @@
 SHELL=/bin/sh
 ICONS=~/.local/share/icons/system
-GIT=/home/git
+GIT=/mnt/horcrux/git
 
 # This is required for notifications
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
