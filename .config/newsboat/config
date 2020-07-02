@@ -19,10 +19,7 @@ confirm-exit yes
 cleanup-on-quit no
 max-items 1000
 # delete-read-articles-on-quit yes
-# datetime-format 📅_%a_%d_%b
-# datetime-format 📅_%a_%d_%b_%Y_%H:%M
-# datetime-format 📅_%a_%d_%b
-datetime-format "%a, %d %b"
+datetime-format "%H:%M, %a, %d %b"
 
 # Formats
 feedlist-title-format "%u Unread Feeds"
@@ -72,7 +69,7 @@ bind-key R reload-urls
 bind-key r reload-all
 
 bind-key ' mark-feed-read
-bind-key \" mark-all-feeds-read
+# bind-key \" mark-all-feeds-read
 
 bind-key f edit-flags
 
