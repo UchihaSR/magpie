@@ -20,13 +20,20 @@ cleanup-on-quit no
 max-items 1000
 # delete-read-articles-on-quit yes
 # datetime-format 📅_%a_%d_%b
-datetime-format 📅_%a_%d_%b_%Y_%H:%M
+# datetime-format 📅_%a_%d_%b_%Y_%H:%M
+# datetime-format 📅_%a_%d_%b
+datetime-format "%a, %d %b"
 
-# Format of the titles.
+# Formats
 feedlist-title-format "%u Unread Feeds"
 articlelist-title-format "%u Unread Articles"
 itemview-title-format "%T"
 urlview-title-format "URLs"
+
+feedlist-format "%u %t"
+articlelist-format "%D %5s %t"
+# feedlist-format "%n %u %t"
+# feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════%t?"
 
 # searchresult-title-format "%N: (%u) Search"
 # filebrowser-title-format "%N: %f %?O?Open File&Save File?"
@@ -49,6 +56,9 @@ bind-key l down
 bind-key k up
 bind-key ; open
 bind-key j quit
+
+bind-key L pagedown
+bind-key K pageup
 
 bind-key i toggle-article-read
 
@@ -77,8 +87,6 @@ macro SPACE set browser "$BROWSER" ; open-in-browser ; set browser "launch --lin
 
 # bind-key G end
 # bind-key g home
-# bind-key d pagedown
-# bind-key u pageup
 
 
 # bind-key n next-unread
@@ -92,16 +100,17 @@ macro SPACE set browser "$BROWSER" ; open-in-browser ; set browser "launch --lin
 #                             Colors
 ################################################################################
 
-color listfocus black white
-color listfocus_unread red white
+color listfocus black cyan
+color listfocus_unread red cyan
 
+color listnormal cyan default
 color listnormal_unread red default
 color info red default
-# color listnormal magenta default
 # color article magenta default bold
 
-highlight all "=.*=" magenta
-highlight feedlist ".*(0/0))" black
+highlight all "══.*" magenta
+highlight all "═\\[.*" yellow
+highlight feedlist ".*(0/[0-9]+))" black
 
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default
 highlight article "(^Link:.*|^Date:.*)" default default

@@ -13,3 +13,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 */5 * * * * battery --monitor
 @hourly checkstorage / 5 /home 10 /mnt/horcrux 50
 @hourly mirror --firefox --git --mailbox --calcurse
+* * * * * mirror --git
