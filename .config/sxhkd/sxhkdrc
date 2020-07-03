@@ -10,6 +10,9 @@ super + Return
 super + e
     $TERMINAL -e explore
 
+super + h
+    $TERMINAL -e newsboat
+
 super + v
     $TERMINAL -e nvim
 
