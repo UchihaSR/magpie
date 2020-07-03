@@ -27,7 +27,7 @@ articlelist-title-format "%u Unread Articles"
 itemview-title-format "%T"
 urlview-title-format "URLs"
 
-feedlist-format "%u %t"
+feedlist-format "%7u %t"
 articlelist-format "%D %5s %-17T %5s %t"
 
 # searchresult-title-format "%N: (%u) Search"
