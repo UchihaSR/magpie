@@ -10,8 +10,8 @@ prepopulate-query-feeds yes
 # show-read-feeds no
 # show-read-articles no
 show-keymap-hint no
-auto-reload yes
-reload-time 900
+# auto-reload yes
+# reload-time 900
 browser "launch --link"
 # external-url-viewer "urlscan -d -r 'launch --link {}'"
 # text-width 80
