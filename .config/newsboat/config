@@ -28,9 +28,7 @@ itemview-title-format "%T"
 urlview-title-format "URLs"
 
 feedlist-format "%u %t"
-articlelist-format "%D %5s %t"
-# feedlist-format "%n %u %t"
-# feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════%t?"
+articlelist-format "%D %5s %-17T %5s %t"
 
 # searchresult-title-format "%N: (%u) Search"
 # filebrowser-title-format "%N: %f %?O?Open File&Save File?"
