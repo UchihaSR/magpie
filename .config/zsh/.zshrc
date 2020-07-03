@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# tmux attach -t 0 > /dev/null 2>&1 || tmux
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -15,7 +17,7 @@ setopt promptsubst
 
 
 ################################################################################
-#                             Prompt 
+#                             Prompt
 ################################################################################
 
 autoload -U colors
@@ -69,7 +71,7 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 zstyle ':completion:*' list-colors ''
 
 ################################################################################
-#                             Options 
+#                             Options
 ################################################################################
 
 setopt autocd               # .. is shortcut for cd .. (etc)
@@ -91,7 +93,7 @@ setopt pushdsilent          # don't print dir stack after pushing/popping
 setopt sharehistory         # share history across shells
 
 ################################################################################
-#                             Misc 
+#                             Misc
 ################################################################################
 
 ## History in cache directory:
@@ -205,25 +207,25 @@ bindkey -M vicmd 'l' vi-down-line-or-history
 # [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 ################################################################################
-#                             Sources 
+#                             Sources
 ################################################################################
 
 [ -f ~/.config/zsh/aliases ] && . ~/.config/zsh/aliases
 [ -f ~/.config/zsh/functions ] && . ~/.config/zsh/functions
 
 ################################################################################
-#                             Plugins 
+#                             Plugins
 ################################################################################
 
 # # autosuggestions
 # [ -f /home/git/others/zsh-autosuggestions/zsh-autosuggestions.zsh ] &&
-#    . /home/git/others/zsh-autosuggestions/zsh-autosuggestions.zsh 
+#    . /home/git/others/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
 
 # powerleve10k
 # [ -f /home/git/others/zsh_powerlevel10k/powerlevel10k.zsh-theme ] &&
-#    . /home/git/others/zsh_powerlevel10k/powerlevel10k.zsh-theme 
+#    . /home/git/others/zsh_powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || . ~/.config/zsh/.p10k.zsh

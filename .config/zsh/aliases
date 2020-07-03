@@ -131,6 +131,9 @@ alias lAl="lsd -Al"
 alias lt="lsd --tree"
 alias lAt="lsd -A --tree"
 
+# tmux
+alias ta="tmux attach -t 0 || tmux"
+
 # # XBPS
 # alias
 #    dxi="da xbps-install"
