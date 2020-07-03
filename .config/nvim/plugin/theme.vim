@@ -92,4 +92,5 @@ highlight Visual       guibg=NONE guifg=#00FF00
 " highlight clear SpellBadi
 " highlight SpellBadi     guibg=red
 
+highlight clear SpellBad
 highlight SpellBad guibg=NONE guifg=Red
