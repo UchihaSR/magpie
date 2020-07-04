@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-tmux attach > /dev/null 2>&1 || tmux
+[ "$TMUX" ] || tmux attach || tmux
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
