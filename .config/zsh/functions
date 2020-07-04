@@ -59,18 +59,18 @@ calc() { printf "%s\n" "$*" | bc; }
 #                             Wifi
 ################################################################################
 
-wifiStop() { doas systemctl stop iwd; }
-wifiStart() { doas systemctl start iwd; }
+wifistop() { doas systemctl stop iwd; }
+wifistart() { doas systemctl start iwd; }
 
 # wifiStop() { doas systemctl stop systemd-resolved; }
 # wifiStart() { doas systemctl start systemd-resolved; }
 
-wifiCon() {
+wificon() {
     iwctl station "$WIFI_CARD" get-networks
     iwctl \
-        --passphrase "${2:-$WIFI_PASS}" \
+        --passphrase "${1:-$WIFI_PASS}" \
         station "$WIFI_CARD" \
         connect "${2:-$WIFI_SSID}"
 }
 
-wifiShow() { iwctl station "$WIFI_CARD" show; }
+wifishow() { iwctl station "$WIFI_CARD" show; }

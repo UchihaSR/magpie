@@ -36,6 +36,12 @@ nnoremap <leader><esc> :qa!<cr>
 vnoremap K           <C-u>zz
 vnoremap L           <C-d>zz
 
+nnoremap <leader>f   /
+nnoremap <leader>F   ?
+
+nnoremap a n
+nnoremap A N
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Modifications for consistancy
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,9 +83,6 @@ nnoremap <leader>w	:set wrap!<cr>
 
 " ------------[ Misc ]-----------------
 
-nnoremap m n
-nnoremap M N
-
 nnoremap h           o<esc>
 nnoremap H           O<esc>
 
@@ -113,9 +116,9 @@ vnoremap <leader>u ~
 
 nnoremap <leader>o   :set spell!<cr>
 
-" Autofix Word
-nnoremap <leader>f   1z=
-nnoremap <leader>F   i<C-X><C-S>
+" Autocorrect Word
+nnoremap <leader>c   1z=
+nnoremap <leader>C   i<C-X><C-S>
 
 " Add / Remove Word
 nnoremap <leader>a   zg
