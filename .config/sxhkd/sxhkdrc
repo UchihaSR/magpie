@@ -41,9 +41,8 @@ super + {f,m}
    crystal --toggle {fullscreen,solo}
 
 super + n
-    xdo close -CN Alacritty
-    # pidof "$TERMINAL" && tmux kill-window || xdo close
-   # crystal --close
+    xdo close
+    # [ "$(pidof $TERMINAL)" = "$(xdo pid)" ] && tmux kill-window || xdo close
 
 KP_Home
     connectbt

@@ -2,6 +2,8 @@
 
 bspc rule -r "*" # remove all previous rules
 bspc rule -a Zathura state=tiled
+# bspc rule -a Alacritty desktop=1 follow=on
+# bspc rule -a firefox desktop=2 follow=on
 # bspc rule -a    guvcview    state=floating stikcy=on layer=above rectangle=480x270+1440+810
 # bspc rule -a    Screenkey manage=off
 
