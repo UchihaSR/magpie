@@ -7,7 +7,7 @@ let mapleader = ' '
 
 nnoremap <cr>          :update<cr>
 nnoremap <leader><cr>  :update \| !compile %<cr>
-nnoremap <m-cr>        :silent w !doas tee %<cr>
+nnoremap <C-cr>        :silent w !doas tee %<cr>
 
 nnoremap n             :qa<cr>
 nnoremap N             :qa!<cr>
@@ -52,6 +52,7 @@ nnoremap V         v$h
 nnoremap vv        V
 nnoremap <leader>v <c-v>
 
+
 nnoremap cj        c^
 nnoremap dj        d^
 nnoremap yj        y^
@@ -60,11 +61,11 @@ nnoremap c;        lC
 nnoremap d;        lD
 nnoremap y;        ly$
 
-nnoremap <M-j>  4dh
-nnoremap <M-;>  i<tab><esc>l
+nnoremap <C-j>  4dh
+nnoremap <C-;>  i<tab><esc>l
 
-nnoremap <M-k>  kJ
-nnoremap <M-l>  J
+nnoremap <C-k>  kJ
+nnoremap <C-l>  J
 
 
 nnoremap <leader>y :%y<cr>

@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-bspc rule -r    "*"                         # remove all previous rules
-bspc rule -a    Zathura     state=tiled
+bspc rule -r "*" # remove all previous rules
+bspc rule -a Zathura state=tiled
 # bspc rule -a    guvcview    state=floating stikcy=on layer=above rectangle=480x270+1440+810
 # bspc rule -a    Screenkey manage=off
 
@@ -13,46 +13,46 @@ bspc rule -a    Zathura     state=tiled
 
 #----------[ Nodes & Desktops ]-----------------
 
-bspc monitor -d                           	1 2 3 4 5
-bspc desktop -f 	                        3
+bspc monitor -d 1 2 3
+bspc desktop -f 1
 # bspc desktop -l			                next
 
 # Launch new nodes to the left
-bspc config automatic_scheme 			spiral
-bspc config initial_polarity			first_child
+bspc config automatic_scheme spiral
+bspc config initial_polarity first_child
 
-bspc config remove_disabled_monitors	true
-bspc config remove_unplugged_monitors	true
-bspc config merge_overlapping_monitors	true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
 
 #----------[ Nodes & Desktops ]-----------------
 
-bspc config focus_follows_pointer	true
+bspc config focus_follows_pointer true
 
 # bspc config pointer_follows_focus	true
 
-bspc config split_ratio	            0.60
+bspc config split_ratio 0.60
 
 #bspc config history_aware_focus	true
 #bspc config focus_by_distance		true
 
 #----------[ Borders, Gaps & Paddings ]-----------------
 
-bspc config border_width			2
-bspc config window_gap 				25
+bspc config border_width 2
+bspc config window_gap 25
 
-bspc config top_padding 			35
+bspc config top_padding 35
 # bspc config right_padding 			50
 # bspc config bottom_padding 			0
 # bspc config left_padding 			50
 
-bspc config borderless_monocle		true
-bspc config gapless_monocle			true
+bspc config borderless_monocle true
+bspc config gapless_monocle true
 
 #----------[ Colors ]-----------------
 
-bspc config normal_border_color		"#FFFFFF"
-bspc config focused_border_color	"#0000FF"
+bspc config normal_border_color "#FFFFFF"
+bspc config focused_border_color "#0000FF"
 
 # bspc config urgent_border_color		"#B58900"
 # bspc config presel_border_color		"#26E2FF"

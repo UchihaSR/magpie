@@ -31,7 +31,9 @@ xset r rate 200 30 &
 # Launch notification server
 dunst &
 # Bind Multi-purpose keys
-sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Alt_L=Tab\"" &
+xmodmap "$LAYOUT_EN" &
+xcape -e "Super_L=Tab" &
+xcape -e "Alt_L=Escape" &
 # sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 # Bind key commands
 sxhkd &
