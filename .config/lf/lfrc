@@ -20,7 +20,7 @@ set previewer preview
 
 cmd trash %mv $fx ~/.local/share/Trash
 
-cmd open $launch --devour "$fx"
+cmd open $launch "$f"
 # cmd open $launch "$f"
 
 cmd makeScript %{{

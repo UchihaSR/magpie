@@ -5,7 +5,7 @@
 ###############################################################################
 
 super + Return
-    $TERMINAL
+    launch --tmux
 
 super + e
     $TERMINAL -e explore
@@ -29,7 +29,7 @@ super + {_,shift} + w
     {toggle --wall-reel,setdisplay --bg delete}
 
 super + o
-    testt
+    bolt --tmux-search
 
 super + p
    mirror --git
@@ -41,7 +41,9 @@ super + {f,m}
    crystal --toggle {fullscreen,solo}
 
 super + n
-   crystal --close
+    xdo close -CN Alacritty
+    # pidof "$TERMINAL" && tmux kill-window || xdo close
+   # crystal --close
 
 KP_Home
     connectbt
