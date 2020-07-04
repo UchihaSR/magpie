@@ -5,18 +5,14 @@ keycode  93 = space NoSymbol space
 
 ! Caps Lock
 clear lock
-! keycode  66 = Mode_switch
-keycode  66 = Alt_L
-! keycode  66 = Super_L
+keycode  66 = Super_L
 ! Right Alt
 keycode  108 = Caps_Lock NoSymbol Caps_Lock
 keycode  31 = i I Caps_Lock
 
 ! Tab
-keycode  23 = Super_L
-! keycode  23 = Alt_L
-! ! keycode  23 = Mode_switch
-keycode  8 = Tab ISO_Left_Tab Tab ISO_Left_Tab
+keycode  23 = Tab ISO_Left_Tab Tab ISO_Left_Tab
+keycode  8  = Tab ISO_Left_Tab Tab ISO_Left_Tab
 
 keycode  44 = j J Left
 keycode  45 = k K Up

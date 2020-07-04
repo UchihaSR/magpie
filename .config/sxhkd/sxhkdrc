@@ -29,7 +29,7 @@ super + {_,shift} + w
     {toggle --wall-reel,setdisplay --bg delete}
 
 super + o
-    bolt --search
+    testt
 
 super + p
    mirror --git

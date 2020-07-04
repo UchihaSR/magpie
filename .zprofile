@@ -35,7 +35,7 @@ export LAYOUT_AR=~/.config/X11/xmodmap-ar
 export LAYOUT_BN=~/.config/X11/xmodmap-bn
 export QT_QPA_PLATFORMTHEME="gtk2"
 export GROFF_FONT_PATH=~/.local/share/fonts/Groff
-export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
+# export FZF_DEFAULT_OPTS="-e -i --layout=reverse --height 40%"
 
 # Stolen from Luke Smith
 export LF_ICONS="di=📁:\
