@@ -11,6 +11,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # m h d M D <Command>
 */5 * * * * battery --monitor
-*/5 * * * * newsboat -x reload
+# */5 * * * * newsboat -x reload
 @hourly checkstorage / 5 /home 10 /mnt/horcrux 50
 @hourly mirror --firefox --git --mailbox --calcurse

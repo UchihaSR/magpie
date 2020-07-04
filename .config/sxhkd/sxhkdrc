@@ -223,3 +223,6 @@ alt + p
 	# systemctl poweroff
 # super + control + shift + Escape
 	# systemctl reboot
+
+super + apostrophe
+    testt
