@@ -36,8 +36,7 @@ nnoremap <leader><esc> :qa!<cr>
 vnoremap K           <C-u>zz
 vnoremap L           <C-d>zz
 
-nnoremap <leader>f   /
-nnoremap <leader>F   ?
+nnoremap f   /
 
 nnoremap m n
 nnoremap M N
@@ -90,7 +89,7 @@ nnoremap H           O<esc>
 nnoremap '           "
 nnoremap "           '
 
-nnoremap <leader>r   :source $MYVIMRC<cr>
+" nnoremap <leader>r   :source $MYVIMRC<cr>
 :noremap <c-w>       g<c-g>
 
 
@@ -117,9 +116,9 @@ vnoremap <leader>u ~
 
 nnoremap <leader>o   :set spell!<cr>
 
-" Autocorrect Word
-nnoremap <leader>c   1z=
-nnoremap <leader>C   i<C-X><C-S>
+" Autofix Word
+nnoremap <leader>f   1z=
+nnoremap <leader>F   i<C-X><C-S>
 
 " Add / Remove Word
 nnoremap <leader>a   zg

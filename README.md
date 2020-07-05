@@ -7,6 +7,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 -  **zsh** (Shell)
 -  **bspwm** (Window Manager)
 -  **alacritty** (Terminal Emulator)
+-  **tmux** (Terminal Multiplexer)
 -  **neovim** (Text Editor)
 -  **lf** (File Manager)
 -  **yabar** (Status Bar)
@@ -15,9 +16,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 -  [Bolt](https://github.com/salman-abedin/bolt)
 -  [Uniblocks](https://github.com/salman-abedin/uniblocks)
--  [Crystal](https://github.com/salman-abedin/crystal)
 -  [Alfred](https://github.com/salman-abedin/alfred)
--  [Devour](https://github.com/salman-abedin/devour)
 
 ## Installation
 
