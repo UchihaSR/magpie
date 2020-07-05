@@ -237,5 +237,6 @@ au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 " Plug 'vim-scripts/restore_view.vim'
 
 " Plug 'kovetskiy/sxhkd-vim'
+" Plug 'tpope/vim-obsession'
 
 call plug#end()
