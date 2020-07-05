@@ -4,13 +4,15 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ## Highlights
 
--  **zsh** (Shell)
--  **bspwm** (Window Manager)
--  **alacritty** (Terminal Emulator)
--  **tmux** (Terminal Multiplexer)
--  **neovim** (Text Editor)
--  **lf** (File Manager)
--  **yabar** (Status Bar)
+| Program   | Description          |
+| --------- | -------------------- |
+| zsh       | Shell                |
+| neovim    | Text Editor          |
+| lf        | File Manager         |
+| tmux      | Terminal Multiplexer |
+| alacritty | Terminal Emulator    |
+| bspwm     | Window Manager       |
+| yabar     | Status Bar           |
 
 ## Dependencies
 
