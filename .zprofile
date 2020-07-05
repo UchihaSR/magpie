@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 
-###############################################################################
-#                             Defaults
-###############################################################################
+. ~/.private 2> /dev/null
+
+#===============================================================================
+#                             Defaults Programs
+#===============================================================================
 
 export COMPOSITOR="xcompmgr"
 export BROWSER=firefox
@@ -17,25 +19,23 @@ export VISUAL=nvim
 export STATUSBAR=yabar
 export WM=bspwm
 
-###############################################################################
-#                             System
-###############################################################################
+#===============================================================================
+#                             System Stuff
+#===============================================================================
 
-export GIT=/mnt/horcrux/git
-export PANEL_FIFO=/tmp/panel_fifo
-export UNIBLOCKS_PID=/tmp/ub_pid
-export DONT_DISTURB_MODE=/tmp/ddm
-export REC_PID=/tmp/rec_pid
-export WALLPAPERS=$GIT/own/eyelust
-export NEWS=/tmp/news
+export PANELFIFO=/tmp/panel_fifo
+export UBPID=/tmp/ub_pid
+export DDM=/tmp/ddm
+export RECPID=/tmp/rec_pid
 export ICONS=~/.local/share/icons/system
-export INACTIVITY=900
-export LAYOUT_EN=~/.config/X11/xmodmap-en
-export LAYOUT_AR=~/.config/X11/xmodmap-ar
-export LAYOUT_BN=~/.config/X11/xmodmap-bn
 export QT_QPA_PLATFORMTHEME="gtk2"
 export GROFF_FONT_PATH=~/.local/share/fonts/Groff
-# export FZF_DEFAULT_OPTS="-e -i --layout=reverse --height 40%"
+export FZF_DEFAULT_OPTS="-e -i --layout=reverse --height 40%"
+# fzf --reverse -e -i -m \
+#     --border --margin 15%,25% \
+#     --info hidden \
+#     --prompt "launch " \
+#     --bind=tab:down,btab:up)
 
 # Stolen from Luke Smith
 export LF_ICONS="di=📁:\
@@ -93,11 +93,9 @@ ex=🎯:\
 *.json=📒:\
 "
 
-. ~/.private 2> /dev/null
-
-###############################################################################
-#                             Maintain a Clean Home Directory
-###############################################################################
+#===============================================================================
+#                             Housekeeping
+#===============================================================================
 
 export XDG_CONFIG_HOME=~/.config
 export XDG_DATA_HOME=~/.local/share
@@ -112,17 +110,17 @@ export WGETRC=~/.config/wget/wgetrc
 export XAUTHORITY=~/.config/X11/.Xauthority
 export INPUTRC=~/.config/inputrc
 
-################################################################################
+#===============================================================================
 #                             Paths
-################################################################################
+#===============================================================================
 
 PATH=$PATH:~/.local/bin
 PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
 export PATH
 
-###############################################################################
+#===============================================================================
 #                             Misc
-###############################################################################
+#===============================================================================
 
 # export PASSWORD_STORE_DIR=~/.config/pass
 # export NODE_ID=/tmp/node_id
@@ -139,15 +137,15 @@ export PATH
 
 # cat /etc/*-release | grep \"void\" >/dev/null && export TERMINAL=alacritty
 
-###############################################################################
-#                             Auto Start X on TTY1
-###############################################################################
+#===============================================================================
+#                         Auto Start X on TTY1
+#===============================================================================
 
 [ "$(fgconsole 2> /dev/null)" = 1 ] &&
     exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
 
-###############################################################################
-#                             Swap Escape & Caps Lock if On TTY
-###############################################################################
+#===============================================================================
+#                        Swap Escape & Caps Lock when on TTY
+#===============================================================================
 
-sudo -n loadkeys ~/.local/share/misc/ttyMaps.kmap 2> /dev/null
+sudo -n loadkeys ~/.local/share/misc/ttyMaps.kmap 2 > /dev/null
