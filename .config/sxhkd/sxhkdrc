@@ -44,8 +44,7 @@ super + {f,m}
    crystal --toggle {fullscreen,solo}
 
 super + n
-    xdo close
-    # [ "$(pidof $TERMINAL)" = "$(xdo pid)" ] && tmux kill-window || xdo close
+   crystal --close
 
 KP_Home
     connectbt
@@ -172,7 +171,7 @@ super + t
 # 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
 
 super + shift + e
-	insert-emoji
+	insertemoji
 
 # super + {_,shift,alt} + b
 #     {$BROWSER,bookmark-add,bookmark-edit}
