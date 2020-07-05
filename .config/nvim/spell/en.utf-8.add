@@ -87,3 +87,5 @@ Inotify
 workflow
 mpv
 1
+tmux
+fzf
