@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-# If not running interactively, do not do anything
-[ "$TMUX" ] || tmux attach || exec tmux
+# [ "$TMUX" ] || tmux attach || exec tmux
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
