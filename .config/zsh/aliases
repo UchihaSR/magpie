@@ -111,6 +111,7 @@ alias ncra="npx create-react-app"
 
 # Power
 alias sS='systemctl suspend'
+alias sH='systemctl hibernate'
 alias pku='pkill -KILL -u $USER'
 alias po='poweroff'
 alias rb='reboot'

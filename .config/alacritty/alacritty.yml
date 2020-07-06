@@ -27,7 +27,7 @@ key_bindings:
    - { key: Semicolon, mods: Control, action: ScrollPageDown }
    - { key: M, mods: Control, action: IncreaseFontSize }
    - { key: N, mods: Control, action: DecreaseFontSize }
-   - { key: Return, mods: Control, action: SpawnNewInstance }
+   # - { key: Return, mods: Control, action: SpawnNewInstance }
 
 window:
    padding:
