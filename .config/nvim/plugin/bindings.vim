@@ -28,10 +28,10 @@ nnoremap <leader><esc> :qa!<cr>
 :noremap J           b
 :noremap :           e
 
-:noremap <leader>k   gg
-:noremap <leader>l   G$zz
-:noremap <leader>j   ^
-:noremap <leader>;   $
+" :noremap <leader>k   gg
+" :noremap <leader>l   G$zz
+" :noremap <leader>j   ^
+" :noremap <leader>;   $
 
 vnoremap K           <C-u>zz
 vnoremap L           <C-d>zz
@@ -60,11 +60,10 @@ nnoremap c;        lC
 nnoremap d;        lD
 nnoremap y;        ly$
 
-nnoremap <C-j>  4dh
-nnoremap <C-;>  i<tab><esc>l
-
-nnoremap <C-k>  kJ
-nnoremap <C-l>  J
+nnoremap <leader>j  4dh
+nnoremap <leader>;  i<tab><esc>l
+nnoremap <leader>k  kJ
+nnoremap <leader>l  J
 
 
 nnoremap <leader>y :%y<cr>
