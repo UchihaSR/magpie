@@ -197,11 +197,11 @@ super + shift + n
 #                             System
 ################################################################################
 
-# alt + y
-#     xdotool keyup y key --clearmodifiers Control+Shift+c
+alt + y
+    xdotool keyup y key --clearmodifiers Control+Shift+c
 
-# alt + p
-#     xdotool keyup p key --clearmodifiers Control+Shift+v
+alt + p
+    xdotool keyup p key --clearmodifiers Control+Shift+v
 
 # Tab + j
     # ns yo
