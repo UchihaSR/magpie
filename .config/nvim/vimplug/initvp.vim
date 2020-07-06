@@ -48,8 +48,8 @@ au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-map  F <Plug>(easymotion-bd-w)
-nmap F <Plug>(easymotion-overwin-w)
+map  e <Plug>(easymotion-bd-w)
+nmap e <Plug>(easymotion-overwin-w)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Color Schemes

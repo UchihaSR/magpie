@@ -7,15 +7,6 @@
 super + Return
     launch --tmux
 
-super + e
-    $TERMINAL -e explore
-
-super + h
-    $TERMINAL -e newsboat
-
-super + v
-    $TERMINAL -e nvim
-
 super + b
     $BROWSER
 
@@ -53,6 +44,9 @@ KP_Delete
     pkill -u $USER
     # bspc quit
    # pkill -KILL -u $USER
+
+super + KP_Add
+    systemctl hibernate
 
 ################################################################################
 #                             BSPWM
@@ -167,9 +161,6 @@ KP_Add
 super + t
     st
 
-# super + i
-# 	$TERMINAL -e $EDITOR /disk/Phone/Notes/quick-note.txt
-
 super + shift + e
 	insertemoji
 
@@ -206,11 +197,15 @@ super + shift + n
 #                             System
 ################################################################################
 
-alt + y
-    xdotool keyup y key --clearmodifiers Control+Shift+c
+# alt + y
+#     xdotool keyup y key --clearmodifiers Control+Shift+c
 
-alt + p
-    xdotool keyup p key --clearmodifiers Control+Shift+v
+# alt + p
+#     xdotool keyup p key --clearmodifiers Control+Shift+v
+
+# Tab + j
+    # ns yo
+    # xdotool keyup p key --clearmodifiers Control+Shift+v
 
 # shift + Escape
 # 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
@@ -227,5 +222,5 @@ alt + p
 # super + control + shift + Escape
 	# systemctl reboot
 
-super + apostrophe
-    testt
+# super + apostrophe
+#     testt

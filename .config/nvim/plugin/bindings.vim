@@ -37,6 +37,7 @@ vnoremap K           <C-u>zz
 vnoremap L           <C-d>zz
 
 nnoremap f   /
+nnoremap F   ?
 
 nnoremap m n
 nnoremap M N
