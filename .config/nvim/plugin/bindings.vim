@@ -61,10 +61,11 @@ nnoremap d;        lD
 nnoremap y;        ly$
 
 nnoremap <leader>j  4dh
+nnoremap <S-Tab>    4dh
 nnoremap <leader>;  i<tab><esc>l
+nnoremap <Tab>      i<tab><esc>l
 nnoremap <leader>k  kJ
 nnoremap <leader>l  J
-
 
 nnoremap <leader>y :%y<cr>
 nnoremap <leader>d :%d<cr>
