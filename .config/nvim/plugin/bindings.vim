@@ -132,6 +132,11 @@ au automation FileType markdown,text nnoremap gl ]s
 "                             Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+function Figlet(string)
+    execute '!figlet -W' a:string '| xsel -b'
+endfunction
+nnoremap <leader>1 :call Figlet("")<left><left>
+
 " nnoremap    <leader>g   :Goyo!<cr>
 
 " nnoremap gk [s
