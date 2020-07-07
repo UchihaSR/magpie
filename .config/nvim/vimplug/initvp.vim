@@ -16,7 +16,7 @@ so ~/.config/nvim/vimplug/coc.vim
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
-Plug 'farmergreg/vim-lastplace'
+" Plug 'farmergreg/vim-lastplace'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'sheerun/vim-polyglot'
 

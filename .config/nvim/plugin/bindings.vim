@@ -39,8 +39,8 @@ vnoremap L           <C-d>zz
 nnoremap f   /
 nnoremap F   ?
 
-nnoremap m n
-nnoremap M N
+nnoremap m nzzzv
+nnoremap M Nzzzv
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Modifications for consistancy

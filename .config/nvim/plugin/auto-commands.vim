@@ -21,6 +21,12 @@ au automation FileType markdown setlocal commentstring=<!---\%s\-->
 "                             Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Return to the same line you left off at
+au automation BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \	execute 'normal! g`"zvzz' |
+    \ endif
+
 " au automation BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 " au automation BufRead,BufNewFile *.ms      set filetype=groff
 " au automation FileType markdown setlocal commentstring=[//]:\ #\ (\%s\)
