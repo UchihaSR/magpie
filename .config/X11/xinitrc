@@ -32,7 +32,8 @@ xset r rate 200 30 &
 dunst &
 # Bind Multi-purpose keys
 xmodmap "$LAYOUT_EN" &
-xcape -e "Super_L=Escape;Control_L=Tab" &
+xcape -e "Super_L=Escape" &
+# xcape -e "Control_L=Tab" &
 # sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 # Bind key commands
 sxhkd &
