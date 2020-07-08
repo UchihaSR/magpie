@@ -53,7 +53,7 @@ vpn() { doas -- openvpn --config ~/.local/share/ovpn/vpnbook-us1-tcp80.ovpn; }
 sf() { fc-list | grep -i "$1"; }
 
 check() {
-    time sh -c 'for i in $(seq 100); do testy > /dev/null; done'
+    time sh -c 'for i in $(seq 100); do testt > /dev/null; done'
 }
 
 ug() { doas -- grub-mkconfig -o /boot/grub/grub.cfg; }
