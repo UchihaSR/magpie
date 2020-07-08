@@ -129,11 +129,13 @@ map w &tmux split-window -h -c "#{pane_current_path}" \; swap-pane -d -t :.1 \; 
 # map w &setsid $TERMINAL -e lf -last-dir-path ~/.config/lf/last_path "$f"
 # map w &setsid $TERMINAL -e $SHELL
 
-map u $upload $fx
+# map u $upload $fx
 
 map z
 
-# map h
+# map h &ns "$fx"
+# map h $lf -remote 'send echo hello world'
+map h $lf -remote 'quit'
 # map hmr mark-remove
 
 ################################################################################
