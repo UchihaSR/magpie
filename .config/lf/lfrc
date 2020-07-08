@@ -133,9 +133,8 @@ map w &tmux split-window -h -c "#{pane_current_path}" \; swap-pane -d -t :.1 \; 
 
 map z
 
-# map h &ns "$fx"
-# map h $lf -remote 'send echo hello world'
-map h $lf -remote 'quit'
+map h &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map H &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
 # map hmr mark-remove
 
 ################################################################################
