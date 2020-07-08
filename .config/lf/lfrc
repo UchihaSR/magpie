@@ -133,8 +133,6 @@ map w &tmux split-window -h -c "#{pane_current_path}" \; swap-pane -d -t :.1 \; 
 
 map z
 
-map h &echo "$fx" > /tmp/list; lf -remote 'send push u'
-map H &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
 # map hmr mark-remove
 
 ################################################################################
@@ -166,6 +164,14 @@ map zrv !reduce-volume "$f"
 map zam !add-music "$fx"
 
 # map zrv !printf "Level? [01 - 99] "; read lev;reduce-volume "$f" "$lev"
+
+#===============================================================================
+#                             Links
+#===============================================================================
+
+map zp &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map zs &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
+map zh &cat /tmp/list | xargs cp -lfru -t "$PWD"; rm /tmp/list
 
 ################################################################################
 #                             Misc
