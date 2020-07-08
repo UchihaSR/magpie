@@ -38,6 +38,7 @@ vnoremap L           <C-d>zz
 
 nnoremap f   /
 nnoremap F   ?
+vnoremap f   "zy:/<C-r>z<cr>
 
 nnoremap m nzzzv
 nnoremap M Nzzzv
@@ -93,11 +94,9 @@ nnoremap "           '
 " nnoremap <leader>r   :source $MYVIMRC<cr>
 :noremap <c-w>       g<c-g>
 
-
 " nnoremap <leader>s   :argdo %s//gcI | update
 nnoremap <leader>s   :%s//gcI<left><left><left><left>
 vnoremap <leader>s   "zy:%s/<C-r>z//gc<left><left><left>
-
 
 nnoremap <leader>b       :w! %.bak<cr>
 
@@ -119,7 +118,7 @@ nnoremap <leader>o   :set spell!<cr>
 
 " Autofix Word
 nnoremap <leader>f   1z=
-nnoremap <leader>F   i<C-X><C-S>
+nnoremap <leader>f   i<C-X><C-S>
 
 " Add / Remove Word
 nnoremap <leader>a   zg
