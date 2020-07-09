@@ -39,7 +39,7 @@ sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 sxhkd &
 # Bind gesture commands
 gebaard -b &
-# Remove X cursor
+# Remove the ugly X cursor
 xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
