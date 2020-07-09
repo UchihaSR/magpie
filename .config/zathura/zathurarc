@@ -9,7 +9,7 @@ set adjust-open width
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
-# set recolor true
+set recolor true
 
 ########################################
 #              Bindings
@@ -20,8 +20,11 @@ map ; zoom in
 map k scroll up
 map l scroll down
 
-map J navigate previous
-map : navigate next
+map [ navigate previous
+map ] navigate next
+
+map J scroll left
+map : scroll right
 map K scroll half-up
 map L scroll half-down
 
