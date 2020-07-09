@@ -15,20 +15,21 @@ set recolor true
 #              Bindings
 ########################################
 
-map j zoom out
-map ; zoom in
+
+map j scroll left
+map ; scroll right
 map k scroll up
 map l scroll down
 
-map [ navigate previous
-map ] navigate next
+map i zoom in
+map o zoom out
 
-map J scroll left
-map : scroll right
+map J navigate previous
+map : navigate next
 map K scroll half-up
 map L scroll half-down
 
-map i recolor
+map r recolor
 
 map w adjust_window width
 map W adjust_window best-fit
@@ -37,8 +38,8 @@ map <Esc> quit
 map n quit
 
 # Index
-map o toggle_index
-map [index] o toggle_index
+map h toggle_index
+map [index] h toggle_index
 
 map [index] k navigate_index up
 map [index] l navigate_index down

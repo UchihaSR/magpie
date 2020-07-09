@@ -30,12 +30,7 @@ export RECPID=/tmp/rec_pid
 export ICONS=~/.local/share/icons/system
 export QT_QPA_PLATFORMTHEME="gtk2"
 export GROFF_FONT_PATH=~/.local/share/fonts/Groff
-export FZF_DEFAULT_OPTS="-e -i --layout=reverse --height 40%"
-# fzf --reverse -e -i -m \
-#     --border --margin 15%,25% \
-#     --info hidden \
-#     --prompt "launch " \
-#     --bind=tab:down,btab:up)
+export FZF_DEFAULT_OPTS="-i -e --reverse --border --margin 15%,25% --info hidden --bind=tab:down,btab:up"
 
 # Stolen from Luke Smith
 export LF_ICONS="di=📁:\
