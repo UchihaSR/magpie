@@ -26,6 +26,9 @@ super + {_,shift} + w
 super + o
     bolt --tmux-search
 
+# super + shift + o
+#     bolt --rofi-search
+
 super + shift + o
     bolt --rofi-search
 

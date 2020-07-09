@@ -15,6 +15,7 @@ au automation FileType markdown,groff,tex setlocal spell
 " Comment string setup
 au automation FileType json     setlocal commentstring=//\%s
 au automation FileType sxhkdrc  setlocal commentstring=#\%s
+au automation FileType xdefaults  setlocal commentstring=!\%s
 au automation FileType markdown setlocal commentstring=<!---\%s\-->
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
