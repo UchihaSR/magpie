@@ -183,8 +183,8 @@ super + c
     # pkill -USR1 polybar
 
 Print
-    maim -B -u -d 1 -s ~/screen.png
-	# screencast
+	screencast
+    # maim -B -u -d 1 -s ~/screen.png
 	# maim -u -d 1 ~/screen.png
 	# record
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
