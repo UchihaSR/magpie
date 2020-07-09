@@ -152,4 +152,4 @@ alias tl="tmux ls"
 # alias
 #    dsu="da sv up"
 #    dsd="da sv down"
-alias z=zathura
+alias z="zathura"

@@ -45,7 +45,7 @@ map [index] ; navigate_index expand
 map [index] J navigate_index collapse-all
 map [index] : navigate_index expand-all
 
-map [index] n exit
+# map [index] n exit
 
 ################################################################################
 #                     Gruvbox Color Scheme (Stolen from Bryan Jenks)
