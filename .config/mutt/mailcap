@@ -1,5 +1,16 @@
+                      # _   _
+  # _ __ ___     __ _  (_) | |   ___    __ _   _ __
+ # | '_ ` _ \   / _` | | | | |  / __|  / _` | | '_ \
+ # | | | | | | | (_| | | | | | | (__  | (_| | | |_) |
+ # |_| |_| |_|  \__,_| |_| |_|  \___|  \__,_| | .__/
+                      #                       |_|
+
 text/html; "$BROWSER" %s;
 image/*; launch %s;
 application/pdf; launch %s;
 video/*; launch %s;
+
+
+
+
 # text/html; "$BROWSER" %s; nametemplate=%s.html

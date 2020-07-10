@@ -1,12 +1,12 @@
-            # _      _        _
- # ___ __  __| |__  | | __ __| |
-# / __|\ \/ /| '_ \ | |/ // _` |
-# \__ \ >  < | | | ||   <| (_| |
-# |___//_/\_\|_| |_||_|\_\\__,_|
+               # _       _          _
+  # ___  __  __ | |__   | | __   __| |  _ __    ___
+ # / __| \ \/ / | '_ \  | |/ /  / _` | | '__|  / __|
+ # \__ \  >  <  | | | | |   <  | (_| | | |    | (__
+ # |___/ /_/\_\ |_| |_| |_|\_\  \__,_| |_|     \___|
 
-###############################################################################
+#===============================================================================
 #                             MVPs
-###############################################################################
+#===============================================================================
 
 super + Return
     launch --tmux
@@ -14,20 +14,12 @@ super + Return
 super + b
     $BROWSER
 
-super + r
-    rofi -show drun
-
-super + g
-    google
-
 super + {_,shift} + w
-    {toggle --wall-reel,setdisplay --bg delete}
+    setdisplay --bg {shuffle,delete}
+    # {toggle --wall-reel,setdisplay --bg delete}
 
 super + o
     bolt --tmux-search
-
-# super + shift + o
-#     bolt --rofi-search
 
 super + shift + o
     bolt --rofi-search
@@ -35,14 +27,8 @@ super + shift + o
 super + p
    mirror --git
 
-super + {l,k}
-   crystal --navigate {next,prev}
-
-super + {f,m}
-   crystal --toggle {fullscreen,solo}
-
-super + n
-   crystal --close
+super + f
+   toggle -f
 
 KP_Home
     connectbt
@@ -55,24 +41,23 @@ KP_Delete
 super + KP_Add
     systemctl hibernate
 
-################################################################################
+#===============================================================================
 #                             BSPWM
-################################################################################
+#===============================================================================
 
-# # Navigate Nodes
-# super + {_,shift} + {k,l}
-# 	bspc node -{f,s} {prev,next}.local
-# 	# bspc node -{f,s} {prev,next}.local
+# Navigate Nodes
+super + {_,shift} + {k,l}
+    bspc node -{f,s} {prev,next}.local
 
 super + {_,shift} + {j,semicolon}
     bspc {desktop -f,node -d} {prev,next}
 
-# # Close / Kill
-# super + {_,shift} + n
-# 	bspc node -{c,k}
+# Close / Kill
+super + {_,shift} + n
+	bspc node -{c,k}
 
 # Toggle Tiled / Monocle
-super + shift + m
+super + m
    bspc desktop -l next
 
 # Focus / Swap [ Desktop ]
@@ -121,10 +106,9 @@ super + i
 # # super + ctrl + {j,k,l,i,semicolon}
 # 	bspc node -p {west,south,east,north,cancel}
 
-
-################################################################################
+#===============================================================================
 #                             Function, Media & Num Keys
-################################################################################
+#===============================================================================
 
 F{2,3}
     pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
@@ -161,39 +145,32 @@ KP_Insert
 KP_Add
     systemctl suspend
 
-###############################################################################
+#===============================================================================
 #                             Misc
-###############################################################################
+#===============================================================================
 
 super + t
     st
 
 super + shift + e
-	insertemoji
+    insertemoji
 
-# super + {_,shift,alt} + b
-#     {$BROWSER,bookmark-add,bookmark-edit}
+super + apostrophe
+    testt
 
-# super + p
-# 	masterpdfeditor4
+super + r
+    rofi -show drun
 
 super + c
     killall xcompmgr || xcompmgr -cCfF &
     # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
 
-# super + shift + p
-    # launchPolybar
-    # pkill -USR1 polybar
-
 Print
-	screencast
-    # maim -B -u -d 1 -s ~/screen.png
-	# maim -u -d 1 ~/screen.png
+	maim -u -d 1 ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
+    # maim -B -u -d 1 -s ~/screencast-"$(date +'%Y-%b-%d-%H-%M-%S')".png
+	# screencast
 	# record
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
-
-# KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior,Add,Subtract,Del,Ins}
-#     {$BROWSER}
 
 super + backslash
     xmodmap $LAYOUT_{EN,AR}
@@ -201,9 +178,9 @@ super + backslash
 super + shift + n
     toggle --noti
 
-################################################################################
-#                             System
-################################################################################
+#===============================================================================
+#                             Exp
+#===============================================================================
 
 # alt + y
 #     xdotool keyup y key --clearmodifiers Control+Shift+c
@@ -230,5 +207,15 @@ super + shift + n
 # super + control + shift + Escape
 	# systemctl reboot
 
-super + apostrophe
-    testt
+# super + {_,shift,alt} + b
+#     {$BROWSER,bookmark-add,bookmark-edit}
+
+# super + p
+# 	masterpdfeditor4
+
+# KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior,Add,Subtract,Del,Ins}
+#     {$BROWSER}
+
+# super + shift + p
+    # launchPolybar
+    # pkill -USR1 polybar

@@ -33,8 +33,12 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ![](https://cloud.disroot.org/s/QDigqQjTKe42dGa/preview)
 
+![](.local/share/preview/vim.png)
+
 ![](https://cloud.disroot.org/s/t258xjFrkm5fF9Q/preview)
 
 ![](https://cloud.disroot.org/s/Gq69DEEcr9xJxNb/preview)
 
 ![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
+
+![](.local/share/preview/mutt.png)
