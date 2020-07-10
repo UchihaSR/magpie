@@ -1,31 +1,41 @@
 # Mutt Config
 
-################################################################################
-#                             Options
-################################################################################
+source colors
 
-set folder = "~/.local/share/mail/gmail/"
+#=======================================
+#              IMAP
+#=======================================
+
+# set folder = "~/.local/share/mail/gmail/"
+set folder    = imaps://imap.gmail.com/
+set imap_user = "salman104alvi@gmail.com"
+set imap_pass = `gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
+
+#=======================================
+#              SMPT
+#=======================================
+
 set smtp_url = "smtps://salman104alvi@gmail.com:`gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`@smtp.gmail.com"
 set from = "salman104alvi@gmail.com"
 set realname = "Salman Abedin"
 
+#===============================================================================
+#                             Settings
+#===============================================================================
+
+set new_mail_command="notify-send '%n new messages, %u unread.' &"
+
 set mailcap_path = "~/.config/mutt/mailcap"
 
 set spoolfile = +INBOX
-# set record = "+Sent"
-# set trash = "+Trash"
-# set postponed = "+Drafts"
+set record = +Sent
+set trash = +Trash
+set postponed = +Drafts
 
 mailboxes =INBOX
 # mailboxes =INBOX =Sent =Trash =Drafts
 
-# Disable saving outgoing mail since Gmail saves them by default.
-
-# Activate caching, as it can greatly improve speed
-set header_cache = "~/.mutt/.cache"
-set message_cachedir = "~/.mutt/.cache"
-
-set sort = 'reverse-date'
+set sort = "reverse-date"
 
 # Basic Options {{{
 set mbox_type = Maildir  # mailbox type
@@ -58,22 +68,75 @@ auto_view text/html				# automatically show html (mailcap uses w3m)
 auto_view application/pgp-encrypted
 alternative_order text/plain text/enriched text/html
 
-set editor="$EDITOR"
+# set editor='$EDITOR'
 
 set query_command = "abook --mutt-query '%s'"
-macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
 
-# Sidebar mappings
-set sidebar_visible = yes
+
+# Store message headers locally to speed things up.
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
+set header_cache = ~/.cache/mutt
+
+# Store messages locally to speed things up, like searching message bodies.
+# Can be the same folder as header_cache.
+# This will cost important disk usage according to your e-mail amount.
+set message_cachedir = "~/.cache/mutt"
+
+# Specify where to save and/or look for postponed messages.
+set postponed = +[Gmail]/Drafts
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+# How often to check for new mail (time in seconds).
+set mail_check = 120
+
+#===============================================================================
+#                             Styles
+#===============================================================================
+
+# set index_fromat = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+# set folder_format = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+
+#=======================================
+#              Sidebar
+#=======================================
+
+set sidebar_visible = no
 set sidebar_width = 20
 set sidebar_short_path = yes
 set sidebar_next_new_wrap = yes
 set mail_check_stats
-set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/? %?S?%S?"
 
-################################################################################
+#===============================================================================
 #                             Bindings
-################################################################################
+#===============================================================================
+
+#=======================================
+#              Navigation
+#=======================================
+
+bind index,attach        l next-entry
+bind pager               l next-line
+bind index,pager,browser L half-down
+
+bind index,attach        k previous-entry
+bind pager               k previous-line
+bind index,pager,browser K half-up
+
+bind index   ";" display-message
+bind pager   ";" view-attachments
+bind attach  ";" view-mailcap
+bind browser ";" select-entry
+
+bind pager,attach j exit
+
+bind index,attach g first-entry
+bind index,attach G  last-entry
 
 # urlscan
 macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
@@ -87,47 +150,30 @@ bind index,pager \Cp sidebar-prev-new
 bind index,pager \Cn sidebar-next-new
 bind index,pager S sidebar-toggle-visible
 
-# Binds
-bind index,attach 			l 			next-entry
-bind pager 					l 			next-line
-bind index,pager,browser 	L 			half-down
-# bind index 					L 			last-entry
-
-bind index,attach 			k 			previous-entry
-bind pager 					k 			previous-line
-bind index,pager,browser 	K 			half-up
-# bind index 			K 			first-entry
-
-bind index 					";" 			display-message
-bind pager 					";" 			view-attachments
-bind attach 				";" 			view-mailcap
-bind browser 				";" 			select-entry
-
-bind pager,attach 			j 			exit
-
 # bind index 					d 			purge-message
-bind index 					d 			delete-message
-bind index 					D 			undelete-message
+bind index d delete-message
+bind index D undelete-message
 
-bind index,pager 			s 			sync-mailbox
+bind index,pager s sync-mailbox
 
-bind editor 				<Tab> 		complete-query
+bind editor <Tab> complete-query
 
-bind index 					<space> 	tag-entry
+# bind index <space> tag-entry
 
-bind pager                  <ESC>       noop
-bind index,pager            <ESC>       quit
-bind index,pager            n           quit
+bind pager       <ESC> noop
+bind index,pager <ESC> quit
+bind index,pager n     quit
 
-bind index					f 			imap-fetch-mail
-
-macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
-macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 macro index O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
-macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 macro index A "<limit>all\n" "show all messages (undo limit)"
 
-macro index,pager 			U  			<set-flag>O 		"Mark as read"
-macro index,pager 			R  			<clear-flag>O    	"Mark as unread"
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+macro index,pager U <set-flag>O   "Mark as read"
+macro index,pager R <clear-flag>O "Mark as unread"
 
-source colors
+bind index f imap-fetch-mail
+
+# Abook & Notmuch
+# macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
+# macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+# macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
