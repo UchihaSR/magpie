@@ -36,7 +36,8 @@ set realname = "Salman Abedin"
 set ssl_starttls
 set ssl_force_tls
 
-set new_mail_command="notify-send '%n new messages, %u unread.'"
+set new_mail_command='notify-send -t 0 -i "$ICONS/mail.png" \
+"$(echo "%n new messages\n%u unread")"'
 # set new_mail_command="notify-send '%n new messages, %u unread.' &"
 
 set mailcap_path = "~/.config/mutt/mailcap"
@@ -81,8 +82,8 @@ set include						# include message in replies
 
 auto_view text/html				# automatically show html (mailcap uses w3m)
 auto_view application/pgp-encrypted
-# alternative_order text/plain text/enriched text/html
-alternative_order text/plain text/html *
+alternative_order text/plain text/enriched text/html
+# alternative_order text/plain text/html *
 
 # set editor='$EDITOR'
 
@@ -95,10 +96,12 @@ set postponed = +[Gmail]/Drafts
 unset imap_passive
 
 # Keep the IMAP connection alive by polling intermittently (time in seconds).
-set imap_keepalive = 300
+set imap_keepalive = 15
+# set imap_keepalive = 300
 
 # How often to check for new mail (time in seconds).
-set mail_check = 120
+set mail_check = 15
+# set mail_check = 120
 
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"

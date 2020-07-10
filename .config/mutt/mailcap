@@ -1,4 +1,5 @@
-text/html; firefox %s; nametemplate=%s.html
-image/*; launch-swallow %s;
-application/pdf; launch-swallow %s;
-video/*; launch-swallow %s;
+text/html; "$BROWSER" %s;
+image/*; launch %s;
+application/pdf; launch %s;
+video/*; launch %s;
+# text/html; "$BROWSER" %s; nametemplate=%s.html
