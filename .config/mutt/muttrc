@@ -6,16 +6,26 @@ source colors
 #              IMAP
 #=======================================
 
+# unmailboxes *
 # set folder = "~/.local/share/mail/gmail/"
 set folder    = imaps://imap.gmail.com/
 set imap_user = "salman104alvi@gmail.com"
 set imap_pass = `gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
+set imap_qresync
+# set imap_qresync = yes
+set header_cache = ~/.cache/mutt
+set message_cachedir = ~/.cache/mutt
+
+set imap_check_subscribed
+
+set spoolfile = +INBOX
 
 #=======================================
 #              SMPT
 #=======================================
 
-set smtp_url = "smtps://salman104alvi@gmail.com:`gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`@smtp.gmail.com"
+set smtp_url = "smtps://salman104alvi@gmail.com@smtp.gmail.com"
+set smtp_pass = `gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
 set from = "salman104alvi@gmail.com"
 set realname = "Salman Abedin"
 
@@ -23,19 +33,23 @@ set realname = "Salman Abedin"
 #                             Settings
 #===============================================================================
 
-set new_mail_command="notify-send '%n new messages, %u unread.' &"
+set ssl_starttls
+set ssl_force_tls
+
+set new_mail_command="notify-send '%n new messages, %u unread.'"
+# set new_mail_command="notify-send '%n new messages, %u unread.' &"
 
 set mailcap_path = "~/.config/mutt/mailcap"
 
-set spoolfile = +INBOX
-set record = +Sent
-set trash = +Trash
-set postponed = +Drafts
+# set record = +Sent
+# set trash = +Trash
+# set postponed = +Drafts
+# set postponed = "+[Gmail]/Drafts"
 
-mailboxes =INBOX
+# mailboxes =INBOX
 # mailboxes =INBOX =Sent =Trash =Drafts
 
-set sort = "reverse-date"
+# set sort = "reverse-date"
 
 # Basic Options {{{
 set mbox_type = Maildir  # mailbox type
@@ -54,7 +68,8 @@ unset record             # Gmails SMTP already copies emails to Sent folder
 set sleep_time = 0				# Pause 0 seconds for informational messages
 set markers = no				# Disables the `+` displayed at line wraps
 set mark_old = no				# Unread mail stay unread until read
-set mime_forward = yes			# attachments are forwarded with mail
+set mime_forward			# attachments are forwarded with mail
+# set mime_forward = yes			# attachments are forwarded with mail
 set wait_key = no				# mutt won't ask "press key to continue"
 set fast_reply					# skip to compose when replying
 set fcc_attach					# save attachments with the body
@@ -66,21 +81,12 @@ set include						# include message in replies
 
 auto_view text/html				# automatically show html (mailcap uses w3m)
 auto_view application/pgp-encrypted
-alternative_order text/plain text/enriched text/html
+# alternative_order text/plain text/enriched text/html
+alternative_order text/plain text/html *
 
 # set editor='$EDITOR'
 
 set query_command = "abook --mutt-query '%s'"
-
-
-# Store message headers locally to speed things up.
-# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
-set header_cache = ~/.cache/mutt
-
-# Store messages locally to speed things up, like searching message bodies.
-# Can be the same folder as header_cache.
-# This will cost important disk usage according to your e-mail amount.
-set message_cachedir = "~/.cache/mutt"
 
 # Specify where to save and/or look for postponed messages.
 set postponed = +[Gmail]/Drafts
@@ -93,6 +99,18 @@ set imap_keepalive = 300
 
 # How often to check for new mail (time in seconds).
 set mail_check = 120
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+set timeout = 300
+
+set auto_tag
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+
+hdr_order Date From To Cc
 
 #===============================================================================
 #                             Styles
@@ -107,8 +125,10 @@ set mail_check = 120
 
 set sidebar_visible = no
 set sidebar_width = 20
-set sidebar_short_path = yes
-set sidebar_next_new_wrap = yes
+set sidebar_short_path
+# set sidebar_short_path = yes
+set sidebar_next_new_wrap
+# set sidebar_next_new_wrap = yes
 set mail_check_stats
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/? %?S?%S?"
 
@@ -162,18 +182,47 @@ bind editor <Tab> complete-query
 
 bind pager       <ESC> noop
 bind index,pager <ESC> quit
-bind index,pager n     quit
+# bind index,pager n     quit
 
-macro index O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
+# macro index O "<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"
 macro index A "<limit>all\n" "show all messages (undo limit)"
 
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 macro index,pager U <set-flag>O   "Mark as read"
 macro index,pager R <clear-flag>O "Mark as unread"
 
-bind index f imap-fetch-mail
+bind index,pager f imap-fetch-mail
 
 # Abook & Notmuch
 # macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
 # macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
 # macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+
+#===============================================================================
+#                             Colors
+#===============================================================================
+
+# color hdrdefault cyan default
+# color attachment yellow default
+
+# color header brightyellow default "From: "
+# color header brightyellow default "Subject: "
+# color header brightyellow default "Date: "
+
+# color quoted green default
+# color quoted1 cyan default
+# color quoted2 green default
+# color quoted3 cyan default
+
+# color error     red             default         # error messages
+# color message   white           default         # message  informational messages
+# color indicator white           red             # indicator for the "current message"
+# color status    white           blue            # status lines in the folder index sed for the mini-help line
+# color tree      red             default         # the "tree" display of threads within the folder index
+# color search    white           blue            # search matches found with search within the internal pager
+# color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
+
+# color index     yellow default  '~O'
+# color index     yellow default  '~N'
+# color index     brightred       default '~F'    # Flagged Messages are important!
+# color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"
