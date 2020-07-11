@@ -115,10 +115,9 @@ super + i
 #===============================================================================
 
 F{2,3}
-    pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && refresh-block 1
-
+    pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && uniblocks -r v
 F1
-    pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh-block 1
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && uniblocks -r v
 
 XF86Audio{Next,Prev,Play}
     setplayer {next,prev,toggle}
