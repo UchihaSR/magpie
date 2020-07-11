@@ -23,9 +23,17 @@ uniblocks --server &
 watchmen &
 # sh -c 'sleep 2; launch --tmux' &
 # Launch Compositor
-sh -c "sleep 1; $COMPOSITOR -cCfF" &
+{
+    sleep 1
+    $COMPOSITOR -cCfF
+} &
+# sh -c "sleep 1; $COMPOSITOR -cCfF" &
 # Set Locker
-sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
+{
+    xset s "$INACTIVITY"
+    xss-lock --ignore-sleep screensaver
+} &
+# sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
 # Speed key reapeat of pressing
 xset r rate 200 30 &
 # Launch notification server
@@ -34,7 +42,11 @@ dunst &
 # xmodmap "$LAYOUT_EN" &
 # xcape -e "Super_L=Escape" &
 # xcape -e "Mode_switch=Tab" &
-sh -c 'xmodmap $LAYOUT_EN; xcape -e "Super_L=Escape;Mode_switch=Tab"' &
+{
+    xmodmap "$LAYOUT_EN"
+    xcape -e "Super_L=Escape;Mode_switch=Tab"
+} &
+# sh -c 'xmodmap $LAYOUT_EN; xcape -e "Super_L=Escape;Mode_switch=Tab"' &
 # sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 # Bind key commands
 sxhkd &
@@ -45,6 +57,10 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-sh -c "sleep 1 && $STATUSBAR" &
+{
+    sleep 1
+    $STATUSBAR
+} &
+# sh -c "sleep 1 && $STATUSBAR" &
 # Launch Window Manager
 exec "$WM"

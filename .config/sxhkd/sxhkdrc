@@ -114,13 +114,11 @@ super + i
 #                             Function, Media & Num Keys
 #===============================================================================
 
-F{2,3}
-    pactl set-sink-volume @DEFAULT_SINK@ {-10%,+10%} && uniblocks -r v
-F1
-    pactl set-sink-mute @DEFAULT_SINK@ toggle && uniblocks -r v
+F{1,2,3}
+    setplayer vol {toggle,down,up}
 
 XF86Audio{Next,Prev,Play}
-    setplayer {next,prev,toggle}
+    setplayer play {next,prev,toggle}
 
 F{11,12}
     {decBl,incBl}
