@@ -9,7 +9,7 @@
 #===============================================================================
 
 super + Return
-    launch --tmux
+    launch --terminal
 
 super + b
     $BROWSER

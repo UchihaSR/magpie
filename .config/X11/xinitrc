@@ -16,12 +16,12 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
+sh -c 'sleep 3;launch --tmux' &
 setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
 uniblocks --server &
 watchmen &
-mirror --mail &
 # Launch Compositor
 sh -c "sleep 1 && $COMPOSITOR -cCfF" &
 # Set Locker
