@@ -16,14 +16,14 @@
 # Launches Transmission Daemon
 # transmission-daemon &
 # Launch Personal Scripts
-sh -c 'sleep 3;launch --tmux' &
 setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
 uniblocks --server &
 watchmen &
+sh -c 'sleep 1; launch --tmux' &
 # Launch Compositor
-sh -c "sleep 1 && $COMPOSITOR -cCfF" &
+sh -c "sleep 1; $COMPOSITOR -cCfF" &
 # Set Locker
 sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
 # Speed key reapeat of pressing
@@ -34,7 +34,8 @@ dunst &
 # xmodmap "$LAYOUT_EN" &
 # xcape -e "Super_L=Escape" &
 # xcape -e "Mode_switch=Tab" &
-sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
+sh -c 'xmodmap $LAYOUT_EN; xcape -e "Super_L=Escape;Mode_switch=Tab"' &
+# sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 # Bind key commands
 sxhkd &
 # Bind gesture commands
