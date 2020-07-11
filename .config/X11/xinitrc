@@ -21,13 +21,9 @@ toggle --wall-reel &
 bolt --generate &
 uniblocks --server &
 watchmen &
-# sh -c 'sleep 2; launch --tmux' &
+launch --tmux &
 # Launch Compositor
-{
-    sleep 1
-    $COMPOSITOR -cCfF
-} &
-# sh -c "sleep 1; $COMPOSITOR -cCfF" &
+$COMPOSITOR -cCfF &
 # Set Locker
 {
     xset s "$INACTIVITY"
@@ -57,10 +53,6 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-{
-    sleep 1
-    $STATUSBAR
-} &
-# sh -c "sleep 1 && $STATUSBAR" &
+$STATUSBAR &
 # Launch Window Manager
 exec "$WM"

@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-sh -c 'launch --tmux' &
+# sh -c 'launch --tmux' &
 
 bspc rule -r "*" # remove all previous rules
 bspc rule -a Zathura state=tiled
