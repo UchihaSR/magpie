@@ -63,6 +63,10 @@ let g:EasyMotion_smartcase = 1
 map  e <Plug>(easymotion-bd-w)
 nmap e <Plug>(easymotion-overwin-w)
 
+Plug 'Yggdroot/indentLine'
+let g:indentLine_enabled = 0
+au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
+
 "===============================================================================
 "                             Color Schemes
 "===============================================================================
@@ -91,7 +95,7 @@ au automation VimResized * execute "normal \<C-W>="
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 let g:mkdp_refresh_slow = 1
-au  automation  FileType    markdown,vimwiki    nnoremap    <leader><cr>    <Plug>MarkdownPreviewToggle
+au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
 let g:mkdp_browser = 'falkon'
 au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
@@ -165,8 +169,6 @@ au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
 " so ~/.config/nvim/source/plugins/airline.vim
 
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_setConceal = 1
 
 " Plug 'kana/vim-textobj-user'
 
