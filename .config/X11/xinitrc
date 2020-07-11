@@ -21,7 +21,7 @@ toggle --wall-reel &
 bolt --generate &
 uniblocks --server &
 watchmen &
-sh -c 'sleep 1; launch --tmux' &
+# sh -c 'sleep 2; launch --tmux' &
 # Launch Compositor
 sh -c "sleep 1; $COMPOSITOR -cCfF" &
 # Set Locker

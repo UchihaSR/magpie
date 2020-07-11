@@ -12,12 +12,20 @@ icons
 themes
 fonts
 
+Downloads/
+
+#===============================================================================
+#                             Repos
+#===============================================================================
+
 eyelust
 firefox
 soulfly-client
 soulfly-server
 
-# Downloads/
+dwm/
+sent/
+st/
 
 voidrice/
 brodie/

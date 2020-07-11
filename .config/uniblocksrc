@@ -2,6 +2,7 @@
 
 # Id,Script,Interval,Signal
 
+W,bspc subscribe report,0
 v,volume,0
 m,mailbox,0
 n,noti-stat,0
