@@ -14,4 +14,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # */5 * * * * tmux run-shell $GIT/others/tmux-resurrect/scripts/save.sh
 # */5 * * * * newsboat -x reload
 @hourly checkstorage / 3 /home 10 /mnt/horcrux 50
-@hourly mirror --firefox --git --mailbox --calcurse
+@hourly mirror --firefox --git --calcurse

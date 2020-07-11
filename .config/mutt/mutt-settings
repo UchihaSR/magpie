@@ -46,8 +46,6 @@ set query_command = "abook --mutt-query '%s'"
 # ignore "DomainKey-Signature:"
 # ignore "DKIM-Signature:"
 
-# set timeout = 300
-
 set auto_tag
 
 hdr_order Date From To Cc
