@@ -80,11 +80,15 @@ super + s
     bspc config window_gap {50, 75,100,0,25}
 
 # Rotate
-super + comma
-    bspc node @focused:/ -R 270
-
 super + period
+    bspc node -f prev.local; bspc node -n next.local
+    # bspc node @focused:/ -R 270
+
+super + comma
     bspc node @focused:/ -R 90
+    # bspc node -n prev.local
+    # bspc node -n prev.local
+    # bspc node @focused:/ -R 90
 
 # Shift to Biggest
 super + i

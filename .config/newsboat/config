@@ -96,10 +96,10 @@ macro SPACE set browser "$BROWSER" ; open-in-browser ; set browser "launch --lin
 #                             Colors
 #===============================================================================
 
-color listfocus black cyan
-color listfocus_unread red cyan
+color listfocus black white
+color listfocus_unread red white
 
-color listnormal cyan default
+color listnormal white default
 color listnormal_unread red default
 color info red default
 # color article magenta default bold

@@ -1,0 +1,71 @@
+set ssl_force_tls
+
+set mailcap_path = "~/.config/mutt/mailcap"
+
+# set sort = "reverse-date"
+
+# Basic Options {{{
+# set mbox_type = Maildir  # mailbox type
+unset move               # gmail does that
+# set delete               # don't ask, just do
+# unset confirmappend      # don't ask, just do!
+# set quit                 # don't ask, just do !!
+# set delete           # Don't ask to confirm purge deleted message on sync
+# unset mark_old           # read/new is good enough for me
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+unset recall            # Don't ask to recall postponed message when Composing
+unset record             # Gmails SMTP already copies emails to Sent folder
+set beep_new             # bell on new mails
+
+set sleep_time = 0				# Pause 0 seconds for informational messages
+unset markers				# Disables the `+` displayed at line wraps
+unset mark_old				# Unread mail stay unread until read
+set mime_forward			# attachments are forwarded with mail
+unset wait_key				# mutt won't ask "press key to continue"
+set fast_reply					# skip to compose when replying
+set fcc_attach					# save attachments with the body
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote				# include message in forwards
+set reverse_name				# reply as whomever it was to
+set include						# include message in replies
+
+auto_view text/html				# automatically show html (mailcap uses w3m)
+auto_view application/pgp-encrypted
+alternative_order text/plain text/enriched text/html
+# alternative_order text/plain text/html *
+
+# set editor='$EDITOR'
+
+set query_command = "abook --mutt-query '%s'"
+
+# Specify where to save and/or look for postponed messages.
+# set postponed = +[Gmail]/Drafts
+
+# ignore "Authentication-Results:"
+# ignore "DomainKey-Signature:"
+# ignore "DKIM-Signature:"
+
+# set timeout = 300
+
+set auto_tag
+
+hdr_order Date From To Cc
+
+#===============================================================================
+#                             Styles
+#===============================================================================
+
+# set index_fromat = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+# set folder_format = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+
+#---------------------------------------
+#              Sidebar
+#---------------------------------------
+
+unset sidebar_visible
+set sidebar_width = 20
+set sidebar_short_path
+set sidebar_next_new_wrap
+set mail_check_stats
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/? %?S?%S?"

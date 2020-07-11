@@ -2,6 +2,7 @@
 
 bspc rule -r "*" # remove all previous rules
 bspc rule -a Zathura state=tiled
+bspc rule -a mpv state=floating sticky=on focus=off
 # bspc rule -a Alacritty desktop=1 follow=on
 # bspc rule -a firefox desktop=2 follow=on
 # bspc rule -a    guvcview    state=floating stikcy=on layer=above rectangle=480x270+1440+810
@@ -16,7 +17,7 @@ bspc rule -a Zathura state=tiled
 #----------[ Nodes & Desktops ]-----------------
 
 bspc monitor -d 1 2 3
-bspc desktop -f 1
+# bspc desktop -f 1
 # bspc desktop -l			                next
 
 # Launch new nodes to the left

@@ -10,6 +10,7 @@ au automation FileType json syntax match Comment +\/\/.\+$+
 au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Read profile as a shellscript
 au automation BufReadPost .*profile set filetype=sh
+au automation BufReadPost mutt* set filetype=muttrc
 " Set spelling for certain filetypes
 au automation FileType markdown,groff,tex setlocal spell
 " Comment string setup

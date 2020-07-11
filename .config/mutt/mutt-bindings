@@ -1,0 +1,61 @@
+#---------------------------------------
+#              Navigation
+#---------------------------------------
+
+bind index,attach        l next-entry
+bind pager               l next-line
+bind index,pager,browser L half-down
+
+bind index,attach        k previous-entry
+bind pager               k previous-line
+bind index,pager,browser K half-up
+
+bind index   ";" display-message
+bind pager   ";" view-attachments
+bind attach  ";" view-mailcap
+bind browser ";" select-entry
+
+bind pager,attach j exit
+
+bind index,attach g first-entry
+bind index,attach G  last-entry
+
+# urlscan
+macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
+macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
+
+# Sidebar
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cl sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager S sidebar-toggle-visible
+
+# bind index 					d 			purge-message
+bind index d delete-message
+bind index D undelete-message
+
+bind index,pager s sync-mailbox
+
+bind editor <Tab> complete-query
+
+# bind index <space> tag-entry
+
+# bind pager       <ESC> noop
+# bind index,pager <ESC> quit
+# bind index,pager n     quit
+
+macro index O "<shell-escape>mbsync -c ~/.config/isync/mbsyncrc -a<enter>" "run mbsync to sync all mail"
+macro index A "<limit>all\n" "show all messages (undo limit)"
+
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+macro index,pager U <set-flag>O   "Mark as read"
+macro index,pager R <clear-flag>O "Mark as unread"
+
+bind index,pager f imap-fetch-mail
+
+# Abook & Notmuch
+# macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
+# macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+# macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
