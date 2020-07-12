@@ -1,10 +1,10 @@
 # Uniblocks configuration
 
-# Id,Script,Interval
+# Tag,Script,Interval
 
-w,panel -w,30s
-n,noti-stat,0
-v,volume,0
-# W,bspwmws,0
-s,panel -s,1s
-d,panel -d,1m
+wifi,panel -w,30s
+noti,panel -n,0
+vol,panel -v,0
+W,panel -b,0
+sys,panel -s,1s
+dt,panel -d,1m
