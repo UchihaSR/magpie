@@ -23,8 +23,6 @@ export WM=bspwm
 #                             System Stuff
 #===============================================================================
 
-export PANELFIFO=/tmp/panel_fifo
-export UBPID=/tmp/ub_pid
 export DDM=/tmp/ddm
 export RECPID=/tmp/rec_pid
 export ICONS=~/.local/share/icons/system
