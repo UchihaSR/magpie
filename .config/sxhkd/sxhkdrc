@@ -166,9 +166,9 @@ super + c
     # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
 
 Print
-	screencast
+    maim -B -u -d 1 -s ~/screencast-"$(date +'%Y-%b-%d-%H-%M-%S')".png
 	# maim -u -d 1 ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
-    # maim -B -u -d 1 -s ~/screencast-"$(date +'%Y-%b-%d-%H-%M-%S')".png
+	# screencast
 	# record
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
