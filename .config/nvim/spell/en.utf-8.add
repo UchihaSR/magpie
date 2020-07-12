@@ -103,3 +103,5 @@ last-entry
 1
 split
 updatable
+mkfifo
+pgrep
