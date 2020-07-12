@@ -19,7 +19,7 @@
 setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
-uniblocks --server &
+# uniblocks --server &
 watchmen &
 launch --tmux &
 # Launch Compositor

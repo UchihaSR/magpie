@@ -8,7 +8,7 @@ au automation BufWritePost dunstrc
             \ silent !killall dunst && dunst & notify-send -i "$ICONS"/bell.png 'Head' 'Message'
 au automation BufWritePost tmux*.conf
             \ silent !tmux source ~/.config/tmux/tmux.conf
-au automation  BufWritePost yabar.conf
+au automation  BufWritePost yabar.conf,uniblocks*,panel.sh
             \ silent !{killall yabar && sleep 1 && yabar; } &
 
 au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex,*.c silent !compile %
