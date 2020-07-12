@@ -105,3 +105,4 @@ split
 updatable
 mkfifo
 pgrep
+dmenu
