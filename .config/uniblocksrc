@@ -2,11 +2,9 @@
 
 # Id,Script,Interval
 
-# w,panel -w,30s
-# n,noti-stat,0
-# v,volume,0
-# W,bspc subscribe report,0
-W,bspc subscribe report,0
-# b,bspwmws,0
-# s,panel -s,1s
-# d,panel -d,1m
+w,panel -w,30s
+n,noti-stat,0
+v,volume,0
+# W,bspwmws,0
+s,panel -s,1s
+d,panel -d,1m
