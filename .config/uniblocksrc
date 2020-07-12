@@ -3,8 +3,8 @@
 # Tag,Script,Interval
 
 wifi,panel -w,30s
-noti,panel -n,0
 vol,panel -v,0
+noti,panel -n,0
 W,panel -b,0
 sys,panel -s,1s
 dt,panel -d,1m
