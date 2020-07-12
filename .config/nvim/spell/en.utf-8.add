@@ -106,3 +106,4 @@ updatable
 mkfifo
 pgrep
 dmenu
+pulseaudio
