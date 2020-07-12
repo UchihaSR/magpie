@@ -33,39 +33,41 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'psliwka/vim-smoothie'
-nmap K <Plug>(SmoothieUpwards)
-nmap L <Plug>(SmoothieDownwards)
+    nmap K <Plug>(SmoothieUpwards)
+    nmap L <Plug>(SmoothieDownwards)
 
 Plug 'tpope/vim-surround'
-nmap sw ysiw
-nmap sW ysiW
-nmap sl yss
+    nmap sw ysiw
+    nmap sW ysiW
+    nmap sl yss
 
 Plug 'tpope/vim-commentary'
-:map s  gc
-nmap ss gcc
+    :map s  <Plug>Commentary
+    nmap ss <Plug>CommentaryLine
+    " :map s  gc
+    " nmap ss gcc
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
+    let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+    let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
 
 Plug 'godlygeek/tabular'
-au automation BufReadPost * :noremap <leader>t :Tabularize /
+    au automation BufReadPost * :noremap <leader>t :Tabularize /
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key='<a-,>'
-let g:user_emmet_install_global = 0
-au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+    let g:user_emmet_leader_key='<a-,>'
+    let g:user_emmet_install_global = 0
+    au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-map  e <Plug>(easymotion-bd-w)
-nmap e <Plug>(easymotion-overwin-w)
+    let g:EasyMotion_do_mapping = 0
+    let g:EasyMotion_smartcase = 1
+    map  e <Plug>(easymotion-bd-w)
+    nmap e <Plug>(easymotion-overwin-w)
 
 Plug 'Yggdroot/indentLine'
-let g:indentLine_enabled = 0
-au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
+    let g:indentLine_enabled = 0
+    au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
 
 "===============================================================================
 "                             Color Schemes
@@ -82,8 +84,8 @@ Plug 'sainnhe/gruvbox-material'
 "===============================================================================
 
 Plug 'junegunn/goyo.vim'
-au automation BufReadPost * Goyo        82x80%
-au automation VimResized * execute "normal \<C-W>="
+    au automation BufReadPost * Goyo        82x80%
+    au automation VimResized * execute "normal \<C-W>="
 
 " au automation FocusGained,BufEnter * Goyo 82x100%
 " au automation User GoyoLeave silent! source $MYVIMRC
@@ -94,10 +96,10 @@ au automation VimResized * execute "normal \<C-W>="
 "===============================================================================
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-let g:mkdp_refresh_slow = 1
-au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
-let g:mkdp_browser = 'falkon'
-au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
+    let g:mkdp_refresh_slow = 1
+    au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
+    let g:mkdp_browser = 'falkon'
+    au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
 " Plug 'dhruvasagar/vim-table-mode'
 " au automation FileType markdown TableModeToggle

@@ -9,8 +9,8 @@ au automation FileType json syntax match Comment +\/\/.\+$+
 " Disables automatic commenting on newline:
 au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Read profile as a shellscript
-au automation BufReadPost .*profile set filetype=sh
-au automation BufReadPost mutt* set filetype=muttrc
+" au automation BufReadPost .*profile set filetype=sh
+" au automation BufReadPost mutt* set filetype=muttrc
 " Set spelling for certain filetypes
 au automation FileType markdown,groff,tex setlocal spell
 " Comment string setup
@@ -18,6 +18,9 @@ au automation FileType json     setlocal commentstring=//\%s
 au automation FileType sxhkdrc  setlocal commentstring=#\%s
 au automation FileType xdefaults  setlocal commentstring=!\%s
 au automation FileType markdown setlocal commentstring=<!---\%s\-->
+
+au automation BufRead .*profile set filetype=sh
+au automation BufRead mutt*     set filetype=muttrc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Misc

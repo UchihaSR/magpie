@@ -1,10 +1,10 @@
 # Uniblocks configuration
 
-# Id,Script,Interval,Signal
+# Id,Script,Interval
 
-w,wifi,30s
+w,panel -w,30s
 n,noti-stat,0
 v,volume,0
-W,bspc subscribe report,0
-s,sys-stat,3s
-d,date-time,1m
+# W,bspc subscribe report,0
+s,panel -s,1s
+d,panel -d,1m
