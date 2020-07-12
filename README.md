@@ -39,6 +39,6 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ![](https://cloud.disroot.org/s/Gq69DEEcr9xJxNb/preview)
 
-![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
-
 ![](.local/share/preview/mutt.png)
+
+![](https://cloud.disroot.org/s/tBFxaXaL8CWqSQE/preview)
