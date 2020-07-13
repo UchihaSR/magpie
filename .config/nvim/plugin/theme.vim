@@ -18,6 +18,8 @@ scriptencoding utf-8
 " let g:gruvbox_material_background = 'soft'
 colorscheme gruvbox-material
 
+" colorscheme solarized
+
 " colorscheme one
 " let g:one_allow_italics = 1
 

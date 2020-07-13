@@ -73,11 +73,14 @@ Plug 'Yggdroot/indentLine'
 "                             Color Schemes
 "===============================================================================
 
-Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
+
+" Plug 'morhetz/gruvbox'
 " Plug 'lifepillar/vim-gruvbox8'
 " Plug 'iCyMind/NeoSolarized'
 " Plug 'rakr/vim-one'
+" Plug 'whatyouhide/vim-gotham'
+ " Plug 'altercation/vim-colors-solarized'
 
 "===============================================================================
 "                             Goyo
