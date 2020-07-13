@@ -12,7 +12,6 @@ color status blue default
 
 color index yellow default '.*'
 color index_author green default '.*'
-color index_number default default
 color index_subject default default '.*'
 
 #---------------------------------------
@@ -95,6 +94,8 @@ color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-
 #===============================================================================
 #                             Exp
 #===============================================================================
+
+# color index_number default default
 
 # color hdrdefault cyan default
 # color attachment yellow default

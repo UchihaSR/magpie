@@ -24,21 +24,20 @@ bind index,attach G  last-entry
 macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
 macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
 
-# Sidebar
-bind index,pager \Ck sidebar-prev
-bind index,pager \Cl sidebar-next
-bind index,pager \Co sidebar-open
-bind index,pager \Cp sidebar-prev-new
-bind index,pager \Cn sidebar-next-new
-bind index,pager S sidebar-toggle-visible
-
 # bind index 					d 			purge-message
 bind index d delete-message
 bind index D undelete-message
 
+macro index,pager U <clear-flag>O "Mark as read"
+macro index,pager u <set-flag>O   "Mark as unread"
+
 bind index,pager s sync-mailbox
 
 bind editor <Tab> complete-query
+
+macro index h "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+
+bind index,pager i mail
 
 # bind index <space> tag-entry
 
@@ -46,16 +45,49 @@ bind editor <Tab> complete-query
 # bind index,pager <ESC> quit
 # bind index,pager n     quit
 
-macro index O "<shell-escape>mbsync -c ~/.config/isync/mbsyncrc -a<enter>" "run mbsync to sync all mail"
-macro index A "<limit>all\n" "show all messages (undo limit)"
+# macro index A "<limit>all\n" "show all messages (undo limit)"
 
-macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
-macro index,pager U <set-flag>O   "Mark as read"
-macro index,pager R <clear-flag>O "Mark as unread"
+bind index,pager f search
+bind index,pager F search-reverse
+bind index,pager m search-next
+bind index,pager M search-opposite
 
-bind index,pager f imap-fetch-mail
+bind index,pager z imap-fetch-mail
+
+bind index,pager n quit
+
+bind index <Space> tag-entry
+
+# bind index,pager <Esc><Tab> noop
+# bind index,pager <Esc>C noop
+# bind index,pager <Esc>P noop
+# bind index,pager <Esc>V noop
+# bind index,pager <Esc>b noop
+# bind index,pager <Esc>c noop
+# bind index,pager <Esc>d noop
+# bind index,pager <Esc>e noop
+# bind index,pager <Esc>i noop
+# bind index,pager <Esc>k noop
+# bind index,pager <Esc>l noop
+# bind index,pager <Esc>n noop
+# bind index,pager <Esc>p noop
+# bind index,pager <Esc>r noop
+# bind index,pager <Esc>s noop
+# bind index,pager <Esc>t noop
+# bind index,pager <Esc>u noop
+# bind index,pager <Esc>v noop
 
 # Abook & Notmuch
 # macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
 # macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
 # macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+
+# # Sidebar
+# bind index,pager \Ck sidebar-prev
+# bind index,pager \Cl sidebar-next
+# bind index,pager \Co sidebar-open
+# bind index,pager \Cp sidebar-prev-new
+# bind index,pager \Cn sidebar-next-new
+# bind index,pager S sidebar-toggle-visible
+
+# macro index O "<shell-escape>mbsync -c ~/.config/isync/mbsyncrc -a<enter>" "run mbsync to sync all mail"
