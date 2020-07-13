@@ -114,10 +114,10 @@ super + i
 #===============================================================================
 
 F{1,2,3}
-    setplayer vol {toggle,down,up}
+    setplayer --vol {toggle,down,up}
 
 XF86Audio{Next,Prev,Play}
-    setplayer play {next,prev,toggle}
+    setplayer --play {next,prev,toggle}
 
 F{11,12}
     {decBl,incBl}

@@ -54,16 +54,15 @@ hdr_order Date From To Cc
 #                             Styles
 #===============================================================================
 
-# set index_fromat = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
-# set folder_format = '%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s'
+set index_format="  %Z %-15.15L %s %{%H:%M,%a,%d-%b}"
 
 #---------------------------------------
 #              Sidebar
 #---------------------------------------
 
-unset sidebar_visible
-set sidebar_width = 20
-set sidebar_short_path
-set sidebar_next_new_wrap
-set mail_check_stats
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/? %?S?%S?"
+# unset sidebar_visible
+# set sidebar_width = 20
+# set sidebar_short_path
+# set sidebar_next_new_wrap
+# set mail_check_stats
+# set sidebar_format = "%B%?F? [%F]?%* %?N?%N/? %?S?%S?"
