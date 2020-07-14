@@ -92,8 +92,6 @@ map . set hidden!
 
 map C copyto
 map M moveto
-map t %mv -f "$fx" ~/.local/share/Trash
-map T delete
 
 map r rename
 map b $vidir
@@ -173,14 +171,25 @@ map zam !add-music "$fx"
 # map zrv !printf "Level? [01 - 99] "; read lev;reduce-volume "$f" "$lev"
 
 #===============================================================================
-#                             Links
+#                             Copy, Paste, Deletes & Links
 #===============================================================================
 
-map zm &echo "$fx" > /tmp/list; lf -remote 'send push u'
-map zp &cat /tmp/list | xargs cp -frul -t "$PWD"
-map zP &cat /tmp/list | xargs cp -frus -t "$PWD"
+map P $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'
+map p $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'; rm -f "$fx"
 
-map zh &cp -frul -t "$PWD" "fx"
+map zl $cp -frus "$fx" "$PWD"
+map zL $cp -frul "$fx" "$PWD"; lf -remote 'send push u'
+
+map P $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'
+map p $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'; rm -f "$fx"
+
+map d %doas -- mv -f "$fx" ~/.local/share/Trash
+map D delete
+
+# map zm &echo "$fx" > /tmp/list; lf -remote 'send push u'
+# map zp &cat /tmp/list | xargs cp -frul -t "$PWD"
+# map zP &cat /tmp/list | xargs cp -frus -t "$PWD"
+
 # map zs &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
 # map zh &cat /tmp/list | xargs cp -lfru -t "$PWD"; rm /tmp/list
 
