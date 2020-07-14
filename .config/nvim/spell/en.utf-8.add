@@ -107,3 +107,5 @@ mkfifo
 pgrep
 dmenu
 pulseaudio
+Suckless
+Utils

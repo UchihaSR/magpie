@@ -179,6 +179,8 @@ map zam !add-music "$fx"
 map zm &echo "$fx" > /tmp/list; lf -remote 'send push u'
 map zp &cat /tmp/list | xargs cp -frul -t "$PWD"
 map zP &cat /tmp/list | xargs cp -frus -t "$PWD"
+
+map zh &cp -frul -t "$PWD" "fx"
 # map zs &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
 # map zh &cat /tmp/list | xargs cp -lfru -t "$PWD"; rm /tmp/list
 
