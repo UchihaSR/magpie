@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-stz() {
+ttz() {
     if readlink /etc/localtime | grep Berlin > /dev/null; then
         doas -- ln -sf /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
     else
