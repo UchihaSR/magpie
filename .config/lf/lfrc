@@ -94,8 +94,8 @@ map C copyto
 map M moveto
 
 map r rename
-map b $vidir
-map B $format -l $f
+# map b $vidir
+# map B $format -l $f
 # map b $vimv "$fx"
 
 map ap !rsync -avhe 'ssh -p 8022' --progress $fx $CARD
@@ -171,20 +171,19 @@ map zam !add-music "$fx"
 # map zrv !printf "Level? [01 - 99] "; read lev;reduce-volume "$f" "$lev"
 
 #===============================================================================
-#                             Copy, Paste, Deletes & Links
+#                             Copy, Paste, Deletes, Links & Backups
 #===============================================================================
-
-map P $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'
-map p $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'; rm -f "$fx"
 
 map zl $cp -frus "$fx" "$PWD"
 map zL $cp -frul "$fx" "$PWD"; lf -remote 'send push u'
 
-map P $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'
-map p $rsync -aPv "$fx" "$PWD"; lf -remote 'send push u'; rm -f "$fx"
+map P $rsync -a "$fx" "$PWD"; lf -remote 'send push u'
+map p $rsync -a "$fx" "$PWD"; rm -f "$fx"
 
 map d %doas -- mv -f "$fx" ~/.local/share/Trash
 map D delete
+
+map b $cp -r "$fx" "$PWD"; lf -remote 'send push u'
 
 # map zm &echo "$fx" > /tmp/list; lf -remote 'send push u'
 # map zp &cat /tmp/list | xargs cp -frul -t "$PWD"

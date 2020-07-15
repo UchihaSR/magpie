@@ -132,8 +132,11 @@ F7
 # super + XF86MonBrightnessUp
 # 	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
 
-KP_Subtract
-    leave-x
+KP_{Subtract,Add}
+    backlight --{down,up}
+
+# KP_Subtract
+#     leave-x
 
 KP_Insert
     sleep 1 && xset dpms force off
