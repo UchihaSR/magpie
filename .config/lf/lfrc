@@ -185,7 +185,7 @@ map D delete
 
 map b $cp -r "$fx" "$PWD"; lf -remote 'send push u'
 
-# map zm &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map zs &echo "$fx" > /tmp/list; lf -remote 'send push u'
 # map zp &cat /tmp/list | xargs cp -frul -t "$PWD"
 # map zP &cat /tmp/list | xargs cp -frus -t "$PWD"
 
