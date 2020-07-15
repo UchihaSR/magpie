@@ -177,8 +177,8 @@ map zam !add-music "$fx"
 map zl $cp -frus "$fx" "$PWD"
 map zL $cp -frul "$fx" "$PWD"; lf -remote 'send push u'
 
-map P $rsync -a "$fx" "$PWD"; lf -remote 'send push u'
-map p $rsync -a "$fx" "$PWD"; rm -f "$fx"
+# map P $rsync -a "$fx" "$PWD"; lf -remote 'send push u'
+# map p $rsync -a "$fx" "$PWD"; rm -f "$fx"
 
 map d %doas -- mv -f "$fx" ~/.local/share/Trash
 map D delete
