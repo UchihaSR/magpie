@@ -185,7 +185,11 @@ map D delete
 
 map b $cp -r "$fx" "$PWD"; lf -remote 'send push u'
 
-map zs &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map y &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map p $rsync -a "$(cat /tmp/list)" "$PWD"; doas -- mv -f "$(cat /tmp/list)" ~/.local/share/Trash
+map P $rsync -a "$(cat /tmp/list)" "$PWD"
+
+# map zP $rsync -a "$fx" "$PWD"; lf -remote 'send push u'
 
 # map zp &cat /tmp/list | xargs cp -frul -t "$PWD"
 # map zP &cat /tmp/list | xargs cp -frus -t "$PWD"
