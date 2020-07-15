@@ -17,8 +17,8 @@ prev_img k
 
 scroll_right J
 scroll_left  colon
-scroll_up    L
-scroll_down  K
+scroll_up    K
+scroll_down  L
 
 orient_3    o
 orient_1    O
