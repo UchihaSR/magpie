@@ -4,6 +4,8 @@ au automation BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
 au automation BufWritePost bspwmrc       silent !sh %
 au automation BufWritePost *.rules       silent !doas -- udevadm control --reload
 au automation BufWritePost cronierc      silent !crontab %
+au automation BufWritePost fcronrc      silent !fcrontab %
+" au automation BufWritePost anacronrc     silent !anacrontab -t %
 au automation BufWritePost dunstrc
             \ silent !killall dunst && dunst & notify-send -i "$ICONS"/bell.png 'Head' 'Message'
 au automation BufWritePost tmux*.conf

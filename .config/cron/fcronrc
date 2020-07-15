@@ -1,0 +1,16 @@
+# FCRON Config
+
+ICONS=~/.local/share/icons/system
+GIT=/mnt/horcrux/git
+
+# This is required for notifications
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+# DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$UID/bus
+
+# Update paths for the scripts
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# @ 60s       notify-send yoyo
+# @ 60s       toy
+@ 30s       /usr/local/bin/mirror -g
+# @ 60m       /usr/local/bin/mirror -g
