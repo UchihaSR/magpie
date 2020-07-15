@@ -125,8 +125,8 @@ map Y &echo $f | xsel -b
 # map s !rsync -avhe 'ssh -p 8022' --progress --delete $f $CARD
 # map S !printf "What do you wanna pull? "; read req; adb pull $CARD/"$req"
 
-map F %printf "What should we call her? "; read name; touch $name
-map D %printf "What should we call it? "; read name; mkdir $name
+map zf %printf "What should we call her? "; read name; touch $name
+map zd %printf "What should we call it? "; read name; mkdir $name
 
 # map w &tmux split-window -h -c "#{pane_current_path}" \; swap-pane -d -t :.1 \; select-layout main-vertical \; send "explore $f" "Enter"
 
