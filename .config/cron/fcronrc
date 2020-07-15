@@ -12,5 +12,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # @ 60s       notify-send yoyo
 # @ 60s       toy
-@ 30s       /usr/local/bin/mirror -g
+@ 30s /usr/local/bin/mirror -g
 # @ 60m       /usr/local/bin/mirror -g
