@@ -1,6 +1,7 @@
 # Manually setting necessary environment variables for cron
-ICONS=~/.local/share/icons/system
-GIT=/mnt/horcrux/git
+
+# ICONS=~/.local/share/icons/system
+# GIT=/mnt/horcrux/git
 
 # This is required for notifications
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
@@ -15,4 +16,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 # @ 1d mirror --repos
 # @ 7d housekeep
 
-@ 30s battery --monitor
+@ 30s ns yo
+# @ 30s battery --monitor
