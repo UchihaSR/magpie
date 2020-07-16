@@ -1,4 +1,5 @@
-SHELL=/bin/sh
+
+# Manually setting necessary environment variables for cron
 ICONS=~/.local/share/icons/system
 GIT=/mnt/horcrux/git
 
@@ -9,9 +10,10 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 # Update paths for the scripts
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-# m h d M D <Command>
-*/5 * * * * battery --monitor
-# */5 * * * * tmux run-shell $GIT/others/tmux-resurrect/scripts/save.sh
-# */5 * * * * newsboat -x reload
-@hourly checkstorage / 3 /home 10 /mnt/horcrux 50
-@hourly mirror --firefox --git --calcurse
+@ 5m battery --monitor
+@ 60m mirror --firefox --git --calcurse
+@ 60m checkstorage / 3 /home 10 /mnt/horcrux 50
+@ 1d mirror --repos
+@ 7d housekeep
+
+@ 30s battery --monitor
