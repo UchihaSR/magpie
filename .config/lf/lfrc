@@ -145,7 +145,7 @@ map z
 ################################################################################
 
 map g
-map gb cd ~/Storage/Workspace/bracu
+map gb cd /mnt/horcrux/git/own/private/.local/share/bookmarks
 map gd cd ~/Downloads
 map gh cd ~
 map gm

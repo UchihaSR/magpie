@@ -23,7 +23,8 @@ bolt --generate &
 watchmen &
 launch --tmux &
 # Launch Compositor
-$COMPOSITOR -cCfF &
+# $COMPOSITOR -cCfF &
+$COMPOSITOR &
 # Set Locker
 {
     xset s "$INACTIVITY"

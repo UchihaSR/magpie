@@ -262,6 +262,6 @@ Plug 'junegunn/goyo.vim'
 " Plug 'jaxbot/browserlink.vim'
     " au automation InsertLeave *.css :BLReloadCSS
 
-Plug 'turbio/bracey.vim'
+" Plug 'turbio/bracey.vim'
 
 call plug#end()

@@ -14,6 +14,9 @@ super + Return
 super + b
     $BROWSER
 
+super + i
+    launch --bookmarker
+
 super + {_,shift} + w
     setdisplay --bg {shuffle,delete}
 
