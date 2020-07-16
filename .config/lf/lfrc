@@ -174,8 +174,8 @@ map zam !add-music "$fx"
 #                             Copy, Paste, Deletes, Links & Backups
 #===============================================================================
 
-map zl $cp -frus "$fx" "$PWD"
-map zL $cp -frul "$fx" "$PWD"; lf -remote 'send push u'
+map zl $cp -frus $(cat /tmp/list) "$PWD"
+map zL $cp -frul $(cat /tmp/list) "$PWD"
 
 # map P $rsync -a "$fx" "$PWD"; lf -remote 'send push u'
 # map p $rsync -a "$fx" "$PWD"; rm -f "$fx"

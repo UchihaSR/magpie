@@ -69,6 +69,7 @@ Plug 'Yggdroot/indentLine'
     let g:indentLine_enabled = 0
     au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
 
+
 "===============================================================================
 "                             Color Schemes
 "===============================================================================
@@ -257,5 +258,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Plug 'kovetskiy/sxhkd-vim'
 " Plug 'tpope/vim-obsession'
+
+" Plug 'jaxbot/browserlink.vim'
+    " au automation InsertLeave *.css :BLReloadCSS
+
+Plug 'turbio/bracey.vim'
 
 call plug#end()
