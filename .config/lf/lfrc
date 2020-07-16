@@ -117,7 +117,7 @@ map J $$SHELL
 # map o &setsid "$TERMINAL" -e lf $f
 # map o &setsid open "$f"
 map o open-in-pane
-# map o &launch --choose "$f"
+map O &launch --choose "$f"
 
 map Y &echo $f | xsel -b
 
