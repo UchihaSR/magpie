@@ -99,11 +99,11 @@ Plug 'junegunn/goyo.vim'
 "                             Markdown
 "===============================================================================
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-    let g:mkdp_refresh_slow = 1
-    au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
-    let g:mkdp_browser = 'falkon'
-    au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"     let g:mkdp_refresh_slow = 1
+"     au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
+"     let g:mkdp_browser = 'falkon'
+"     au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
 " Plug 'dhruvasagar/vim-table-mode'
 " au automation FileType markdown TableModeToggle
