@@ -27,7 +27,8 @@ $COMPOSITOR -cCfF &
 # Set Locker
 {
     xset s "$INACTIVITY"
-    xss-lock --ignore-sleep screensaver
+    xss-lock --ignore-sleep -n screensaver -- ''
+    # xss-lock --ignore-sleep screensaver
 } &
 # sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
 # Speed key reapeat of pressing
