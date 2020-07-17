@@ -56,7 +56,7 @@ xsetroot -cursor_name left_ptr &
 unclutter &
 # Launch bar
 {
-    sleep 1
+    # sleep 1
     $STATUSBAR
 } &
 # Launch Window Manager
