@@ -13,3 +13,4 @@ au automation FileType sh,conf,yaml,sxhkdrc,zsh,python,muttrc,tmux inoremap ;b #
 au automation FileType sh,conf,yaml,sxhkdrc,zsh,python,muttrc,tmux inoremap ;B #<esc>39a-<esc>yypO#<esc>15a<space><Esc>i
 
 au automation FileType sh inoremap ;o  <Esc>:read ~/.config/nvim/templates/options.sh<cr>
+au automation FileType sh inoremap ;go  <Esc>:read ~/.config/nvim/templates/getopts.sh<cr>
