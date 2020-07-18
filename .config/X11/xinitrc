@@ -28,7 +28,7 @@ $COMPOSITOR &
 # Set Locker
 {
     xset s "$INACTIVITY"
-    xss-lock --ignore-sleep -n screensaver -- ''
+    xss-lock -n screensaver -- ''
     # xss-lock --ignore-sleep screensaver
 } &
 # sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
