@@ -162,7 +162,7 @@ map gw cd ~/Storage/Workspace
 
 map zr
 
-map zmg !videomagic -mg "$f"
+map zg !videomagic -mg "$f"
 map zcv !cut-vid "$f"
 map zCv !crop-vid "$f"
 map zrv !reduce-volume "$f"
@@ -200,6 +200,15 @@ map m $rsync -a $(cat /tmp/list) "$PWD"
 # map zs &cat /tmp/list | xargs cp -frsu -t "$PWD"; rm /tmp/list
 # map zh &cat /tmp/list | xargs cp -lfru -t "$PWD"; rm /tmp/list
 
+#===============================================================================
+#                             GIT
+#===============================================================================
+
+map zt $git checkout testing
+map zp $git checkout personal
+map zm $git checkout master
+map zP !git add .; git commit -m "update" && git push
+
 ################################################################################
 #                             Misc
 ################################################################################
@@ -208,5 +217,5 @@ map z1 makeScript
 map zcm chmod
 map zco chown
 
-map zt
-map ztg $ttf2groff "$f"
+# map zt
+# map ztg $ttf2groff "$f"
