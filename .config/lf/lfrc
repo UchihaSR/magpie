@@ -207,7 +207,6 @@ map m $rsync -a $(cat /tmp/list) "$PWD"
 map zt $git checkout testing
 map zp $git checkout personal
 map zm $git checkout master
-map zP !git add .; git commit -m "update" && git push
 
 ################################################################################
 #                             Misc
