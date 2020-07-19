@@ -20,10 +20,11 @@ bind pager,attach j exit
 bind index,attach g first-entry
 bind index,attach G  last-entry
 
-# urlscan
+macro index,pager o "<pipe-entry>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
+macro index,pager o "<pipe-message>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
 
-macro index,pager o "<pipe-entry>tee ~/content<enter><shell-escape>puri ~/content<enter>"
-macro index,pager o "<pipe-message>tee ~/content<enter><shell-escape>puri ~/content<enter>"
+# macro index,pager o "<pipe-entry>tee ~/content<enter><shell-escape>puri ~/content<enter>"
+# macro index,pager o "<pipe-message>tee ~/content<enter><shell-escape>puri ~/content<enter>"
 
 # macro index,pager    o "<pipe-entry> tee ~/content && puri ~/content<Enter>"
 # macro index,pager    o "<pipe-message> tee ~/content'<Enter>"
