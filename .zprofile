@@ -108,7 +108,8 @@ export INPUTRC=~/.config/inputrc
 #===============================================================================
 
 PATH=$PATH:~/.local/bin
-PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
+PATH="$PATH:$(du "$GIT"/own/alfred | cut -f2 | paste -sd ':')"
+# PATH="$PATH:$(du $GIT/own/alfred | cut -f2 | tr '\n' ':' | sed 's/:$//')"
 export PATH
 
 #===============================================================================
