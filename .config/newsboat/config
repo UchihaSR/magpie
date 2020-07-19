@@ -13,7 +13,7 @@ show-keymap-hint no
 auto-reload yes
 reload-time 5 # reload after 5 minue
 browser "launch --link"
-external-url-viewer "fzf-url"
+external-url-viewer "tup"
 # external-url-viewer "urlscan -d -r 'launch --link {}'"
 # text-width 80
 confirm-exit yes
