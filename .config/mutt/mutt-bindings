@@ -21,8 +21,15 @@ bind index,attach g first-entry
 bind index,attach G  last-entry
 
 # urlscan
-macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
-macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
+
+macro index,pager o "<pipe-entry>tee ~/content<enter><shell-escape>puri ~/content<enter>"
+macro index,pager o "<pipe-message>tee ~/content<enter><shell-escape>puri ~/content<enter>"
+
+# macro index,pager    o "<pipe-entry> tee ~/content && puri ~/content<Enter>"
+# macro index,pager    o "<pipe-message> tee ~/content'<Enter>"
+# macro index,pager    o "<pipe-entry> tee ~/content'<Enter>"
+# macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
+# macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
 
 # bind index 					d 			purge-message
 bind index d delete-message
