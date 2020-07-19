@@ -188,6 +188,9 @@ super + shift + n
 #                             Exp
 #===============================================================================
 
+# alt + j
+    # xdotool keyup j key --clearmodifiers Control+l
+
 # alt + y
 #     xdotool keyup y key --clearmodifiers Control+Shift+c
 
