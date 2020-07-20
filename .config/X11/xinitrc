@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 
 # sh -c "sleep 0.5;  stalonetray -bg \"#000000\" --geometry \"1x1+125+5\"" &
-# doas killall compton mpd polybar connman-vpnd picom
-# pulseaudio --start &
-# [ -f ~/.config/X11/Xresources ] && xrdb ~/.config/X11/Xresources &
 
 # # Lunch Dbus
 # if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -19,33 +16,24 @@
 setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
-# uniblocks --server &
 watchmen &
 launch --tmux &
 # Launch Compositor
-# $COMPOSITOR -cCfF &
 $COMPOSITOR &
 # Set Locker
 {
     xset s "$INACTIVITY"
     xss-lock -n screensaver -- ''
-    # xss-lock --ignore-sleep screensaver
 } &
-# sh -c "xset s $INACTIVITY; xss-lock --ignore-sleep screensaver" &
-# Speed key reapeat of pressing
+# Speed key press reapeat rate
 xset r rate 200 30 &
 # Launch notification server
 dunst &
 # Bind Multi-purpose keys
-# xmodmap "$LAYOUT_EN" &
-# xcape -e "Super_L=Escape" &
-# xcape -e "Mode_switch=Tab" &
 {
     xmodmap "$LAYOUT_EN"
     xcape -e "Super_L=Escape;Mode_switch=Tab"
 } &
-# sh -c 'xmodmap $LAYOUT_EN; xcape -e "Super_L=Escape;Mode_switch=Tab"' &
-# sh -c "xmodmap $LAYOUT_EN; xcape -e \"Super_L=Escape;Mode_switch=Tab\"" &
 # Bind key commands
 sxhkd &
 # Bind gesture commands
@@ -55,9 +43,6 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-{
-    # sleep 1
-    $STATUSBAR
-} &
+$STATUSBAR &
 # Launch Window Manager
 exec "$WM"
