@@ -2,27 +2,29 @@
 
 Dotfiles of my minimal Unix system geared for media, programming & writing.
 
-## Line-up highlight
+### The Line-up
 
-| Program   | Description          |
-| --------- | -------------------- |
-| zsh       | Shell                |
-| neovim    | Text Editor          |
-| lf        | File Explorer        |
-| tmux      | Terminal Multiplexer |
-| alacritty | Terminal Emulator    |
-| bspwm     | Window Manager       |
-| yabar     | Status Bar           |
+| Types                | Programs                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| Shell                | [zsh](http://www.zsh.org/)                                                                              |
+| Text Editor          | [neovim](https://github.com/neovim/neovim)                                                              |
+| File Explorer        | [lf](https://github.com/gokcehan/lf)                                                                    |
+| RSS Reader           | [newsboat](https://github.com/newsboat/newsboat)                                                        |
+| Mail Client          | [neomutt](https://github.com/neomutt/neomutt)                                                           |
+| Launcher             | [bolt](https://github.com/salman-abedin/bolt)                                                           |
+| Torrent Client       | [tide](https://github.com/salman-abedin/tide)                                                           |
+| URL Launcher         | [puri](https://github.com/salman-abedin/puri)                                                           |
+| Terminal Multiplexer | [tmux](https://github.com/tmux/tmux)                                                                    |
+| Terminal Emulator    | [alacritty](https://github.com/alacritty/alacritty)                                                     |
+| Window Manager       | [bspwm](https://github.com/baskerville/bspwm)                                                           |
+| Status Bar           | [yabar](https://github.com/koekeishiya/yabai) + [uniblocks](https://github.com/salman-abedin/uniblocks) |
+| Notification Daemon  | [dunst](https://github.com/dunst-project/dunst)                                                         | Notification Daemon | [dunst](https://github.com/dunst-project/dunst) |
 
 ## Dependencies
 
-| Program                                                 | Description        |
-| ------------------------------------------------------- | ------------------ |
-| [Alfred](https://github.com/salman-abedin/alfred)       | Scripts            |
-| [bolt](https://github.com/salman-abedin/bolt)           | Launcher           |
-| [uniblocks](https://github.com/salman-abedin/uniblocks) | Status bar wrapper |
-| [tide](https://github.com/salman-abedin/tide)           | Torrent Client     |
-| [puri](https://github.com/salman-abedin/puri)           | URL launcher       |
+| Program                                           | Description |
+| ------------------------------------------------- | ----------- |
+| [Alfred](https://github.com/salman-abedin/alfred) | Scripts     |
 
 ## Installation
 
