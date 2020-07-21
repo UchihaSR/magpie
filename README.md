@@ -19,8 +19,8 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | Window Manager       | [bspwm](https://github.com/baskerville/bspwm)                                                           |
 | Status Bar           | [yabar](https://github.com/koekeishiya/yabai) + [uniblocks](https://github.com/salman-abedin/uniblocks) |
 | Notification Daemon  | [dunst](https://github.com/dunst-project/dunst)                                                         | Notification Daemon | [dunst](https://github.com/dunst-project/dunst) |
-| Wallpapers           | [Eyelust](https://github.com/salman-abedin/eyelust)                                                     |
 | Scripts              | [Alfred](https://github.com/salman-abedin/alfred)                                                       |
+| Wallpapers           | [Eyelust](https://github.com/salman-abedin/eyelust)                                                     |
 
 ## Installation
 
