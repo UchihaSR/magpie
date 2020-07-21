@@ -16,11 +16,13 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ## Dependencies
 
--  [Alfred](https://github.com/salman-abedin/alfred)
--  [bolt](https://github.com/salman-abedin/bolt)
--  [uniblocks](https://github.com/salman-abedin/uniblocks)
--  [puri](https://github.com/salman-abedin/puri)
--  [tide](https://github.com/salman-abedin/tide)
+| Program                                                 | Description        |
+| ------------------------------------------------------- | ------------------ |
+| [Alfred](https://github.com/salman-abedin/alfred)       | Scripts            |
+| [bolt](https://github.com/salman-abedin/bolt)           | Launcher           |
+| [uniblocks](https://github.com/salman-abedin/uniblocks) | Status bar wrapper |
+| [tide](https://github.com/salman-abedin/tide)           | Torrent Client     |
+| [puri](https://github.com/salman-abedin/puri)           | URL launcher       |
 
 ## Installation
 
