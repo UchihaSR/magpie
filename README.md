@@ -17,9 +17,10 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 ## Dependencies
 
 -  [Alfred](https://github.com/salman-abedin/alfred)
--  [Bolt](https://github.com/salman-abedin/bolt)
--  [Crystal](https://github.com/salman-abedin/crystal)
--  [Uniblocks](https://github.com/salman-abedin/uniblocks)
+-  [bolt](https://github.com/salman-abedin/bolt)
+-  [uniblocks](https://github.com/salman-abedin/uniblocks)
+-  [puri](https://github.com/salman-abedin/puri)
+-  [tide](https://github.com/salman-abedin/tide)
 
 ## Installation
 
