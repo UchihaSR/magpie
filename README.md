@@ -48,29 +48,11 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ## Repos you might be interested in
 
-[bolt](https://github.com/salman-abedin/bolt)
-: The lightning fast workflow creator
-
-[uniblocks](https://github.com/salman-abedin/uniblocks)
-: The status bar wrapper
-
-[tide](https://github.com/salman-abedin/tide)
-: minimal Transmission CLI client
-
-[puri](https://github.com/salman-abedin/puri)
-: minimal URL launcher
-
 [crystal](https://github.com/salman-abedin/crystal)
 : The transparent setup
 
 [devour](https://github.com/salman-abedin/devour)
 : Terminal swallowing
-
-[Magpie](https://github.com/salman-abedin/magpie)
-: The dotfiles
-
-[Alfred](https://github.com/salman-abedin/alfred)
-: The scripts
 
 ## Contact
 
