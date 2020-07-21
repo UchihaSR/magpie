@@ -2,7 +2,7 @@
 
 Dotfiles of my minimal Unix system geared for media, programming & writing.
 
-## Highlights
+## Line-up highlight
 
 | Program   | Description          |
 | --------- | -------------------- |
