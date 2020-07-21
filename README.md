@@ -22,9 +22,10 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ## Dependencies
 
-| Program                                           | Description |
-| ------------------------------------------------- | ----------- |
-| [Alfred](https://github.com/salman-abedin/alfred) | Scripts     |
+| Type       | Programs                                            |
+| ---------- | --------------------------------------------------- |
+| Scripts    | [Alfred](https://github.com/salman-abedin/alfred)   |
+| Wallpapers | [Eyelust](https://github.com/salman-abedin/eyelust) |
 
 ## Installation
 
