@@ -50,11 +50,11 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ## Repos you might be interested in
 
-[crystal](https://github.com/salman-abedin/crystal)
-: The transparent setup
+-  [crystal](https://github.com/salman-abedin/crystal)
+   : The transparent setup
 
-[devour](https://github.com/salman-abedin/devour)
-: Terminal swallowing
+-  [devour](https://github.com/salman-abedin/devour)
+   : Terminal swallowing
 
 ## Contact
 
