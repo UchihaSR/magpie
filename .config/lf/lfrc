@@ -14,7 +14,7 @@ set period 1
 set previewer preview
 
 # Two columns.
-# set ratios 1:2
+set ratios 1:2
 
 # ---------------------[ Commands ]-----------------------------
 

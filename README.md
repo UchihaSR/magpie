@@ -8,7 +8,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | --------- | -------------------- |
 | zsh       | Shell                |
 | neovim    | Text Editor          |
-| lf        | File Manager         |
+| lf        | File Explorer        |
 | tmux      | Terminal Multiplexer |
 | alacritty | Terminal Emulator    |
 | bspwm     | Window Manager       |
