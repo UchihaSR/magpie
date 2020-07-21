@@ -28,6 +28,8 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 -  [MISS: Magpie Installer Shell Script](https://github.com/salman-abedin/miss)
 
+---
+
 ![](https://cloud.disroot.org/s/KC3TTZdzW4dpBBx/preview)
 
 ![](https://cloud.disroot.org/s/YHjELDteXdqYdqn/preview)
