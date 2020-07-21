@@ -204,7 +204,7 @@ map m $rsync -a $(cat /tmp/list) "$PWD"
 #                             GIT
 #===============================================================================
 
-map zt $git checkout -b testing
+map zt $git checkout testing
 map zp $git checkout personal
 map zm $git checkout master
 
