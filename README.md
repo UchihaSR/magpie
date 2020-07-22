@@ -14,12 +14,14 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | Launcher             | [bolt](https://github.com/salman-abedin/bolt)                                                           |
 | Torrent Client       | [tide](https://github.com/salman-abedin/tide)                                                           |
 | URL Launcher         | [puri](https://github.com/salman-abedin/puri)                                                           |
+| Music Player         | [mpd](https://github.com/MusicPlayerDaemon/MPD) + [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)         |
 | Terminal Multiplexer | [tmux](https://github.com/tmux/tmux)                                                                    |
 | Terminal Emulator    | [alacritty](https://github.com/alacritty/alacritty)                                                     |
 | Window Manager       | [bspwm](https://github.com/baskerville/bspwm)                                                           |
 | Status Bar           | [yabar](https://github.com/koekeishiya/yabai) + [uniblocks](https://github.com/salman-abedin/uniblocks) |
-| Notification Daemon  | [dunst](https://github.com/pwmt/zathura)                                                                |
-| Document Viewer      | [zathura](https://github.com/dunst-project/dunst)                                                       |
+| Compositor           | [xcompmgr](https://wiki.archlinux.org/index.php/xcompmgr)                                               |
+| Document Viewer      | [zathura](https://github.com/pwmt/zathura)                                                              |
+| Notification Daemon  | [dunst](https://github.com/dunst-project/dunst)                                                         |
 | Scripts              | [Alfred](https://github.com/salman-abedin/alfred)                                                       |
 | Wallpapers           | [Eyelust](https://github.com/salman-abedin/eyelust)                                                     |
 
