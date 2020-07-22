@@ -14,6 +14,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | Launcher             | [bolt](https://github.com/salman-abedin/bolt)                                                           |
 | Torrent Client       | [tide](https://github.com/salman-abedin/tide)                                                           |
 | URL Launcher         | [puri](https://github.com/salman-abedin/puri)                                                           |
+| Command Scheduler    | [fcron](http://fcron.free.fr/)                                                                          |
 | Music Player         | [mpd](https://github.com/MusicPlayerDaemon/MPD) + [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)         |
 | Terminal Multiplexer | [tmux](https://github.com/tmux/tmux)                                                                    |
 | Terminal Emulator    | [alacritty](https://github.com/alacritty/alacritty)                                                     |
