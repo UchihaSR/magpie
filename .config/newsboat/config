@@ -44,6 +44,8 @@ articlelist-format "%D | %-17T | %t"
 # notify-program "notifynews"
 # notify-format "%d News Update"
 
+cleanup-on-quit no
+
 #===============================================================================
 #                             Bindings
 #===============================================================================
@@ -85,8 +87,8 @@ macro SPACE set browser "$BROWSER" ; open-in-browser ; set browser "launch --lin
 # bind-key g home
 
 
-# bind-key n next-unread
-# bind-key N prev-unread
+bind-key m next-unread
+bind-key M prev-unread
 
 # bind-key D pb-download
 # bind-key U show-urls

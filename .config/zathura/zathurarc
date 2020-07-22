@@ -1,8 +1,8 @@
 # Zathura configuration
 
-########################################
+#---------------------------------------
 #              Options
-########################################
+#---------------------------------------
 
 set selection-clipboard clipboard
 set adjust-open width
@@ -10,11 +10,11 @@ set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
 set recolor true
+set smooth-scroll "true"
 
-########################################
+#---------------------------------------
 #              Bindings
-########################################
-
+#---------------------------------------
 
 map j scroll left
 map ; scroll right
@@ -51,9 +51,9 @@ map [index] : navigate_index expand-all
 
 # map [index] n exit
 
-################################################################################
+#===============================================================================
 #                     Gruvbox Color Scheme (Stolen from Bryan Jenks)
-################################################################################
+#===============================================================================
 
 set completion-group-bg         "#282828"
 set completion-group-fg         "#ebdbb2"
