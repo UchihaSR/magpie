@@ -53,6 +53,7 @@ alias ysn="yay -S --noconfirm"
 alias dprn="da pacman -Rns --noconfirm"
 alias pq="pacman -Qs"
 alias pqe="pacman -Qqe"
+alias ecpacq="expac '%m %n' | sort -n"
 
 # Systemctl
 alias dse="da systemctl enable"
