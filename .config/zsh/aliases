@@ -10,6 +10,7 @@ alias -g da="doas --"
 #                             MVPs
 ################################################################################
 
+alias bgn="bolt --generate"
 alias c="clear"
 alias cc="calcurse"
 alias cpr="cp -r"
@@ -21,7 +22,7 @@ alias dmv="da mv"
 alias drm="da rm -rf"
 alias e="exit"
 alias f="explore"
-alias bgn="bolt --generate"
+alias i="fc"
 alias k="xev -event keyboard"
 alias ka="killall"
 alias m="neomutt 2>/dev/null"
