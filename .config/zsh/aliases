@@ -98,6 +98,7 @@ alias gc="git checkout"
 alias gl="git log"
 alias gcprt="git config pull.rebase true"
 alias gcprf="git config pull.rebase false"
+alias gpsuo="git push --set-upstream origin"
 # ug="cd $DF; git commit -a -m"update\" && git push -u origin master"
 
 # NPM
