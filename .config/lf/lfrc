@@ -68,6 +68,11 @@ cmd open-in-pane ${{
         send "launch $f" "Enter"
 }}
 
+
+cmd on-cd &{{
+    lf -remote "send $id set promptfmt \"$PWD $(git branch --show-current)\""
+}}
+
 # ---------------------[ Bindings ]-----------------------------
 
 # map <enter> shell-pipe
@@ -204,9 +209,9 @@ map m $rsync -a $(cat /tmp/list) "$PWD"
 #                             GIT
 #===============================================================================
 
-map zt $git checkout testing
-map zp $git checkout personal
-map zm $git checkout master
+map zt &git checkout -B testing
+map zp &git checkout  personal
+map zm &git checkout  master
 
 ################################################################################
 #                             Misc
