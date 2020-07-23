@@ -10,8 +10,10 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 # Update paths for the scripts
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
+# All personal scripts from Alfred
 @ 5 battery --monitor
 @ 1h mirror --firefox --git --calcurse
 @ 1h checkstorage / 3 /home 10 /mnt/horcrux 50
 @ 24h mirror --repos --drive
 @ 7d housekeep
+@ 7d mirror --arch
