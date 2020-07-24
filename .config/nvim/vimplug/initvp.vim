@@ -76,6 +76,7 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'sainnhe/gruvbox-material'
 
+" Plug 'bluz71/vim-nightfly-guicolors'
 " Plug 'morhetz/gruvbox'
 " Plug 'lifepillar/vim-gruvbox8'
 " Plug 'iCyMind/NeoSolarized'

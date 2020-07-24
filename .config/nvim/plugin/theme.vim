@@ -18,6 +18,8 @@ scriptencoding utf-8
 " let g:gruvbox_material_background = 'soft'
 colorscheme gruvbox-material
 
+" " colorscheme nightfly
+
 " colorscheme solarized
 
 " colorscheme one
