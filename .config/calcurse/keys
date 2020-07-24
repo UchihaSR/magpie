@@ -28,7 +28,7 @@ generic-next-month  m
 del-item  d
 flag-item  D
 
-add-item  i
+add-item  a
 repeat  r
 
 generic-prev-week  W
@@ -40,6 +40,8 @@ generic-goto  g
 generic-goto-today  t
 
 generic-config-menu  c
+
+edit-item  i
 
 ###################################################################################
 
@@ -55,7 +57,6 @@ generic-next-day  ^X
 generic-scroll-down  ^N
 generic-scroll-up  ^P
 generic-command  `
-edit-item  e
 view-item  v V RET
 pipe-item  |
 edit-note  N
@@ -63,4 +64,3 @@ view-note  >
 
 generic-credits  @
 generic-help  ?
-

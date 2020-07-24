@@ -68,7 +68,7 @@ alias sab="systemd-analyze blame"
 ################################################################################
 
 alias gP="git pull"
-alias gaa="ga ."
+alias gaa="git add ."
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git checkout"
