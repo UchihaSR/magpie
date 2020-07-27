@@ -266,3 +266,5 @@ Plug 'junegunn/goyo.vim'
 " Plug 'turbio/bracey.vim'
 
 call plug#end()
+
+colorscheme gruvbox-material

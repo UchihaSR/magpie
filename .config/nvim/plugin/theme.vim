@@ -1,6 +1,48 @@
 ﻿set encoding=utf-8
 scriptencoding utf-8
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Cursor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" set cursorline
+" set cursorcolumn
+" autocmd automation InsertEnter * set nocursorline nocursorcolumn
+" autocmd automation InsertLeave * set cursorline cursorcolumn
+
+hi clear CursorLine
+hi CursorLine gui=underline
+" hi CursorLine gui=underline cterm=underline
+autocmd automation InsertEnter * set nocursorline
+autocmd automation InsertLeave * set cursorline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Backgrounds and Foregrouds
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Transparency
+highlight Normal       guibg=NONE
+highlight SignColumn   guibg=NONE
+highlight Pmenu        guibg=NONE
+highlight CursorLineNR guibg=NONE
+highlight EndOfBuffer  guibg=NONE
+
+highlight Visual       guibg=NONE guifg=#00FF00
+
+" hi LineNr 	    guibg=NONE
+" highlight NonText      guibg=NONE
+
+" highlight clear SpellBadi
+" highlight SpellBadi     guibg=red
+
+highlight clear SpellBad
+highlight SpellBad guibg=NONE guifg=Red
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                             Exp
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " syntax enable
 " syntax on
 " set t_8f=[38;2;%lu;%lu;%lum
@@ -16,7 +58,7 @@ scriptencoding utf-8
 
 " Available values: 'hard', 'medium'(default), 'soft'
 " let g:gruvbox_material_background = 'soft'
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
 
 " " colorscheme nightfly
 
@@ -61,40 +103,3 @@ colorscheme gruvbox-material
 "colorscheme solarized8
 "colorscheme flattened_dark
 " colorscheme monokai_pro
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Cursor
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" set cursorline
-" set cursorcolumn
-" autocmd automation InsertEnter * set nocursorline nocursorcolumn
-" autocmd automation InsertLeave * set cursorline cursorcolumn
-
-hi clear CursorLine
-hi CursorLine gui=underline
-" hi CursorLine gui=underline cterm=underline
-autocmd automation InsertEnter * set nocursorline
-autocmd automation InsertLeave * set cursorline
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Backgrounds and Foregrouds
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Transparency
-highlight Normal       guibg=NONE
-highlight SignColumn   guibg=NONE
-highlight Pmenu        guibg=NONE
-highlight CursorLineNR guibg=NONE
-highlight EndOfBuffer  guibg=NONE
-
-highlight Visual       guibg=NONE guifg=#00FF00
-
-" hi LineNr 	    guibg=NONE
-" highlight NonText      guibg=NONE
-
-" highlight clear SpellBadi
-" highlight SpellBadi     guibg=red
-
-highlight clear SpellBad
-highlight SpellBad guibg=NONE guifg=Red
