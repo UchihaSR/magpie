@@ -26,6 +26,7 @@ alias i="fc"
 alias k="xev -event keyboard"
 alias ka="killall"
 alias m="neomutt 2>/dev/null"
+alias ml='cp -frsu -t ~ "$GIT"/own/magpie/. "$GIT"/own/private/.'
 alias md="mkdir"
 alias n="newsboat"
 alias p="patch -p1 <"

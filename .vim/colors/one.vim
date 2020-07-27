@@ -1,0 +1,1 @@
+/mnt/horcrux/git/own/magpie/.config/nvim/colors/one.vim
