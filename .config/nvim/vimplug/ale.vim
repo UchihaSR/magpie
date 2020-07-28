@@ -25,6 +25,7 @@ let g:ale_linters = {
             \   'javascript':   ['eslint'],
             \   'javascriptreact':   ['eslint'],
             \   'json':   ['jsonlint'],
+            \   'lua':   ['luac'],
             \   'nroff':   ['write-good'],
             \   'typescript':   ['tsserver'],
             \   'typescriptreact':   ['tsserver'],
@@ -36,6 +37,7 @@ let g:ale_linters = {
             \   'yaml':   ['yamllint'],
             \}
 
+            " \   'lua':   ['luacheck'],
 " \   'python':   ['flake8', 'pylint'],
 
 let g:ale_javascript_eslint_options = '-c ~/.config/eslintrc.json'
