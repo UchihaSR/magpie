@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 . ~/.private 2> /dev/null
 
@@ -23,8 +23,8 @@ export WM=bspwm
 #                             System Stuff
 #===============================================================================
 
-export DDM=/tmp/ddm
-export RECPID=/tmp/rec_pid
+# export DDM=/tmp/ddm
+# export RECPID=/tmp/rec_pid
 export ICONS=~/.local/share/icons/system
 export QT_QPA_PLATFORMTHEME="gtk2"
 export GROFF_FONT_PATH=~/.local/share/fonts/Groff
