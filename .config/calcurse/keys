@@ -13,7 +13,8 @@ end-of-week  : $
 
 generic-cancel  q
 generic-select  SPC
-generic-quit    ESC
+generic-quit    n
+# generic-quit    ESC
 
 generic-copy    y
 generic-paste   p
@@ -22,8 +23,8 @@ generic-save    s
 
 generic-change-view  h
 
-generic-prev-month  n
 generic-next-month  m
+generic-prev-month  M
 
 del-item  d
 flag-item  D
