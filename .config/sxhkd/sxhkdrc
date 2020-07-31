@@ -162,7 +162,7 @@ super + shift + e
     insertemoji
 
 super + apostrophe
-    testt
+    toy
 
 super + r
     rofi -show drun
