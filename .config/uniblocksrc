@@ -2,8 +2,8 @@
 
 # Tag,Script,Interval
 
-dt,panel -d,1m
+dt,panel -d,60
 W,panel -b,0
-sys,panel -s,3s
+sys,panel -s,1
 vol,panel -v,0
-wifi,panel -w,30s
+wifi,panel -w,30
