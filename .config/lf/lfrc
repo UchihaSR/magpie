@@ -153,13 +153,12 @@ map g
 map gb cd /mnt/horcrux/git/own/private/.local/share/bookmarks
 map gd cd ~/Downloads
 map gh cd ~
-map gm
 map gs cd /mnt/horcrux
 map gp
 map gp cd /mnt/horcrux/phone
 map gr cd /mnt/horcrux/git/own
 map gt cd ~/.local/share/Trash
-map gw cd ~/Storage/Workspace
+map gw cd /mnt/horcrux/Storage/workspace
 
 ################################################################################
 #                             FFMPEG
