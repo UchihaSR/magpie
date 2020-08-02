@@ -158,7 +158,7 @@ map gp
 map gp cd /mnt/horcrux/phone
 map gr cd /mnt/horcrux/git/own
 map gt cd ~/.local/share/Trash
-map gw cd /mnt/horcrux/Storage/workspace
+map gw cd /mnt/horcrux/git/own/private/Storage/workspace
 
 ################################################################################
 #                             FFMPEG
