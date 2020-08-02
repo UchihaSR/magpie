@@ -69,7 +69,7 @@ bind-key e edit-urls
 bind-key R reload-urls
 bind-key r reload-all
 
-bind-key ' mark-feed-read
+bind-key h mark-feed-read
 # bind-key \" mark-all-feeds-read
 
 bind-key f edit-flags
