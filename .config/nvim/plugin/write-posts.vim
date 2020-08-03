@@ -19,8 +19,16 @@ au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
 " au automation BufWritePost test.c  silent !compile %
 
-au automation BufWritePost *.c,*.h exec normal! m"
-" au automation BufWritePost *.c,*.h silent exec "%!astyle"
+au automation BufWritePost *.c,*.h
+            \ exec "normal! ma" |
+            \ silent exec "%!astyle" |
+            \ exec "normal! `a"
+            " \ silent exec "%!clang-format" |
+
+au automation BufWritePost *.sh
+            \ exec "normal! ma" |
+            \ silent exec "%!shfmt -p -i 4 -ci -s -sr" |
+            \ exec "normal! `a"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

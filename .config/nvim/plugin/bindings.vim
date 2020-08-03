@@ -43,7 +43,8 @@ vnoremap f   "zy:/<C-r>z<cr>
 nnoremap m nzzzv
 nnoremap M Nzzzv
 
-nnoremap "           m
+nnoremap " m
+nnoremap ' `
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Modifications for consistancy
