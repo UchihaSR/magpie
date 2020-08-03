@@ -19,15 +19,32 @@ au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
 " au automation BufWritePost test.c  silent !compile %
 
-au automation BufWritePost *.c,*.h
-            \ exec "normal! ma" |
-            \ silent exec "%!astyle" |
-            \ exec "normal! `a"
-            " \ silent exec "%!clang-format" |
-
 au automation BufWritePost *.sh
             \ exec "normal! ma" |
             \ silent exec "%!shfmt -p -i 4 -ci -s -sr" |
+            \ exec "normal! `azz"
+
+au automation BufWritePost *.c,*.h
+            \ exec "normal! ma" |
+            \ silent exec "%!astyle" |
+            \ exec "normal! `azz"
+            " \ silent exec "%!clang-format" |
+
+au automation BufWritePost *.html
+            \ exec "normal! ma" |
+            \ silent exec "%!prettier --parser html" |
+            \ exec "normal! `azz"
+
+
+au automation BufWritePost *.md
+            \ exec "normal! ma" |
+            \ silent exec "%!prettier --parser markdown" |
+            \ exec "normal! `a"
+
+
+au automation BufWritePost *.yml
+            \ exec "normal! ma" |
+            \ silent exec "%!prettier --parser yaml" |
             \ exec "normal! `a"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
