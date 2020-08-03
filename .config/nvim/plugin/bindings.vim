@@ -43,6 +43,8 @@ vnoremap f   "zy:/<C-r>z<cr>
 nnoremap m nzzzv
 nnoremap M Nzzzv
 
+nnoremap "           m
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Modifications for consistancy
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,8 +90,7 @@ nnoremap <leader>w	:set wrap!<cr>
 nnoremap h           o<esc>
 nnoremap H           O<esc>
 
-nnoremap '           "
-nnoremap "           '
+" nnoremap '           "
 
 " nnoremap <leader>r   :source $MYVIMRC<cr>
 :noremap <c-w>       g<c-g>

@@ -55,7 +55,6 @@ nmap gl <Plug>(ale_next_wrap)
 " highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_fixers = {
-            \   'c': ['clang-format'],
             \   'css': ['prettier'],
             \   'html': ['prettier'],
             \   'javascript': ['prettier'],
@@ -68,6 +67,7 @@ let g:ale_fixers = {
             \   'yaml': ['prettier'],
             \   '*': ['remove_trailing_lines', 'trim_whitespace'],
             \}
+            " \   'c': ['clang-format'],
 
 let g:ale_sh_shfmt_options = '-p -i 4 -ci -s -sr'
 " let g:ale_c_clangformat_options = '--style=LLVM'
