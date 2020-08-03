@@ -21,7 +21,7 @@ au automation BufWritePost test.py !python %
 
 au automation BufWritePost *.sh
             \ exec "normal! ma" |
-            \ silent exec "%!shfmt -p -i 4 -ci -s -sr" |
+            \ silent exec "%!shfmt -p -i 3 -ci -s -sr" |
             \ exec "normal! `azz"
 
 au automation BufWritePost *.c,*.h
@@ -30,18 +30,17 @@ au automation BufWritePost *.c,*.h
 
 au automation BufWritePost *.html
             \ exec "normal! ma" |
-            \ silent exec "%!prettier --parser html" |
+            \ silent exec "%!prettier --parser html --tab-width 3" |
             \ exec "normal! `azz"
 
 au automation BufWritePost *.md
             \ exec "normal! ma" |
-            \ silent exec "%!prettier --parser markdown" |
+            \ silent exec "%!prettier --parser markdown --tab-width 3" |
             \ exec "normal! `a"
-
 
 au automation BufWritePost *.yml
             \ exec "normal! ma" |
-            \ silent exec "%!prettier --parser yaml" |
+            \ silent exec "%!prettier --parser yaml --tab-width 3" |
             \ exec "normal! `a"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
