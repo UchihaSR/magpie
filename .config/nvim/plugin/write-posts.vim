@@ -34,7 +34,7 @@ au automation BufWritePost *.html
             \ exec "normal! ma" |
             \ silent exec "%!prettier --parser html" |
             \ exec "normal! `azz"
-
+            " \ silent exec "%!tidy" |
 
 au automation BufWritePost *.md
             \ exec "normal! ma" |

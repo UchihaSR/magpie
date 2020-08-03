@@ -38,6 +38,7 @@ Plug 'dense-analysis/ale'
                 \   'vim':           ['vint'],
                 \   'yaml':   ['yamllint'],
                 \}
+                " \   'html':   ['htmlhint'],
                 " \   'c':   ['ccls'],
                 " \   'c':   ['clang'],
                 " \   'lua':   ['luacheck'],
