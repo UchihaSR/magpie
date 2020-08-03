@@ -18,7 +18,6 @@ let g:ale_virtualtext_prefix = '   <--   💡 '
 let g:ale_use_global_executables = 1
 
 let g:ale_linters = {
-            \   'c':   ['clang'],
             \   'groff':   ['write-good'],
             \   'markdown':   ['write-good'],
             \   'python':   ['flake8'],
@@ -36,7 +35,9 @@ let g:ale_linters = {
             \   'vim':           ['vint'],
             \   'yaml':   ['yamllint'],
             \}
-
+            " \   'c':   ['ccls'],
+            " \   'c':   ['gcc'],
+            " \   'c':   ['clang'],
             " \   'lua':   ['luacheck'],
 " \   'python':   ['flake8', 'pylint'],
 

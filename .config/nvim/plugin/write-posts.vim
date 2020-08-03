@@ -19,7 +19,8 @@ au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
 " au automation BufWritePost test.c  silent !compile %
 
-au automation BufWritePost *.c silent %!astyle
+au automation BufWritePost *.c,*.h exec normal! m"
+" au automation BufWritePost *.c,*.h silent exec "%!astyle"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
