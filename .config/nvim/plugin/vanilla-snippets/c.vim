@@ -5,6 +5,8 @@
 au automation FileType c inoremap ;p printf("");<left><left><left>
 au automation FileType c inoremap ;s system("");<left><left><left>
 au automation FileType c inoremap ;i #include <.h><left><left><left>
+au automation FileType c inoremap ;m 
+            \ int main(void){<cr><cr><cr>}<up><tab>return 0;<up><tab>
 
 au automation FileType c inoremap ;t  <Esc>:read ~/.config/nvim/templates/c_boiler.c<cr>
 
