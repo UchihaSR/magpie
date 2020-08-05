@@ -21,7 +21,7 @@ au automation BufWritePost test.py !python %
 
 au automation BufWritePost *.sh
             \ exec "normal! ma" |
-            \ silent exec "%!shfmt -p -i 3 -ci -s -sr -kp" |
+            \ silent exec "%!shfmt -p -i 3 -ci -s -sr" |
             \ exec "normal! `azz"
 
 au automation BufWritePost *.c,*.h

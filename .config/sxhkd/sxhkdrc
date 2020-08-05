@@ -172,9 +172,9 @@ super + c
     # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
 
 Print
-    maim -B -u -d 1 -s ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
+	screencast
+    # maim -B -u -d 1 -s ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
 	# maim -u -d 1 ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
-	# screencast
 	# record
 	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
@@ -228,3 +228,7 @@ super + shift + n
 # super + shift + p
     # launchPolybar
     # pkill -USR1 polybar
+
+KP_Left
+    timer
+
