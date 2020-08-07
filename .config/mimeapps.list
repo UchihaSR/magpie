@@ -2,4 +2,3 @@
 
 [Default Applications]
 x-scheme-handler/magnet=transmission.desktop;
-application/x-bittorrent=transmission.desktop;

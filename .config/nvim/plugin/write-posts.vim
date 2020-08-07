@@ -43,6 +43,11 @@ au automation BufWritePost *.yml
             \ silent exec "%!prettier --parser yaml --tab-width 3" |
             \ exec "normal! `a"
 
+au automation BufWritePost *.txt
+            \ exec "normal! ma" |
+            \ silent exec "%!pretty" |
+            \ exec "normal! `a"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " au automation BufWritePost test.c  silent !gcc -Wall % -lxcb ;;
