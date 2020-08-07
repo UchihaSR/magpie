@@ -190,7 +190,7 @@ map D delete
 
 map b $cp -r "$fx" "$PWD"; lf -remote 'send push u'
 
-# map y &echo "$fx" > /tmp/list; lf -remote 'send push u'
+map zy &echo "$fx" > /tmp/list; lf -remote 'send push u'
 # map p $cp -fr --backup=t $(cat /tmp/list) "$PWD"
 # map P $cp -br $(cat /tmp/list) "$PWD"; doas -- rm -fr $(cat /tmp/list)
 map m $rsync -a $(cat /tmp/list) "$PWD"
