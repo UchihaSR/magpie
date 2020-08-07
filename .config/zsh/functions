@@ -1,5 +1,18 @@
 #!/bin/sh
 
+twr(){
+ iwctl station wlan0 disconnect
+ iwctl station wlan0 scan
+ sleep 1
+ if iwctl station wlan0 show | grep -i "direct"; then
+    iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
+    notify-send -u low -i "$ICONS"/connected.png 'Connected to repeater'
+else
+    iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
+    notify-send -u low -i "$ICONS"/connected.png 'Connected to default'
+ fi
+}
+
 ttz() {
     if readlink /etc/localtime | grep Berlin > /dev/null; then
         doas -- ln -sf /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
