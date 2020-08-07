@@ -3,8 +3,8 @@
 twr(){
  iwctl station wlan0 disconnect
  iwctl station wlan0 scan
- sleep 2
-    # iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
+ # sleep 2
+    iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
 iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
  iwctl station wlan0 show
  return
@@ -86,8 +86,12 @@ calc() { printf "%s\n" "$*" | bc; }
 #                             Wifi
 ################################################################################
 
-wifistop() { doas systemctl stop iwd; }
-wifistart() { doas systemctl start iwd; }
+diswifi(){  iwctl station wlan0 disconnect; }
+scanwifi(){  iwctl station wlan0 scan; }
+getnw(){  iwctl station wlan0 get-networks; }
+showwifi(){  iwctl station wlan0 show; }
+conwifi(){ iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3; }
+repwifi(){ iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199; }
 
 # wifiStop() { doas systemctl stop systemd-resolved; }
 # wifiStart() { doas systemctl start systemd-resolved; }
@@ -99,5 +103,3 @@ wificon() {
         station "$WIFI_CARD" \
         connect "${2:-$WIFI_SSID}"
 }
-
-wifishow() { iwctl station "$WIFI_CARD" show; }
