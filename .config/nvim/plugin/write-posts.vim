@@ -48,6 +48,11 @@ au automation BufWritePost *.txt
             \ silent exec "%!pretty" |
             \ exec "normal! `a"
 
+au automation BufWritePost *.tex
+            \ exec "normal! ma" |
+            \ silent exec "%!latexindent" |
+            \ exec "normal! `a"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " au automation BufWritePost test.c  silent !gcc -Wall % -lxcb ;;
