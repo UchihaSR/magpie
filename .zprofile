@@ -104,7 +104,7 @@ export UNISON=~/.local/share/unison
 export WGETRC=~/.config/wget/wgetrc
 export XAUTHORITY=~/.config/X11/.Xauthority
 export INPUTRC=~/.config/inputrc
-export NPM_CONFIG_PREFIX=~/.local/share/npm
+# export NPM_CONFIG_PREFIX=~/.local/share/npm
 #export VIMINIT="if !has('nvim') | source $XDG_CONFIG_HOME/vim/vimrc | endif"
 
 #===============================================================================
