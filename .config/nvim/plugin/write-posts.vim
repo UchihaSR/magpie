@@ -26,7 +26,7 @@ au automation BufWritePost *.sh
 
 au automation BufWritePost *.c,*.h
             \ exec "normal! ma" |
-            \ silent exec '%!clang-format -style="{BasedOnStyle: chromium, IndentWidth: 3}"' | exec "normal! `azz"
+            \ silent exec '%!clang-format -style="{BasedOnStyle: google, IndentWidth: 3}"' | exec "normal! `azz"
 
 au automation BufWritePost *.html
             \ exec "normal! ma" |
@@ -41,16 +41,6 @@ au automation BufWritePost *.md
 au automation BufWritePost *.yml
             \ exec "normal! ma" |
             \ silent exec "%!prettier --parser yaml --tab-width 3" |
-            \ exec "normal! `a"
-
-au automation BufWritePost *.txt
-            \ exec "normal! ma" |
-            \ silent exec "%!pretty" |
-            \ exec "normal! `a"
-
-au automation BufWritePost *.tex
-            \ exec "normal! ma" |
-            \ silent exec "%!latexindent" |
             \ exec "normal! `a"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
