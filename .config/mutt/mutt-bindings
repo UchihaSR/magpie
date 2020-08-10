@@ -20,8 +20,11 @@ bind pager,attach j exit
 bind index,attach g first-entry
 bind index,attach G  last-entry
 
-macro index,pager o "<pipe-entry>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
-macro index,pager o "<pipe-message>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
+# macro index,pager o "<pipe-entry>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
+# macro index,pager o "<pipe-message>tee /tmp/muttb<enter><shell-escape>puri /tmp/muttb<enter>"
+
+macro index,pager o "<pipe-entry>tee /tmp/muttb<enter><shell-escape>tmux split-window 'puri /tmp/muttb && rm -f /tmp/muttb'<enter>"
+macro index,pager o "<pipe-message>tee /tmp/muttb<enter><shell-escape>tmux split-window 'puri /tmp/muttb && rm -f /tmp/muttb'<enter>"
 
 # macro index,pager    o "<pipe-message> urlscan -Hdcr 'launch --link {}'<Enter>"
 # macro attach,compose o "<pipe-entry> urlscan -Hdcr 'launch --link {}'<Enter>"
