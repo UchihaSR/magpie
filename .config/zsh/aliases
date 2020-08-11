@@ -120,6 +120,7 @@ alias rb='reboot'
 # Make
 alias dm="da make"
 alias dmi="da make install"
+alias dmc="da make clean"
 alias dmci="da make clean install"
 alias dmu="da make uninstall"
 
