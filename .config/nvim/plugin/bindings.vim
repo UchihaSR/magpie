@@ -7,6 +7,8 @@ let mapleader = ' '
 
 nnoremap <cr>          :update<cr>
 nnoremap <leader><cr>  :update \| !compile %<cr>
+au automation FileType tex nnoremap <leader><cr> :wa \| silent !compile %<cr>
+
 nnoremap <C-cr>        :silent w !doas tee %<cr>
 
 nnoremap n             :qa<cr>

@@ -56,7 +56,7 @@ Plug 'easymotion/vim-easymotion'
     let g:EasyMotion_do_mapping = 0
     let g:EasyMotion_smartcase = 1
     map  e <Plug>(easymotion-bd-w)
-    nmap e <Plug>(easymotion-overwin-w)
+    " nmap e <Plug>(easymotion-overwin-w)
 
 Plug 'Yggdroot/indentLine'
     let g:indentLine_enabled = 0

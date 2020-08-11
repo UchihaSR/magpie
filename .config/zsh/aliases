@@ -118,6 +118,7 @@ alias po='poweroff'
 alias rb='reboot'
 
 # Make
+alias dm="da make"
 alias dmi="da make install"
 alias dmci="da make clean install"
 alias dmu="da make uninstall"

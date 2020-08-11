@@ -13,7 +13,7 @@ au automation BufWritePost tmux*.conf
 au automation  BufWritePost yabar.conf,uniblocks*,panel.sh
             \ silent !{killall yabar && sleep 1 && yabar; } &
 
-au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex,*.c silent !compile %
+au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h silent !compile %
 
 au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
@@ -43,8 +43,12 @@ au automation BufWritePost *.yml
             \ silent exec "%!prettier --parser yaml --tab-width 3" |
             \ exec "normal! `a"
 
+au automation BufWritePost *.tex
+            \ exec "normal! ma" |
+            \ silent exec "%!latexindent" |
+            \ exec "normal! `a"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" au automation BufWritePost test.c  silent !gcc -Wall % -lxcb ;;
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 " au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
