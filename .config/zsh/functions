@@ -97,9 +97,10 @@ repwifi(){ iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b
 # wifiStart() { doas systemctl start systemd-resolved; }
 
 wificon() {
+    WIFI_CARD="$(ip link | grep -o 'w.*:' | tr -d ':')"
     iwctl station "$WIFI_CARD" get-networks
     iwctl \
-        --passphrase "${1:-$WIFI_PASS}" \
+        --passphrase "${2:-$WIFI_PASS}" \
         station "$WIFI_CARD" \
-        connect "${2:-$WIFI_SSID}"
+        connect "${1:-$WIFI_SSID}"
 }

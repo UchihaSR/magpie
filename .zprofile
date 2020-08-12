@@ -23,6 +23,10 @@ export WM=bspwm
 #                             System Stuff
 #===============================================================================
 
+export XDG_CONFIG_HOME=~/.config
+export XDG_DATA_HOME=~/.local/share
+export XDG_CACHE_HOME=~/.local/share/cache
+
 # export DDM=/tmp/ddm
 # export RECPID=/tmp/rec_pid
 export ICONS=~/.local/share/icons/system
@@ -92,9 +96,6 @@ ex=🎯:\
 #                             Housekeeping
 #===============================================================================
 
-export XDG_CONFIG_HOME=~/.config
-export XDG_DATA_HOME=~/.local/share
-export XDG_CACHE_HOME=~/.local/share/cache
 export XINITRC=~/.config/X11/xinitrc
 export ZDOTDIR=~/.config/zsh
 export GNUPGHOME=~/.local/share/gnupg
@@ -104,6 +105,7 @@ export UNISON=~/.local/share/unison
 export WGETRC=~/.config/wget/wgetrc
 export XAUTHORITY=~/.config/X11/.Xauthority
 export INPUTRC=~/.config/inputrc
+export STARDICT_DATA_DIR=~/.local/share
 # export NPM_CONFIG_PREFIX=~/.local/share/npm
 #export VIMINIT="if !has('nvim') | source $XDG_CONFIG_HOME/vim/vimrc | endif"
 

@@ -5,9 +5,8 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <cr>          :update<cr>
-nnoremap <leader><cr>  :update \| !compile %<cr>
-au automation FileType tex nnoremap <leader><cr> :wa \| silent !compile %<cr>
+nnoremap <silent><cr> :silent update<cr>
+nnoremap <leader><cr> :update \| !compile %<cr>
 
 nnoremap <C-cr>        :silent w !doas tee %<cr>
 
@@ -24,8 +23,9 @@ nnoremap <leader><esc> :qa!<cr>
 :noremap j           h
 :noremap ;           l
 
-:noremap k           gk
-:noremap l           gj
+" :noremap k           gk
+" :noremap l           gj
+:noremap l           j
 
 :noremap J           b
 :noremap :           e
@@ -38,9 +38,9 @@ nnoremap <leader><esc> :qa!<cr>
 vnoremap K           <C-u>zz
 vnoremap L           <C-d>zz
 
-nnoremap f   /
-nnoremap F   ?
-vnoremap f   "zy:/<C-r>z<cr>
+nnoremap e   /
+vnoremap e   "zy:/<C-r>z<cr>
+nnoremap E   ?
 
 nnoremap m nzzzv
 nnoremap M Nzzzv

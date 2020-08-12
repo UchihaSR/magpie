@@ -55,8 +55,8 @@ Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
     let g:EasyMotion_do_mapping = 0
     let g:EasyMotion_smartcase = 1
-    map  e <Plug>(easymotion-bd-w)
-    " nmap e <Plug>(easymotion-overwin-w)
+    nmap f <Plug>(easymotion-overwin-w)
+    " map  f <Plug>(easymotion-bd-w)
 
 Plug 'Yggdroot/indentLine'
     let g:indentLine_enabled = 0
@@ -82,8 +82,9 @@ Plug 'sainnhe/gruvbox-material'
 "===============================================================================
 
 Plug 'junegunn/goyo.vim'
-    au automation BufReadPost * Goyo        82x80%
+    au automation BufReadPost * Goyo 82x80%
     au automation VimResized * execute "normal \<C-W>="
+    " let g:goyo_linenr = 1
 
 " au automation FocusGained,BufEnter * Goyo 82x100%
 " au automation User GoyoLeave silent! source $MYVIMRC

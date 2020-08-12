@@ -32,6 +32,9 @@ au automation BufReadPost *
     \	execute 'normal! g`"zvzz' |
     \ endif
 
+" Quickly highlight yanked text
+" au automation TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1000)
+
 " au automation BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 " au automation BufRead,BufNewFile *.ms      set filetype=groff
 " au automation FileType markdown setlocal commentstring=[//]:\ #\ (\%s\)
