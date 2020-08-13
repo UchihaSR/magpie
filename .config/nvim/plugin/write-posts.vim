@@ -19,7 +19,6 @@ au automation BufWritePost test.sh !sh %
 au automation BufWritePost test.py !python %
 " au automation BufWritePost test.c  silent !compile %
 
-au automation FileType text nnoremap <leader><cr> :w !wc -w<cr>
 au automation FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
 
 "===============================================================================
