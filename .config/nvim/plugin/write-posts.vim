@@ -54,15 +54,15 @@ au automation BufWritePost *.tex
             \ silent exec "%!latexindent" |
             \ exec "normal! `a"
 
-au automation BufWritePost *.js
-            \ exec "normal! ma" |
-            \ silent exec "%!prettier --parser babel --tab-width 3 --single-quote" |
-            \ exec "normal! `a"
-
 au automation BufWritePost *.json
             \ exec "normal! ma" |
             \ silent exec "%!prettier --parser json --tab-width 3" |
             \ exec "normal! `a"
+
+" au automation BufWritePost *.js
+"             \ exec "normal! ma" |
+"             \ silent exec "%!prettier --parser babel --tab-width 3 --single-quote --loglevel error" |
+"             \ exec "normal! `a"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

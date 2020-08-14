@@ -30,21 +30,21 @@ Plug 'dense-analysis/ale'
                 \   'javascript.jsx':   ['eslint'],
                 \   'json':   ['jsonlint'],
                 \   'lua':   ['luac'],
-                \   'nroff':   ['write-good'],
-                \   'typescript':   ['tsserver'],
-                \   'typescriptreact':   ['tsserver'],
-                \   'sass':           ['sasslint'],
-                \   'scss':           ['sasslint'],
                 \   'sh':           ['shellcheck'],
                 \   'tex':   ['chktex', 'lacheck'],
                 \   'vim':           ['vint'],
                 \   'yaml':   ['yamllint'],
                 \}
+                " \   'nroff':   ['write-good'],
+                " \   'sass':           ['sasslint'],
+                " \   'scss':           ['sasslint'],
+                " \   'typescript':   ['tsserver'],
+                " \   'typescriptreact':   ['tsserver'],
                 " \   'html':   ['htmlhint'],
                 " \   'c':   ['ccls'],
                 " \   'c':   ['clang'],
                 " \   'lua':   ['luacheck'],
-    " \   'python':   ['flake8', 'pylint'],
+                " \   'python':   ['flake8', 'pylint'],
 
     let g:ale_javascript_eslint_options = '-c ~/.config/eslintrc.json'
     " let g:ale_scss_sasslint_options = '-s sass'
