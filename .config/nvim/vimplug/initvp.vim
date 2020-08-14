@@ -129,7 +129,7 @@ Plug 'junegunn/goyo.vim'
 "                             Javascript
 "===============================================================================
 
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 " Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'peecky/vim-node-syntax'
 " Plug 'mxw/vim-xhp'
@@ -138,10 +138,10 @@ Plug 'junegunn/goyo.vim'
 " Plug 'leafgarland/typescript-vim'
 " Plug 'HerringtonDarkholme/yats.vim'
 
-" Plug 'GutenYe/json5.vim'
+Plug 'GutenYe/json5.vim'
 " Plug 'elzr/vim-json'
 
-" Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 " Plug 'chemzqm/vim-jsx-improve'
 " Plug 'moll/vim-node'
 " Plug 'othree/yajs'

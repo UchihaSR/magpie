@@ -54,6 +54,11 @@ au automation BufWritePost *.tex
             \ silent exec "%!latexindent" |
             \ exec "normal! `a"
 
+au automation BufWritePost *.js
+            \ exec "normal! ma" |
+            \ silent exec "%!prettier --parser babel --tab-width 3 --single-quote" |
+            \ exec "normal! `a"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
