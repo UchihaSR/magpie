@@ -20,10 +20,11 @@ so ~/.config/nvim/vimplug/coc.vim
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 " Plug 'farmergreg/vim-lastplace'
 Plug 'powerman/vim-plugin-AnsiEsc'
 " Plug 'sheerun/vim-polyglot'
+Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'psliwka/vim-smoothie'
     nmap K <Plug>(SmoothieUpwards)
@@ -48,9 +49,10 @@ Plug 'godlygeek/tabular'
     au automation BufReadPost * :noremap <leader>t :Tabularize /
 
 Plug 'mattn/emmet-vim'
-    let g:user_emmet_leader_key='<a-,>'
+    let g:user_emmet_leader_key=','
+    " let g:user_emmet_leader_key='<a-,>'
     let g:user_emmet_install_global = 0
-    au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+    au automation FileType html,css,sass,javascript.jsx,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
     let g:EasyMotion_do_mapping = 0
@@ -61,7 +63,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
     let g:indentLine_enabled = 0
     au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
-
 
 "===============================================================================
 "                             Color Schemes
@@ -261,7 +262,6 @@ Plug 'mxw/vim-jsx'
 " Plug 'garbas/vim-snipmate'
 " Plug 'vim-scripts/restore_view.vim'
 
-" Plug 'kovetskiy/sxhkd-vim'
 " Plug 'tpope/vim-obsession'
 
 " Plug 'jaxbot/browserlink.vim'
