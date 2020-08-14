@@ -151,8 +151,8 @@ Plug 'pangloss/vim-javascript'
 "              JSX 
 "---------------------------------------
 Plug 'mxw/vim-jsx'
-" Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'chemzqm/vim-jsx-improve'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'chemzqm/vim-jsx-improve'
 
 " Plug 'moll/vim-node'
 " Plug 'othree/yajs'

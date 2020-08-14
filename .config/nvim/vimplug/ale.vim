@@ -27,6 +27,7 @@ Plug 'dense-analysis/ale'
                 \   'python':   ['flake8'],
                 \   'javascript':   ['eslint'],
                 \   'javascriptreact':   ['eslint'],
+                \   'javascript.jsx':   ['eslint'],
                 \   'json':   ['jsonlint'],
                 \   'lua':   ['luac'],
                 \   'nroff':   ['write-good'],

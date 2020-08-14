@@ -59,6 +59,11 @@ au automation BufWritePost *.js
             \ silent exec "%!prettier --parser babel --tab-width 3 --single-quote" |
             \ exec "normal! `a"
 
+au automation BufWritePost *.json
+            \ exec "normal! ma" |
+            \ silent exec "%!prettier --parser json --tab-width 3" |
+            \ exec "normal! `a"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
