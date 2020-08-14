@@ -10,5 +10,5 @@ au automation FileType c inoremap ;m
 
 au automation FileType c inoremap ;t  <Esc>:read ~/.config/nvim/templates/c_boiler.c<cr>
 
-au automation FileType c inoremap ;b //<esc>78a=<esc>yypO//<esc>30a<space><Esc>i
-au automation FileType c inoremap ;B //<esc>38a-<esc>yypO//<esc>15a<space><Esc>i
+au automation FileType c,javascript.jsx inoremap ;b //<esc>78a=<esc>yypO//<esc>30a<space><Esc>i
+au automation FileType c,javascript.jsx inoremap ;B //<esc>38a-<esc>yypO//<esc>15a<space><Esc>i

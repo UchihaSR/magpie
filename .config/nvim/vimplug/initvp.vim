@@ -23,7 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
 " Plug 'farmergreg/vim-lastplace'
 Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 Plug 'psliwka/vim-smoothie'
     nmap K <Plug>(SmoothieUpwards)
@@ -130,19 +130,29 @@ Plug 'junegunn/goyo.vim'
 "===============================================================================
 
 Plug 'pangloss/vim-javascript'
-" Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'peecky/vim-node-syntax'
 " Plug 'mxw/vim-xhp'
 
+"---------------------------------------
+"              Typescript 
+"---------------------------------------
 " Plug 'tasn/vim-tsx'
 " Plug 'leafgarland/typescript-vim'
 " Plug 'HerringtonDarkholme/yats.vim'
 
-Plug 'GutenYe/json5.vim'
+"---------------------------------------
+"              JSON 
+"---------------------------------------
+" Plug 'GutenYe/json5.vim'
 " Plug 'elzr/vim-json'
 
+"---------------------------------------
+"              JSX 
+"---------------------------------------
 Plug 'mxw/vim-jsx'
+" Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'chemzqm/vim-jsx-improve'
+
 " Plug 'moll/vim-node'
 " Plug 'othree/yajs'
 
