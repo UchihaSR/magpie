@@ -13,6 +13,7 @@ au automation FileType * setlocal formatoptions-=c formatoptions-=r formatoption
 " au automation BufReadPost mutt* set filetype=muttrc
 " Set spelling for certain filetypes
 au automation FileType markdown,groff,tex setlocal spell
+au automation BufRead *.sent setlocal spell
 " Comment string setup
 au automation FileType json     setlocal commentstring=//\%s
 au automation FileType sxhkdrc  setlocal commentstring=#\%s
@@ -21,6 +22,7 @@ au automation FileType markdown setlocal commentstring=<!---\%s\-->
 
 au automation BufRead .*profile set filetype=sh
 au automation BufRead mutt*     set filetype=muttrc
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Misc
