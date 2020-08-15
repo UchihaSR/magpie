@@ -30,7 +30,8 @@ super + p
    mirror --git
 
 super + {_,shift} f
-   {launch -e,toggle -f}
+   {bspc node -t fullscreen,toggle -f}
+   # {launch -e,toggle -f}
 
 KP_Home
     connectbt
