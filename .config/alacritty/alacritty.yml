@@ -22,8 +22,8 @@ font:
 
 
 key_bindings:
-   - { key: M, mods: Control, action: IncreaseFontSize }
-   - { key: N, mods: Control, action: DecreaseFontSize }
+   - { key: L, mods: Control, action: IncreaseFontSize }
+   - { key: K, mods: Control, action: DecreaseFontSize }
    # - { key: K, mods: Control, action: ScrollLineUp }
    # - { key: L, mods: Control, action: ScrollLineDown }
    # - { key: J, mods: Control, action: ScrollPageUp }
