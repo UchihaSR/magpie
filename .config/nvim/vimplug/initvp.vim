@@ -52,7 +52,7 @@ Plug 'mattn/emmet-vim'
     let g:user_emmet_leader_key=','
     " let g:user_emmet_leader_key='<a-,>'
     let g:user_emmet_install_global = 0
-    au automation FileType html,css,sass,javascript.jsx,markdown,vimwiki EmmetInstall
+    au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
     let g:EasyMotion_do_mapping = 0
