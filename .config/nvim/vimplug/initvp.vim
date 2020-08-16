@@ -1,9 +1,9 @@
-          " _                       _
- " __   __ (_)  _ __ ___    _ __   | |  _   _    __ _
- " \ \ / / | | | '_ ` _ \  | '_ \  | | | | | |  / _` |
-  " \ V /  | | | | | | | | | |_) | | | | |_| | | (_| |
-   " \_/   |_| |_| |_| |_| | .__/  |_|  \__,_|  \__, |
-          "                |_|                  |___/
+" _                       _
+" __   __ (_)  _ __ ___    _ __   | |  _   _    __ _
+" \ \ / / | | | '_ ` _ \  | '_ \  | | | | | |  / _` |
+" \ V /  | | | | | | | | | |_) | | | | |_| | | (_| |
+" \_/   |_| |_| |_| |_| | .__/  |_|  \__,_|  \__, |
+"                |_|                  |___/
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -18,7 +18,7 @@ so ~/.config/nvim/vimplug/coc.vim
 "                             Essentials
 "===============================================================================
 
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
 " Plug 'mhinz/vim-startify'
 " Plug 'farmergreg/vim-lastplace'
@@ -27,42 +27,42 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'psliwka/vim-smoothie'
-    nmap K <Plug>(SmoothieUpwards)
-    nmap L <Plug>(SmoothieDownwards)
+nmap K <Plug>(SmoothieUpwards)
+nmap L <Plug>(SmoothieDownwards)
 
 Plug 'tpope/vim-surround'
-    nmap sw ysiw
-    nmap sW ysiW
-    nmap sl yss
+nmap sw ysiw
+nmap sW ysiW
+nmap sl yss
 
 Plug 'tpope/vim-commentary'
-    :map s  <Plug>Commentary
-    nmap ss <Plug>CommentaryLine
-    " :map s  gc
-    " nmap ss gcc
+:map s  <Plug>Commentary
+nmap ss <Plug>CommentaryLine
+" :map s  gc
+" nmap ss gcc
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-    let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-    let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
 
 Plug 'godlygeek/tabular'
-    au automation BufReadPost * :noremap <leader>t :Tabularize /
+au automation BufReadPost * :noremap <leader>t :Tabularize /
 
 Plug 'mattn/emmet-vim'
-    let g:user_emmet_leader_key=','
-    " let g:user_emmet_leader_key='<a-,>'
-    let g:user_emmet_install_global = 0
-    au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+let g:user_emmet_leader_key=','
+" let g:user_emmet_leader_key='<a-,>'
+let g:user_emmet_install_global = 0
+au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
-    let g:EasyMotion_do_mapping = 0
-    let g:EasyMotion_smartcase = 1
-    nmap f <Plug>(easymotion-overwin-w)
-    " map  f <Plug>(easymotion-bd-w)
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap f <Plug>(easymotion-overwin-w)
+" map  f <Plug>(easymotion-bd-w)
 
 Plug 'Yggdroot/indentLine'
-    let g:indentLine_enabled = 0
-    au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
+let g:indentLine_enabled = 0
+au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
 
 "===============================================================================
 "                             Color Schemes
@@ -76,16 +76,16 @@ Plug 'sainnhe/gruvbox-material'
 " Plug 'iCyMind/NeoSolarized'
 " Plug 'rakr/vim-one'
 " Plug 'whatyouhide/vim-gotham'
- " Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 
 "===============================================================================
 "                             Goyo
 "===============================================================================
 
 Plug 'junegunn/goyo.vim'
-    au automation BufReadPost * Goyo 82x80%
-    au automation VimResized * execute "normal \<C-W>="
-    " let g:goyo_linenr = 1
+au automation BufReadPost * Goyo 82x80%
+au automation VimResized * execute "normal \<C-W>="
+" let g:goyo_linenr = 1
 
 " au automation FocusGained,BufEnter * Goyo 82x100%
 " au automation User GoyoLeave silent! source $MYVIMRC
@@ -265,7 +265,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'tpope/vim-obsession'
 
 " Plug 'jaxbot/browserlink.vim'
-    " au automation InsertLeave *.css :BLReloadCSS
+" au automation InsertLeave *.css :BLReloadCSS
 
 " Plug 'turbio/bracey.vim'
 

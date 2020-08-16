@@ -36,9 +36,8 @@ au automation BufRead *.js set equalprg=prettier\ --parser\ babel\ --tab-width\ 
 
 nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>
 
-" au automation BufWritePost *.c,*.h %s/[$"{}>;/]/;/
-au automation BufWritePost *.c
-            \ exec "normal! ma" |
-            \ exec "%s/[^{}>;/\"]$/;/" |
-            \ exec "normal! `azz" |
-            \ exec "silent update"
+" au automation FileType c nnoremap <cr> 
+"             \ma
+"             \:%s/[^{}>;/]$/&;/e<cr>
+"             \:%s/.h";/.h"/e<cr>
+"             \:silent norm! G=gg`azz<cr>:silent wa<cr>
