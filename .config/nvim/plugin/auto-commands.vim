@@ -30,9 +30,9 @@ au automation BufRead mutt*     set filetype=muttrc
 
 " Return to the same line you left off at
 au automation BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \	execute 'normal! g`"zvzz' |
-    \ endif
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \	execute 'normal! g`"zvzz' |
+            \ endif
 
 " au automation BufNewFile,BufRead *.c set formatprg=astyle\ -T9
 

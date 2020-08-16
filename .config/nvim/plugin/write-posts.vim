@@ -15,11 +15,11 @@ au automation  BufWritePost yabar.conf,uniblocks*,panel.sh
 
 au automation  BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h silent !compile %
 
-" au automation BufWritePost test.sh !sh %
-" au automation BufWritePost test.py !python %
-" au automation BufWritePost test.c  silent !compile %
-
 au automation FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
 
 " au automation  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 " au automation  BufWritePost picom.conf    silent !pkill -USR1 picom
+
+" au automation BufWritePost test.sh !sh %
+" au automation BufWritePost test.py !python %
+" au automation BufWritePost test.c  silent !compile %

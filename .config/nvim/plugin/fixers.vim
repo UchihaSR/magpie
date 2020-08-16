@@ -35,3 +35,10 @@ au automation BufRead *.yml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 
 au automation BufRead *.js set equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
 
 nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>
+
+" au automation BufWritePost *.c,*.h %s/[$"{}>;/]/;/
+au automation BufWritePost *.c
+            \ exec "normal! ma" |
+            \ exec "%s/[^{}>;/\"]$/;/" |
+            \ exec "normal! `azz" |
+            \ exec "silent update"
