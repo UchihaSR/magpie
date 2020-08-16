@@ -25,7 +25,6 @@
 
 " au automation BufWritePost *.sh :!shfmt -p -i 3 -ci -s -sr %<cr>
 
-
 au automation BufRead *.c,*.h set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
 au automation BufRead *.sh set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
 au automation BufRead *.md set equalprg=prettier\ --parser\ markdown\ --tab-width\ 3
