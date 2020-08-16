@@ -5,7 +5,7 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <silent><cr> :silent update<cr>
+" nnoremap <silent><cr> :silent update<cr>
 nnoremap <leader><cr> :update \| !compile %<cr>
 
 nnoremap <C-cr>        :silent w !doas tee %<cr>

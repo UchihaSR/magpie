@@ -34,6 +34,8 @@ au automation BufReadPost *
     \	execute 'normal! g`"zvzz' |
     \ endif
 
+" au automation BufNewFile,BufRead *.c set formatprg=astyle\ -T9
+
 " Quickly highlight yanked text
 " au automation TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 1000)
 
