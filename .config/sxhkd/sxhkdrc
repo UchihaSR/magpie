@@ -1,48 +1,48 @@
-               # _       _          _
-  # ___  __  __ | |__   | | __   __| |  _ __    ___
- # / __| \ \/ / | '_ \  | |/ /  / _` | | '__|  / __|
- # \__ \  >  <  | | | | |   <  | (_| | | |    | (__
- # |___/ /_/\_\ |_| |_| |_|\_\  \__,_| |_|     \___|
+# _       _          _
+# ___  __  __ | |__   | | __   __| |  _ __    ___
+# / __| \ \/ / | '_ \  | |/ /  / _` | | '__|  / __|
+# \__ \  >  <  | | | | |   <  | (_| | | |    | (__
+# |___/ /_/\_\ |_| |_| |_|\_\  \__,_| |_|     \___|
 
 #===============================================================================
 #                             MVPs
 #===============================================================================
 
 super + Return
-    launch --terminal
+	launch --terminal
 
 super + b
-    $BROWSER
+	$BROWSER
 
 super + i
-    launch --bookmarker
+	launch --bookmarker
 
 super + {_,shift} + w
-    setdisplay --bg {shuffle,delete}
+	setdisplay --bg {shuffle,delete}
 
 super + o
-    bolt --tmux-search
+	bolt --tmux-search
 
 super + shift + o
-    bolt --rofi-search
+	bolt --rofi-search
 
 super + p
-   mirror --git
+	mirror --git
 
 super + {_,shift} f
-   {bspc node -t fullscreen,toggle -f}
-   # {launch -e,toggle -f}
+	{bspc node -t fullscreen,toggle -f}
+# {launch -e,toggle -f}
 
 KP_Home
-    connectbt
+	connectbt
 
 KP_Delete
-    pkill -u $USER
-    # bspc quit
-   # pkill -KILL -u $USER
+	pkill -u $USER
+# bspc quit
+# pkill -KILL -u $USER
 
 super + KP_Add
-    systemctl hibernate
+	systemctl hibernate
 
 #===============================================================================
 #                             BSPWM
@@ -50,10 +50,10 @@ super + KP_Add
 
 # Navigate Nodes
 super + {_,shift} + {k,l}
-    bspc node -{f,s} {prev,next}.local
+	bspc node -{f,s} {prev,next}.local
 
 super + {_,shift} + {j,semicolon}
-    bspc {desktop -f,node -d} {prev,next}
+	bspc {desktop -f,node -d} {prev,next}
 
 # Close / Kill
 super + {_,shift} + n
@@ -61,41 +61,41 @@ super + {_,shift} + n
 
 # Toggle Tiled / Monocle
 super + m
-   bspc desktop -l next
+	bspc desktop -l next
 
 # Focus / Swap [ Desktop ]
 super + {_,shift} + {1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 {alt,super} + {_,shift} + Tab
-    bspc {node,desktop} -f {prev,next}
+	bspc {node,desktop} -f {prev,next}
 
 # Resize Outward
 super + alt + {j,l,semicolon,k}
-    bspc node -z {left -20 0,bottom 0 20,right 20 0,top 0 -20}
+	bspc node -z {left -20 0,bottom 0 20,right 20 0,top 0 -20}
 
 # Resize Inward
 super + alt + shift + {j,l,semicolon,k}
-    bspc node -z {right -20 0,top 0 20,left 20 0,bottom 0 -20}
+	bspc node -z {right -20 0,top 0 20,left 20 0,bottom 0 -20}
 
 # Toggle gaps
 super + s
-    bspc config window_gap {50, 75,100,0,25}
+	bspc config window_gap {50, 75,100,0,25}
 
 # Rotate
 super + period
-    bspc node -f prev.local; bspc node -n next.local
-    # bspc node @focused:/ -R 270
+	bspc node -f prev.local; bspc node -n next.local
+# bspc node @focused:/ -R 270
 
 super + comma
-    bspc node @focused:/ -R 90
-    # bspc node -n prev.local
-    # bspc node -n prev.local
-    # bspc node @focused:/ -R 90
+	bspc node @focused:/ -R 90
+# bspc node -n prev.local
+# bspc node -n prev.local
+# bspc node @focused:/ -R 90
 
 # Shift to Biggest
 super + i
-    bspc node -n biggest.local
+	bspc node -n biggest.local
 
 # # Fullscreen
 # super + f
@@ -118,17 +118,17 @@ super + i
 #===============================================================================
 
 F{1,2,3}
-    setplayer --vol {toggle,down,up}
+	setplayer --vol {toggle,down,up}
 
 XF86Audio{Next,Prev,Play}
-    setplayer --play {next,prev,toggle}
+	setplayer --play {next,prev,toggle}
 
 F{11,12}
-    {decBl,incBl}
+	{decBl,incBl}
 
 F7
-    toggle --wifi --noti --wall-reel
-    # toggle --wifi --noti && setdisplay --bg toggle-reel
+	toggle --wifi --noti --wall-reel
+# toggle --wifi --noti && setdisplay --bg toggle-reel
 
 # super + XF86MonBrightnessDown
 # 	xrandr --output eDP-1 --gamma {1:1:1, 1:0.9:0.1, 1:0.8:0.1, 1:0.7:0.1, 1:0.7:0.1, 1:0.6:0.1}
@@ -137,60 +137,60 @@ F7
 # 	xrandr --output eDP-1 --gamma {1:1:1, 1.1:1.1:1.1, 1.2:1.2:1.2, 1.3:1.3:1.3, 1.4:1.4:1.4, 1.5:1.5:1.5, 1.6:1.6:1.6, 1.7:1.7:1.7, 1.8:1.8:1.8, 1.9:1.9:1.9, 2.0:2.0:2.0}
 
 KP_{Subtract,Add}
-    backlight --{down,up}
+	backlight --{down,up}
 
 # KP_Subtract
 #     leave-x
 
 KP_Insert
-    sleep 1 && xset dpms force off
-    # xrandr --output eDP1 {--off,--auto --dpi 96}
+	sleep 1 && xset dpms force off
+# xrandr --output eDP1 {--off,--auto --dpi 96}
 
 # KP_End
 #     systemctl suspend
 
 KP_Add
-    systemctl suspend
+	systemctl suspend
 
 #===============================================================================
 #                             Misc
 #===============================================================================
 
 super + t
-    st
+	st
 
 super + shift + e
-    insertemoji
+	insertemoji
 
 super + apostrophe
-    toy
+	toy
 
 super + r
-    rofi -show drun
+	rofi -show drun
 
 super + c
-    killall xcompmgr || xcompmgr -cCfF &
-    # killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
+	killall xcompmgr || xcompmgr -cCfF &
+# killall picom && picom --config {~/.config/picomOff.conf, ~/.config/picom.conf} &
 
 Print
-	screencast
-	# maim -u -d 1 ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
-    # maim -B -u -d 1 -s ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
-	# record
-	# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
+	maim -B -u -d 1 -s ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
+# maim -u -d 1 ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png
+# screencast
+# record
+# scrot ~/Pictures/Scrot_%H:%M-%a-%e-%b-%Y.png
 
 super + backslash
-    xmodmap $LAYOUT_{EN,AR}
+	xmodmap $LAYOUT_{EN,AR}
 
 super + shift + n
-    toggle --noti
+	toggle --noti
 
 #===============================================================================
 #                             Exp
 #===============================================================================
 
 # alt + j
-    # xdotool keyup j key --clearmodifiers Control+l
+# xdotool keyup j key --clearmodifiers Control+l
 
 # alt + y
 #     xdotool keyup y key --clearmodifiers Control+Shift+c
@@ -199,8 +199,8 @@ super + shift + n
 #     xdotool keyup p key --clearmodifiers Control+Shift+v
 
 # Tab + j
-    # ns yo
-    # xdotool keyup p key --clearmodifiers Control+Shift+v
+# ns yo
+# xdotool keyup p key --clearmodifiers Control+Shift+v
 
 # shift + Escape
 # 	xdotool keyup Caps_Lock key --clearmodifiers Caps_Lock
@@ -209,13 +209,13 @@ super + shift + n
 # 	systemctl poweroff
 
 # super + shift + Escape
-	# systemctl suspend
+# systemctl suspend
 # super + alt + Escape
-	# sleep 1 ; xset dpms force off
+# sleep 1 ; xset dpms force off
 # super + control + Escape
-	# systemctl poweroff
+# systemctl poweroff
 # super + control + shift + Escape
-	# systemctl reboot
+# systemctl reboot
 
 # super + {_,shift,alt} + b
 #     {$BROWSER,bookmark-add,bookmark-edit}
@@ -227,9 +227,9 @@ super + shift + n
 #     {$BROWSER}
 
 # super + shift + p
-    # launchPolybar
-    # pkill -USR1 polybar
+# launchPolybar
+# pkill -USR1 polybar
 
 KP_Left
-    timer
+	timer
 
