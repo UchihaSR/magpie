@@ -49,7 +49,7 @@ nnoremap " m
 nnoremap ' `
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Modifications for consistancy
+"                             Modifications
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap Y         y$
@@ -80,6 +80,9 @@ nnoremap <leader>d :%d<cr>
 nnoremap U <C-r>
 
 xnoremap p pgvy
+
+vmap < <gv
+vmap > >gv
 
 " ------------[ View ]-----------------
 
