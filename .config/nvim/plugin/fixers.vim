@@ -32,6 +32,6 @@ au automation BufRead *.tex set equalprg=latexindent\ -s
 au automation BufRead *.html set equalprg=prettier\ --parser\ html\ --tab-width\ 3
 au automation BufRead *.json set equalprg=prettier\ --parser\ json\ --tab-width\ 3
 au automation BufRead *.yml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 3
-" au automation BufRead *.js set equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
+au automation BufRead *.js set equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
 
 nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>

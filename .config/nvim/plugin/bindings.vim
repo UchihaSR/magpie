@@ -5,10 +5,8 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" nnoremap <silent><cr> :silent update<cr>
 nnoremap <leader><cr> :update \| !compile %<cr>
-
-nnoremap <C-cr>        :silent w !doas tee %<cr>
+nnoremap g<cr> :execute 'silent! write !sudo tee % >/dev/null' <bar> edit!<cr>
 
 nnoremap n             :qa<cr>
 nnoremap N             :qa!<cr>
@@ -108,7 +106,7 @@ vnoremap <leader>s   "zy:%s/<C-r>z//gc<left><left><left>
 nnoremap <leader>b       :w! %.bak<cr>
 
 " Save file as sudo on files that require root permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!<cr>
 
 nnoremap <leader>P       maggVG='a
 
@@ -194,3 +192,11 @@ nnoremap gj :prev<cr>
 " nnoremap	<M-cr>          :%d \| :-1read %.bak<cr>
 
 " nnoremap <leader><cr>     :update <bar> !compile %<cr>
+
+" nnoremap <C-cr>        :silent w !doas tee %<cr>
+" nnoremap <C-cr>        :%!doas tee > /dev/nul %<cr>
+" nnoremap g<cr> :%!doas tee > /dev/nul %<cr>
+" cnoremap w!! %!sudo tee > /dev/null %<CR>
+" nnoremap g<cr> :silent! write !sudo tee % >/dev/null \| edit!<cr>
+
+" nnoremap <silent><cr> :silent update<cr>
