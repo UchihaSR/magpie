@@ -32,6 +32,8 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 
 ---
 
+![](.local/share/preview/c_dev.png)
+
 ![](https://cloud.disroot.org/s/KC3TTZdzW4dpBBx/preview)
 
 ![](https://cloud.disroot.org/s/YHjELDteXdqYdqn/preview)
