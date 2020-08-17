@@ -25,11 +25,16 @@
 
 " au automation BufWritePost *.sh :!shfmt -p -i 3 -ci -s -sr %<cr>
 
-au automation FileType c,cpp,shelll,tex,html,json,yaml,javascript
-            \ nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>
+" Bind w to save
+nnoremap <silent>w :silent wa<cr>
 
+" Bind w to autofixing for certain files
+au automation FileType c,cpp,sh,tex,html,json,yaml,javascript
+            \ nnoremap <silent>w :silent norm! maG=gg`azz<cr>:silent wa<cr>
+
+" Set fixers according to file types
 au automation FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
-au automation FileType shell set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
+au automation FileType sh set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
 au automation FileType markdown set equalprg=prettier\ --parser\ markdown\ --tab-width\ 3
 au automation FileType tex set equalprg=latexindent\ -s
 au automation FileType html set equalprg=prettier\ --parser\ html\ --tab-width\ 3

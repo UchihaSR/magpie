@@ -5,8 +5,8 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <leader><cr> :update \| !compile %<cr>
-nnoremap g<cr> :execute 'silent! write !sudo tee % >/dev/null' <bar> edit!<cr>
+nnoremap <cr> :wa<cr>:!compile %<cr>
+" nnoremap g<cr> :execute 'silent! write !sudo tee % >/dev/null' <bar> edit!<cr>
 
 nnoremap n             :qa<cr>
 nnoremap N             :qa!<cr>
