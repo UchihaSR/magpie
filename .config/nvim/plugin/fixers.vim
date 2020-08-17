@@ -25,16 +25,17 @@
 
 " au automation BufWritePost *.sh :!shfmt -p -i 3 -ci -s -sr %<cr>
 
-au automation BufRead *.c,*.h set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
-au automation BufRead *.sh set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
-au automation BufRead *.md set equalprg=prettier\ --parser\ markdown\ --tab-width\ 3
-au automation BufRead *.tex set equalprg=latexindent\ -s
-au automation BufRead *.html set equalprg=prettier\ --parser\ html\ --tab-width\ 3
-au automation BufRead *.json set equalprg=prettier\ --parser\ json\ --tab-width\ 3
-au automation BufRead *.yml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 3
-au automation BufRead *.js set equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
+au automation FileType c,cpp,shelll,tex,html,json,yaml,javascript
+            \ nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>
 
-nnoremap <silent><cr> :silent norm! maG=gg`azz<cr>:silent wa<cr>
+au automation FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
+au automation FileType shell set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
+au automation FileType markdown set equalprg=prettier\ --parser\ markdown\ --tab-width\ 3
+au automation FileType tex set equalprg=latexindent\ -s
+au automation FileType html set equalprg=prettier\ --parser\ html\ --tab-width\ 3
+au automation FileType json set equalprg=prettier\ --parser\ json\ --tab-width\ 3
+au automation FileType yaml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 3
+au automation FileType javascript set  equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
 
 " au automation FileType c nnoremap <cr> 
 "             \ma
