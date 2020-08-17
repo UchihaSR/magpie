@@ -46,13 +46,13 @@ let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
 
 Plug 'godlygeek/tabular'
-au automation BufReadPost * :noremap <leader>t :Tabularize /
+au ac BufReadPost * :noremap <leader>t :Tabularize /
 
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 " let g:user_emmet_leader_key='<a-,>'
 let g:user_emmet_install_global = 0
-au automation FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+au ac FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
@@ -62,7 +62,7 @@ nmap f <Plug>(easymotion-overwin-w)
 
 Plug 'Yggdroot/indentLine'
 let g:indentLine_enabled = 0
-au automation BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
+au ac BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
 
 "===============================================================================
 "                             Color Schemes
@@ -83,13 +83,13 @@ Plug 'sainnhe/gruvbox-material'
 "===============================================================================
 
 Plug 'junegunn/goyo.vim'
-au automation BufReadPost * Goyo 82x80%
-au automation VimResized * execute "normal \<C-W>="
+au ac BufReadPost * Goyo 82x80%
+au ac VimResized * execute "normal \<C-W>="
 " let g:goyo_linenr = 1
 
-" au automation FocusGained,BufEnter * Goyo 82x100%
-" au automation User GoyoLeave silent! source $MYVIMRC
-" au! automation User GoyoLeave silent! source $MYVIMRC
+" au ac FocusGained,BufEnter * Goyo 82x100%
+" au ac User GoyoLeave silent! source $MYVIMRC
+" au! ac User GoyoLeave silent! source $MYVIMRC
 
 "===============================================================================
 "                             Markdown
@@ -97,12 +97,12 @@ au automation VimResized * execute "normal \<C-W>="
 
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "     let g:mkdp_refresh_slow = 1
-"     au automation FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
+"     au ac FileType markdown,vimwiki nnoremap <leader><cr> <Plug>MarkdownPreviewToggle
 "     let g:mkdp_browser = 'falkon'
-"     au automation FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
+"     au ac FileType markdown nnoremap <leader><cr> :MarkdownPreview<cr>
 
 " Plug 'dhruvasagar/vim-table-mode'
-" au automation FileType markdown TableModeToggle
+" au ac FileType markdown TableModeToggle
 
 " Plug 'plasticboy/vim-markdown'
 " Plug 'tpope/vim-markdown'
@@ -112,8 +112,8 @@ au automation VimResized * execute "normal \<C-W>="
 
 " Plug 'vimwiki/vimwiki'
 " let g:vimwiki_list = [{'path': '/disk/Phone/Notes', 'syntax': 'markdown', 'ext': '.md'}]
-" au automation   FileType vimwiki nmap gj <Plug>VimwikiGoBackLink
-" au automation   FileType vimwiki nmap g; <Plug>VimwikiFollowLink
+" au ac   FileType vimwiki nmap gj <Plug>VimwikiGoBackLink
+" au ac   FileType vimwiki nmap g; <Plug>VimwikiFollowLink
 
 " let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
@@ -265,7 +265,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'tpope/vim-obsession'
 
 " Plug 'jaxbot/browserlink.vim'
-" au automation InsertLeave *.css :BLReloadCSS
+" au ac InsertLeave *.css :BLReloadCSS
 
 " Plug 'turbio/bracey.vim'
 

@@ -104,4 +104,4 @@ Plug 'dense-analysis/ale'
 
     "" let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
     "" " \   'jsx':          ['stylelint', 'eslint'],
-    " au automation Filetype * nmap <leader>p :ALEFix<cr>
+    " au ac Filetype * nmap <leader>p :ALEFix<cr>

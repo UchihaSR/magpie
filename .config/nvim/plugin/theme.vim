@@ -8,14 +8,14 @@ scriptencoding utf-8
 
 " set cursorline
 " set cursorcolumn
-" autocmd automation InsertEnter * set nocursorline nocursorcolumn
-" autocmd automation InsertLeave * set cursorline cursorcolumn
+" autocmd ac InsertEnter * set nocursorline nocursorcolumn
+" autocmd ac InsertLeave * set cursorline cursorcolumn
 
 hi clear CursorLine
 hi CursorLine gui=underline
 " hi CursorLine gui=underline cterm=underline
-autocmd automation InsertEnter * set nocursorline
-autocmd automation InsertLeave * set cursorline
+autocmd ac InsertEnter * set nocursorline
+autocmd ac InsertLeave * set cursorline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Backgrounds and Foregrouds

@@ -1,1 +1,1 @@
-au automation FileType markdown inoremap ;cf ```<cr>```<up>
+au ac FileType markdown inoremap ;cf ```<cr>```<up>

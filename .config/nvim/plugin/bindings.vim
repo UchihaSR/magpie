@@ -5,7 +5,7 @@ let mapleader = ' '
 "                             Saves & Quits
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nnoremap <cr> :wa<cr>:!compile %<cr>
+" nnoremap <cr> :wa<cr>:!compile %<cr>
 " nnoremap g<cr> :execute 'silent! write !sudo tee % >/dev/null' <bar> edit!<cr>
 
 nnoremap n             :qa<cr>
@@ -129,8 +129,8 @@ nnoremap <leader>F   i<C-X><C-S>
 nnoremap <leader>a   zg
 nnoremap <leader>A   zug
 
-au automation FileType markdown,text nnoremap gk [s
-au automation FileType markdown,text nnoremap gl ]s
+au ac FileType markdown,text nnoremap gk [s
+au ac FileType markdown,text nnoremap gl ]s
 
 "===============================================================================
 "                             Auto-Pair

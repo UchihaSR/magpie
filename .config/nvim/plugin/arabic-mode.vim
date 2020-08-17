@@ -31,5 +31,5 @@ function! ToggleArabicMode()
     endif
 endfunction
 
-au automation BufReadPost *.ar.* call ToggleArabicMode()
+au ac BufReadPost *.ar.* call ToggleArabicMode()
 nnoremap <silent> ga :call ToggleArabicMode()<CR>

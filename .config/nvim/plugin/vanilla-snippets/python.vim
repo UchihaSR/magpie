@@ -1,1 +1,1 @@
-au automation FileType python inoremap ;p print()<left>
+au ac FileType python inoremap ;p print()<left>

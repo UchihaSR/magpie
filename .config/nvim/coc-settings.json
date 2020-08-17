@@ -1,4 +1,6 @@
 {
-    "diagnostic.enable": false,
-    "coc.preferences.jumpCommand": "split"
+   "_comment": "Let ALE handle the linting",
+   "diagnostic.enable": false,
+   "_comment": "Set where the splits should be",
+   "coc.preferences.jumpCommand": "split"
 }
