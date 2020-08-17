@@ -33,7 +33,7 @@ au ac FileType c,cpp,sh,tex,html,json,yaml,javascript
             \ nnoremap <silent>w :silent norm! maG=gg`azz<cr>:silent wa<cr>
 
 " Set fixers according to file types
-au ac FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
+au ac FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ webkit,\ IndentWidth:\ 3}\"
 au ac FileType sh set equalprg=shfmt\ -p\ -i\ 3\ -ci\ -s\ -sr
 au ac FileType markdown set equalprg=prettier\ --parser\ markdown\ --tab-width\ 3
 au ac FileType tex set equalprg=latexindent
