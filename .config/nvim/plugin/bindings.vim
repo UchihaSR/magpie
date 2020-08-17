@@ -132,13 +132,6 @@ nnoremap <leader>A   zug
 au ac FileType markdown,text nnoremap gk [s
 au ac FileType markdown,text nnoremap gl ]s
 
-"===============================================================================
-"                             Auto-Pair
-"===============================================================================
-
-inoremap { {<CR>}<Esc>O
-inoremap ' ''<left>
-inoremap " ""<left>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Misc
