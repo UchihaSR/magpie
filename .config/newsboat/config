@@ -27,7 +27,7 @@ itemview-title-format "%T"
 urlview-title-format "URLs"
 datetime-format "%H:%M, %a, %d %b, %y"
 
-feedlist-format "%8u %t"
+feedlist-format "%9u %t"
 articlelist-format "%D | %-17T | %t"
 # articlelist-format "%D %5s %-17T %5s %t"
 
