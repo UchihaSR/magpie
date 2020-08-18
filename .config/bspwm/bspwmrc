@@ -4,7 +4,7 @@
 
 bspc rule -r "*" # remove all previous rules
 bspc rule -a Zathura state=tiled
-bspc rule -a mpv state=floating focus=off
+# bspc rule -a mpv state=floating focus=off
 bspc rule -a firefox desktop=2 follow=on
 bspc rule -a Alacritty desktop=1 follow=on
 # bspc rule -a mpv state=floating sticky=on focus=off
