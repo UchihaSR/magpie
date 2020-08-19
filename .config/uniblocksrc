@@ -1,9 +1,0 @@
-# Uniblocks configuration
-
-# Tag,Script,Interval
-
-dt,panel -d,60
-W,panel -b,0
-sys,panel -s,3
-vol,panel -v,0
-wifi,panel -w,30
