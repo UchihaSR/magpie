@@ -34,6 +34,7 @@ Plug 'dense-analysis/ale'
                 \   'tex':   ['chktex', 'lacheck'],
                 \   'vim':           ['vint'],
                 \   'yaml':   ['yamllint'],
+                \   'dart':   ['dartanalyzer'],
                 \}
                 " \   'nroff':   ['write-good'],
                 " \   'sass':           ['sasslint'],

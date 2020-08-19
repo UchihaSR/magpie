@@ -15,3 +15,5 @@ au ac FileType c,cpp,dart,javascript inoremap ;B //<esc>38a-<esc>yypO//<esc>15a<
 
 au ac FileType c,cpp,dart inoremap (<space> ();<left><left>
 au ac FileType c,cpp,dart inoremap (<cr> (){<cr>}<esc>kf(a
+
+au ac FileType c,cpp,dart inoremap { {<CR>}<Esc>O
