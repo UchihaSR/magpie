@@ -15,4 +15,3 @@ au ac FileType c,javascript inoremap ;B //<esc>38a-<esc>yypO//<esc>15a<space><Es
 
 au ac FileType c,cpp inoremap (<space> ();<left><left>
 au ac FileType c,cpp inoremap (<cr> (){<cr>}<esc>kf(a
-

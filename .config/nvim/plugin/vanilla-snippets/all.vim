@@ -5,8 +5,6 @@
 inoremap { {<CR>}<Esc>O
 inoremap ' ''<left>
 inoremap " ""<left>
-inoremap ( ()<left>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             SASS
