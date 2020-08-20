@@ -13,7 +13,7 @@ au ac FileType c inoremap ;t  <Esc>:read ~/.config/nvim/templates/c_boiler.c<cr>
 au ac FileType c,cpp,dart,javascript inoremap ;b //<esc>78a=<esc>yypO//<esc>30a<space><Esc>i
 au ac FileType c,cpp,dart,javascript inoremap ;B //<esc>38a-<esc>yypO//<esc>15a<space><Esc>i
 
-au ac FileType c,cpp,dart inoremap (<space> ();<left><left>
-au ac FileType c,cpp,dart inoremap (<cr> (){<cr>}<esc>kf(a
+" au ac FileType c,cpp,dart inoremap (<space> ();<left><left>
+" au ac FileType c,cpp,dart inoremap (<cr> (){<cr>}<esc>kf(a
 
 au ac FileType c,cpp,dart inoremap { {<CR>}<Esc>O
