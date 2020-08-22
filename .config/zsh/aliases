@@ -156,3 +156,6 @@ alias tl="tmux ls"
 #    dsu="da sv up"
 #    dsd="da sv down"
 alias z="zathura"
+
+# Flutter
+alias fr="flutter run"

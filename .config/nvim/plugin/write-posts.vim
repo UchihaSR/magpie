@@ -17,6 +17,8 @@ au ac  BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h silent !compile %
 
 au ac FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
 
+au ac BufWritePost *.dart silent !tmux send -t- r
+
 " au ac  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 " au ac  BufWritePost picom.conf    silent !pkill -USR1 picom
 
