@@ -12,7 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
 "=======================================
 
 " so ~/.config/nvim/vimplug/ale.vim
-" so ~/.config/nvim/vimplug/coc.vim
+so ~/.config/nvim/vimplug/coc.vim
 so ~/.config/nvim/vimplug/neomake.vim
 
 "===============================================================================
