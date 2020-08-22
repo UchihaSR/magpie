@@ -16,6 +16,10 @@ au ac FileType yaml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 3
 au ac FileType javascript set  equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
 au ac FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
 
+"===============================================================================
+"                             Exp 
+"===============================================================================
+
 " au ac FileType c nnoremap <cr> 
 "             \ma
 "             \:%s/[^{}>;/]$/&;/e<cr>

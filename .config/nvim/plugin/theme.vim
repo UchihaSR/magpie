@@ -22,11 +22,12 @@ autocmd ac InsertLeave * set cursorline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Transparency
-highlight Normal       guibg=NONE
-highlight SignColumn   guibg=NONE
-highlight Pmenu        guibg=NONE
-highlight CursorLineNR guibg=NONE
-highlight EndOfBuffer  guibg=NONE
+highlight Normal        guibg=NONE
+highlight SignColumn    guibg=NONE
+highlight Pmenu         guibg=NONE
+highlight CursorLineNR  guibg=NONE
+highlight EndOfBuffer   guibg=NONE
+highlight CocErrorFloat guibg=NONE
 
 highlight Visual       guibg=NONE guifg=#00FF00
 
