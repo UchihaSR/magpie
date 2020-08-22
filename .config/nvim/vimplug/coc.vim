@@ -11,6 +11,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "             \ 'coc-emmet',
 "             \ 'coc-python',
 "             \ 'coc-texlab',
+"             \ 'coc-flutter',
 "             \ ]
 
 " " Use tab for trigger completion with characters ahead and navigate.
