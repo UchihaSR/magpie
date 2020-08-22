@@ -279,4 +279,4 @@ Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 colorscheme gruvbox-material
-call neomake#configure#automake('nw', 500)
+" call neomake#configure#automake('nw', 500)

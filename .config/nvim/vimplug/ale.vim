@@ -22,6 +22,7 @@ Plug 'dense-analysis/ale'
 
     let g:ale_linters = {
                 \   'c':   ['gcc'],
+                \   'cpp':   ['gcc'],
                 \   'groff':   ['write-good'],
                 \   'markdown':   ['write-good'],
                 \   'python':   ['flake8'],
