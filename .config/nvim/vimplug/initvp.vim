@@ -11,7 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
 "              Sources
 "=======================================
 
-" so ~/.config/nvim/vimplug/ale.vim
 so ~/.config/nvim/vimplug/coc.vim
 so ~/.config/nvim/vimplug/neomake.vim
 
@@ -279,4 +278,3 @@ Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 colorscheme gruvbox-material
-" call neomake#configure#automake('nw', 500)

@@ -9,7 +9,7 @@ Plug 'neomake/neomake'
     let g:neomake_c_enabled_makers = [ 'gcc']
     let g:neomake_cpp_enabled_makers = [ 'gcc']
 
-    au ac CursorHold *.sh,*.vim,*.c,*.h,*.dart
+    au ac CursorHold *.sh,*.vim,*.c,*.h
                 \ Neomake
 
 "===============================================================================

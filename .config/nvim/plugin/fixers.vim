@@ -13,7 +13,7 @@ au ac FileType markdown set equalprg=prettier\ --parser\ markdown\ --tab-width\ 
 au ac FileType html set equalprg=prettier\ --parser\ html\ --tab-width\ 3
 au ac FileType json set equalprg=prettier\ --parser\ json\ --tab-width\ 3
 au ac FileType yaml set equalprg=prettier\ --parser\ yaml\ --tab-width\ 3
-au ac FileType javascript set  equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
+au ac FileType javascript set equalprg=prettier\ --parser\ babel\ --tab-width\ 3\ --single-quote\ --loglevel\ error
 au ac FileType c,cpp set equalprg=clang-format\ -style=\"{BasedOnStyle:\ google,\ IndentWidth:\ 3}\"
 
 "===============================================================================
