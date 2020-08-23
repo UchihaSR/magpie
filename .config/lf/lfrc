@@ -159,6 +159,7 @@ map gp cd /mnt/horcrux/phone
 map gr cd /mnt/horcrux/git/own
 map gt cd ~/.local/share/Trash
 map gw cd /mnt/horcrux/git/own/private/Storage/workspace
+map gv cd /mnt/horcrux/git/own/magpie/.config/nvim
 
 ################################################################################
 #                             FFMPEG
