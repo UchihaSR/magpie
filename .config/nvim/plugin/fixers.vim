@@ -2,7 +2,7 @@
 nnoremap <silent>w :silent wa<cr>
 
 " Bind w to autofixing for certain files
-au ac FileType c,cpp,sh,tex,html,json,yaml,javascript,dart
+au ac FileType c,cpp,sh,tex,html,json,yaml,javascript,dart,markdown
             \ nnoremap <silent>w :silent norm! maG=gg`azz<cr>:silent wa<cr>
 
 " Set fixers according to file types
