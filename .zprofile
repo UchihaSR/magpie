@@ -14,7 +14,7 @@ export FILE=lf
 export MANPAGER="nvim +Man!"
 export PAGER="nvim -R +AnsiEsc"
 export READER=zathura
-export TERMINAL=alacritty
+export TERMINAL=st
 export VISUAL=nvim
 export STATUSBAR=yabar
 export WM=bspwm
@@ -91,7 +91,6 @@ ex=🎯:\
 *.py=$(printf "\003[33m%s\033[m" "py"):\
 "
 
-
 #===============================================================================
 #                             Housekeeping
 #===============================================================================
@@ -142,7 +141,7 @@ export PATH
 #===============================================================================
 
 [ "$(fgconsole 2> /dev/null)" = 1 ] &&
-    exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
+   exec startx ~/.config/X11/xinitrc -- vt1 > /dev/null 2>&1
 
 #===============================================================================
 #                        Swap Escape & Caps Lock when on TTY
