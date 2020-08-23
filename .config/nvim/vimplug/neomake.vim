@@ -8,9 +8,9 @@ Plug 'neomake/neomake'
         \ }
     let g:neomake_c_enabled_makers = [ 'gcc']
     let g:neomake_cpp_enabled_makers = [ 'gcc']
+    au ac CursorHold *.c,*.h Neomake
 
-    au ac CursorHold *.sh,*.vim,*.c,*.h
-                \ Neomake
+    au ac CursorHold *.sh,*.vim Neomake
 
 "===============================================================================
 "                             Styles 

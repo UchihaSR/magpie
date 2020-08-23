@@ -1,18 +1,18 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" let g:coc_global_extensions = [
-"             \ 'coc-clangd',
+let g:coc_global_extensions = [
+            \ 'coc-vimlsp',
+            \ 'coc-sh',
+            \ 'coc-flutter',
+            \ 'coc-tsserver',
+            \ 'coc-texlab',
+            \ 'coc-clangd',
+            \ 'coc-json',
+            \ 'coc-snippets',
+            \ 'coc-python',
+            \ ]
+"             \ 'coc-emmet',
 "             \ 'coc-css',
 "             \ 'coc-cssmodules',
-"             \ 'coc-json',
-"             \ 'coc-tsserver',
-"             \ 'coc-sh',
-"             \ 'coc-snippets',
-"             \ 'coc-vimlsp',
-"             \ 'coc-emmet',
-"             \ 'coc-python',
-"             \ 'coc-texlab',
-"             \ 'coc-flutter',
-"             \ ]
 
 " " Use tab for trigger completion with characters ahead and navigate.
 " " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

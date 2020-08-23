@@ -43,7 +43,7 @@ nmap ss <Plug>CommentaryLine
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf' ]
+let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf', 'cpp' ]
 
 Plug 'godlygeek/tabular'
 au ac BufReadPost * :noremap <leader>t :Tabularize /
