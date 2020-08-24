@@ -18,7 +18,7 @@ setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
 # watchmen &
-# launch --tmux &
+launch -t -T &
 # Launch Compositor
 $COMPOSITOR &
 # Set Locker

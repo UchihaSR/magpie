@@ -20,7 +20,7 @@ set previewer preview
 
 cmd trash %mv $fx ~/.local/share/Trash
 
-cmd open $launch "$f"
+cmd open $launch -f "$f"
 
 cmd makeScript %{{
    printf "What shall be we call her? : "
@@ -65,7 +65,7 @@ cmd open-in-pane ${{
     tmux split-window -h -c "#{pane_current_path}" \; \
         swap-pane -d -t :.1 \; \
         select-layout main-vertical \; \
-        send "launch $f" "Enter"
+        send "launch -f $f" "Enter"
 }}
 
 
