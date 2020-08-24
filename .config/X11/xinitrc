@@ -20,7 +20,10 @@ setdisplay --dpi &
 toggle --wall-reel &
 bolt --generate &
 # watchmen &
-launch -t -T &
+{
+   launch -t
+   "$TERMINAL" -e tmux attach
+} &
 # Launch Compositor
 $COMPOSITOR &
 # Set Locker
@@ -46,6 +49,6 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-# $STATUSBAR &
+$STATUSBAR &
 # Launch Window Manager
 exec $WM
