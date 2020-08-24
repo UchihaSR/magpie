@@ -8,7 +8,7 @@
 
 export WM="launch --dwm"
 export TERMINAL="st"
-export STATUSBAR="uniblocks -g"
+export STATUSBAR="dwmblocks"
 export DMENU="dmenu -i"
 
 # export WM="bspwm"

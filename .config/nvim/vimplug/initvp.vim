@@ -11,8 +11,8 @@ call plug#begin('~/.config/nvim/plugged')
 "              Sources
 "=======================================
 
-so ~/.config/nvim/vimplug/coc.vim
-so ~/.config/nvim/vimplug/neomake.vim
+" so ~/.config/nvim/vimplug/coc.vim
+" so ~/.config/nvim/vimplug/neomake.vim
 
 "===============================================================================
 "                             Essentials
