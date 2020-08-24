@@ -36,7 +36,7 @@ dunst &
    xcape -e "Super_L=Escape;Mode_switch=Tab"
 } &
 # Bind key commands
-sxhkd &
+# sxhkd &
 # Bind gesture commands
 gebaard -b &
 # Remove the ugly X cursor
