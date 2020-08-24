@@ -151,3 +151,6 @@ set whichwrap=b,h,l,s,<,>,[,],~       " allow <BS>/h/l/<Left>/<Right>/<Space>, ~
 " set shortmess+=F
 
 set noshowmode
+
+set undofile | "Allows undo after closing and reopening a file
+set noemoji | "Fixes emoji double width
