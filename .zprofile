@@ -8,10 +8,16 @@
 
 export WM="launch --dwm"
 export TERMINAL="st"
-export STATUSBAR="dwmblocks"
+export STATUSBAR="uniblocks -g"
+export DMENU="dmenu -i"
+
+# export WM="bspwm"
+# export TERMINAL="alacritty"
+# export STATUSBAR="yabar"
+# export DMENU="rofi -dmenu -i"
+
 export COMPOSITOR="xcompmgr"
 export BROWSER="firefox"
-export DMENU="rofi -dmenu -i"
 export EDITOR="nvim"
 export FILE="lf"
 export MANPAGER="nvim +Man!"
