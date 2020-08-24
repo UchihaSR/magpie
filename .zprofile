@@ -7,17 +7,17 @@
 #===============================================================================
 
 export WM="launch --dwm"
-export TERMINAL=st
-export STATUSBAR=dwmblocks
+export TERMINAL="st"
+export STATUSBAR="dwmblocks"
 export COMPOSITOR="xcompmgr"
-export BROWSER=firefox
+export BROWSER="firefox"
 export DMENU="rofi -dmenu -i"
-export EDITOR=nvim
-export FILE=lf
+export EDITOR="nvim"
+export FILE="lf"
 export MANPAGER="nvim +Man!"
 export PAGER="nvim -R +AnsiEsc"
-export READER=zathura
-export VISUAL=nvim
+export READER="zathura"
+export VISUAL="nvim"
 
 #===============================================================================
 #                             System Stuff

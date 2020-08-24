@@ -12,7 +12,9 @@
 
 # Launches Transmission Daemon
 # transmission-daemon &
+#---------------------------------------
 # Launch Personal Scripts
+#---------------------------------------
 # firefox &
 setdisplay --dpi &
 toggle --wall-reel &
@@ -46,4 +48,4 @@ unclutter &
 # Launch bar
 # $STATUSBAR &
 # Launch Window Manager
-exec "$WM"
+exec $WM
