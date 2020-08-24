@@ -1,0 +1,8 @@
+# Uniblocks configuration
+
+# Tag,Script,Interval(in second) (0 for manually updated modules)
+
+sys,panel -s,1
+vol,panel -v,0
+wifi,panel -w,30
+dt,panel -d,60
