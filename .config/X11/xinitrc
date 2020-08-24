@@ -46,6 +46,6 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-# $STATUSBAR &
+$STATUSBAR &
 # Launch Window Manager
 exec $WM
