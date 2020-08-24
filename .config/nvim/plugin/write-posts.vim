@@ -5,6 +5,7 @@ au ac BufWritePost bspwmrc       silent !sh %
 au ac BufWritePost *.rules       silent !doas -- udevadm control --reload
 au ac BufWritePost cronierc      silent !crontab %
 au ac BufWritePost fcronrc      silent !fcrontab %
+au ac BufWritePost */dwm/config.h      silent !pkill dwm
 " au ac BufWritePost anacronrc     silent !anacrontab -t %
 au ac BufWritePost dunstrc
             \ silent !killall dunst && dunst & notify-send -i "$ICONS"/bell.png 'Head' 'Message'

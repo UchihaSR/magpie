@@ -6,7 +6,7 @@
 #                             Defaults Programs
 #===============================================================================
 
-export WM=launch_dwm
+export WM="launch --dwm"
 export TERMINAL=st
 export STATUSBAR=dwmblocks
 export COMPOSITOR="xcompmgr"

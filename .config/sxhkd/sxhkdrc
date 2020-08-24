@@ -8,8 +8,8 @@
 #                             MVPs
 #===============================================================================
 
-# super + Return
-# 	launch --terminal
+super + Return
+	launch --terminal
 
 super + b
 	$BROWSER
@@ -44,8 +44,8 @@ KP_Delete
 # bspc quit
 # pkill -KILL -u $USER
 
-super + KP_Add
-	systemctl hibernate
+# super + KP_Add
+# 	systemctl hibernate
 
 #===============================================================================
 #                             BSPWM
@@ -126,8 +126,8 @@ F{1,2,3}
 XF86Audio{Next,Prev,Play}
 	setplayer --play {next,prev,toggle}
 
-F{11,12}
-	{decBl,incBl}
+# F{11,12}
+# 	{decBl,incBl}
 
 F7
 	toggle --wifi --noti --wall-reel
