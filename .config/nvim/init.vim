@@ -20,3 +20,7 @@ endif
 
 " Source Vimplug stuff
 so ~/.config/nvim/vimplug/initvp.vim
+
+"===============================================================================
+" "plugin"" directory contains the rest of the configs
+"===============================================================================
