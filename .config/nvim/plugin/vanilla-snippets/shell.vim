@@ -15,4 +15,5 @@ au ac FileType sh,conf,yaml,sxhkdrc,zsh,python,muttrc,tmux,make inoremap ;B #<es
 au ac FileType sh inoremap ;o  <Esc>:read ~/.config/nvim/templates/options.sh<cr>
 au ac FileType sh inoremap ;go  <Esc>:read ~/.config/nvim/templates/getopts.sh<cr>
 
-au ac FileType sh inoremap ( () {<cr>}<esc>O
+au ac FileType sh inoremap ( ()<left>
+" au ac FileType sh inoremap ( () {<cr>}<esc>O
