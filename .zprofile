@@ -6,6 +6,9 @@
 #                             Defaults Programs
 #===============================================================================
 
+export TERMINAL=st
+export WM=dwm
+export STATUSBAR=dwmblocks
 export COMPOSITOR="xcompmgr"
 export BROWSER=firefox
 export DMENU="rofi -dmenu -i"
@@ -14,10 +17,7 @@ export FILE=lf
 export MANPAGER="nvim +Man!"
 export PAGER="nvim -R +AnsiEsc"
 export READER=zathura
-export TERMINAL=st
 export VISUAL=nvim
-export STATUSBAR=yabar
-export WM=bspwm
 
 #===============================================================================
 #                             System Stuff

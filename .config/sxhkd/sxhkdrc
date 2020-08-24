@@ -8,8 +8,8 @@
 #                             MVPs
 #===============================================================================
 
-super + Return
-	launch --terminal
+# super + Return
+# 	launch --terminal
 
 super + b
 	$BROWSER
@@ -51,54 +51,54 @@ super + KP_Add
 #                             BSPWM
 #===============================================================================
 
-# Navigate Nodes
-super + {_,shift} + {k,l}
-	bspc node -{f,s} {prev,next}.local
+# # Navigate Nodes
+# super + {_,shift} + {k,l}
+# 	bspc node -{f,s} {prev,next}.local
 
-super + {_,shift} + {j,semicolon}
-	bspc {desktop -f,node -d} {prev,next}
+# super + {_,shift} + {j,semicolon}
+# 	bspc {desktop -f,node -d} {prev,next}
 
-# Close / Kill
-super + {_,shift} + n
-	bspc node -{c,k}
+# # Close / Kill
+# super + {_,shift} + n
+# 	bspc node -{c,k}
 
-# Toggle Tiled / Monocle
-super + m
-	bspc desktop -l next
+# # Toggle Tiled / Monocle
+# super + m
+# 	bspc desktop -l next
 
-# Focus / Swap [ Desktop ]
-super + {_,shift} + {1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# # Focus / Swap [ Desktop ]
+# super + {_,shift} + {1-9,0}
+# 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-{alt,super} + {_,shift} + Tab
-	bspc {node,desktop} -f {prev,next}
+# {alt,super} + {_,shift} + Tab
+# 	bspc {node,desktop} -f {prev,next}
 
-# Resize Outward
-super + alt + {j,l,semicolon,k}
-	bspc node -z {left -20 0,bottom 0 20,right 20 0,top 0 -20}
+# # Resize Outward
+# super + alt + {j,l,semicolon,k}
+# 	bspc node -z {left -20 0,bottom 0 20,right 20 0,top 0 -20}
 
-# Resize Inward
-super + alt + shift + {j,l,semicolon,k}
-	bspc node -z {right -20 0,top 0 20,left 20 0,bottom 0 -20}
+# # Resize Inward
+# super + alt + shift + {j,l,semicolon,k}
+# 	bspc node -z {right -20 0,top 0 20,left 20 0,bottom 0 -20}
 
-# Toggle gaps
-super + s
-	bspc config window_gap {50, 75,100,0,25}
+# # Toggle gaps
+# super + s
+# 	bspc config window_gap {50, 75,100,0,25}
 
-# Rotate
-super + period
-	bspc node -f prev.local; bspc node -n next.local
-# bspc node @focused:/ -R 270
+# # Rotate
+# super + period
+# 	bspc node -f prev.local; bspc node -n next.local
+# # bspc node @focused:/ -R 270
 
-super + comma
-	bspc node @focused:/ -R 90
-# bspc node -n prev.local
-# bspc node -n prev.local
-# bspc node @focused:/ -R 90
+# super + comma
+# 	bspc node @focused:/ -R 90
+# # bspc node -n prev.local
+# # bspc node -n prev.local
+# # bspc node @focused:/ -R 90
 
-# Shift to Biggest
-super + i
-	bspc node -n biggest.local
+# # Shift to Biggest
+# super + i
+# 	bspc node -n biggest.local
 
 # # Fullscreen
 # super + f
@@ -168,8 +168,8 @@ super + shift + e
 super + apostrophe
 	toy
 
-super + r
-	rofi -show drun
+# super + r
+# 	rofi -show drun
 
 super + c
 	killall xcompmgr || xcompmgr -cCfF &
