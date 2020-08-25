@@ -11,7 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 "              Sources
 "=======================================
 
-" so ~/.config/nvim/vimplug/coc.vim
+so ~/.config/nvim/vimplug/coc.vim
 so ~/.config/nvim/vimplug/neomake.vim
 
 "===============================================================================
@@ -19,21 +19,22 @@ so ~/.config/nvim/vimplug/neomake.vim
 "===============================================================================
 
 " Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-repeat'
 " Plug 'mhinz/vim-startify'
 " Plug 'farmergreg/vim-lastplace'
 Plug 'powerman/vim-plugin-AnsiEsc'
 " Plug 'sheerun/vim-polyglot'
-Plug 'kovetskiy/sxhkd-vim'
+" Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'psliwka/vim-smoothie'
 nmap K <Plug>(SmoothieUpwards)
 nmap L <Plug>(SmoothieDownwards)
 
 Plug 'tpope/vim-surround'
-nmap sw ysiw
-nmap sW ysiW
-nmap sl yss
+" nmap sw ysiw
+" nmap sW ysiW
+" nmap sl yss
+" nmap s ys
 
 Plug 'tpope/vim-commentary'
 :map s  <Plug>Commentary
