@@ -22,6 +22,7 @@ bolt --generate &
 # watchmen &
 {
    launch -t
+   sleep 2
    "$TERMINAL" -e tmux attach
 } &
 # Launch Compositor
@@ -49,6 +50,10 @@ xsetroot -cursor_name left_ptr &
 # Hide cursor when idle
 unclutter &
 # Launch bar
-$STATUSBAR &
+{
+   sleep 2
+   $STATUSBAR
+} &
 # Launch Window Manager
-exec $WM
+# exec $WM
+launch --dwm
