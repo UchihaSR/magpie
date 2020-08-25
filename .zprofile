@@ -9,7 +9,7 @@
 export WM="launch --dwm"
 export TERMINAL=st
 export STATUSBAR="uniblocks -g"
-export DMENU="dmenu -i"
+export DMENU=dmenu
 
 # export WM="bspwm"
 # export TERMINAL="alacritty"
