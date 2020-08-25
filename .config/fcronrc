@@ -12,8 +12,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # All personal scripts from Alfred
 @ 5 battery --monitor
-@ 1h mirror --git --calcurse
+@ 1h mirror --git
 @ 1h checkstorage / 3 /home 10 /mnt/horcrux 50
-@ 24h mirror --firefox --repos --drive
+@ 24h mirror --calcurse --firefox --repos --drive
 @ 7d housekeep
 @ 7d mirror --arch

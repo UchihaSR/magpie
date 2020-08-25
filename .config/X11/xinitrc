@@ -22,7 +22,6 @@ bolt --generate &
 # watchmen &
 {
    launch -t
-   sleep 2
    "$TERMINAL" -e tmux attach
 } &
 # Launch Compositor
