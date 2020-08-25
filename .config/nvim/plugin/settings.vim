@@ -154,3 +154,5 @@ set noshowmode
 
 set undofile "Allows undo after closing and reopening a file
 set noemoji  "Fixes emoji double width
+
+let g:markdown_fenced_languages = ['sh', 'c']
