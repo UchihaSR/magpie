@@ -6,6 +6,7 @@ inoremap ' ''<left>
 inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
+inoremap ` ``<left>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             SASS
@@ -14,20 +15,8 @@ inoremap [ []<left>
 au ac   FileType sass inoremap    ;bc          background-color:
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Markdown
+"                             Text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-au ac  FileType markdown,vimwiki    inoremap    `       ```<cr>```<up><right><right><right>
-au ac  FileType markdown,vimwiki    inoremap    ;s     &nbsp;
-au ac  FileType markdown,vimwiki    inoremap    ;f     \frac{}{<*>}<esc>5ji
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Text & Markdown
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" au ac FileType text,markdown inoremap . .<cr>
-
-au ac FileType markdown inoremap ;i ![](/preview)
 
 au ac   FileType text     inoremap    ;b          <Esc>80i-<Esc>o<Esc>80i-<Esc>O-<Esc>30a<space><Esc>i
 
