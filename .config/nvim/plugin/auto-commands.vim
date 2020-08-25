@@ -1,37 +1,38 @@
 " Updates the buffer if changed elsewhere
 au ac FocusGained,BufEnter * checktime
 " Clean Junk files after quitting
-au ac VimLeave *.c,*.tex !compile --clean %
+au ac VimLeave *.tex !compile --clean %
 " Vertically center document when entering insert mode
 au ac InsertEnter * norm zz
-" JSON Comment Viewer
-au ac FileType json syntax match Comment +\/\/.\+$+
 " Disables automatic commenting on newline:
 au ac FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" Read profile as a shellscript
-" au ac BufReadPost .*profile set filetype=sh
-" au ac BufReadPost mutt* set filetype=muttrc
+
 " Set spelling for certain filetypes
 au ac FileType markdown,groff,tex setlocal spell
 au ac BufRead *.sent setlocal spell
+
 " Comment string setup
 au ac FileType json     setlocal commentstring=//\%s
 au ac FileType sxhkdrc  setlocal commentstring=#\%s
 au ac FileType xdefaults  setlocal commentstring=!\%s
 au ac FileType markdown setlocal commentstring=<!---\%s\-->
 
+" Filetype setups
 au ac BufRead .*profile set filetype=sh
 au ac BufRead mutt*     set filetype=muttrc
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             Misc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Return to the same line you left off at
 au ac BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \	execute 'normal! g`"zvzz' |
             \ endif
+
+"===============================================================================
+"                             Exp 
+"===============================================================================
+
+" " JSON Comment Viewer
+" au ac FileType json syntax match Comment +\/\/.\+$+
 
 " au ac BufNewFile,BufRead *.c set formatprg=astyle\ -T9
 

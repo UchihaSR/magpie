@@ -1,9 +1,9 @@
-" _                       _
-" __   __ (_)  _ __ ___    _ __   | |  _   _    __ _
-" \ \ / / | | | '_ ` _ \  | '_ \  | | | | | |  / _` |
-" \ V /  | | | | | | | | | |_) | | | | |_| | | (_| |
-" \_/   |_| |_| |_| |_| | .__/  |_|  \__,_|  \__, |
-"                |_|                  |___/
+          "
+ " __   __ (_)  _ __ ___    _ __   | |  _   _    __ _ 
+ " \ \ / / | | | '_ ` _ \  | '_ \  | | | | | |  / _` |
+  " \ V /  | | | | | | | | | |_) | | | | |_| | | (_| |
+   " \_/   |_| |_| |_| |_| | .__/  |_|  \__,_|  \__, |
+          "                |_|                  |___/ 
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -27,43 +27,40 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 " Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'psliwka/vim-smoothie'
-nmap K <Plug>(SmoothieUpwards)
-nmap L <Plug>(SmoothieDownwards)
+    nmap K <Plug>(SmoothieUpwards)
+    nmap L <Plug>(SmoothieDownwards)
 
 Plug 'tpope/vim-surround'
-" nmap sw ysiw
-" nmap sW ysiW
-" nmap sl yss
-" nmap s ys
+    nmap sw ysiw
+    nmap sW ysiW
+    nmap sl yss
 
 Plug 'tpope/vim-commentary'
-:map s  <Plug>Commentary
-nmap ss <Plug>CommentaryLine
-" :map s  gc
-" nmap ss gcc
+    :map s  <Plug>Commentary
+    nmap ss <Plug>CommentaryLine
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf', 'cpp' ]
+    let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+    let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript', 'sh', 'yaml', 'conf', 'cpp' ]
 
-Plug 'godlygeek/tabular'
-au ac BufReadPost * :noremap <leader>t :Tabularize /
+" Plug 'godlygeek/tabular'
+"     au ac BufReadPost * :noremap <leader>t :Tabularize /
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key=','
-" let g:user_emmet_leader_key='<a-,>'
-let g:user_emmet_install_global = 0
-au ac FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
+    let g:user_emmet_leader_key=','
+    " let g:user_emmet_leader_key='<a-,>'
+    let g:user_emmet_install_global = 0
+    au ac FileType html,css,sass,javascript,markdown,vimwiki EmmetInstall
 
 Plug 'easymotion/vim-easymotion'
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-nmap f <Plug>(easymotion-overwin-w)
-" map  f <Plug>(easymotion-bd-w)
+    let g:EasyMotion_do_mapping = 0
+    let g:EasyMotion_smartcase = 1
+    nmap f <Plug>(easymotion-overwin-w)
+    " map  f <Plug>(easymotion-bd-w)
 
-Plug 'Yggdroot/indentLine'
-let g:indentLine_enabled = 0
-au ac BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
+" Plug 'Yggdroot/indentLine'
+"     let g:indentLine_enabled = 0
+"     au ac BufReadPost * nnoremap <leader>i :IndentLinesToggle<cr>
 
 "===============================================================================
 "                             Color Schemes
@@ -84,13 +81,11 @@ Plug 'sainnhe/gruvbox-material'
 "===============================================================================
 
 Plug 'junegunn/goyo.vim'
-au ac BufReadPost * Goyo 82x80%
-au ac VimResized * execute "normal \<C-W>="
-" let g:goyo_linenr = 1
-
-" au ac FocusGained,BufEnter * Goyo 82x100%
-" au ac User GoyoLeave silent! source $MYVIMRC
-" au! ac User GoyoLeave silent! source $MYVIMRC
+    au ac BufReadPost * Goyo 82x80%
+    au ac VimResized * execute "normal \<C-W>="
+    " let g:goyo_linenr = 1
+    " au ac User GoyoLeave silent! source $MYVIMRC
+    " au! ac User GoyoLeave silent! source $MYVIMRC
 
 "===============================================================================
 "                             Markdown

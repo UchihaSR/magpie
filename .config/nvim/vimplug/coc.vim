@@ -1,3 +1,9 @@
+   " ____    ___     ____ 
+  " / ___|  / _ \   / ___|
+ " | |     | | | | | |    
+ " | |___  | |_| | | |___ 
+  " \____|  \___/   \____|
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
             \ 'coc-vimlsp',

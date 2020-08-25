@@ -13,6 +13,8 @@ nnoremap N             :qa!<cr>
 nnoremap <esc>         :qa<cr>
 nnoremap <leader><esc> :qa!<cr>
 
+au ac FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Navigation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -138,7 +140,7 @@ au ac FileType markdown,text nnoremap gl ]s
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function Figlet(string)
-    execute '!figlet -W' a:string '| xsel -b'
+    silent exec '!figlet -W' a:string '| xsel -b'
 endfunction
 nnoremap <leader>1 :call Figlet("")<left><left>
 

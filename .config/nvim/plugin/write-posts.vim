@@ -6,11 +6,18 @@ au ac BufWritePost dunstrc
             \ silent !killall dunst && dunst & notify-send -i "$ICONS"/bell.png 'Head' 'Message'
 au ac BufWritePost tmux*.conf
             \ silent !tmux source ~/.config/tmux/tmux.conf
+au ac BufWritePost *.dart silent !tmux send -t- r
+
+" Autocompile
+au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h
+            \ silent !compile %
+
+"===============================================================================
+"                             Exp 
+"===============================================================================
+
 " au ac  BufWritePost *uniblocks*,*/panel.sh
 "             \ silent !{killall uniblocks && sleep 1 && uniblocks -g; } &
-au ac  BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h silent !compile %
-au ac FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
-au ac BufWritePost *.dart silent !tmux send -t- r
 
 " au ac  BufWritePost yabar.conf,*/uniblocks/* silent !{killall yabar && sleep 1 && yabar; } &
 " au ac  BufWritePost picom.conf    silent !pkill -USR1 picom
