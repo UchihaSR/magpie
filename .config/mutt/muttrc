@@ -21,7 +21,7 @@ set spoolfile = +INBOX
 set header_cache = ~/.cache/mutt
 set message_cachedir = ~/.cache/mutt
 set imap_user = "salman104alvi@gmail.com"
-set imap_pass = `gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
+set imap_pass = `gpg -d ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
 
 # Keep the IMAP connection alive by polling intermittently (time in seconds).
 set imap_keepalive = 300
@@ -58,6 +58,6 @@ set sort_aux = 'reverse-last-date-received'
 #---------------------------------------
 
 set smtp_url = "smtps://salman104alvi@gmail.com@smtp.gmail.com"
-set smtp_pass = `gpg -d --batch --passphrase asdlkj ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
+set smtp_pass = `gpg -d ~/.local/share/passwords/salman104alvi@gmail.com.gpg`
 set from = "salman104alvi@gmail.com"
 set realname = "Salman Abedin"

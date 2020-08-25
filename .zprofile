@@ -6,6 +6,7 @@
 #                             Defaults Programs
 #===============================================================================
 
+export WM="launch --dwm"
 export TERMINAL=st
 export STATUSBAR="uniblocks -g"
 export DMENU="dmenu -i"
