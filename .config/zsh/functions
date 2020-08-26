@@ -1,62 +1,67 @@
 #!/bin/sh
 
-twr(){
- iwctl station wlan0 disconnect
- iwctl station wlan0 scan
- # sleep 2
-    iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
-iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
- iwctl station wlan0 show
- return
-    return
- if iwctl station wlan0 show | grep -i "direct"; then
-    iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
-    notify-send -u low -i "$ICONS"/connected.png 'Connected to default'
-else
-    iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
-    notify-send -u low -i "$ICONS"/connected.png 'Connected to repeater'
- fi
+commit() {
+   git add all
+   git commit -m "$@"
+}
+
+twr() {
+   iwctl station wlan0 disconnect
+   iwctl station wlan0 scan
+   # sleep 2
+   iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
+   iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
+   iwctl station wlan0 show
+   return
+   return
+   if iwctl station wlan0 show | grep -i "direct"; then
+      iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3
+      notify-send -u low -i "$ICONS"/connected.png 'Connected to default'
+   else
+      iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199
+      notify-send -u low -i "$ICONS"/connected.png 'Connected to repeater'
+   fi
 }
 
 ttz() {
-    if readlink /etc/localtime | grep Berlin > /dev/null; then
-        doas -- ln -sf /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
-    else
-        doas -- ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-    fi
+   if readlink /etc/localtime | grep Berlin > /dev/null; then
+      doas -- ln -sf /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
+   else
+      doas -- ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+   fi
 }
 
 short() { curl -F "shorten=$1" 0x0.st; }
 
 h() {
-    out=$($1 --help || $1 -h)
-    echo "$out" | nvim -R
+   out=$($1 --help || $1 -h)
+   echo "$out" | nvim -R
 }
 # h() { "$1" --help | nvim -R; }
 
 M() { man "$1" | nvim -R; }
 
 N() {
-    pidof mpd > /dev/null || mpd 2> /dev/null
-    ncmpcpp
+   pidof mpd > /dev/null || mpd 2> /dev/null
+   ncmpcpp
 }
 
 bt() {
-    pactl list | grep -i "active profile: a2dp_sink" > /dev/null &&
-        pactl set-card-profile 3 "headset_head_unit"
-    pactl set-card-profile 3 "a2dp_sink"
+   pactl list | grep -i "active profile: a2dp_sink" > /dev/null &&
+      pactl set-card-profile 3 "headset_head_unit"
+   pactl set-card-profile 3 "a2dp_sink"
 }
 
 autoLogin() {
-    path=/etc/systemd/system/getty@tty1.service.d/override.conf
-    [ "$1" ] && echo '' | doas tee $path && return
-    printf "%s" "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $USER --noclear %I $TERM" | doas tee $path
+   path=/etc/systemd/system/getty@tty1.service.d/override.conf
+   [ "$1" ] && echo '' | doas tee $path && return
+   printf "%s" "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $USER --noclear %I $TERM" | doas tee $path
 }
 
 disableMinNCam() {
-    [ "$1" ] && echo "" | doas tee /etc/modprobe.d/blacklist.conf && return
-    echo install uvcvideo /bin/true | doas -- tee -a /etc/modprobe.d/blacklist.conf > /dev/null
-    echo install "$(sed 1q /proc/asound/modules | cut -d ' ' -f 3)" /bin/true | doas -- tee -a /etc/modprobe.d/blacklist.conf > /dev/null
+   [ "$1" ] && echo "" | doas tee /etc/modprobe.d/blacklist.conf && return
+   echo install uvcvideo /bin/true | doas -- tee -a /etc/modprobe.d/blacklist.conf > /dev/null
+   echo install "$(sed 1q /proc/asound/modules | cut -d ' ' -f 3)" /bin/true | doas -- tee -a /etc/modprobe.d/blacklist.conf > /dev/null
 }
 
 gsa() { git subtree add --prefix "$1" "$2" master --squash; }
@@ -68,16 +73,16 @@ vpn() { doas -- openvpn --config ~/.local/share/ovpn/vpnbook-us1-tcp80.ovpn; }
 sf() { fc-list | grep -i "$1"; }
 
 check() {
-    time sh -c 'for i in $(seq 1000); do toy > /dev/null 2>&1; done'
-    # time sh -c 'for i in $(seq 1000000); do $@ > /dev/null; done'
+   time sh -c 'for i in $(seq 1000); do toy > /dev/null 2>&1; done'
+   # time sh -c 'for i in $(seq 1000000); do $@ > /dev/null; done'
 }
 
 ug() { doas -- grub-mkconfig -o /boot/grub/grub.cfg; }
 
 server() {
-    [ "$1" ] && echo 'Server = http://mirror.xeonbd.com/archlinux/$repo/os/$arch' |
-        doas tee /etc/pacman.d/mirrorlist && return
-    doas -- reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+   [ "$1" ] && echo 'Server = http://mirror.xeonbd.com/archlinux/$repo/os/$arch' |
+      doas tee /etc/pacman.d/mirrorlist && return
+   doas -- reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 calc() { printf "%s\n" "$*" | bc; }
@@ -86,21 +91,21 @@ calc() { printf "%s\n" "$*" | bc; }
 #                             Wifi
 ################################################################################
 
-diswifi(){  iwctl station wlan0 disconnect; }
-scanwifi(){  iwctl station wlan0 scan; }
-getnw(){  iwctl station wlan0 get-networks; }
-showwifi(){  iwctl station wlan0 show; }
-conwifi(){ iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3; }
-repwifi(){ iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199; }
+diswifi() { iwctl station wlan0 disconnect; }
+scanwifi() { iwctl station wlan0 scan; }
+getnw() { iwctl station wlan0 get-networks; }
+showwifi() { iwctl station wlan0 show; }
+conwifi() { iwctl --passphrase pqlamz., station wlan0 connect c4rn@g3; }
+repwifi() { iwctl --passphrase pS73exd1 station wlan0 connect DIRECT-f6-Android_b199; }
 
 # wifiStop() { doas systemctl stop systemd-resolved; }
 # wifiStart() { doas systemctl start systemd-resolved; }
 
 wificon() {
-    WIFI_CARD="$(ip link | grep -o 'w.*:' | tr -d ':')"
-    iwctl station "$WIFI_CARD" get-networks
-    iwctl \
-        --passphrase "${2:-$WIFI_PASS}" \
-        station "$WIFI_CARD" \
-        connect "${1:-$WIFI_SSID}"
+   WIFI_CARD="$(ip link | grep -o 'w.*:' | tr -d ':')"
+   iwctl station "$WIFI_CARD" get-networks
+   iwctl \
+      --passphrase "${2:-$WIFI_PASS}" \
+      station "$WIFI_CARD" \
+      connect "${1:-$WIFI_SSID}"
 }
