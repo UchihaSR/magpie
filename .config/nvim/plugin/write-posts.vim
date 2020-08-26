@@ -10,9 +10,9 @@ au ac BufWritePost *.dart silent !tmux send -t- r
 " au ac BufWritePost */dwm/*.h,*/dwm/*.c silent !{ compile %; sleep 2;  pkill dwm; } &
 
 " Autocompile
-au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex
+au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex,*.c
             \ silent !compile % &
-au ac BufWritePost *.c,*.h
+au ac BufWritePost *.h
             \ silent !compile %
 
 "===============================================================================
