@@ -12,8 +12,8 @@ au ac BufWritePost *.dart silent !tmux send -t- r
 " Autocompile
 au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex,*.c
             \ silent !compile % &
-au ac BufWritePost *.h
-            \ silent !compile %
+" au ac BufWritePost *.h
+"             \ silent !compile %
 
 "===============================================================================
 "                             Exp 
