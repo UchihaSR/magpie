@@ -8,6 +8,7 @@ LICENSE
 README.md
 .ssh
 .mame
+.gnupg
 icons
 themes
 fonts
@@ -19,6 +20,5 @@ Downloads/
 #===============================================================================
 
 eyelust
-firefox
 soulfly-client
 soulfly-server
