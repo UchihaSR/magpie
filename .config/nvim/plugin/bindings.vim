@@ -13,7 +13,7 @@ nnoremap N             :qa!<cr>
 nnoremap <esc>         :qa<cr>
 nnoremap <leader><esc> :qa!<cr>
 
-" au ac FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
+au ac FileType tex nnoremap <leader><cr> :w \| silent !compile %<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                             Navigation
