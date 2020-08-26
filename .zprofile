@@ -103,7 +103,7 @@ ex=🎯:\
 
 export XINITRC=~/.config/X11/xinitrc
 export ZDOTDIR=~/.config/zsh
-# export GNUPGHOME=~/.local/share/gnupg
+export GNUPGHOME=~/.local/share/gnupg
 export GOPATH=~/.local/share/go
 export HISTFILE=~/.local/share/history
 export UNISON=~/.local/share/unison
