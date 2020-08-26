@@ -1,4 +1,3 @@
-au ac BufWritePost */dwm/config.h      silent !pkill dwm
 au ac BufWritePost *xmodmap*     silent !xmodmap %
 au ac BufWritePost gebaard.toml  silent !pkill -USR1 gebaard
 au ac BufWritePost fcronrc      silent !fcrontab %
@@ -10,7 +9,8 @@ au ac BufWritePost *.dart silent !tmux send -t- r
 
 " Autocompile
 au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h
-            \ silent !compile %
+            \ silent !compile % &
+" au ac BufWritePost */dwm/*.h,*/dwm/*.c silent !{ sleep 2 && pkill dwm; } &
 
 "===============================================================================
 "                             Exp 
