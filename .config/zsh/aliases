@@ -99,6 +99,7 @@ alias grh="git reset --hard"
 alias grum="git rebase upstream/master"
 alias gs="git status"
 # ug="cd $DF; git commit -a -m"update\" && git push -u origin master"
+alias gsc="git stash clear"
 
 # NPM
 alias niy="npm init -y"

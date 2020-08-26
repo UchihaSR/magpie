@@ -167,7 +167,7 @@ map gv cd /mnt/horcrux/git/own/magpie/.config/nvim
 
 map zr
 
-map zg !videomagic -mg "$f"
+map zmg !videomagic -mg "$f"
 map zcv !cut-vid "$f"
 map zCv !crop-vid "$f"
 map zrv !reduce-volume "$f"
@@ -213,6 +213,7 @@ map m $rsync -a $(cat /tmp/list) "$PWD"
 map zt &git checkout  testing
 map zp &git checkout  personal
 map zm &git checkout  master
+map zgs &git stash && git stash clear
 
 ################################################################################
 #                             Misc
