@@ -11,11 +11,11 @@ let g:coc_global_extensions = [
             \ 'coc-flutter',
             \ 'coc-tsserver',
             \ 'coc-texlab',
-            \ 'coc-clangd',
             \ 'coc-json',
             \ 'coc-snippets',
             \ 'coc-python',
             \ ]
+            " \ 'coc-clangd',
 "             \ 'coc-emmet',
 "             \ 'coc-css',
 "             \ 'coc-cssmodules',
