@@ -7,10 +7,13 @@ au ac BufWritePost tmux*.conf
             \ silent !tmux source ~/.config/tmux/tmux.conf
 au ac BufWritePost *.dart silent !tmux send -t- r
 
+" au ac BufWritePost */dwm/*.h,*/dwm/*.c silent !{ compile %; sleep 2;  pkill dwm; } &
+
 " Autocompile
-au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.c,*.h
+au ac BufWritePost *.scss,*.sass,*.ms,*.sh,*.tex
             \ silent !compile % &
-" au ac BufWritePost */dwm/*.h,*/dwm/*.c silent !{ sleep 2 && pkill dwm; } &
+au ac BufWritePost *.c,*.h
+            \ silent !compile %
 
 "===============================================================================
 "                             Exp 
