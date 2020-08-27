@@ -2,6 +2,10 @@
 
 Dotfiles of my minimal Unix system geared for media, programming & writing.
 
+![](.local/share/preview/magpie2.png)
+
+---
+
 ## Line-up Highlights
 
 | Types                | Programs                                                                                        |
@@ -25,10 +29,6 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | Notification Daemon  | [dunst](https://github.com/dunst-project/dunst)                                                 |
 | Scripts              | [Alfred](https://github.com/salman-abedin/alfred)                                               |
 | Wallpapers           | [Eyelust](https://github.com/salman-abedin/eyelust)                                             |
-
----
-
-![](.local/share/preview/magpie2.png)
 
 ---
 
