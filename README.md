@@ -25,7 +25,7 @@ Dotfiles of my minimal Unix system geared for media, programming & writing.
 | Window Manager       | [dwm](https://github.com/salman-abedin/dwm)                                                     |
 | Status Bar           | [uniblocks](https://github.com/salman-abedin/uniblocks)                                         |
 | Compositor           | [xcompmgr](https://wiki.archlinux.org/index.php/xcompmgr)                                       |
-| Document Viewer      | [zathura](https://github.com/pwmt/zathura)                                                      |
+| Document Viewer      | [zathura](https://github.com/pwmt/zathura) + [evince](https://github.com/GNOME/evince)          |
 | Notification Daemon  | [dunst](https://github.com/dunst-project/dunst)                                                 |
 | Scripts              | [Alfred](https://github.com/salman-abedin/alfred)                                               |
 | Wallpapers           | [Eyelust](https://github.com/salman-abedin/eyelust)                                             |
