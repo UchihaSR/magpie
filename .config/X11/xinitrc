@@ -51,5 +51,4 @@ unclutter &
 # Launch bar
 $STATUSBAR &
 # Launch Window Manager
-# exec $WM
-launch --dwm
+exec $WM
